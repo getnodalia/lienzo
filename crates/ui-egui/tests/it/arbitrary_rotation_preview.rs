@@ -100,7 +100,9 @@ fn size_changing_rotation_preview_is_visible_and_preserves_the_panned_center() {
     for (width, height, zoom, center, degrees, factor) in [
         (400, 240, 1.0, [160.0, 90.0], 45.0, 1),
         (400, 240, 1.0, [160.0, 90.0], -45.0, 1),
-        (400, 240, 1.0, [160.0, 90.0], 90.0, 1),
+        // Panned to the image's right edge: Nodalia's dialog sits over the canvas centre, and the
+        // upright 90° result has to show its top and bottom beside it to be measured.
+        (400, 240, 1.0, [400.0, 90.0], 90.0, 1),
         (3000, 1800, 0.12, [1350.0, 825.0], 45.0, 2),
     ] {
         setup(&mut h, width, height, zoom, center);
