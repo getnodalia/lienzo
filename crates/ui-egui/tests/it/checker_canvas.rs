@@ -277,10 +277,11 @@ fn grid_line_contrast_over_grey(h: &mut Harness, grey: u8) -> i32 {
     let mut block: Vec<i32> = (0..64).map(|i| img.at(cx + i % 8, cy + i / 8)[0] as i32).collect();
     block.sort_unstable();
     let interior = block[32];
-    // Walk out to the document edge: the pasteboard is far darker than any grid line.
+    // Walk out to the document edge, 24 document pixels (192 screen px) from the centre. Nodalia's
+    // pasteboard is close enough to a dark grey to pass for it, so the walk stops there too.
     let near = |x: u32, y: u32| (img.at(x, y)[0] as i32 - interior).abs() < 50;
-    let x0 = (0..=cx).rev().take_while(|x| near(*x, cy)).last().unwrap_or(cx);
-    let y0 = (0..=cy).rev().take_while(|y| near(cx, *y)).last().unwrap_or(cy);
+    let x0 = (0..=cx).rev().take(24 * 8 + 1).take_while(|x| near(*x, cy)).last().unwrap_or(cx);
+    let y0 = (0..=cy).rev().take(24 * 8 + 1).take_while(|y| near(cx, *y)).last().unwrap_or(cy);
     // Pixel (col, row) owns the grid line on its left and top edge, 8 screen px apart.
     let y = y0 + 8 * 3 + 4;
     (2..6).map(|col| (img.at(x0 + 8 * col, y)[0] as i32 - img.at(x0 + 8 * col + 4, y)[0] as i32).abs()).max().unwrap_or(0)
