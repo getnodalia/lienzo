@@ -4547,3 +4547,151 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Report an issue	Informar de un problema
 	by Nodalia	de Nodalia
 	A native image editor, layer by layer. No account, no cloud.	Un editor de imágenes nativo, capa a capa. Sin cuenta, sin nube.
+
+# Strings added since the last catalog pass (options bars, actions, histogram, layer filters, open prompts)
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Se canceló o se detuvo un comando durante el procesamiento por lotes. ¿Continuar con el siguiente archivo o detenerse?
+	A file is still being placed; try again when it has finished.	Todavía se está colocando un archivo; inténtelo de nuevo cuando termine.
+	Allow Tool Recording	Permitir grabación de herramientas
+	Allows rotation and scaling of selection	Permite rotar y escalar la selección
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Usar siempre la presión para la opacidad. Desactivado, el ajuste preestablecido del pincel controla la presión
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Usar siempre la presión para el tamaño. Desactivado, el ajuste preestablecido del pincel controla la presión
+	Answer the open import question first, then import this file again.	Responda primero a la pregunta de importación abierta y vuelva a importar este archivo.
+	Anti-alias brush application	Suavizar los bordes al aplicar el pincel
+	Are you sure you want to delete all notes?	¿Seguro que desea eliminar todas las notas?
+	Arrowhead options	Opciones de punta de flecha
+	Arrowheads	Puntas de flecha
+	Attribute	Atributo
+	Batch preview	Vista previa del lote
+	Bottom align text	Alinear texto abajo
+	CPU Rendering	Renderizado por CPU
+	Calculating…	Calculando…
+	Cancelled placing {name}	Se canceló la colocación de {name}
+	Choose a menu command. Playback asks for its settings when needed.	Elija un comando de menú. Al reproducir, se pedirán sus ajustes cuando haga falta.
+	Choose a remix mode	Elija un modo de remezcla
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Haga clic y mueva a la izquierda o a la derecha para escalar con la herramienta Zoom (solo OpenGL)
+	Click to open the Brush Preset picker	Haga clic para abrir el selector de ajustes preestablecidos de pincel
+	Click to refresh histogram with uncached data	Haga clic para actualizar el histograma con datos sin caché
+	Concavity	Concavidad
+	Confirm or cancel the pending Record Again editor first.	Confirme o cancele primero el editor pendiente de Volver a grabar.
+	Confirm or cancel the pending menu item first.	Confirme o cancele primero el elemento de menú pendiente.
+	Could not use the type tool because the layer is locked.	No se pudo usar la herramienta de texto porque la capa está bloqueada.
+	Count:	Recuento:
+	Data Sets as Files is unavailable on the web	Conjuntos de datos en archivos no está disponible en la web
+	Delete Note	Eliminar nota
+	Delete this note?	¿Eliminar esta nota?
+	Determines the spread of replaced color	Determina la extensión del color sustituido
+	Do not erase the foreground swatch color	No borrar el color de la muestra frontal
+	Drawn on the CPU: {reason}. Click for System Info.	Dibujado en la CPU: {reason}. Haga clic para ver la información del sistema.
+	Draws background color over foreground colors	Pinta el color de fondo sobre los colores frontales
+	Dropped files weren't placed: their document was closed.	Los archivos soltados no se colocaron: su documento se cerró.
+	Dropped files weren't placed: too many are waiting for their document.	Los archivos soltados no se colocaron: hay demasiados esperando a su documento.
+	Effect	Efecto
+	Empty	Vacío
+	Enable to remix all layers	Actívelo para remezclar todas las capas
+	End	Final
+	Erase range of similar colors	Borrar un rango de colores parecidos
+	Erase to History	Borrar a historia
+	Filter for embedded smart objects	Filtrar objetos inteligentes incrustados
+	Filter for linked smart objects that are missing	Filtrar objetos inteligentes enlazados que faltan
+	Filter for smart objects linked locally	Filtrar objetos inteligentes enlazados localmente
+	High Memory Photoshop Document	Documento de Photoshop con mucha memoria
+	How far to let the erasing spread	Hasta dónde se extiende el borrado
+	Image Compression	Compresión de imagen
+	Import as New Group	Importar como grupo nuevo
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Importar como grupo nuevo conserva «{group}» y añade el archivo como un grupo nuevo a su lado.
+	Insert Menu Item…	Insertar elemento de menú…
+	Insert Path	Insertar trazado
+	LZW	LZW
+	Layer Effects	Efectos de capa
+	Level:	Nivel:
+	Linked	Enlazado
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Quedaría poca memoria tras abrir este archivo. Cierre antes otras aplicaciones o Lienzo podría quedarse sin memoria.
+	Load Solid Colors Only	Cargar solo colores sólidos
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Reduce el recorte en sombras e iluminaciones y evita que los colores cambien de tono
+	No Adv. Blending	Sin fusión avanzada
+	No Layer Effects	Sin efectos de capa
+	No Layer Mask	Sin máscara de capa
+	No Vector Mask	Sin máscara vectorial
+	No document.	No hay ningún documento.
+	No import is waiting. Import the file again.	No hay ninguna importación pendiente. Vuelva a importar el archivo.
+	No matching fonts	No hay fuentes que coincidan
+	No menu item belongs to this chooser.	Ningún elemento de menú pertenece a este selector.
+	No menu item is waiting.	No hay ningún elemento de menú pendiente.
+	No note to delete	No hay ninguna nota que eliminar
+	No options for the Add Anchor Point Tool.	La herramienta Añadir punto de ancla no tiene opciones.
+	No options for the Delete Anchor Point Tool.	La herramienta Eliminar punto de ancla no tiene opciones.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	No hay ningún trazado con el que crear una forma: dibuje uno con la herramienta Pluma o seleccione uno en el panel Trazados.
+	No pixels are selected.	No hay píxeles seleccionados.
+	No recorded step belongs to this editor.	Ningún paso grabado pertenece a este editor.
+	No slices are selected. Click a slice in the preview to select it.	No hay sectores seleccionados. Haga clic en un sector de la vista previa para seleccionarlo.
+	No step is waiting.	No hay ningún paso pendiente.
+	Not Clipped	Sin recortar
+	Not Empty	No vacío
+	Not Linked	Sin enlazar
+	Not Locked	Sin bloquear
+	Not Visible	No visible
+	Note deleted, but the preference could not be saved: {error}	Nota eliminada, pero no se pudo guardar la preferencia: {error}
+	Nudge	Desplazar
+	Open anyway	Abrir de todos modos
+	Opening this document uses more memory and may slow down your computer or other running applications.	Abrir este documento usa más memoria y puede ralentizar el equipo u otras aplicaciones abiertas.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Abrir «{name}» requiere unos {est} GiB de memoria ({avail} GiB disponibles).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Abrir «{name}» requiere unos {est} GiB de memoria. No se pudo medir la memoria disponible.
+	Painting Mode	Modo de pintura
+	Percentile:	Percentil:
+	Pick Color From Image	Tomar color de la imagen
+	Preparing Free Transform	Preparando la transformación libre
+	Record Again	Volver a grabar
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Sustituir elimina primero todo lo que hay en «{group}», incluidos los ajustes preestablecidos que haya editado o movido allí. No se puede deshacer.
+	Resize windows when zooming using the Zoom Tool	Cambiar el tamaño de las ventanas al hacer zoom con la herramienta Zoom
+	Save Image Pyramid	Guardar pirámide de imagen
+	Save Transparency	Guardar transparencia
+	Scroll all open document windows when using the hand tool	Desplazar todas las ventanas de documento abiertas al usar la herramienta Mano
+	Search and select fonts	Buscar y seleccionar fuentes
+	Select Pixels	Seleccionar píxeles
+	Select an action first.	Seleccione antes una acción.
+	Select an action step first.	Seleccione antes un paso de la acción.
+	Selected Slices	Sectores seleccionados
+	Set as default	Establecer como predeterminado
+	Set exposure for stroke	Definir la exposición del trazo
+	Set flow rate for stroke	Definir el flujo del trazo
+	Set font size	Definir el tamaño de fuente
+	Set font style	Definir el estilo de fuente
+	Set opacity for stroke	Definir la opacidad del trazo
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Definir el suavizado del trazo\nUse valores más altos para reducir el temblor de los trazos de pincel
+	Set symmetry options for Painting	Definir las opciones de simetría para pintar
+	Set text color	Definir el color del texto
+	Set the brush angle	Definir el ángulo del pincel
+	Show Channels in Color	Mostrar canales en color
+	Show Statistics	Mostrar estadísticas
+	Smoothing Options	Opciones de suavizado
+	Source:	Origen:
+	Start	Inicio
+	The Record Again command changed.	El comando Volver a grabar ha cambiado.
+	The action or insertion command changed. Request Insert Menu Item again.	La acción o el comando de inserción han cambiado. Vuelva a solicitar Insertar elemento de menú.
+	The actions changed. Request Record Again again.	Las acciones han cambiado. Vuelva a solicitar Volver a grabar.
+	The command permissions changed. Request Insert Menu Item again.	Los permisos de los comandos han cambiado. Vuelva a solicitar Insertar elemento de menú.
+	The command permissions changed. Request Record Again again.	Los permisos de los comandos han cambiado. Vuelva a solicitar Volver a grabar.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	La carpeta de memoria virtual actual ({path}) no informa de su espacio libre, así que Lienzo no puede detenerse antes de llenarla, y los archivos grandes no obtienen espacio adicional de ella sin un límite de tamaño de memoria virtual. Este aviso se refiere a la configuración actual; los cambios de arriba se aplican con Aplicar o Aceptar. Fije un límite o use un disco local.
+	The document changed. Please choose Clear All again.	El documento ha cambiado. Vuelva a elegir Borrar todo.
+	The document changed. Request Record Again again.	El documento ha cambiado. Vuelva a solicitar Volver a grabar.
+	The document or its notes changed. Please delete the note again.	El documento o sus notas han cambiado. Vuelva a eliminar la nota.
+	The estimate is above 8 GiB and the available memory is unknown, so this process or browser tab may run out of memory. You can still try to open it.	La estimación supera los 8 GiB y se desconoce la memoria disponible, así que este proceso o esta pestaña del navegador podrían quedarse sin memoria. Aun así, puede intentar abrirlo.
+	The preference could not be saved: {error}	No se pudo guardar la preferencia: {error}
+	The step editor could not be opened.	No se pudo abrir el editor del paso.
+	The step has no command editor.	El paso no tiene editor de comandos.
+	Tolerance for choosing related colors	Tolerancia para elegir colores relacionados
+	Top align text	Alinear texto arriba
+	Twirl Counterclockwise	Remolino en sentido antihorario
+	Uncached Refresh	Actualizar sin caché
+	Use relative positioning for reference point	Usar posición relativa para el punto de referencia
+	Use these settings for new arrows	Usar estos ajustes para las flechas nuevas
+	Useful mixer brush combinations	Combinaciones útiles del pincel mezclador
+	WinTab reads pressure, tilt, rotation and the eraser end from the tablet driver. Turn off Windows Ink in your tablet's software utility (for example Wacom Center) before using it.	WinTab lee la presión, la inclinación, la rotación y el extremo borrador desde el controlador de la tableta. Desactive Windows Ink en la utilidad de software de la tableta (por ejemplo, Wacom Center) antes de usarlo.
+	ZIP	ZIP
+	Zoom current window to 1:1	Ajustar el zoom de la ventana actual a 1:1
+	Zoom current window to fill the screen	Ajustar el zoom de la ventana actual para llenar la pantalla
+	Zoom current window to screen size	Ajustar el zoom de la ventana actual al tamaño de la pantalla
+	brush tool	herramienta Pincel
+	dodge tool	herramienta Sobreexponer
+	{message} into “{group}”	{message} en «{group}»
+	{ok} written to {dir}	{ok} escritos en {dir}
