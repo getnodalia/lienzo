@@ -17,6 +17,16 @@ fn rect(h: &Harness<'_, LienzoApp>, field: &str) -> Rect {
     let a = v[field].as_array().unwrap();
     Rect::from_min_max(pos2(a[0].as_f64().unwrap() as f32, a[1].as_f64().unwrap() as f32), pos2(a[2].as_f64().unwrap() as f32, a[3].as_f64().unwrap() as f32))
 }
+/// Lienzo draws one design language: whatever theme a test asks for, it shows Nodalia in that
+/// theme's mode (`appearance::selected_theme`), so the tests pick the mode and expect Nodalia.
+fn shown(theme: ThemeKind) -> ThemeKind {
+    if theme.is_dark() { ThemeKind::Nodalia } else { ThemeKind::NodaliaLight }
+}
+fn use_theme(app: &mut LienzoApp, ctx: &egui::Context, theme: ThemeKind) {
+    let mode = if theme.is_dark() { "dark" } else { "light" };
+    app.run("prefs.set", json!({"path": "interface.appearanceMode", "value": mode})).unwrap();
+    app.set_theme(ctx, theme);
+}
 fn fixture(theme: ThemeKind) -> Harness<'static, LienzoApp> {
     fixture_render(theme, false)
 }
@@ -28,7 +38,7 @@ fn fixture_render(theme: ThemeKind, gpu: bool) -> Harness<'static, LienzoApp> {
         let mut app = LienzoApp::new(lienzo_engine::Session::new(), Default::default());
         // Nodalia floats the Properties card over the canvas: keep the canvas under test clear.
         app.ui.panels.properties = false;
-        app.set_theme(&cc.egui_ctx, theme);
+        use_theme(&mut app, &cc.egui_ctx, theme);
         app.run("file.new", json!({"width":64,"height":48})).unwrap();
         app.run("layer.new.layer", json!({})).unwrap();
         app.run("edit.fill", json!({"color":"#80ff00"})).unwrap();
@@ -38,9 +48,9 @@ fn fixture_render(theme: ThemeKind, gpu: bool) -> Harness<'static, LienzoApp> {
     h.run_steps(3);
     // Startup preferences can replace the initial theme; apply the requested test theme after it.
     let ctx = h.ctx.clone();
-    h.state_mut().set_theme(&ctx, theme);
+    use_theme(h.state_mut(), &ctx, theme);
     h.run_steps(3);
-    assert_eq!(h.state().ui.theme, theme);
+    assert_eq!(h.state().ui.theme, shown(theme));
     settle(&mut h);
     h
 }
@@ -440,7 +450,7 @@ fn both_clipping_warnings_leave_unclipped_preview_pixels_visible_on_gpu() {
         let mut app = LienzoApp::new(lienzo_engine::Session::new(), Default::default());
         // Nodalia floats the Properties card over the canvas: keep the canvas under test clear.
         app.ui.panels.properties = false;
-        app.set_theme(&cc.egui_ctx, ThemeKind::Pro);
+        use_theme(&mut app, &cc.egui_ctx, ThemeKind::Pro);
         app.run("file.new", json!({"width":16,"height":16})).unwrap();
         app.run("layer.new.layer", json!({})).unwrap();
         app.run("edit.fill", json!({"color":"#808080"})).unwrap();
@@ -698,10 +708,10 @@ fn pixel_hover_gpu_badge_single_band_and_crosshair_appear_and_clear_in_all_theme
     let mut h = fixture_render(ThemeKind::Pro, true);
     for theme in ThemeKind::ALL.into_iter().skip(part).step_by(4) {
         let ctx = h.ctx.clone();
-        h.state_mut().set_theme(&ctx, theme);
+        use_theme(h.state_mut(), &ctx, theme);
         h.run_steps(3);
         settle(&mut h);
-        assert_eq!(h.state().ui.theme, theme);
+        assert_eq!(h.state().ui.theme, shown(theme));
         menu(h.state_mut(), &ctx, json!({"ui":{"scope":{"vectorscope":true}}})).unwrap();
         h.run_steps(4);
         let histogram = rect(&h, "scopeRect");

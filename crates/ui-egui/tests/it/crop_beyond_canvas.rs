@@ -184,5 +184,9 @@ fn editing_a_crop_frame_shows_the_pixels_past_the_canvas() {
     h.run_steps(3);
     let img = render(&mut h);
     assert_eq!(h.state().ui.crop_rect, None, "Esc hides the frame");
-    assert_eq!(shown(&h, &img), was, "hidden again after Esc");
+    // Hidden again: the pasteboard as before, within the few levels Nodalia's canvas shadow shifts
+    // by once the crop shield is gone (the hidden white, a few px below the canvas, sits in it).
+    let now = shown(&h, &img);
+    let close = now.iter().zip(&was).all(|(a, b)| a.iter().zip(b).all(|(x, y)| x.abs_diff(*y) <= 10));
+    assert!(close && !tinted(now[0], 0) && !tinted(now[1], 2), "hidden again after Esc: {now:?}, was {was:?}");
 }

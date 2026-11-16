@@ -41,7 +41,7 @@ for working in layers, with no account and no cloud. It runs on Linux, macOS and
 </p>
 
 > [!IMPORTANT]
-> **Lienzo is at an early stage.** Version 0.3.5 is out for Linux, macOS and Windows:
+> **Lienzo is at an early stage.** Version 0.3.6 is out for Linux, macOS and Windows:
 > [download it from the releases page](https://github.com/getnodalia/lienzo/releases/latest)
 > (AppImage, .deb, .rpm and .tar.gz; a DMG; a Windows installer and portable zip).
 
@@ -53,6 +53,13 @@ for working in layers, with no account and no cloud. It runs on Linux, macOS and
 - The Nodalia interface: rounded islands, Lienzo's accent, Sora and Inter, round window controls
   (or your desktop's own, on Linux), light and dark following the system.
 - Every action is a command, so it can be scripted and driven from the command line.
+
+<details>
+<summary>Every tool in the toolbox</summary>
+
+<h4>🧰 69 tools</h4>
+Move · Artboard · Rectangular and Elliptical Marquee · Single Row Marquee · Single Column Marquee · Lasso · Polygonal Lasso · Magnetic Lasso · Object Selection · Quick Selection · Magic Wand · Crop · Perspective Crop · Slice · Slice Select · Frame · Eyedropper · Color Sampler · Ruler · Note · Count · Remove · Spot Healing Brush · Healing Brush · Patch · Content-Aware Move · Red Eye · Brush · Pencil · Mixer Brush · Color Replacement · Clone Stamp · Pattern Stamp · History Brush · Art History Brush · Eraser · Background Eraser · Magic Eraser · Gradient · Paint Bucket · Blur · Sharpen · Smudge · Dodge · Burn · Sponge · Pen · Freeform Pen · Curvature Pen · Add Anchor Point · Delete Anchor Point · Convert Point · Horizontal and Vertical Type · Horizontal and Vertical Type Mask · Path Selection · Direct Selection · Rectangle · Ellipse · Triangle · Polygon · Star · Line · Custom Shape · Hand · Rotate View · Zoom
+</details>
 
 ## Build and run
 
