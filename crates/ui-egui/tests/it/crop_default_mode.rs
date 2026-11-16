@@ -21,7 +21,9 @@ type Harness = egui_kittest::Harness<'static, LienzoApp>;
 
 fn harness() -> Option<Harness> {
     let built = std::panic::catch_unwind(|| {
-        egui_kittest::Harness::builder().with_size(egui::vec2(900.0, 640.0)).with_max_steps(64).wgpu().build_eframe(|cc| {
+        // Wide enough that Nodalia's dock leaves the canvas room for the panned frame and the
+        // drags past it (at 900 the canvas ends at x = 532, under the panned right edge).
+        egui_kittest::Harness::builder().with_size(egui::vec2(1200.0, 640.0)).with_max_steps(64).wgpu().build_eframe(|cc| {
             LienzoApp::setup_context(&cc.egui_ctx, Default::default());
             let mut app = LienzoApp::new(lienzo_engine::Session::new(), Default::default());
             // Nodalia floats the Properties card over the canvas: keep the canvas under test clear.
