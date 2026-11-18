@@ -32,12 +32,12 @@
 for working in layers, with no account and no cloud. It runs on Linux, macOS and Windows.
 
 <p align="center">
-  <img src="docs/images/lienzo-demo.jpg" width="900" alt="Lienzo editing The Great Wave off Kanagawa, with adjustment layers in the Layers panel">
+  <img src="https://raw.githubusercontent.com/getnodalia/nodalia-web/main/assets/screens/lienzo/lienzo-editor-dark.jpg" width="900" alt="Lienzo editing The Great Wave off Kanagawa in the dark theme, with adjustment layers in the Layers panel">
 </p>
 
 <p align="center">
-  <img src="docs/images/lienzo-adjustments.jpg" width="440" alt="A Curves adjustment layer in Lienzo">
-  <img src="docs/images/lienzo-light.jpg" width="440" alt="Lienzo in the light theme">
+  <img src="https://raw.githubusercontent.com/getnodalia/nodalia-web/main/assets/screens/lienzo/lienzo-editor-light.jpg" width="440" alt="The same image in the light theme, with the Curves properties">
+  <img src="https://raw.githubusercontent.com/getnodalia/nodalia-web/main/assets/screens/lienzo/lienzo-home-dark.jpg" width="440" alt="Lienzo's start screen in the dark theme">
 </p>
 
 > [!IMPORTANT]
