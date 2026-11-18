@@ -1722,6 +1722,8 @@ fn preferences_apply_button_saves_without_closing_and_cancel_keeps_applied_value
 fn system_title_bar_explains_next_launch_and_preserves_apply_and_cancel() {
     use egui_kittest::{Harness, kittest::Queryable};
 
+    // Only Linux draws its own title bar, so only Linux says the choice applies at next launch.
+    let note = super::graphics::read_at_launch("interface.systemTitleBar");
     let (mut app, store) = app_with_store();
     app.run("prefs.set", json!({"values": {"interface.language": "en"}})).unwrap();
     app.custom_titlebar = true;
@@ -1733,13 +1735,17 @@ fn system_title_bar_explains_next_launch_and_preserves_apply_and_cancel() {
     h.run_steps(4);
     h.get_by_label("System title bar").scroll_to_me();
     h.run_steps(4);
-    h.get_by_label("Applies at next launch.");
+    if note {
+        h.get_by_label("Applies at next launch.");
+    }
     for desired in [true, false] {
         h.get_by_label("System title bar").click();
         h.run_steps(4);
         assert_eq!(h.state().ui.dialogs.iter().find(|d| d.id == id).unwrap().fields["values"]["interface"]["systemTitleBar"], desired);
         assert_eq!(h.state().session.prefs().interface.system_title_bar, !desired, "the draft is not applied yet");
-        h.get_by_label("Applies at next launch.");
+        if note {
+            h.get_by_label("Applies at next launch.");
+        }
         h.get_by_label("Apply").click();
         h.run_steps(4);
         assert_eq!(h.state().session.prefs().interface.system_title_bar, desired);
@@ -1747,7 +1753,9 @@ fn system_title_bar_explains_next_launch_and_preserves_apply_and_cancel() {
         assert!(h.state().custom_titlebar, "do not change the current window or restart it");
         let (reloaded, _) = app_with_saved(store.lock().unwrap().clone());
         assert_eq!(reloaded.session.prefs().interface.system_title_bar, desired);
-        h.get_by_label("Applies at next launch.");
+        if note {
+            h.get_by_label("Applies at next launch.");
+        }
     }
     h.get_by_label("System title bar").click();
     h.run_steps(4);
