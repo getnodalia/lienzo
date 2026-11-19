@@ -4786,3 +4786,267 @@ cameraRaw	White Balance: As Shot	สมดุลแสงขาว: เท่า
 	Content-aware fill	เติมตามเนื้อหา
 	Sample content from part of the image and use it to fill a small area	สุ่มเนื้อหาจากส่วนหนึ่งของภาพเพื่อเติมพื้นที่เล็ก ๆ
 	Reset the crop box, image rotation, and aspect ratio settings	รีเซ็ตกรอบครอป การหมุนภาพ และอัตราส่วน
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	คำสั่งถูกยกเลิกหรือหยุดระหว่างการประมวลผลเป็นชุด ต้องการทำต่อกับไฟล์ถัดไปหรือหยุด?
+	A file is still being placed; try again when it has finished.	ไฟล์ยังอยู่ระหว่างการวาง ลองอีกครั้งเมื่อเสร็จแล้ว
+	A native image editor, layer by layer. No account, no cloud.	โปรแกรมแก้ไขรูปภาพแบบเนทีฟ ทีละเลเยอร์ ไม่ต้องมีบัญชี ไม่ต้องใช้คลาวด์
+	Allow Tool Recording	อนุญาตให้บันทึกเครื่องมือ
+	Allows rotation and scaling of selection	อนุญาตให้หมุนและปรับขนาดส่วนที่เลือก
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	ใช้แรงกดสำหรับความทึบเสมอ เมื่อปิด พรีเซ็ตแปรงจะควบคุมแรงกด
+	Always use Pressure for Size. When off, Brush Preset controls pressure	ใช้แรงกดสำหรับขนาดเสมอ เมื่อปิด พรีเซ็ตแปรงจะควบคุมแรงกด
+	Answer the open import question first, then import this file again.	ตอบคำถามการนำเข้าที่เปิดอยู่ก่อน แล้วนำเข้าไฟล์นี้อีกครั้ง
+	Anti-alias brush application	ลบรอยหยักการใช้แปรง
+	Are you sure you want to delete all notes?	แน่ใจหรือไม่ว่าต้องการลบบันทึกทั้งหมด?
+	Arrowhead options	ตัวเลือกหัวลูกศร
+	Arrowheads	หัวลูกศร
+	Attribute	แอตทริบิวต์
+	Batch preview	ตัวอย่างชุดงาน
+	Bottom align text	จัดข้อความชิดล่าง
+	Cancelled placing {name}	ยกเลิกการวาง {name} แล้ว
+	Choose a menu command. Playback asks for its settings when needed.	เลือกคำสั่งเมนู การเล่นจะถามการตั้งค่าเมื่อจำเป็น
+	Choose a remix mode	เลือกโหมดรีมิกซ์
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	คลิกแล้วเลื่อนซ้ายหรือขวาเพื่อปรับมาตราส่วนด้วยเครื่องมือซูม (เฉพาะ OpenGL)
+	Click to open the Brush Preset picker	คลิกเพื่อเปิดตัวเลือกพรีเซ็ตแปรง
+	Concavity	ความเว้า
+	Confirm or cancel the pending Record Again editor first.	ยืนยันหรือยกเลิกตัวแก้ไข “บันทึกอีกครั้ง” ที่ค้างอยู่ก่อน
+	Confirm or cancel the pending menu item first.	ยืนยันหรือยกเลิกรายการเมนูที่ค้างอยู่ก่อน
+	Copy CSS	คัดลอก CSS
+	Could not use the type tool because the layer is locked.	ใช้เครื่องมือข้อความไม่ได้เนื่องจากเลเยอร์ถูกล็อก
+	Data Sets as Files is unavailable on the web	“ชุดข้อมูลเป็นไฟล์” ไม่พร้อมใช้งานบนเว็บ
+	Delete Note	ลบบันทึก
+	Delete this note?	ลบบันทึกนี้หรือไม่?
+	Determines the spread of replaced color	กำหนดการกระจายของสีที่ถูกแทนที่
+	Do not erase the foreground swatch color	ไม่ลบสีตัวอย่างพื้นหน้า
+	Draws background color over foreground colors	วาดสีพื้นหลังทับสีพื้นหน้า
+	Dropped files weren't placed: their document was closed.	ไม่ได้วางไฟล์ที่ลากมา: เอกสารของไฟล์ถูกปิดแล้ว
+	Dropped files weren't placed: too many are waiting for their document.	ไม่ได้วางไฟล์ที่ลากมา: มีไฟล์รอเอกสารของตนมากเกินไป
+	Effect	เอฟเฟกต์
+	Empty	ว่าง
+	Enable to remix all layers	เปิดเพื่อรีมิกซ์ทุกเลเยอร์
+	End	สิ้นสุด
+	Erase range of similar colors	ลบช่วงของสีที่คล้ายกัน
+	Erase to History	ลบไปยังประวัติ
+	Filter for embedded smart objects	ตัวกรองสำหรับสมาร์ทออบเจกต์แบบฝัง
+	Filter for linked smart objects that are missing	ตัวกรองสำหรับสมาร์ทออบเจกต์ที่เชื่อมโยงและขาดหาย
+	Filter for smart objects linked locally	ตัวกรองสำหรับสมาร์ทออบเจกต์ที่เชื่อมโยงในเครื่อง
+	High Memory Photoshop Document	เอกสาร Photoshop หน่วยความจำสูง
+	How far to let the erasing spread	ระยะที่ให้การลบกระจายออกไป
+	Image Compression	การบีบอัดรูปภาพ
+	Import as New Group	นำเข้าเป็นกลุ่มใหม่
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	“นำเข้าเป็นกลุ่มใหม่” จะเก็บ “{group}” ไว้และเพิ่มไฟล์เป็นกลุ่มใหม่ข้างกัน
+	Insert Menu Item…	แทรกรายการเมนู…
+	Insert Path	แทรกพาธ
+	LZW	LZW
+	Layer Effects	เอฟเฟกต์เลเยอร์
+	Lining	ตัวเลขเสมอแนว
+	Linked	เชื่อมโยงแล้ว
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	หลังเปิดไฟล์นี้จะเหลือหน่วยความจำน้อยมาก ปิดแอปอื่นก่อน มิฉะนั้น Lienzo อาจหน่วยความจำไม่พอ
+	Load Solid Colors Only	โหลดเฉพาะสีทึบ
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	ลดการตัดในเงาและไฮไลต์ และป้องกันไม่ให้สีเปลี่ยนเฉด
+	No Adv. Blending	ไม่มีการผสมขั้นสูง
+	No Layer Effects	ไม่มีเอฟเฟกต์เลเยอร์
+	No Layer Mask	ไม่มีมาสก์เลเยอร์
+	No Vector Mask	ไม่มีมาสก์เวกเตอร์
+	No document.	ไม่มีเอกสาร
+	No import is waiting. Import the file again.	ไม่มีการนำเข้าที่รออยู่ นำเข้าไฟล์อีกครั้ง
+	No matching fonts	ไม่มีฟอนต์ที่ตรงกัน
+	No menu item belongs to this chooser.	ไม่มีรายการเมนูที่เป็นของตัวเลือกนี้
+	No menu item is waiting.	ไม่มีรายการเมนูที่รออยู่
+	No note to delete	ไม่มีบันทึกให้ลบ
+	No options for the Add Anchor Point Tool.	ไม่มีตัวเลือกสำหรับเครื่องมือเพิ่มจุดยึด
+	No options for the Delete Anchor Point Tool.	ไม่มีตัวเลือกสำหรับเครื่องมือลบจุดยึด
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	ไม่มีพาธสำหรับสร้างรูปร่าง: วาดด้วยเครื่องมือปากกาหรือเลือกในแผงพาธ
+	No pixels are selected.	ไม่ได้เลือกพิกเซลใด
+	No recorded step belongs to this editor.	ไม่มีขั้นตอนที่บันทึกไว้ซึ่งเป็นของตัวแก้ไขนี้
+	No slices are selected. Click a slice in the preview to select it.	ไม่ได้เลือกสไลซ์ใด คลิกสไลซ์ในตัวอย่างเพื่อเลือก
+	No step is waiting.	ไม่มีขั้นตอนที่รออยู่
+	Not Clipped	ไม่ถูกตัด
+	Not Empty	ไม่ว่าง
+	Not Linked	ไม่ได้เชื่อมโยง
+	Not Locked	ไม่ถูกล็อก
+	Not Visible	ไม่แสดง
+	Note deleted, but the preference could not be saved: {error}	ลบบันทึกแล้ว แต่บันทึกค่ากำหนดไม่ได้: {error}
+	Nudge	เลื่อนเล็กน้อย
+	Numerals	ตัวเลข
+	Open anyway	เปิดต่อไป
+	Open as Smart Object…	เปิดเป็นสมาร์ทออบเจกต์…
+	Opening this document uses more memory and may slow down your computer or other running applications.	การเปิดเอกสารนี้ใช้หน่วยความจำมากขึ้นและอาจทำให้คอมพิวเตอร์หรือแอปอื่นที่ทำงานอยู่ช้าลง
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	การเปิด “{name}” ต้องใช้หน่วยความจำโดยประมาณ {est} GiB (ว่าง {avail} GiB)
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	การเปิด “{name}” ต้องใช้หน่วยความจำโดยประมาณ {est} GiB วัดหน่วยความจำที่ว่างไม่ได้
+	Painting Mode	โหมดการระบายสี
+	Preparing Free Transform	กำลังเตรียมการแปลงอิสระ
+	Proportional	สัดส่วน
+	Proportional Lining	ตัวเลขเสมอแนวแบบสัดส่วน
+	Proportional Oldstyle	ตัวเลขแบบเก่าแบบสัดส่วน
+	Record Again	บันทึกอีกครั้ง
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	“แทนที่” จะลบทุกอย่างใน “{group}” ก่อน รวมถึงพรีเซ็ตที่คุณแก้ไขหรือย้ายไปไว้ที่นั่น ไม่สามารถเลิกทำได้
+	Report an issue	รายงานปัญหา
+	Resize windows when zooming using the Zoom Tool	ปรับขนาดหน้าต่างเมื่อซูมด้วยเครื่องมือซูม
+	Save Image Pyramid	บันทึกพีระมิดภาพ
+	Save Transparency	บันทึกความโปร่งใส
+	Scroll all open document windows when using the hand tool	เลื่อนหน้าต่างเอกสารที่เปิดอยู่ทั้งหมดเมื่อใช้เครื่องมือมือ
+	Search and select fonts	ค้นหาและเลือกฟอนต์
+	Select Pixels	เลือกพิกเซล
+	Select an action first.	เลือกแอ็กชันก่อน
+	Select an action step first.	เลือกขั้นตอนของแอ็กชันก่อน
+	Selected Slices	สไลซ์ที่เลือก
+	Set 	ชุด 
+	Set 1	ชุด 1
+	Set 10	ชุด 10
+	Set 11	ชุด 11
+	Set 12	ชุด 12
+	Set 13	ชุด 13
+	Set 14	ชุด 14
+	Set 15	ชุด 15
+	Set 16	ชุด 16
+	Set 17	ชุด 17
+	Set 18	ชุด 18
+	Set 19	ชุด 19
+	Set 2	ชุด 2
+	Set 20	ชุด 20
+	Set 3	ชุด 3
+	Set 4	ชุด 4
+	Set 5	ชุด 5
+	Set 6	ชุด 6
+	Set 7	ชุด 7
+	Set 8	ชุด 8
+	Set 9	ชุด 9
+	Set as default	ตั้งเป็นค่าเริ่มต้น
+	Set exposure for stroke	ตั้งค่าการเปิดรับแสงของเส้นแปรง
+	Set flow rate for stroke	ตั้งค่าอัตราการไหลของเส้นแปรง
+	Set font size	ตั้งขนาดฟอนต์
+	Set font style	ตั้งสไตล์ฟอนต์
+	Set opacity for stroke	ตั้งค่าความทึบของเส้นแปรง
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	ตั้งค่าความนุ่มนวลของเส้นแปรง\nใช้ค่าสูงเพื่อลดการสั่นของเส้นแปรง
+	Set symmetry options for Painting	ตั้งตัวเลือกสมมาตรสำหรับการระบายสี
+	Set text color	ตั้งสีข้อความ
+	Set the brush angle	ตั้งมุมของแปรง
+	Smoothing Options	ตัวเลือกความนุ่มนวล
+	Start	เริ่มต้น
+	Stylistic Sets	ชุดสไตล์
+	Tabular	ตัวเลขความกว้างคงที่
+	Tabular Lining	ตัวเลขเสมอแนวความกว้างคงที่
+	Tabular Oldstyle	ตัวเลขแบบเก่าความกว้างคงที่
+	The Record Again command changed.	คำสั่ง “บันทึกอีกครั้ง” เปลี่ยนไป
+	The action or insertion command changed. Request Insert Menu Item again.	แอ็กชันหรือคำสั่งแทรกเปลี่ยนไป ขอ “แทรกรายการเมนู” อีกครั้ง
+	The actions changed. Request Record Again again.	แอ็กชันเปลี่ยนไป ขอ “บันทึกอีกครั้ง” อีกครั้ง
+	The command permissions changed. Request Insert Menu Item again.	สิทธิ์ของคำสั่งเปลี่ยนไป ขอ “แทรกรายการเมนู” อีกครั้ง
+	The command permissions changed. Request Record Again again.	สิทธิ์ของคำสั่งเปลี่ยนไป ขอ “บันทึกอีกครั้ง” อีกครั้ง
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	ไดเรกทอรีสแครชปัจจุบัน ({path}) ไม่รายงานพื้นที่ว่าง Lienzo จึงหยุดก่อนเต็มไม่ได้ และไฟล์ขนาดใหญ่จะไม่ได้พื้นที่เพิ่มจากที่นี่หากไม่กำหนดขีดจำกัดขนาดสแครช คำเตือนนี้ใช้กับการกำหนดค่าปัจจุบัน การเปลี่ยนแปลงด้านบนมีผลเมื่อกดนำไปใช้หรือตกลง กำหนดขีดจำกัดหรือใช้ดิสก์ในเครื่อง
+	The document changed. Please choose Clear All again.	เอกสารเปลี่ยนไป โปรดเลือก “ล้างทั้งหมด” อีกครั้ง
+	The document changed. Request Record Again again.	เอกสารเปลี่ยนไป ขอ “บันทึกอีกครั้ง” อีกครั้ง
+	The document or its notes changed. Please delete the note again.	เอกสารหรือบันทึกของเอกสารเปลี่ยนไป โปรดลบบันทึกอีกครั้ง
+	The preference could not be saved: {error}	บันทึกค่ากำหนดไม่ได้: {error}
+	The step editor could not be opened.	เปิดตัวแก้ไขขั้นตอนไม่ได้
+	The step has no command editor.	ขั้นตอนนี้ไม่มีตัวแก้ไขคำสั่ง
+	Tolerance for choosing related colors	ค่าความคลาดเคลื่อนสำหรับการเลือกสีที่เกี่ยวข้อง
+	Top align text	จัดข้อความชิดบน
+	Use relative positioning for reference point	ใช้การวางตำแหน่งแบบสัมพัทธ์สำหรับจุดอ้างอิง
+	Use these settings for new arrows	ใช้การตั้งค่านี้กับลูกศรใหม่
+	Useful mixer brush combinations	การผสมผสานแปรงผสมสีที่มีประโยชน์
+	ZIP	ZIP
+	Zoom current window to 1:1	ซูมหน้าต่างปัจจุบันเป็น 1:1
+	Zoom current window to fill the screen	ซูมหน้าต่างปัจจุบันให้เต็มหน้าจอ
+	Zoom current window to screen size	ซูมหน้าต่างปัจจุบันให้เท่าขนาดหน้าจอ
+	brush tool	เครื่องมือแปรง
+	by Nodalia	โดย Nodalia
+	dodge tool	เครื่องมือเพิ่มความสว่าง
+	{message} into “{group}”	{message} ใน “{group}”
+	{ok} written to {dir}	เขียน {ok} ลงใน {dir} แล้ว
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	กลุ่มแปรง “{group}” มีแปรงของคุณอยู่แล้ว {n} แปรง
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	กลุ่มการไล่ระดับสี “{group}” มีอยู่แล้ว ({n} การไล่ระดับสี)
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: เอาต์พุต Image Assets {n} รายการล้มเหลว
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: ไฟล์ {n} ไฟล์ล้มเหลว
+	A frame supports affine transforms; select its image for perspective transforms	เฟรมรองรับการแปลงแบบอะฟฟีน เลือกรูปภาพของเฟรมสำหรับการแปลงเปอร์สเปกทีฟ
+	A frame supports affine transforms; select its image to warp it	เฟรมรองรับการแปลงแบบอะฟฟีน เลือกรูปภาพของเฟรมเพื่อบิดภาพ
+	Accelerated	เร่งความเร็ว
+	Align bottom edges	จัดขอบล่างให้ตรงกัน
+	Align top edges	จัดขอบบนให้ตรงกัน
+	Align vertical centers	จัดกึ่งกลางแนวตั้งให้ตรงกัน
+	Canceled opening {name}	ยกเลิกการเปิด {name} แล้ว
+	Canceled {label}	ยกเลิก {label} แล้ว
+	Center the gradient (offset 0, 0)	จัดการไล่ระดับสีไว้กึ่งกลาง (ออฟเซ็ต 0, 0)
+	Channel Options…	ตัวเลือกแชนเนล…
+	Click to restore the current color	คลิกเพื่อคืนค่าสีปัจจุบัน
+	Click to sample the foreground color  ·  {key}-click for background	คลิกเพื่อเก็บตัวอย่างสีพื้นหน้า  ·  {key}-คลิกสำหรับสีพื้นหลัง
+	Clip Thumbnails to Document Bounds	ตัดภาพขนาดย่อตามขอบเขตเอกสาร
+	Color Blindness - Deuteranopia-type	ตาบอดสี - ชนิดดิวเทอราโนเปีย
+	Color Blindness - Protanopia-type	ตาบอดสี - ชนิดโปรทาโนเปีย
+	Contextual Task Bar	แถบงานตามบริบท
+	Convert to Frame…	แปลงเป็นเฟรม…
+	Create a new custom frame	สร้างเฟรมแบบกำหนดเองใหม่
+	Create a new polygonal frame	สร้างเฟรมหลายเหลี่ยมใหม่
+	Create a new triangular frame	สร้างเฟรมสามเหลี่ยมใหม่
+	Create a single history state	สร้างสถานะประวัติเดียว
+	Default Foreground and Background Colors (D)	สีพื้นหน้าและพื้นหลังเริ่มต้น (D)
+	Delete effect	ลบเอฟเฟกต์
+	Distribute horizontally	กระจายตามแนวนอน
+	Distribute vertically	กระจายตามแนวตั้ง
+	Drag around the center to rotate the view  ·  Shift constrains to 15°	ลากรอบจุดศูนย์กลางเพื่อหมุนมุมมอง  ·  Shift จำกัดที่ 15°
+	Drag to move the selected path	ลากเพื่อย้ายพาธที่เลือก
+	Embed All Linked	ฝังที่เชื่อมโยงทั้งหมด
+	Embed Linked	ฝังที่เชื่อมโยง
+	Equalize Entire Image Based On Selected Area	ปรับสมดุลทั้งภาพตามพื้นที่ที่เลือก
+	Equalize Selected Area Only	ปรับสมดุลเฉพาะพื้นที่ที่เลือก
+	Expand layer group on click	ขยายกลุ่มเลเยอร์เมื่อคลิก
+	Fit Content to Frame	ปรับเนื้อหาให้พอดีเฟรม
+	Fit Frame to Content	ปรับเฟรมให้พอดีเนื้อหา
+	Frame coordinates must be finite and within 600000 pixels	พิกัดของเฟรมต้องเป็นค่าจำกัดและอยู่ภายใน 600000 พิกเซล
+	Hide bar	ซ่อนแถบ
+	Import Image…	นำเข้ารูปภาพ…
+	Internet Standard RGB (sRGB)	RGB มาตรฐานอินเทอร์เน็ต (sRGB)
+	Invalid frame transform	การแปลงเฟรมไม่ถูกต้อง
+	Invalid nested file drop	การวางไฟล์ซ้อนไม่ถูกต้อง
+	Large Thumbnails	ภาพขนาดย่อใหญ่
+	Learn	เรียนรู้
+	Legacy Macintosh RGB (Gamma 1.8)	RGB Macintosh รุ่นเก่า (แกมมา 1.8)
+	Make Shape	สร้างรูปร่าง
+	Medium Thumbnails	ภาพขนาดย่อกลาง
+	More options	ตัวเลือกเพิ่มเติม
+	Move bar	ย้ายแถบ
+	Move effect down	ย้ายเอฟเฟกต์ลง
+	Move effect up	ย้ายเอฟเฟกต์ขึ้น
+	Netscape Gray	เทา Netscape
+	New Frame	เฟรมใหม่
+	New file	ไฟล์ใหม่
+	No Thumbnails	ไม่มีภาพขนาดย่อ
+	No settings saved: these raws can't keep a sidecar here	ไม่ได้บันทึกการตั้งค่า: ไฟล์ RAW เหล่านี้เก็บไฟล์ประกอบที่นี่ไม่ได้
+	Not a web color: click for the nearest web color	ไม่ใช่สีเว็บ: คลิกเพื่อใช้สีเว็บที่ใกล้ที่สุด
+	Nothing to save: these raws are at their default settings	ไม่มีอะไรให้บันทึก: ไฟล์ RAW เหล่านี้ใช้การตั้งค่าเริ่มต้น
+	On your computer	บนคอมพิวเตอร์ของคุณ
+	Open a document to select a color range.	เปิดเอกสารเพื่อเลือกช่วงสี
+	Out of gamut for printing: click for the nearest printable color	อยู่นอกขอบเขตสีสำหรับการพิมพ์: คลิกเพื่อใช้สีที่พิมพ์ได้ใกล้ที่สุด
+	Path operations	การดำเนินการพาธ
+	Pause For	หยุดชั่วคราวเป็นเวลา
+	Pause For:	หยุดชั่วคราวเป็นเวลา:
+	Pin bar position	ปักหมุดตำแหน่งแถบ
+	Playback Options…	ตัวเลือกการเล่น…
+	Plugins…	ปลั๊กอิน…
+	Recently Used Colors	สีที่ใช้ล่าสุด
+	Remember to turn off the printer's own color management in Print Settings…	อย่าลืมปิดการจัดการสีของเครื่องพิมพ์เองในการตั้งค่าการพิมพ์…
+	Replace Image…	แทนที่รูปภาพ…
+	Reset bar position	รีเซ็ตตำแหน่งแถบ
+	Sample: foreground color	ตัวอย่าง: สีพื้นหน้า
+	Save canceled	ยกเลิกการบันทึกแล้ว
+	Save the settings to each raw's sidecar without opening it	บันทึกการตั้งค่าลงไฟล์ประกอบของ RAW แต่ละไฟล์โดยไม่ต้องเปิด
+	Scroll All Windows	เลื่อนทุกหน้าต่าง
+	Shapes can't use patterns yet	รูปร่างยังใช้แพทเทิร์นไม่ได้
+	Show hover bounds from Layers	แสดงขอบเขตเมื่อชี้จากเลเยอร์
+	Show layer bounds on hover	แสดงขอบเขตเลเยอร์เมื่อชี้
+	Small Thumbnails	ภาพขนาดย่อเล็ก
+	Some settings could not be saved; the raws stay open	บันทึกการตั้งค่าบางอย่างไม่ได้ ไฟล์ RAW ยังคงเปิดอยู่
+	Source: {name}	ต้นฉบับ: {name}
+	Specify Channels:	ระบุแชนเนล:
+	Step by Step	ทีละขั้นตอน
+	Stop Color	สีหยุด
+	Switch Foreground and Background Colors (X)	สลับสีพื้นหน้าและพื้นหลัง (X)
+	The GPU compositor is still being prepared	ตัวประกอบภาพ GPU ยังอยู่ระหว่างการเตรียม
+	The History Brush source was deleted: set a new source in the History panel	ต้นฉบับของแปรงประวัติถูกลบแล้ว: ตั้งต้นฉบับใหม่ในแผงประวัติ
+	The frame is locked	เฟรมถูกล็อก
+	The frame is unavailable	เฟรมไม่พร้อมใช้งาน
+	Website	เว็บไซต์
+	Working CMY Plates	เพลต CMY สำหรับทำงาน
+	seconds	วินาที
+	{label} is writing the file and can no longer be canceled	{label} กำลังเขียนไฟล์และไม่สามารถยกเลิกได้อีก
+	{set} from {file} replaced the one from {earlier}	{set} จาก {file} แทนที่ชุดจาก {earlier}
+@plural	{n} action file loaded|{n} action files loaded	โหลดไฟล์แอ็กชัน {n} ไฟล์แล้ว
+@plural	{n} file could not be loaded: {errors}|{n} files could not be loaded: {errors}	โหลดไฟล์ {n} ไฟล์ไม่ได้: {errors}

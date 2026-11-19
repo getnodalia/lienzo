@@ -4396,3 +4396,186 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Op inhoud gebaseerd vullen
 	Sample content from part of the image and use it to fill a small area	Inhoud uit een deel van de afbeelding halen om een klein gebied te vullen
 	Reset the crop box, image rotation, and aspect ratio settings	Het uitsnijkader, de beeldrotatie en de beeldverhouding resetten
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Een opdracht is geannuleerd of gestopt tijdens de batchverwerking. Doorgaan met het volgende bestand of stoppen?
+	A file is still being placed; try again when it has finished.	Er wordt nog een bestand geplaatst; probeer het opnieuw als het klaar is.
+	A native image editor, layer by layer. No account, no cloud.	Een native beeldbewerker, laag voor laag. Geen account, geen cloud.
+	Allow Tool Recording	Opnemen van gereedschappen toestaan
+	Allows rotation and scaling of selection	Staat draaien en schalen van de selectie toe
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Gebruik altijd druk voor dekking. Als dit uit staat, bepaalt de penseelvoorinstelling de druk
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Gebruik altijd druk voor grootte. Als dit uit staat, bepaalt de penseelvoorinstelling de druk
+	Answer the open import question first, then import this file again.	Beantwoord eerst de openstaande importvraag en importeer dit bestand daarna opnieuw.
+	Anti-alias brush application	Anti-aliasing toepassen bij het penseel
+	Are you sure you want to delete all notes?	Weet je zeker dat je alle notities wilt verwijderen?
+	Arrowhead options	Opties voor pijlpunten
+	Arrowheads	Pijlpunten
+	Attribute	Kenmerk
+	Batch preview	Batchvoorbeeld
+	Bottom align text	Tekst onderaan uitlijnen
+	CPU Rendering	CPU-rendering
+	Calculating…	Berekenen…
+	Cancelled placing {name}	Plaatsen van {name} geannuleerd
+	Choose a menu command. Playback asks for its settings when needed.	Kies een menuopdracht. Bij het afspelen worden de instellingen gevraagd wanneer dat nodig is.
+	Choose a remix mode	Kies een remixmodus
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Klik en beweeg naar links of rechts om te schalen met het zoomgereedschap (alleen OpenGL)
+	Click to open the Brush Preset picker	Klik om de kiezer voor penseelvoorinstellingen te openen
+	Click to refresh histogram with uncached data	Klik om het histogram te vernieuwen met niet-gecachete gegevens
+	Concavity	Holte
+	Confirm or cancel the pending Record Again editor first.	Bevestig of annuleer eerst de openstaande editor voor Opnieuw opnemen.
+	Confirm or cancel the pending menu item first.	Bevestig of annuleer eerst het openstaande menu-item.
+	Copy CSS	CSS kopiëren
+	Could not use the type tool because the layer is locked.	Het tekstgereedschap kon niet worden gebruikt omdat de laag is vergrendeld.
+	Count:	Aantal:
+	Data Sets as Files is unavailable on the web	Gegevenssets als bestanden is niet beschikbaar op het web
+	Delete Note	Notitie verwijderen
+	Delete this note?	Deze notitie verwijderen?
+	Determines the spread of replaced color	Bepaalt de spreiding van de vervangen kleur
+	Do not erase the foreground swatch color	Wis de staalkleur van de voorgrond niet
+	Drawn on the CPU: {reason}. Click for System Info.	Getekend op de CPU: {reason}. Klik voor systeeminformatie.
+	Draws background color over foreground colors	Tekent de achtergrondkleur over voorgrondkleuren
+	Dropped files weren't placed: their document was closed.	Neergezette bestanden zijn niet geplaatst: hun document is gesloten.
+	Dropped files weren't placed: too many are waiting for their document.	Neergezette bestanden zijn niet geplaatst: te veel wachten op hun document.
+	Effect	Effect
+	Empty	Leeg
+	Enable to remix all layers	Inschakelen om alle lagen te remixen
+	End	Einde
+	Erase range of similar colors	Een bereik van vergelijkbare kleuren wissen
+	Erase to History	Wissen naar geschiedenis
+	Filter for embedded smart objects	Filter voor ingesloten slimme objecten
+	Filter for linked smart objects that are missing	Filter voor gekoppelde slimme objecten waarvan de koppeling ontbreekt
+	Filter for smart objects linked locally	Filter voor lokaal gekoppelde slimme objecten
+	High Memory Photoshop Document	Photoshop-document met veel geheugen
+	How far to let the erasing spread	Hoe ver het wissen zich mag uitbreiden
+	Image Compression	Beeldcompressie
+	Import as New Group	Importeren als nieuwe groep
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Met Importeren als nieuwe groep blijft “{group}” behouden en wordt het bestand als nieuwe groep ernaast toegevoegd.
+	Insert Menu Item…	Menu-item invoegen…
+	Insert Path	Pad invoegen
+	LZW	LZW
+	Layer Effects	Laageffecten
+	Level:	Niveau:
+	Lining	Uitgelijnd
+	Linked	Gekoppeld
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Na het openen van dit bestand blijft er weinig geheugen over. Sluit eerst andere apps, anders kan Lienzo zonder geheugen komen te zitten.
+	Load Solid Colors Only	Alleen effen kleuren laden
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Beperkt clipping in schaduwen en hooglichten en voorkomt dat kleuren van tint verschuiven
+	No Adv. Blending	Geen geavanceerd mengen
+	No Layer Effects	Geen laageffecten
+	No Layer Mask	Geen laagmasker
+	No Vector Mask	Geen vectormasker
+	No document.	Geen document.
+	No import is waiting. Import the file again.	Er wacht geen import. Importeer het bestand opnieuw.
+	No matching fonts	Geen overeenkomende lettertypen
+	No menu item belongs to this chooser.	Er hoort geen menu-item bij deze kiezer.
+	No menu item is waiting.	Er wacht geen menu-item.
+	No note to delete	Geen notitie om te verwijderen
+	No options for the Add Anchor Point Tool.	Het gereedschap Ankerpunt toevoegen heeft geen opties.
+	No options for the Delete Anchor Point Tool.	Het gereedschap Ankerpunt verwijderen heeft geen opties.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Geen pad om een vorm van te maken: teken er een met het pengereedschap of selecteer er een in het paneel Paden.
+	No pixels are selected.	Er zijn geen pixels geselecteerd.
+	No recorded step belongs to this editor.	Er hoort geen opgenomen stap bij deze editor.
+	No slices are selected. Click a slice in the preview to select it.	Er zijn geen segmenten geselecteerd. Klik in het voorbeeld op een segment om het te selecteren.
+	No step is waiting.	Er wacht geen stap.
+	Not Clipped	Niet geclipt
+	Not Empty	Niet leeg
+	Not Linked	Niet gekoppeld
+	Not Locked	Niet vergrendeld
+	Not Visible	Niet zichtbaar
+	Note deleted, but the preference could not be saved: {error}	Notitie verwijderd, maar de voorkeur kon niet worden opgeslagen: {error}
+	Nudge	Verschuiven
+	Numerals	Cijfers
+	Open anyway	Toch openen
+	Open as Smart Object…	Openen als slim object…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Voor het openen van dit document is meer geheugen nodig en je computer of andere actieve apps kunnen er trager door worden.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Voor het openen van “{name}” is naar schatting {est} GiB geheugen nodig ({avail} GiB beschikbaar).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Voor het openen van “{name}” is naar schatting {est} GiB geheugen nodig. Het beschikbare geheugen kon niet worden gemeten.
+	Painting Mode	Schildermodus
+	Percentile:	Percentiel:
+	Preparing Free Transform	Vrije transformatie voorbereiden
+	Proportional	Proportioneel
+	Proportional Lining	Proportioneel uitgelijnd
+	Proportional Oldstyle	Proportioneel oldstyle
+	Record Again	Opnieuw opnemen
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Met Vervangen wordt eerst alles in “{group}” verwijderd, ook voorinstellingen die je daar hebt bewerkt of naartoe hebt verplaatst. Dit kan niet ongedaan worden gemaakt.
+	Report an issue	Een probleem melden
+	Resize windows when zooming using the Zoom Tool	Venstergrootte aanpassen bij zoomen met het zoomgereedschap
+	Save Image Pyramid	Beeldpiramide opslaan
+	Save Transparency	Transparantie opslaan
+	Scroll all open document windows when using the hand tool	Alle geopende documentvensters scrollen bij gebruik van het handgereedschap
+	Search and select fonts	Lettertypen zoeken en selecteren
+	Select Pixels	Pixels selecteren
+	Select an action first.	Selecteer eerst een actie.
+	Select an action step first.	Selecteer eerst een actiestap.
+	Selected Slices	Geselecteerde segmenten
+	Set 	Set 
+	Set 1	Set 1
+	Set 10	Set 10
+	Set 11	Set 11
+	Set 12	Set 12
+	Set 13	Set 13
+	Set 14	Set 14
+	Set 15	Set 15
+	Set 16	Set 16
+	Set 17	Set 17
+	Set 18	Set 18
+	Set 19	Set 19
+	Set 2	Set 2
+	Set 20	Set 20
+	Set 3	Set 3
+	Set 4	Set 4
+	Set 5	Set 5
+	Set 6	Set 6
+	Set 7	Set 7
+	Set 8	Set 8
+	Set 9	Set 9
+	Set as default	Instellen als standaard
+	Set exposure for stroke	Belichting voor streek instellen
+	Set flow rate for stroke	Doorstroomsnelheid voor streek instellen
+	Set font size	Lettergrootte instellen
+	Set font style	Letterstijl instellen
+	Set opacity for stroke	Dekking voor streek instellen
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Vloeiend maken voor streek instellen\nGebruik hogere waarden om het trillen van penseelstreken te verminderen
+	Set symmetry options for Painting	Symmetrieopties voor schilderen instellen
+	Set text color	Tekstkleur instellen
+	Set the brush angle	Penseelhoek instellen
+	Show Channels in Color	Kanalen in kleur tonen
+	Show Statistics	Statistieken tonen
+	Smoothing Options	Opties voor vloeiend maken
+	Source:	Bron:
+	Start	Begin
+	Stylistic Sets	Stilistische sets
+	Tabular	Tabelcijfers
+	Tabular Lining	Uitgelijnde tabelcijfers
+	Tabular Oldstyle	Oldstyle-tabelcijfers
+	The Record Again command changed.	De opdracht Opnieuw opnemen is gewijzigd.
+	The action or insertion command changed. Request Insert Menu Item again.	De actie of invoegopdracht is gewijzigd. Vraag Menu-item invoegen opnieuw aan.
+	The actions changed. Request Record Again again.	De acties zijn gewijzigd. Vraag Opnieuw opnemen opnieuw aan.
+	The command permissions changed. Request Insert Menu Item again.	De opdrachtmachtigingen zijn gewijzigd. Vraag Menu-item invoegen opnieuw aan.
+	The command permissions changed. Request Record Again again.	De opdrachtmachtigingen zijn gewijzigd. Vraag Opnieuw opnemen opnieuw aan.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	De huidige scratchmap ({path}) geeft geen vrije ruimte door, dus Lienzo kan niet stoppen voordat die vol is, en grote bestanden krijgen er zonder limiet voor de scratchgrootte geen extra ruimte van. Deze waarschuwing geldt voor de huidige configuratie; wijzigingen hierboven worden doorgevoerd bij Toepassen of OK. Stel een limiet in of gebruik een lokale schijf.
+	The document changed. Please choose Clear All again.	Het document is gewijzigd. Kies opnieuw Alles wissen.
+	The document changed. Request Record Again again.	Het document is gewijzigd. Vraag Opnieuw opnemen opnieuw aan.
+	The document or its notes changed. Please delete the note again.	Het document of de notities ervan zijn gewijzigd. Verwijder de notitie opnieuw.
+	The preference could not be saved: {error}	De voorkeur kon niet worden opgeslagen: {error}
+	The step editor could not be opened.	De stapeditor kon niet worden geopend.
+	The step has no command editor.	De stap heeft geen opdrachteditor.
+	Tolerance for choosing related colors	Tolerantie voor het kiezen van verwante kleuren
+	Top align text	Tekst bovenaan uitlijnen
+	Uncached Refresh	Vernieuwen zonder cache
+	Use relative positioning for reference point	Relatieve positionering gebruiken voor referentiepunt
+	Use these settings for new arrows	Gebruik deze instellingen voor nieuwe pijlen
+	Useful mixer brush combinations	Handige combinaties voor het mengpenseel
+	ZIP	ZIP
+	Zoom current window to 1:1	Huidig venster zoomen naar 1:1
+	Zoom current window to fill the screen	Huidig venster zoomen om het scherm te vullen
+	Zoom current window to screen size	Huidig venster zoomen naar schermformaat
+	brush tool	penseelgereedschap
+	by Nodalia	door Nodalia
+	dodge tool	tegenhoudgereedschap
+	{message} into “{group}”	{message} in “{group}”
+	{ok} written to {dir}	{ok} geschreven naar {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	De penseelgroep “{group}” bevat al {n} penseel van jou.|De penseelgroep “{group}” bevat al {n} penselen van jou.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	De verloopgroep “{group}” bestaat al ({n} verloop).|De verloopgroep “{group}” bestaat al ({n} verlopen).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} uitvoer van beeldassets is mislukt|{what}: {n} uitvoeren van beeldassets zijn mislukt
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} bestand is mislukt|{what}: {n} bestanden zijn mislukt
+	Drag to move the selected path	Sleep om het geselecteerde pad te verplaatsen
+	Pick Color From Image	Kleur uit afbeelding kiezen

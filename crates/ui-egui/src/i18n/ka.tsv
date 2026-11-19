@@ -4730,3 +4730,205 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	შიგთავსზე დაფუძნებული შევსება
 	Sample content from part of the image and use it to fill a small area	აიღეთ შიგთავსი სურათის ნაწილიდან პატარა არის შესავსებად
 	Reset the crop box, image rotation, and aspect ratio settings	ჩამოჭრის ჩარჩოს, სურათის ბრუნვისა და ასპექტის თანაფარდობის აღდგენა
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	ბრძანება გაუქმდა ან შეჩერდა პაკეტური დამუშავებისას. გავაგრძელოთ შემდეგი ფაილით თუ შევწყვიტოთ?
+	A file is still being placed; try again when it has finished.	ფაილი ჯერ კიდევ თავსდება; სცადეთ ხელახლა, როცა დასრულდება.
+	A native image editor, layer by layer. No account, no cloud.	მშობლიური გამოსახულებების რედაქტორი, ფენა-ფენა. ანგარიშისა და ღრუბლის გარეშე.
+	Allow Tool Recording	ხელსაწყოს ჩაწერის დაშვება
+	Allows rotation and scaling of selection	საშუალებას იძლევა შერჩევა დაბრუნდეს და მისი ზომა შეიცვალოს
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	გაუმჭვირვალობისთვის ყოველთვის გამოიყენე წნევა. გამორთვისას წნევას ფუნჯის პრესეტი აკონტროლებს
+	Always use Pressure for Size. When off, Brush Preset controls pressure	ზომისთვის ყოველთვის გამოიყენე წნევა. გამორთვისას წნევას ფუნჯის პრესეტი აკონტროლებს
+	Answer the open import question first, then import this file again.	ჯერ უპასუხეთ გახსნილ იმპორტის კითხვას, შემდეგ ხელახლა შემოიტანეთ ეს ფაილი.
+	Anti-alias brush application	ფუნჯის გამოყენების დაგლუვება
+	Are you sure you want to delete all notes?	დარწმუნებული ხართ, რომ გსურთ ყველა შენიშვნის წაშლა?
+	Arrowhead options	ისრის წვერის პარამეტრები
+	Arrowheads	ისრის წვეროები
+	Attribute	ატრიბუტი
+	Batch preview	პაკეტის გადახედვა
+	Bottom align text	ტექსტის ქვემოთ სწორება
+	Cancelled placing {name}	{name}-ის განთავსება გაუქმდა
+	Choose a menu command. Playback asks for its settings when needed.	აირჩიეთ მენიუს ბრძანება. დაკვრა საჭიროებისას პარამეტრებს ითხოვს.
+	Choose a remix mode	აირჩიეთ რემიქსის რეჟიმი
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	დააწკაპუნეთ და გადაიტანეთ მარცხნივ ან მარჯვნივ მასშტაბის შესაცვლელად გადიდების ხელსაწყოთი (მხოლოდ OpenGL)
+	Click to open the Brush Preset picker	დააწკაპუნეთ ფუნჯის პრესეტების ამომრჩევლის გასახსნელად
+	Concavity	ჩაზნექილობა
+	Confirm or cancel the pending Record Again editor first.	ჯერ დაადასტურეთ ან გააუქმეთ მოლოდინში მყოფი „ხელახლა ჩაწერის“ რედაქტორი.
+	Confirm or cancel the pending menu item first.	ჯერ დაადასტურეთ ან გააუქმეთ მოლოდინში მყოფი მენიუს ელემენტი.
+	Copy CSS	CSS-ის კოპირება
+	Could not use the type tool because the layer is locked.	ტექსტის ხელსაწყოს გამოყენება ვერ მოხერხდა, რადგან ფენა დაბლოკილია.
+	Data Sets as Files is unavailable on the web	„მონაცემთა ნაკრებები ფაილებად“ ვებში მიუწვდომელია
+	Delete Note	შენიშვნის წაშლა
+	Delete this note?	წაიშალოს ეს შენიშვნა?
+	Determines the spread of replaced color	განსაზღვრავს ჩანაცვლებული ფერის გავრცელებას
+	Do not erase the foreground swatch color	წინა პლანის ნიმუშის ფერი არ წაიშალოს
+	Draws background color over foreground colors	წინა პლანის ფერებზე ხატავს ფონის ფერს
+	Dropped files weren't placed: their document was closed.	ჩაგდებული ფაილები არ განთავსდა: მათი დოკუმენტი დაიხურა.
+	Dropped files weren't placed: too many are waiting for their document.	ჩაგდებული ფაილები არ განთავსდა: ზედმეტად ბევრი ელოდება თავის დოკუმენტს.
+	Effect	ეფექტი
+	Empty	ცარიელი
+	Enable to remix all layers	ჩართეთ ყველა ფენის რემიქსისთვის
+	End	დასასრული
+	Erase range of similar colors	მსგავსი ფერების დიაპაზონის წაშლა
+	Erase to History	ისტორიამდე წაშლა
+	Filter for embedded smart objects	ჩაშენებული ჭკვიანი ობიექტების ფილტრი
+	Filter for linked smart objects that are missing	დაკარგული დაკავშირებული ჭკვიანი ობიექტების ფილტრი
+	Filter for smart objects linked locally	ლოკალურად დაკავშირებული ჭკვიანი ობიექტების ფილტრი
+	High Memory Photoshop Document	დიდი მეხსიერების Photoshop დოკუმენტი
+	How far to let the erasing spread	რამდენად შორს გავრცელდეს წაშლა
+	Image Compression	გამოსახულების შეკუმშვა
+	Import as New Group	იმპორტი ახალ ჯგუფად
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	„იმპორტი ახალ ჯგუფად“ ინახავს „{group}“-ს და ფაილს ახალ ჯგუფად უმატებს მის გვერდით.
+	Insert Menu Item…	მენიუს ელემენტის ჩასმა…
+	Insert Path	ბილიკის ჩასმა
+	LZW	LZW
+	Layer Effects	ფენის ეფექტები
+	Lining	სწორხაზოვანი ციფრები
+	Linked	დაკავშირებული
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	ამ ფაილის გახსნის შემდეგ ცოტა მეხსიერება დარჩება. ჯერ დახურეთ სხვა აპები, თორემ Lienzo-ს მეხსიერება შეიძლება ამოეწუროს.
+	Load Solid Colors Only	მხოლოდ ერთფერიანი ფერების ჩატვირთვა
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	ამცირებს ჩამოჭრას ჩრდილებსა და ნათელ ადგილებში და ფერებს ტონის შეცვლისგან იცავს
+	No Adv. Blending	გაფართოებული შერევის გარეშე
+	No Layer Effects	ფენის ეფექტების გარეშე
+	No Layer Mask	ფენის ნიღბის გარეშე
+	No Vector Mask	ვექტორული ნიღბის გარეშე
+	No document.	დოკუმენტი არ არის.
+	No import is waiting. Import the file again.	იმპორტი არ ელოდება. შემოიტანეთ ფაილი ხელახლა.
+	No menu item belongs to this chooser.	ამ ამომრჩეველს მენიუს ელემენტი არ ეკუთვნის.
+	No menu item is waiting.	მენიუს ელემენტი არ ელოდება.
+	No note to delete	წასაშლელი შენიშვნა არ არის
+	No options for the Add Anchor Point Tool.	საყრდენი წერტილის დამატების ხელსაწყოს პარამეტრები არ არის.
+	No options for the Delete Anchor Point Tool.	საყრდენი წერტილის წაშლის ხელსაწყოს პარამეტრები არ არის.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	ფორმის შესაქმნელად ბილიკი არ არის: დახატეთ ის კალმის ხელსაწყოთი ან აირჩიეთ ბილიკების პანელში.
+	No pixels are selected.	არც ერთი პიქსელი არ არის არჩეული.
+	No recorded step belongs to this editor.	ამ რედაქტორს ჩაწერილი ნაბიჯი არ ეკუთვნის.
+	No slices are selected. Click a slice in the preview to select it.	არც ერთი ნაჭერი არ არის არჩეული. არჩევისთვის დააწკაპუნეთ ნაჭერზე გადახედვაში.
+	No step is waiting.	ნაბიჯი არ ელოდება.
+	Not Clipped	ამოუჭრელი
+	Not Empty	არ არის ცარიელი
+	Not Linked	დაუკავშირებელი
+	Not Locked	დაუბლოკავი
+	Not Visible	უხილავი
+	Note deleted, but the preference could not be saved: {error}	შენიშვნა წაიშალა, მაგრამ პარამეტრი ვერ შეინახა: {error}
+	Nudge	გადაადგილება
+	Numerals	ციფრები
+	Open anyway	მაინც გახსნა
+	Open as Smart Object…	გახსნა ჭკვიანი ობიექტის სახით…
+	Opening this document uses more memory and may slow down your computer or other running applications.	ამ დოკუმენტის გახსნა მეტ მეხსიერებას იყენებს და შეიძლება შეანელოს თქვენი კომპიუტერი ან სხვა გაშვებული აპლიკაციები.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	„{name}“-ის გასახსნელად საჭიროა დაახლოებით {est} გიბიბაიტი მეხსიერება (ხელმისაწვდომია {avail} გიბიბაიტი).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	„{name}“-ის გასახსნელად საჭიროა დაახლოებით {est} გიბიბაიტი მეხსიერება. ხელმისაწვდომი მეხსიერების გაზომვა ვერ მოხერხდა.
+	Painting Mode	ხატვის რეჟიმი
+	Preparing Free Transform	თავისუფალი გარდაქმნის მომზადება
+	Proportional	პროპორციული
+	Proportional Lining	პროპორციული სწორხაზოვანი ციფრები
+	Proportional Oldstyle	პროპორციული ძველი სტილის ციფრები
+	Record Again	ხელახლა ჩაწერა
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	„ჩანაცვლება“ ჯერ „{group}“-ში ყველაფერს წაშლის, მათ შორის თქვენ მიერ რედაქტირებულ ან იქ გადატანილ პრესეტებს. ამის გაუქმება შეუძლებელია.
+	Report an issue	პრობლემის შეტყობინება
+	Resize windows when zooming using the Zoom Tool	გადიდების ხელსაწყოთი გადიდებისას ფანჯრების ზომის შეცვლა
+	Save Image Pyramid	გამოსახულების პირამიდის შენახვა
+	Save Transparency	გამჭვირვალობის შენახვა
+	Scroll all open document windows when using the hand tool	ხელის ხელსაწყოს გამოყენებისას ყველა გახსნილი დოკუმენტის ფანჯრის გადახვევა
+	Search and select fonts	შრიფტების ძიება და არჩევა
+	Select Pixels	პიქსელების არჩევა
+	Select an action first.	ჯერ აირჩიეთ მოქმედება.
+	Select an action step first.	ჯერ აირჩიეთ მოქმედების ნაბიჯი.
+	Selected Slices	არჩეული ნაჭრები
+	Set 	ნაკრები 
+	Set 1	ნაკრები 1
+	Set 10	ნაკრები 10
+	Set 11	ნაკრები 11
+	Set 12	ნაკრები 12
+	Set 13	ნაკრები 13
+	Set 14	ნაკრები 14
+	Set 15	ნაკრები 15
+	Set 16	ნაკრები 16
+	Set 17	ნაკრები 17
+	Set 18	ნაკრები 18
+	Set 19	ნაკრები 19
+	Set 2	ნაკრები 2
+	Set 20	ნაკრები 20
+	Set 3	ნაკრები 3
+	Set 4	ნაკრები 4
+	Set 5	ნაკრები 5
+	Set 6	ნაკრები 6
+	Set 7	ნაკრები 7
+	Set 8	ნაკრები 8
+	Set 9	ნაკრები 9
+	Set as default	ნაგულისხმევად დაყენება
+	Set exposure for stroke	ხაზის ექსპოზიციის დაყენება
+	Set flow rate for stroke	ხაზის ნაკადის სიჩქარის დაყენება
+	Set font size	შრიფტის ზომის დაყენება
+	Set font style	შრიფტის სტილის დაყენება
+	Set opacity for stroke	ხაზის გაუმჭვირვალობის დაყენება
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	ხაზის დაგლუვების დაყენება\nფუნჯის ხაზების კანკალის შესამცირებლად გამოიყენეთ მაღალი მნიშვნელობები
+	Set symmetry options for Painting	ხატვის სიმეტრიის პარამეტრების დაყენება
+	Set text color	ტექსტის ფერის დაყენება
+	Set the brush angle	ფუნჯის კუთხის დაყენება
+	Smoothing Options	დაგლუვების პარამეტრები
+	Start	დასაწყისი
+	Stylistic Sets	სტილისტური ნაკრებები
+	Tabular	ტაბულარული
+	Tabular Lining	ტაბულარული სწორხაზოვანი ციფრები
+	Tabular Oldstyle	ტაბულარული ძველი სტილის ციფრები
+	The Record Again command changed.	„ხელახლა ჩაწერის“ ბრძანება შეიცვალა.
+	The action or insertion command changed. Request Insert Menu Item again.	მოქმედება ან ჩასმის ბრძანება შეიცვალა. ხელახლა მოითხოვეთ „მენიუს ელემენტის ჩასმა“.
+	The actions changed. Request Record Again again.	მოქმედებები შეიცვალა. ხელახლა მოითხოვეთ „ხელახლა ჩაწერა“.
+	The command permissions changed. Request Insert Menu Item again.	ბრძანების ნებართვები შეიცვალა. ხელახლა მოითხოვეთ „მენიუს ელემენტის ჩასმა“.
+	The command permissions changed. Request Record Again again.	ბრძანების ნებართვები შეიცვალა. ხელახლა მოითხოვეთ „ხელახლა ჩაწერა“.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	მიმდინარე სამუშაო დირექტორია ({path}) თავისუფალ ადგილს არ აფიქსირებს, ამიტომ Lienzo ვერ გაჩერდება გავსებამდე, ხოლო დიდი ფაილები მისგან დამატებით ადგილს ვერ იღებს სამუშაო ადგილის ლიმიტის გარეშე. ეს გაფრთხილება მიმდინარე კონფიგურაციას ეხება; ზემოთ ცვლილებები ძალაში შედის „გამოყენება“ ან „კარგი“-ს დაჭერისას. დააყენეთ ლიმიტი ან გამოიყენეთ ლოკალური დისკი.
+	The document changed. Please choose Clear All again.	დოკუმენტი შეიცვალა. გთხოვთ, ხელახლა აირჩიოთ „ყველაფრის გასუფთავება“.
+	The document changed. Request Record Again again.	დოკუმენტი შეიცვალა. ხელახლა მოითხოვეთ „ხელახლა ჩაწერა“.
+	The document or its notes changed. Please delete the note again.	დოკუმენტი ან მისი შენიშვნები შეიცვალა. გთხოვთ, ხელახლა წაშალოთ შენიშვნა.
+	The preference could not be saved: {error}	პარამეტრის შენახვა ვერ მოხერხდა: {error}
+	The step editor could not be opened.	ნაბიჯის რედაქტორის გახსნა ვერ მოხერხდა.
+	The step has no command editor.	ნაბიჯს ბრძანების რედაქტორი არ აქვს.
+	Tolerance for choosing related colors	დაშვება დაკავშირებული ფერების ასარჩევად
+	Top align text	ტექსტის ზემოთ სწორება
+	Use relative positioning for reference point	საცნობარო წერტილისთვის ფარდობითი პოზიციონირების გამოყენება
+	Use these settings for new arrows	ამ პარამეტრების გამოყენება ახალი ისრებისთვის
+	Useful mixer brush combinations	შერევის ფუნჯის სასარგებლო კომბინაციები
+	ZIP	ZIP
+	Zoom current window to 1:1	მიმდინარე ფანჯრის გადიდება 1:1-მდე
+	Zoom current window to fill the screen	მიმდინარე ფანჯრის გადიდება ეკრანის შესავსებად
+	Zoom current window to screen size	მიმდინარე ფანჯრის გადიდება ეკრანის ზომამდე
+	brush tool	ფუნჯის ხელსაწყო
+	by Nodalia	Nodalia-სგან
+	dodge tool	გაღიავების ხელსაწყო
+	{message} into “{group}”	{message} „{group}“-ში
+	{ok} written to {dir}	{ok} ჩაიწერა {dir}-ში
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	ფუნჯების ჯგუფში „{group}“ უკვე არის თქვენი {n} ფუნჯი.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	გრადიენტების ჯგუფი „{group}“ უკვე არსებობს ({n} გრადიენტი).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} Image Assets გამოსავალი ვერ შესრულდა
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} ფაილი ვერ შესრულდა
+	Align bottom edges	ქვედა კიდეების სწორება
+	Align top edges	ზედა კიდეების სწორება
+	Align vertical centers	ვერტიკალური ცენტრების სწორება
+	Canceled opening {name}	{name}-ის გახსნა გაუქმდა
+	Canceled {label}	{label} გაუქმდა
+	Center the gradient (offset 0, 0)	გრადიენტის ცენტრში მოთავსება (წანაცვლება 0, 0)
+	Click to restore the current color	დააწკაპუნეთ მიმდინარე ფერის აღსადგენად
+	Click to sample the foreground color  ·  {key}-click for background	დააწკაპუნეთ წინა პლანის ფერის ასარჩევად  ·  ფონისთვის {key}-კლიკი
+	Color Blindness - Deuteranopia-type	ფერთა სიბრმავე - დეიტერანოპიის ტიპი
+	Color Blindness - Protanopia-type	ფერთა სიბრმავე - პროტანოპიის ტიპი
+	Default Foreground and Background Colors (D)	ნაგულისხმევი წინა პლანისა და ფონის ფერები (D)
+	Distribute horizontally	ჰორიზონტალურად განაწილება
+	Distribute vertically	ვერტიკალურად განაწილება
+	Drag around the center to rotate the view  ·  Shift constrains to 15°	გადაატარეთ ცენტრის გარშემო ხედის დასატრიალებლად  ·  Shift 15°-ით ზღუდავს
+	Equalize Entire Image Based On Selected Area	მთელი გამოსახულების გათანაბრება არჩეული არეალის მიხედვით
+	Equalize Selected Area Only	მხოლოდ არჩეული არეალის გათანაბრება
+	Expand layer group on click	ფენების ჯგუფის გაშლა დაწკაპუნებისას
+	Netscape Gray	Netscape ნაცრისფერი
+	No settings saved: these raws can't keep a sidecar here	პარამეტრები არ შენახულა: ამ RAW-ებს აქ თანმხლები ფაილის შენახვა არ შეუძლიათ
+	Not a web color: click for the nearest web color	არ არის ვებ-ფერი: დააწკაპუნეთ უახლოესი ვებ-ფერისთვის
+	Nothing to save: these raws are at their default settings	შესანახი არაფერია: ამ RAW-ებს ნაგულისხმევი პარამეტრები აქვთ
+	Open a document to select a color range.	ფერთა დიაპაზონის ასარჩევად გახსენით დოკუმენტი.
+	Out of gamut for printing: click for the nearest printable color	ბეჭდვისთვის გამუტის გარეთაა: დააწკაპუნეთ უახლოესი დასაბეჭდი ფერისთვის
+	Remember to turn off the printer's own color management in Print Settings…	არ დაგავიწყდეთ პრინტერის საკუთარი ფერების მართვის გამორთვა ბეჭდვის პარამეტრებში…
+	Sample: foreground color	ნიმუში: წინა პლანის ფერი
+	Save canceled	შენახვა გაუქმდა
+	Save the settings to each raw's sidecar without opening it	პარამეტრების შენახვა თითოეული RAW-ის თანმხლებ ფაილში გახსნის გარეშე
+	Scroll All Windows	ყველა ფანჯრის გადახვევა
+	Show hover bounds from Layers	მაუსის გადატარებისას ფენების საზღვრების ჩვენება ფენებიდან
+	Show layer bounds on hover	ფენის საზღვრების ჩვენება გადატარებისას
+	Some settings could not be saved; the raws stay open	ზოგი პარამეტრი ვერ შეინახა; RAW-ები ღია რჩება
+	Switch Foreground and Background Colors (X)	წინა პლანისა და ფონის ფერების გაცვლა (X)
+	{label} is writing the file and can no longer be canceled	{label} წერს ფაილს და მისი გაუქმება აღარ შეიძლება

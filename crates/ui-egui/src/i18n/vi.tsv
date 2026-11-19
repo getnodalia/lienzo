@@ -4148,3 +4148,189 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Lấp đầy theo nội dung
 	Sample content from part of the image and use it to fill a small area	Lấy nội dung từ một phần của ảnh để lấp đầy vùng nhỏ
 	Reset the crop box, image rotation, and aspect ratio settings	Đặt lại khung cắt, độ xoay ảnh và tỷ lệ
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Một lệnh đã bị hủy hoặc dừng trong lúc xử lý hàng loạt. Tiếp tục với tệp tiếp theo hay dừng?
+	A file is still being placed; try again when it has finished.	Một tệp vẫn đang được đặt; hãy thử lại khi hoàn tất.
+	A native image editor, layer by layer. No account, no cloud.	Trình chỉnh sửa ảnh gốc, từng lớp một. Không cần tài khoản, không cần đám mây.
+	Allow Tool Recording	Cho phép ghi lại công cụ
+	Allows rotation and scaling of selection	Cho phép xoay và đổi tỷ lệ vùng chọn
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Luôn dùng áp lực cho độ mờ. Khi tắt, cài đặt sẵn của cọ sẽ điều khiển áp lực
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Luôn dùng áp lực cho kích thước. Khi tắt, cài đặt sẵn của cọ sẽ điều khiển áp lực
+	Answer the open import question first, then import this file again.	Hãy trả lời câu hỏi nhập đang mở trước, rồi nhập lại tệp này.
+	Anti-alias brush application	Áp dụng cọ với khử răng cưa
+	Are you sure you want to delete all notes?	Bạn có chắc muốn xóa tất cả ghi chú không?
+	Arrowhead options	Tùy chọn đầu mũi tên
+	Arrowheads	Đầu mũi tên
+	Attribute	Thuộc tính
+	Batch preview	Xem trước hàng loạt
+	Bottom align text	Căn văn bản xuống dưới
+	CPU Rendering	Kết xuất bằng CPU
+	Calculating…	Đang tính toán…
+	Cancelled placing {name}	Đã hủy đặt {name}
+	Choose a menu command. Playback asks for its settings when needed.	Chọn một lệnh menu. Khi phát lại sẽ hỏi cài đặt của lệnh nếu cần.
+	Choose a remix mode	Chọn chế độ phối lại
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Nhấp và di chuyển sang trái hoặc phải để đổi tỷ lệ bằng Công cụ Thu phóng (chỉ OpenGL)
+	Click to open the Brush Preset picker	Nhấp để mở bộ chọn cài đặt sẵn của cọ
+	Click to refresh histogram with uncached data	Nhấp để làm mới biểu đồ tần suất bằng dữ liệu chưa được lưu đệm
+	Concavity	Độ lõm
+	Confirm or cancel the pending Record Again editor first.	Hãy xác nhận hoặc hủy trình chỉnh sửa Ghi lại lần nữa đang chờ trước.
+	Confirm or cancel the pending menu item first.	Hãy xác nhận hoặc hủy mục menu đang chờ trước.
+	Copy CSS	Sao chép CSS
+	Could not use the type tool because the layer is locked.	Không thể dùng công cụ văn bản vì lớp đã bị khóa.
+	Count:	Số lượng:
+	Data Sets as Files is unavailable on the web	Tập dữ liệu dưới dạng tệp không khả dụng trên web
+	Delete Note	Xóa ghi chú
+	Delete this note?	Xóa ghi chú này?
+	Determines the spread of replaced color	Xác định mức lan của màu được thay thế
+	Do not erase the foreground swatch color	Không xóa màu mẫu của màu nền trước
+	Drawn on the CPU: {reason}. Click for System Info.	Được vẽ bằng CPU: {reason}. Nhấp để xem Thông tin hệ thống.
+	Draws background color over foreground colors	Vẽ màu nền sau lên trên màu nền trước
+	Dropped files weren't placed: their document was closed.	Các tệp được thả chưa được đặt: tài liệu của chúng đã bị đóng.
+	Dropped files weren't placed: too many are waiting for their document.	Các tệp được thả chưa được đặt: có quá nhiều tệp đang chờ tài liệu của chúng.
+	Effect	Hiệu ứng
+	Empty	Trống
+	Enable to remix all layers	Bật để phối lại tất cả các lớp
+	End	Kết thúc
+	Erase range of similar colors	Xóa một dải màu tương tự
+	Erase to History	Xóa về Lịch sử
+	Filter for embedded smart objects	Bộ lọc cho các đối tượng thông minh nhúng
+	Filter for linked smart objects that are missing	Bộ lọc cho các đối tượng thông minh được liên kết bị mất liên kết
+	Filter for smart objects linked locally	Bộ lọc cho các đối tượng thông minh được liên kết cục bộ
+	High Memory Photoshop Document	Tài liệu Photoshop dùng nhiều bộ nhớ
+	How far to let the erasing spread	Mức độ lan rộng của thao tác xóa
+	Image Compression	Nén ảnh
+	Import as New Group	Nhập dưới dạng nhóm mới
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Nhập dưới dạng nhóm mới giữ nguyên “{group}” và thêm tệp làm nhóm mới bên cạnh.
+	Insert Menu Item…	Chèn mục menu…
+	Insert Path	Chèn đường dẫn
+	LZW	LZW
+	Layer Effects	Hiệu ứng lớp
+	Level:	Mức:
+	Lining	Căn hàng
+	Linked	Đã liên kết
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Sau khi mở tệp này, bộ nhớ còn lại sẽ rất ít. Hãy đóng các ứng dụng khác trước, nếu không Lienzo có thể hết bộ nhớ.
+	Load Solid Colors Only	Chỉ tải các màu đặc
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Giảm thiểu hiện tượng cắt ở vùng tối và vùng sáng, đồng thời giữ cho màu không bị lệch sắc độ
+	No Adv. Blending	Không pha trộn nâng cao
+	No Layer Effects	Không có hiệu ứng lớp
+	No Layer Mask	Không có mặt nạ lớp
+	No Vector Mask	Không có mặt nạ vector
+	No document.	Không có tài liệu.
+	No import is waiting. Import the file again.	Không có thao tác nhập nào đang chờ. Hãy nhập lại tệp.
+	No matching fonts	Không có phông chữ phù hợp
+	No menu item belongs to this chooser.	Không có mục menu nào thuộc bộ chọn này.
+	No menu item is waiting.	Không có mục menu nào đang chờ.
+	No note to delete	Không có ghi chú để xóa
+	No options for the Add Anchor Point Tool.	Công cụ Thêm điểm neo không có tùy chọn.
+	No options for the Delete Anchor Point Tool.	Công cụ Xóa điểm neo không có tùy chọn.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Không có đường dẫn để tạo hình: hãy vẽ một đường bằng công cụ Bút hoặc chọn một đường trong bảng Đường dẫn.
+	No pixels are selected.	Không có điểm ảnh nào được chọn.
+	No recorded step belongs to this editor.	Không có bước đã ghi nào thuộc trình chỉnh sửa này.
+	No slices are selected. Click a slice in the preview to select it.	Không có lát cắt nào được chọn. Hãy nhấp vào một lát cắt trong phần xem trước để chọn.
+	No step is waiting.	Không có bước nào đang chờ.
+	Not Clipped	Không bị cắt
+	Not Empty	Không trống
+	Not Linked	Không liên kết
+	Not Locked	Không bị khóa
+	Not Visible	Không hiển thị
+	Note deleted, but the preference could not be saved: {error}	Đã xóa ghi chú nhưng không thể lưu tùy chọn: {error}
+	Nudge	Nhích
+	Numerals	Chữ số
+	Open anyway	Vẫn mở
+	Open as Smart Object…	Mở dưới dạng đối tượng thông minh…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Mở tài liệu này sẽ dùng nhiều bộ nhớ hơn và có thể làm chậm máy tính hoặc các ứng dụng khác đang chạy.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Mở “{name}” cần ước tính {est} GiB bộ nhớ (còn {avail} GiB).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Mở “{name}” cần ước tính {est} GiB bộ nhớ. Không thể đo bộ nhớ khả dụng.
+	Painting Mode	Chế độ vẽ
+	Percentile:	Phân vị:
+	Preparing Free Transform	Đang chuẩn bị Biến đổi tự do
+	Proportional	Tỷ lệ
+	Proportional Lining	Tỷ lệ căn hàng
+	Proportional Oldstyle	Tỷ lệ kiểu cũ
+	Record Again	Ghi lại lần nữa
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Thay thế sẽ xóa mọi thứ trong “{group}” trước, kể cả các cài đặt sẵn bạn đã chỉnh sửa hoặc di chuyển vào đó. Không thể hoàn tác.
+	Report an issue	Báo cáo sự cố
+	Resize windows when zooming using the Zoom Tool	Đổi kích thước cửa sổ khi thu phóng bằng Công cụ Thu phóng
+	Save Image Pyramid	Lưu kim tự tháp ảnh
+	Save Transparency	Lưu độ trong suốt
+	Scroll all open document windows when using the hand tool	Cuộn tất cả cửa sổ tài liệu đang mở khi dùng công cụ Bàn tay
+	Search and select fonts	Tìm kiếm và chọn phông chữ
+	Select Pixels	Chọn điểm ảnh
+	Select an action first.	Hãy chọn một hành động trước.
+	Select an action step first.	Hãy chọn một bước của hành động trước.
+	Selected Slices	Các lát cắt đã chọn
+	Set 	Bộ 
+	Set 1	Bộ 1
+	Set 10	Bộ 10
+	Set 11	Bộ 11
+	Set 12	Bộ 12
+	Set 13	Bộ 13
+	Set 14	Bộ 14
+	Set 15	Bộ 15
+	Set 16	Bộ 16
+	Set 17	Bộ 17
+	Set 18	Bộ 18
+	Set 19	Bộ 19
+	Set 2	Bộ 2
+	Set 20	Bộ 20
+	Set 3	Bộ 3
+	Set 4	Bộ 4
+	Set 5	Bộ 5
+	Set 6	Bộ 6
+	Set 7	Bộ 7
+	Set 8	Bộ 8
+	Set 9	Bộ 9
+	Set as default	Đặt làm mặc định
+	Set exposure for stroke	Đặt độ phơi sáng cho nét vẽ
+	Set flow rate for stroke	Đặt tốc độ lưu lượng cho nét vẽ
+	Set font size	Đặt cỡ phông chữ
+	Set font style	Đặt kiểu phông chữ
+	Set opacity for stroke	Đặt độ mờ cho nét vẽ
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Đặt độ làm mượt cho nét vẽ\nDùng giá trị cao hơn để giảm độ rung của nét cọ
+	Set symmetry options for Painting	Đặt tùy chọn đối xứng cho việc vẽ
+	Set text color	Đặt màu văn bản
+	Set the brush angle	Đặt góc của cọ
+	Show Channels in Color	Hiển thị kênh bằng màu
+	Show Statistics	Hiển thị thống kê
+	Smoothing Options	Tùy chọn làm mượt
+	Source:	Nguồn:
+	Start	Bắt đầu
+	Stylistic Sets	Bộ kiểu
+	Tabular	Dạng bảng
+	Tabular Lining	Dạng bảng căn hàng
+	Tabular Oldstyle	Dạng bảng kiểu cũ
+	The Record Again command changed.	Lệnh Ghi lại lần nữa đã thay đổi.
+	The action or insertion command changed. Request Insert Menu Item again.	Hành động hoặc lệnh chèn đã thay đổi. Hãy yêu cầu lại Chèn mục menu.
+	The actions changed. Request Record Again again.	Các hành động đã thay đổi. Hãy yêu cầu lại Ghi lại lần nữa.
+	The command permissions changed. Request Insert Menu Item again.	Quyền của lệnh đã thay đổi. Hãy yêu cầu lại Chèn mục menu.
+	The command permissions changed. Request Record Again again.	Quyền của lệnh đã thay đổi. Hãy yêu cầu lại Ghi lại lần nữa.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Thư mục đệm hiện tại ({path}) không báo cáo dung lượng trống, nên Lienzo không thể dừng trước khi nó đầy, và các tệp lớn không nhận thêm chỗ từ nó nếu không có Giới hạn kích thước đĩa đệm. Cảnh báo này áp dụng cho cấu hình hiện tại; các thay đổi ở trên có hiệu lực khi chọn Áp dụng hoặc OK. Hãy đặt giới hạn hoặc dùng ổ đĩa cục bộ.
+	The document changed. Please choose Clear All again.	Tài liệu đã thay đổi. Hãy chọn Xóa tất cả lần nữa.
+	The document changed. Request Record Again again.	Tài liệu đã thay đổi. Hãy yêu cầu lại Ghi lại lần nữa.
+	The document or its notes changed. Please delete the note again.	Tài liệu hoặc ghi chú của nó đã thay đổi. Hãy xóa ghi chú lần nữa.
+	The preference could not be saved: {error}	Không thể lưu tùy chọn: {error}
+	The step editor could not be opened.	Không thể mở trình chỉnh sửa bước.
+	The step has no command editor.	Bước này không có trình chỉnh sửa lệnh.
+	Tolerance for choosing related colors	Dung sai khi chọn các màu liên quan
+	Top align text	Căn văn bản lên trên
+	Uncached Refresh	Làm mới không dùng bộ nhớ đệm
+	Use relative positioning for reference point	Dùng định vị tương đối cho điểm tham chiếu
+	Use these settings for new arrows	Dùng các cài đặt này cho mũi tên mới
+	Useful mixer brush combinations	Các tổ hợp cọ trộn hữu ích
+	ZIP	ZIP
+	Zoom current window to 1:1	Thu phóng cửa sổ hiện tại về 1:1
+	Zoom current window to fill the screen	Thu phóng cửa sổ hiện tại để lấp đầy màn hình
+	Zoom current window to screen size	Thu phóng cửa sổ hiện tại về kích thước màn hình
+	brush tool	công cụ cọ
+	by Nodalia	bởi Nodalia
+	dodge tool	công cụ làm sáng
+	{message} into “{group}”	{message} vào “{group}”
+	{ok} written to {dir}	Đã ghi {ok} vào {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Nhóm cọ “{group}” đã có {n} cọ của bạn.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Nhóm dải chuyển màu “{group}” đã tồn tại ({n} dải chuyển màu).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} đầu ra Tài nguyên ảnh thất bại
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} tệp thất bại
+	Apply to All	Áp dụng cho tất cả
+	Artboards	Bảng vẽ
+	Create new set	Tạo bộ mới
+	Locked	Bị khóa
+	Recent Files	Tệp gần đây

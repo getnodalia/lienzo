@@ -3340,3 +3340,195 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	内容识别填充
 	Sample content from part of the image and use it to fill a small area	从图像的一部分取样内容来填充小区域
 	Reset the crop box, image rotation, and aspect ratio settings	重置裁剪框、图像旋转和宽高比
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	批处理期间有命令被取消或中止。继续处理下一个文件还是停止？
+	A file is still being placed; try again when it has finished.	仍在置入文件；请在完成后重试。
+	A native image editor, layer by layer. No account, no cloud.	原生图像编辑器，逐图层编辑。无需账户，无需云端。
+	Allow Tool Recording	允许记录工具
+	Allows rotation and scaling of selection	允许旋转和缩放选区
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	始终对不透明度使用压力。关闭时，由画笔预设控制压力
+	Always use Pressure for Size. When off, Brush Preset controls pressure	始终对大小使用压力。关闭时，由画笔预设控制压力
+	Answer the open import question first, then import this file again.	请先回答尚未完成的导入问题，然后再次导入此文件。
+	Anti-alias brush application	对画笔应用抗锯齿
+	Are you sure you want to delete all notes?	确定要删除所有注释吗？
+	Arrowhead options	箭头选项
+	Arrowheads	箭头
+	Attribute	属性
+	Batch preview	批处理预览
+	Bottom align text	文本底对齐
+	CPU Rendering	CPU 渲染
+	Calculating…	正在计算…
+	Cancelled placing {name}	已取消置入 {name}
+	Choose a menu command. Playback asks for its settings when needed.	选择一个菜单命令。回放时会在需要时询问其设置。
+	Choose a remix mode	选择重混模式
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	使用缩放工具向左或向右单击并移动以缩放（仅限 OpenGL）
+	Click to open the Brush Preset picker	单击以打开画笔预设选取器
+	Click to refresh histogram with uncached data	单击以使用未缓存的数据刷新直方图
+	Concavity	凹度
+	Confirm or cancel the pending Record Again editor first.	请先确认或取消待处理的“再次记录”编辑器。
+	Confirm or cancel the pending menu item first.	请先确认或取消待处理的菜单项。
+	Copy CSS	拷贝 CSS
+	Could not use the type tool because the layer is locked.	由于图层已锁定，无法使用文字工具。
+	Count:	计数:
+	Data Sets as Files is unavailable on the web	网页版无法使用“数据组作为文件”
+	Delete Note	删除注释
+	Delete this note?	要删除此注释吗？
+	Determines the spread of replaced color	确定被替换颜色的扩展范围
+	Do not erase the foreground swatch color	不要擦除前景色色板颜色
+	Drawn on the CPU: {reason}. Click for System Info.	正在使用 CPU 绘制: {reason}。单击以查看系统信息。
+	Draws background color over foreground colors	在前景色上绘制背景色
+	Dropped files weren't placed: their document was closed.	拖入的文件未被置入: 其文档已关闭。
+	Dropped files weren't placed: too many are waiting for their document.	拖入的文件未被置入: 等待其文档的文件过多。
+	Effect	效果
+	Empty	空
+	Enable to remix all layers	启用以重混所有图层
+	End	结束
+	Erase range of similar colors	擦除相似颜色的范围
+	Erase to History	擦除到历史记录
+	Filter for embedded smart objects	嵌入式智能对象的过滤器
+	Filter for linked smart objects that are missing	缺失的链接智能对象的过滤器
+	Filter for smart objects linked locally	本地链接的智能对象的过滤器
+	High Memory Photoshop Document	大内存 Photoshop 文档
+	How far to let the erasing spread	擦除的扩展程度
+	Image Compression	图像压缩
+	Import as New Group	导入为新组
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	“导入为新组”会保留“{group}”，并将该文件作为新组添加在其旁边。
+	Insert Menu Item…	插入菜单项…
+	Insert Path	插入路径
+	LZW	LZW
+	Layer Effects	图层效果
+	Level:	色阶:
+	Lining	对齐数字
+	Linked	已链接
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	打开此文件后剩余内存将很少。请先关闭其他应用，否则 Lienzo 可能会耗尽内存。
+	Load Solid Colors Only	仅载入纯色
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	尽量减少阴影和高光中的剪切，并避免颜色色相偏移
+	No Adv. Blending	无高级混合
+	No Layer Effects	无图层效果
+	No Layer Mask	无图层蒙版
+	No Vector Mask	无矢量蒙版
+	No document.	没有文档。
+	No import is waiting. Import the file again.	没有等待中的导入。请再次导入该文件。
+	No matching fonts	没有匹配的字体
+	No menu item belongs to this chooser.	此选择器没有对应的菜单项。
+	No menu item is waiting.	没有等待中的菜单项。
+	No note to delete	没有可删除的注释
+	No options for the Add Anchor Point Tool.	添加锚点工具没有选项。
+	No options for the Delete Anchor Point Tool.	删除锚点工具没有选项。
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	没有可用来创建形状的路径: 请使用钢笔工具绘制一条，或在“路径”面板中选择一条。
+	No pixels are selected.	未选择任何像素。
+	No recorded step belongs to this editor.	没有属于此编辑器的已记录步骤。
+	No slices are selected. Click a slice in the preview to select it.	未选择任何切片。请在预览中单击切片进行选择。
+	No step is waiting.	没有等待中的步骤。
+	Not Clipped	未剪切
+	Not Empty	非空
+	Not Linked	未链接
+	Not Locked	未锁定
+	Not Visible	不可见
+	Note deleted, but the preference could not be saved: {error}	注释已删除，但无法存储首选项: {error}
+	Nudge	微移
+	Numerals	数字
+	Open anyway	仍然打开
+	Open as Smart Object…	作为智能对象打开…
+	Opening this document uses more memory and may slow down your computer or other running applications.	打开此文档会占用更多内存，并可能使计算机或其他正在运行的应用程序变慢。
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	打开“{name}”预计需要 {est} GiB 内存（可用 {avail} GiB）。
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	打开“{name}”预计需要 {est} GiB 内存。无法测量可用内存。
+	Painting Mode	绘画模式
+	Percentile:	百分位:
+	Preparing Free Transform	正在准备自由变换
+	Proportional	比例
+	Proportional Lining	比例对齐数字
+	Proportional Oldstyle	比例旧式数字
+	Record Again	再次记录
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	“替换”会先删除“{group}”中的所有内容，包括您在其中编辑或移入的预设。此操作无法撤销。
+	Report an issue	报告问题
+	Resize windows when zooming using the Zoom Tool	使用缩放工具缩放时调整窗口大小
+	Save Image Pyramid	存储图像金字塔
+	Save Transparency	保存透明度
+	Scroll all open document windows when using the hand tool	使用抓手工具时滚动所有打开的文档窗口
+	Search and select fonts	搜索并选择字体
+	Select Pixels	选择像素
+	Select an action first.	请先选择一个动作。
+	Select an action step first.	请先选择一个动作步骤。
+	Selected Slices	选中的切片
+	Set 	组 
+	Set 1	组 1
+	Set 10	组 10
+	Set 11	组 11
+	Set 12	组 12
+	Set 13	组 13
+	Set 14	组 14
+	Set 15	组 15
+	Set 16	组 16
+	Set 17	组 17
+	Set 18	组 18
+	Set 19	组 19
+	Set 2	组 2
+	Set 20	组 20
+	Set 3	组 3
+	Set 4	组 4
+	Set 5	组 5
+	Set 6	组 6
+	Set 7	组 7
+	Set 8	组 8
+	Set 9	组 9
+	Set as default	设为默认值
+	Set exposure for stroke	设置描边的曝光度
+	Set flow rate for stroke	设置描边的流量
+	Set font size	设置字体大小
+	Set font style	设置字体样式
+	Set opacity for stroke	设置描边的不透明度
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	设置描边的平滑\n使用较大的值可减少画笔描边的抖动
+	Set symmetry options for Painting	设置绘画的对称选项
+	Set text color	设置文字颜色
+	Set the brush angle	设置画笔角度
+	Show Channels in Color	用原色显示通道
+	Show Statistics	显示统计数据
+	Smoothing Options	平滑选项
+	Source:	源:
+	Start	开始
+	Stylistic Sets	样式集
+	Tabular	等宽
+	Tabular Lining	等宽对齐数字
+	Tabular Oldstyle	等宽旧式数字
+	The Record Again command changed.	“再次记录”命令已更改。
+	The action or insertion command changed. Request Insert Menu Item again.	动作或插入命令已更改。请再次请求“插入菜单项”。
+	The actions changed. Request Record Again again.	动作已更改。请再次请求“再次记录”。
+	The command permissions changed. Request Insert Menu Item again.	命令权限已更改。请再次请求“插入菜单项”。
+	The command permissions changed. Request Record Again again.	命令权限已更改。请再次请求“再次记录”。
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	当前暂存盘目录（{path}）不报告其可用空间，因此 Lienzo 无法在其占满之前停止；如果没有暂存盘大小限制，大文件也无法获得额外空间。此警告适用于当前配置；上方的更改将在“应用”或“确定”后生效。请设置限制或使用本地磁盘。
+	The document changed. Please choose Clear All again.	文档已更改。请再次选择“全部清除”。
+	The document changed. Request Record Again again.	文档已更改。请再次请求“再次记录”。
+	The document or its notes changed. Please delete the note again.	文档或其注释已更改。请再次删除该注释。
+	The preference could not be saved: {error}	无法存储首选项: {error}
+	The step editor could not be opened.	无法打开步骤编辑器。
+	The step has no command editor.	此步骤没有命令编辑器。
+	Tolerance for choosing related colors	选择相关颜色的容差
+	Top align text	文本顶对齐
+	Uncached Refresh	不使用缓存刷新
+	Use relative positioning for reference point	对参考点使用相对定位
+	Use these settings for new arrows	对新箭头使用这些设置
+	Useful mixer brush combinations	实用的混合器画笔组合
+	ZIP	ZIP
+	Zoom current window to 1:1	将当前窗口缩放到 1:1
+	Zoom current window to fill the screen	将当前窗口缩放到填满屏幕
+	Zoom current window to screen size	将当前窗口缩放到屏幕大小
+	brush tool	画笔工具
+	by Nodalia	由 Nodalia 提供
+	dodge tool	减淡工具
+	{message} into “{group}”	{message}到“{group}”
+	{ok} written to {dir}	已将 {ok} 写入 {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	画笔组“{group}”中已有 {n} 个您的画笔。
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	渐变组“{group}”已存在（{n} 个渐变）。
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} 个图像资源输出失败
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} 个文件失败
+	Advanced Blending	高级混合
+	Apply to All	应用于全部
+	Artboards	画板
+	Batch	批处理
+	Create new set	创建新组
+	Duplicate	复制
+	Length	长度
+	Locked	已锁定
+	Pick Color From Image	从图像中拾取颜色
+	Recent Files	最近使用的文件
+	Unknown	未知
