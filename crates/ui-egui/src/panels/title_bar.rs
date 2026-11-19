@@ -14,7 +14,8 @@ pub fn title_bar(app: &mut LienzoApp, ui: &mut egui::Ui) {
     // The caption buttons' room at each end (`titlebar`); a side with buttons has no margin.
     let (caption_left, caption_right) = crate::titlebar::reserved(app, ui.ctx());
     let left = if cfg!(target_os = "macos") && app.integrated_titlebar {
-        78
+        // The room the system's traffic lights take, the same in every Nodalia app.
+        nodalia_theme::titlebar::MAC_LIGHTS as i8
     } else if caption_left > 0.0 {
         0
     } else {
