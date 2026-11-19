@@ -4844,3 +4844,206 @@ cameraRaw	White Balance: As Shot	Hvidbalance: Som fotograferet
 	Content-aware fill	Indholdsbaseret udfyldning
 	Sample content from part of the image and use it to fill a small area	Hent indhold fra en del af billedet for at fylde et lille område
 	Reset the crop box, image rotation, and aspect ratio settings	Nulstil beskæringsrammen, billedrotationen og billedformatet
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	En kommando blev annulleret eller stoppet under batchbehandlingen. Vil du fortsætte med næste fil eller stoppe?
+	A file is still being placed; try again when it has finished.	En fil er stadig ved at blive placeret; prøv igen, når den er færdig.
+	A native image editor, layer by layer. No account, no cloud.	Et indbygget billedredigeringsprogram, lag for lag. Ingen konto, ingen sky.
+	Allow Tool Recording	Tillad optagelse af værktøjer
+	Allows rotation and scaling of selection	Tillader rotation og skalering af markeringen
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Brug altid tryk til opacitet. Når det er slået fra, styrer penselforudindstillingen trykket
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Brug altid tryk til størrelse. Når det er slået fra, styrer penselforudindstillingen trykket
+	Answer the open import question first, then import this file again.	Besvar først det åbne importspørgsmål, og importér derefter filen igen.
+	Anti-alias brush application	Anvend penslen med anti-aliasing
+	Are you sure you want to delete all notes?	Er du sikker på, at du vil slette alle noter?
+	Arrowhead options	Indstillinger for pilespidser
+	Arrowheads	Pilespidser
+	Attribute	Attribut
+	Batch preview	Batcheksempel
+	Bottom align text	Juster tekst nederst
+	Cancelled placing {name}	Annullerede placering af {name}
+	Choose a menu command. Playback asks for its settings when needed.	Vælg en menukommando. Afspilningen spørger efter dens indstillinger, når det er nødvendigt.
+	Choose a remix mode	Vælg en remixtilstand
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Klik og flyt til venstre eller højre for at skalere med zoomværktøjet (kun OpenGL)
+	Click to open the Brush Preset picker	Klik for at åbne vælgeren til penselforudindstillinger
+	Concavity	Konkavitet
+	Confirm or cancel the pending Record Again editor first.	Bekræft eller annullér først den afventende editor til Optag igen.
+	Confirm or cancel the pending menu item first.	Bekræft eller annullér først det afventende menupunkt.
+	Copy CSS	Kopiér CSS
+	Could not use the type tool because the layer is locked.	Tekstværktøjet kunne ikke bruges, fordi laget er låst.
+	Data Sets as Files is unavailable on the web	Datasæt som filer er ikke tilgængelig på nettet
+	Delete Note	Slet note
+	Delete this note?	Vil du slette denne note?
+	Determines the spread of replaced color	Bestemmer spredningen af den erstattede farve
+	Do not erase the foreground swatch color	Slet ikke forgrundsfarvens farvefelt
+	Draws background color over foreground colors	Tegner baggrundsfarven oven på forgrundsfarverne
+	Dropped files weren't placed: their document was closed.	De slæppede filer blev ikke placeret: deres dokument blev lukket.
+	Dropped files weren't placed: too many are waiting for their document.	De slæppede filer blev ikke placeret: for mange venter på deres dokument.
+	Effect	Effekt
+	Empty	Tom
+	Enable to remix all layers	Aktivér for at remixe alle lag
+	End	Slut
+	Erase range of similar colors	Slet et område af lignende farver
+	Erase to History	Slet til historik
+	Filter for embedded smart objects	Filter for indlejrede smartobjekter
+	Filter for linked smart objects that are missing	Filter for sammenkædede smartobjekter, hvor linket mangler
+	Filter for smart objects linked locally	Filter for lokalt sammenkædede smartobjekter
+	High Memory Photoshop Document	Photoshop-dokument med højt hukommelsesforbrug
+	How far to let the erasing spread	Hvor langt sletningen må brede sig
+	Image Compression	Billedkomprimering
+	Import as New Group	Importér som ny gruppe
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Importér som ny gruppe beholder ”{group}” og tilføjer filen som en ny gruppe ved siden af.
+	Insert Menu Item…	Indsæt menupunkt…
+	Insert Path	Indsæt sti
+	LZW	LZW
+	Layer Effects	Lageffekter
+	Lining	Justerede
+	Linked	Sammenkædet
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Der vil være lidt hukommelse tilbage, når filen er åbnet. Luk først andre apps, ellers kan Lienzo løbe tør for hukommelse.
+	Load Solid Colors Only	Indlæs kun ensfarvede
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Minimerer beskæring i skygger og højlys og forhindrer farver i at skifte nuance
+	No Adv. Blending	Ingen avanceret blanding
+	No Layer Effects	Ingen lageffekter
+	No Layer Mask	Ingen lagmaske
+	No Vector Mask	Ingen vektormaske
+	No document.	Intet dokument.
+	No import is waiting. Import the file again.	Der venter ingen import. Importér filen igen.
+	No matching fonts	Ingen matchende skrifttyper
+	No menu item belongs to this chooser.	Intet menupunkt hører til denne vælger.
+	No menu item is waiting.	Der venter intet menupunkt.
+	No note to delete	Ingen note at slette
+	No options for the Add Anchor Point Tool.	Værktøjet Tilføj ankerpunkt har ingen indstillinger.
+	No options for the Delete Anchor Point Tool.	Værktøjet Slet ankerpunkt har ingen indstillinger.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Ingen sti at lave en form af: tegn en med penneværktøjet, eller markér en i panelet Stier.
+	No pixels are selected.	Ingen pixel er markeret.
+	No recorded step belongs to this editor.	Intet optaget trin hører til denne editor.
+	No slices are selected. Click a slice in the preview to select it.	Ingen udsnit er markeret. Klik på et udsnit i eksemplet for at markere det.
+	No step is waiting.	Der venter intet trin.
+	Not Clipped	Ikke beskåret
+	Not Empty	Ikke tom
+	Not Linked	Ikke sammenkædet
+	Not Locked	Ikke låst
+	Not Visible	Ikke synlig
+	Note deleted, but the preference could not be saved: {error}	Noten blev slettet, men indstillingen kunne ikke gemmes: {error}
+	Nudge	Flyt lidt ad gangen
+	Numerals	Tal
+	Open anyway	Åbn alligevel
+	Open as Smart Object…	Åbn som smartobjekt…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Åbning af dette dokument bruger mere hukommelse og kan gøre computeren eller andre programmer langsommere.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Åbning af ”{name}” kræver anslået {est} GiB hukommelse ({avail} GiB tilgængelig).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Åbning af ”{name}” kræver anslået {est} GiB hukommelse. Den tilgængelige hukommelse kunne ikke måles.
+	Painting Mode	Malertilstand
+	Preparing Free Transform	Forbereder Frit transformér
+	Proportional	Proportionale
+	Proportional Lining	Proportionale justerede
+	Proportional Oldstyle	Proportionale i gammeldags stil
+	Record Again	Optag igen
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Erstat sletter først alt i ”{group}”, også forudindstillinger, du har redigeret eller flyttet dertil. Det kan ikke fortrydes.
+	Report an issue	Rapportér et problem
+	Resize windows when zooming using the Zoom Tool	Tilpas vinduesstørrelse ved zoom med zoomværktøjet
+	Save Image Pyramid	Gem billedpyramide
+	Save Transparency	Gem gennemsigtighed
+	Scroll all open document windows when using the hand tool	Rul alle åbne dokumentvinduer, når håndværktøjet bruges
+	Search and select fonts	Søg efter og vælg skrifttyper
+	Select Pixels	Markér pixel
+	Select an action first.	Vælg først en handling.
+	Select an action step first.	Vælg først et handlingstrin.
+	Selected Slices	Markerede udsnit
+	Set 	Sæt 
+	Set 1	Sæt 1
+	Set 10	Sæt 10
+	Set 11	Sæt 11
+	Set 12	Sæt 12
+	Set 13	Sæt 13
+	Set 14	Sæt 14
+	Set 15	Sæt 15
+	Set 16	Sæt 16
+	Set 17	Sæt 17
+	Set 18	Sæt 18
+	Set 19	Sæt 19
+	Set 2	Sæt 2
+	Set 20	Sæt 20
+	Set 3	Sæt 3
+	Set 4	Sæt 4
+	Set 5	Sæt 5
+	Set 6	Sæt 6
+	Set 7	Sæt 7
+	Set 8	Sæt 8
+	Set 9	Sæt 9
+	Set as default	Angiv som standard
+	Set exposure for stroke	Angiv eksponering for strøg
+	Set flow rate for stroke	Angiv gennemstrømningshastighed for strøg
+	Set font size	Angiv skriftstørrelse
+	Set font style	Angiv skriftstil
+	Set opacity for stroke	Angiv opacitet for strøg
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Angiv udjævning for strøg\nBrug højere værdier for at reducere rystelser i penselstrøg
+	Set symmetry options for Painting	Angiv symmetriindstillinger for maling
+	Set text color	Angiv tekstfarve
+	Set the brush angle	Angiv penselvinkel
+	Smoothing Options	Udjævningsindstillinger
+	Start	Start
+	Stylistic Sets	Stilistiske sæt
+	Tabular	Tabel
+	Tabular Lining	Tabel justerede
+	Tabular Oldstyle	Tabel i gammeldags stil
+	The Record Again command changed.	Kommandoen Optag igen blev ændret.
+	The action or insertion command changed. Request Insert Menu Item again.	Handlingen eller indsættelseskommandoen blev ændret. Anmod om Indsæt menupunkt igen.
+	The actions changed. Request Record Again again.	Handlingerne blev ændret. Anmod om Optag igen igen.
+	The command permissions changed. Request Insert Menu Item again.	Kommandotilladelserne blev ændret. Anmod om Indsæt menupunkt igen.
+	The command permissions changed. Request Record Again again.	Kommandotilladelserne blev ændret. Anmod om Optag igen igen.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Den aktuelle arbejdsmappe ({path}) oplyser ikke sin ledige plads, så Lienzo kan ikke stoppe, før den er fuld, og store filer får ingen ekstra plads fra den uden en grænse for arbejdsdiskens størrelse. Advarslen gælder den aktuelle konfiguration; ændringerne ovenfor træder i kraft ved Anvend eller OK. Angiv en grænse, eller brug en lokal disk.
+	The document changed. Please choose Clear All again.	Dokumentet blev ændret. Vælg Ryd alle igen.
+	The document changed. Request Record Again again.	Dokumentet blev ændret. Anmod om Optag igen igen.
+	The document or its notes changed. Please delete the note again.	Dokumentet eller dets noter blev ændret. Slet noten igen.
+	The preference could not be saved: {error}	Indstillingen kunne ikke gemmes: {error}
+	The step editor could not be opened.	Trineditoren kunne ikke åbnes.
+	The step has no command editor.	Trinnet har ingen kommandoeditor.
+	Tolerance for choosing related colors	Tolerance ved valg af beslægtede farver
+	Top align text	Juster tekst øverst
+	Use relative positioning for reference point	Brug relativ placering for referencepunktet
+	Use these settings for new arrows	Brug disse indstillinger til nye pile
+	Useful mixer brush combinations	Nyttige kombinationer til blandingspenslen
+	ZIP	ZIP
+	Zoom current window to 1:1	Zoom det aktuelle vindue til 1:1
+	Zoom current window to fill the screen	Zoom det aktuelle vindue, så det fylder skærmen
+	Zoom current window to screen size	Zoom det aktuelle vindue til skærmstørrelse
+	brush tool	penselværktøj
+	by Nodalia	af Nodalia
+	dodge tool	lysningsværktøj
+	{message} into “{group}”	{message} i ”{group}”
+	{ok} written to {dir}	{ok} skrevet til {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Penselgruppen ”{group}” har allerede {n} pensel af dig.|Penselgruppen ”{group}” har allerede {n} pensler af dig.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Forløbsgruppen ”{group}” findes allerede ({n} forløb).|Forløbsgruppen ”{group}” findes allerede ({n} forløb).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} billedressourceoutput mislykkedes|{what}: {n} billedressourceoutput mislykkedes
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} fil mislykkedes|{what}: {n} filer mislykkedes
+	A frame supports affine transforms; select its image for perspective transforms	En ramme understøtter affine transformationer; markér dens billede for perspektivtransformationer
+	A frame supports affine transforms; select its image to warp it	En ramme understøtter affine transformationer; markér dens billede for at forvrænge det
+	Convert to Frame…	Konvertér til ramme…
+	Create a new custom frame	Opret en ny brugerdefineret ramme
+	Create a new polygonal frame	Opret en ny polygonal ramme
+	Create a new triangular frame	Opret en ny trekantet ramme
+	Drag to move the selected path	Træk for at flytte den markerede sti
+	Equalize Entire Image Based On Selected Area	Udlign hele billedet ud fra det markerede område
+	Equalize Selected Area Only	Udlign kun det markerede område
+	Fit Content to Frame	Tilpas indhold til ramme
+	Fit Frame to Content	Tilpas ramme til indhold
+	Frame coordinates must be finite and within 600000 pixels	Rammekoordinater skal være endelige og inden for 600000 pixel
+	Import Image…	Importér billede…
+	Invalid frame transform	Ugyldig rammetransformation
+	Invalid nested file drop	Ugyldigt indlejret filslip
+	Learn	Lær
+	New Frame	Ny ramme
+	New file	Ny fil
+	No settings saved: these raws can't keep a sidecar here	Ingen indstillinger gemt: disse raw-filer kan ikke have en sidecar-fil her
+	Nothing to save: these raws are at their default settings	Intet at gemme: disse raw-filer har standardindstillinger
+	On your computer	På din computer
+	Recently Used Colors	Senest brugte farver
+	Replace Image…	Erstat billede…
+	Save the settings to each raw's sidecar without opening it	Gem indstillingerne i hver raw-fils sidecar-fil uden at åbne den
+	Shapes can't use patterns yet	Former kan ikke bruge mønstre endnu
+	Some settings could not be saved; the raws stay open	Nogle indstillinger kunne ikke gemmes; raw-filerne forbliver åbne
+	Source: {name}	Kilde: {name}
+	Stop Color	Stopfarve
+	The GPU compositor is still being prepared	GPU-compositoren forberedes stadig
+	The History Brush source was deleted: set a new source in the History panel	Kilden til historikpenslen blev slettet: angiv en ny kilde i panelet Historik
+	The frame is locked	Rammen er låst
+	The frame is unavailable	Rammen er ikke tilgængelig
+	Website	Websted
