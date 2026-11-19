@@ -13,7 +13,7 @@ rust-version = "1.95"
 [workspace.dependencies]
 craft-ui = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d", features = ["serde"] }
 # Nodalia Design Language tokens (no features: no egui of its own, so the patched egui stays the only one).
-nodalia-theme = { git = "https://github.com/danielmigueltejedor/nodalia-design", rev = "6d94e9c17c1767260bcb020f00c71eddd105561f" }
+nodalia-theme = { git = "https://github.com/danielmigueltejedor/nodalia-design", rev = "44bfd0a37e6bd2837c473b4e5607b70e8d169e61" }
 # internal
 lienzo-geom = { path = "crates/geom" }
 lienzo-color = { path = "crates/color" }
