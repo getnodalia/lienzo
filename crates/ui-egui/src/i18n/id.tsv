@@ -3669,3 +3669,192 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Pengisian berdasarkan konten
 	Sample content from part of the image and use it to fill a small area	Ambil konten dari sebagian gambar untuk mengisi area kecil
 	Reset the crop box, image rotation, and aspect ratio settings	Atur ulang bingkai pangkas, rotasi gambar, dan rasio aspek
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Sebuah perintah dibatalkan atau dihentikan saat pemrosesan batch. Lanjutkan ke file berikutnya atau berhenti?
+	A file is still being placed; try again when it has finished.	Sebuah file masih ditempatkan; coba lagi setelah selesai.
+	A native image editor, layer by layer. No account, no cloud.	Editor gambar native, layer demi layer. Tanpa akun, tanpa cloud.
+	Allow Tool Recording	Izinkan Perekaman Alat
+	Allows rotation and scaling of selection	Mengizinkan rotasi dan penskalaan seleksi
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Selalu gunakan Tekanan untuk Opasitas. Jika nonaktif, preset kuas mengendalikan tekanan
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Selalu gunakan Tekanan untuk Ukuran. Jika nonaktif, preset kuas mengendalikan tekanan
+	Answer the open import question first, then import this file again.	Jawab dulu pertanyaan impor yang terbuka, lalu impor file ini lagi.
+	Anti-alias brush application	Terapkan kuas dengan anti-aliasing
+	Are you sure you want to delete all notes?	Yakin ingin menghapus semua catatan?
+	Arrowhead options	Opsi ujung panah
+	Arrowheads	Ujung panah
+	Attribute	Atribut
+	Batch preview	Pratinjau batch
+	Bottom align text	Ratakan teks ke bawah
+	CPU Rendering	Rendering CPU
+	Calculating…	Menghitung…
+	Cancelled placing {name}	Penempatan {name} dibatalkan
+	Choose a menu command. Playback asks for its settings when needed.	Pilih perintah menu. Pemutaran akan meminta pengaturannya bila diperlukan.
+	Choose a remix mode	Pilih mode remix
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Klik lalu geser ke kiri atau kanan untuk menskalakan dengan Alat Zoom (hanya OpenGL)
+	Click to open the Brush Preset picker	Klik untuk membuka pemilih preset kuas
+	Click to refresh histogram with uncached data	Klik untuk menyegarkan histogram dengan data yang belum di-cache
+	Concavity	Cekungan
+	Confirm or cancel the pending Record Again editor first.	Konfirmasi atau batalkan dulu editor Rekam Ulang yang tertunda.
+	Confirm or cancel the pending menu item first.	Konfirmasi atau batalkan dulu item menu yang tertunda.
+	Copy CSS	Salin CSS
+	Could not use the type tool because the layer is locked.	Alat teks tidak dapat digunakan karena layer terkunci.
+	Count:	Jumlah:
+	Data Sets as Files is unavailable on the web	Kumpulan Data sebagai File tidak tersedia di web
+	Delete Note	Hapus Catatan
+	Delete this note?	Hapus catatan ini?
+	Determines the spread of replaced color	Menentukan sebaran warna yang diganti
+	Do not erase the foreground swatch color	Jangan hapus warna swatch latar depan
+	Drawn on the CPU: {reason}. Click for System Info.	Digambar di CPU: {reason}. Klik untuk Info Sistem.
+	Draws background color over foreground colors	Menggambar warna latar belakang di atas warna latar depan
+	Dropped files weren't placed: their document was closed.	File yang dijatuhkan tidak ditempatkan: dokumennya telah ditutup.
+	Dropped files weren't placed: too many are waiting for their document.	File yang dijatuhkan tidak ditempatkan: terlalu banyak yang menunggu dokumennya.
+	Effect	Efek
+	Empty	Kosong
+	Enable to remix all layers	Aktifkan untuk me-remix semua layer
+	End	Akhir
+	Erase range of similar colors	Hapus rentang warna yang mirip
+	Erase to History	Hapus ke Riwayat
+	Filter for embedded smart objects	Filter untuk smart object yang disematkan
+	Filter for linked smart objects that are missing	Filter untuk smart object tertaut yang tautannya hilang
+	Filter for smart objects linked locally	Filter untuk smart object yang ditautkan secara lokal
+	High Memory Photoshop Document	Dokumen Photoshop Memori Tinggi
+	How far to let the erasing spread	Seberapa jauh penghapusan boleh menyebar
+	Image Compression	Kompresi Gambar
+	Import as New Group	Impor sebagai Grup Baru
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Impor sebagai Grup Baru mempertahankan “{group}” dan menambahkan file sebagai grup baru di sampingnya.
+	Insert Menu Item…	Sisipkan Item Menu…
+	Insert Path	Sisipkan Path
+	LZW	LZW
+	Layer Effects	Efek Layer
+	Level:	Level:
+	Lining	Sejajar
+	Linked	Tertaut
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Memori yang tersisa akan sedikit setelah file ini dibuka. Tutup aplikasi lain dulu, atau Lienzo bisa kehabisan memori.
+	Load Solid Colors Only	Muat Hanya Warna Solid
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Meminimalkan clipping pada bayangan dan sorotan, serta menjaga warna agar rona tidak bergeser
+	No Adv. Blending	Tanpa Pemaduan Lanjutan
+	No Layer Effects	Tanpa Efek Layer
+	No Layer Mask	Tanpa Mask Layer
+	No Vector Mask	Tanpa Mask Vektor
+	No document.	Tidak ada dokumen.
+	No import is waiting. Import the file again.	Tidak ada impor yang menunggu. Impor file lagi.
+	No matching fonts	Tidak ada font yang cocok
+	No menu item belongs to this chooser.	Tidak ada item menu yang termasuk dalam pemilih ini.
+	No menu item is waiting.	Tidak ada item menu yang menunggu.
+	No note to delete	Tidak ada catatan untuk dihapus
+	No options for the Add Anchor Point Tool.	Alat Tambah Anchor Point tidak memiliki opsi.
+	No options for the Delete Anchor Point Tool.	Alat Hapus Anchor Point tidak memiliki opsi.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Tidak ada path untuk dibuat menjadi bentuk: gambar satu dengan alat Pen atau pilih satu di panel Path.
+	No pixels are selected.	Tidak ada piksel yang dipilih.
+	No recorded step belongs to this editor.	Tidak ada langkah terekam yang termasuk dalam editor ini.
+	No slices are selected. Click a slice in the preview to select it.	Tidak ada slice yang dipilih. Klik slice di pratinjau untuk memilihnya.
+	No step is waiting.	Tidak ada langkah yang menunggu.
+	Not Clipped	Tidak Di-clip
+	Not Empty	Tidak Kosong
+	Not Linked	Tidak Tertaut
+	Not Locked	Tidak Terkunci
+	Not Visible	Tidak Terlihat
+	Note deleted, but the preference could not be saved: {error}	Catatan dihapus, tetapi preferensi tidak dapat disimpan: {error}
+	Nudge	Geser Halus
+	Numerals	Angka
+	Open anyway	Tetap buka
+	Open as Smart Object…	Buka sebagai Smart Object…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Membuka dokumen ini memakai lebih banyak memori dan dapat memperlambat komputer atau aplikasi lain yang berjalan.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Membuka “{name}” membutuhkan perkiraan {est} GiB memori ({avail} GiB tersedia).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Membuka “{name}” membutuhkan perkiraan {est} GiB memori. Memori yang tersedia tidak dapat diukur.
+	Painting Mode	Mode Painting
+	Percentile:	Persentil:
+	Preparing Free Transform	Menyiapkan Free Transform
+	Proportional	Proporsional
+	Proportional Lining	Proporsional Sejajar
+	Proportional Oldstyle	Proporsional Gaya Lama
+	Record Again	Rekam Ulang
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Ganti akan menghapus semua isi “{group}” terlebih dahulu, termasuk preset yang Anda edit atau pindahkan ke sana. Tindakan ini tidak dapat dibatalkan.
+	Report an issue	Laporkan masalah
+	Resize windows when zooming using the Zoom Tool	Ubah ukuran jendela saat memperbesar dengan Alat Zoom
+	Save Image Pyramid	Simpan Piramida Gambar
+	Save Transparency	Simpan Transparansi
+	Scroll all open document windows when using the hand tool	Gulir semua jendela dokumen yang terbuka saat memakai alat Hand
+	Search and select fonts	Cari dan pilih font
+	Select Pixels	Pilih Piksel
+	Select an action first.	Pilih sebuah action dulu.
+	Select an action step first.	Pilih langkah action dulu.
+	Selected Slices	Slice Terpilih
+	Set 	Set 
+	Set 1	Set 1
+	Set 10	Set 10
+	Set 11	Set 11
+	Set 12	Set 12
+	Set 13	Set 13
+	Set 14	Set 14
+	Set 15	Set 15
+	Set 16	Set 16
+	Set 17	Set 17
+	Set 18	Set 18
+	Set 19	Set 19
+	Set 2	Set 2
+	Set 20	Set 20
+	Set 3	Set 3
+	Set 4	Set 4
+	Set 5	Set 5
+	Set 6	Set 6
+	Set 7	Set 7
+	Set 8	Set 8
+	Set 9	Set 9
+	Set as default	Jadikan default
+	Set exposure for stroke	Atur eksposur untuk goresan
+	Set flow rate for stroke	Atur laju aliran untuk goresan
+	Set font size	Atur ukuran font
+	Set font style	Atur gaya font
+	Set opacity for stroke	Atur opasitas untuk goresan
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Atur penghalusan untuk goresan\nGunakan nilai lebih tinggi untuk mengurangi getaran goresan kuas
+	Set symmetry options for Painting	Atur opsi simetri untuk Painting
+	Set text color	Atur warna teks
+	Set the brush angle	Atur sudut kuas
+	Show Channels in Color	Tampilkan Channel dengan Warna
+	Show Statistics	Tampilkan Statistik
+	Smoothing Options	Opsi Penghalusan
+	Source:	Sumber:
+	Start	Mulai
+	Stylistic Sets	Set Stilistik
+	Tabular	Tabular
+	Tabular Lining	Tabular Sejajar
+	Tabular Oldstyle	Tabular Gaya Lama
+	The Record Again command changed.	Perintah Rekam Ulang telah berubah.
+	The action or insertion command changed. Request Insert Menu Item again.	Action atau perintah penyisipan telah berubah. Minta Sisipkan Item Menu lagi.
+	The actions changed. Request Record Again again.	Action telah berubah. Minta Rekam Ulang lagi.
+	The command permissions changed. Request Insert Menu Item again.	Izin perintah telah berubah. Minta Sisipkan Item Menu lagi.
+	The command permissions changed. Request Record Again again.	Izin perintah telah berubah. Minta Rekam Ulang lagi.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Direktori scratch saat ini ({path}) tidak melaporkan ruang kosongnya, sehingga Lienzo tidak bisa berhenti sebelum penuh, dan file besar tidak mendapat ruang tambahan darinya tanpa Batas Ukuran Scratch. Peringatan ini berlaku untuk konfigurasi saat ini; perubahan di atas berlaku setelah Terapkan atau OK. Tetapkan batas atau gunakan disk lokal.
+	The document changed. Please choose Clear All again.	Dokumen telah berubah. Pilih Hapus Semua lagi.
+	The document changed. Request Record Again again.	Dokumen telah berubah. Minta Rekam Ulang lagi.
+	The document or its notes changed. Please delete the note again.	Dokumen atau catatannya telah berubah. Hapus catatan lagi.
+	The preference could not be saved: {error}	Preferensi tidak dapat disimpan: {error}
+	The step editor could not be opened.	Editor langkah tidak dapat dibuka.
+	The step has no command editor.	Langkah ini tidak memiliki editor perintah.
+	Tolerance for choosing related colors	Toleransi untuk memilih warna terkait
+	Top align text	Ratakan teks ke atas
+	Uncached Refresh	Segarkan Tanpa Cache
+	Use relative positioning for reference point	Gunakan penempatan relatif untuk titik acuan
+	Use these settings for new arrows	Gunakan pengaturan ini untuk panah baru
+	Useful mixer brush combinations	Kombinasi kuas pencampur yang berguna
+	ZIP	ZIP
+	Zoom current window to 1:1	Zoom jendela saat ini ke 1:1
+	Zoom current window to fill the screen	Zoom jendela saat ini hingga memenuhi layar
+	Zoom current window to screen size	Zoom jendela saat ini ke ukuran layar
+	brush tool	alat kuas
+	by Nodalia	oleh Nodalia
+	dodge tool	alat dodge
+	{message} into “{group}”	{message} ke “{group}”
+	{ok} written to {dir}	{ok} ditulis ke {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Grup kuas “{group}” sudah memiliki {n} kuas milik Anda.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Grup gradien “{group}” sudah ada ({n} gradien).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} output Aset Gambar gagal
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} file gagal
+	Apply to All	Terapkan ke Semua
+	Artboards	Artboard
+	Batch	Batch
+	Drag to move the selected path	Seret untuk memindahkan path yang dipilih
+	Length	Panjang
+	Locked	Terkunci
+	Pick Color From Image	Ambil Warna dari Gambar
+	Recent Files	File Terbaru

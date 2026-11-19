@@ -4706,3 +4706,184 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Popunjavanje prema sadržaju
 	Sample content from part of the image and use it to fill a small area	Uzmite sadržaj iz dela slike da popunite malu oblast
 	Reset the crop box, image rotation, and aspect ratio settings	Vratite okvir za isecanje, rotaciju slike i razmeru
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Naredba je otkazana ili zaustavljena tokom grupne obrade. Nastaviti sa sledećom datotekom ili prekinuti?
+	A file is still being placed; try again when it has finished.	Datoteka se još postavlja; pokušajte ponovo kada se završi.
+	A native image editor, layer by layer. No account, no cloud.	Izvorni uređivač slika, sloj po sloj. Bez naloga, bez oblaka.
+	Allow Tool Recording	Dozvoli snimanje alatki
+	Allows rotation and scaling of selection	Dozvoljava rotiranje i skaliranje izbora
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Uvek koristi pritisak za neprozirnost. Kada je isključeno, pritisak kontroliše predpodešavanje četkice
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Uvek koristi pritisak za veličinu. Kada je isključeno, pritisak kontroliše predpodešavanje četkice
+	Answer the open import question first, then import this file again.	Prvo odgovorite na otvoreno pitanje o uvozu, a zatim ponovo uvezite ovu datoteku.
+	Anti-alias brush application	Primeni četkicu sa izglađivanjem ivica
+	Are you sure you want to delete all notes?	Da li ste sigurni da želite da obrišete sve beleške?
+	Arrowhead options	Opcije vrhova strelica
+	Arrowheads	Vrhovi strelica
+	Attribute	Atribut
+	Batch preview	Pregled grupne obrade
+	Bottom align text	Poravnaj tekst dole
+	CPU Rendering	Iscrtavanje na procesoru
+	Calculating…	Izračunavanje…
+	Cancelled placing {name}	Postavljanje „{name}” je otkazano
+	Choose a menu command. Playback asks for its settings when needed.	Izaberite naredbu iz menija. Reprodukcija traži njena podešavanja kada su potrebna.
+	Choose a remix mode	Izaberite režim remiksa
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Kliknite i pomerajte ulevo ili udesno da biste skalirali alatkom lupa (samo OpenGL)
+	Click to open the Brush Preset picker	Kliknite da otvorite birač predpodešavanja četkice
+	Click to refresh histogram with uncached data	Kliknite da osvežite histogram podacima koji nisu u kešu
+	Concavity	Konkavnost
+	Confirm or cancel the pending Record Again editor first.	Prvo potvrdite ili otkažite uređivač „Snimi ponovo” koji čeka.
+	Confirm or cancel the pending menu item first.	Prvo potvrdite ili otkažite stavku menija koja čeka.
+	Copy CSS	Kopiraj CSS
+	Could not use the type tool because the layer is locked.	Alatka za tekst nije mogla da se koristi jer je sloj zaključan.
+	Count:	Broj:
+	Data Sets as Files is unavailable on the web	Skupovi podataka kao datoteke nisu dostupni na vebu
+	Delete Note	Obriši belešku
+	Delete this note?	Obrisati ovu belešku?
+	Determines the spread of replaced color	Određuje raspon zamenjene boje
+	Do not erase the foreground swatch color	Ne briši uzorak boje prednjeg plana
+	Drawn on the CPU: {reason}. Click for System Info.	Iscrtano na procesoru: {reason}. Kliknite za informacije o sistemu.
+	Draws background color over foreground colors	Crta boju pozadine preko boja prednjeg plana
+	Dropped files weren't placed: their document was closed.	Spuštene datoteke nisu postavljene: njihov dokument je zatvoren.
+	Dropped files weren't placed: too many are waiting for their document.	Spuštene datoteke nisu postavljene: previše njih čeka na svoj dokument.
+	Effect	Efekat
+	Empty	Prazno
+	Enable to remix all layers	Omogućite da remiksujete sve slojeve
+	End	Kraj
+	Erase range of similar colors	Briši raspon sličnih boja
+	Erase to History	Obriši u istoriju
+	Filter for embedded smart objects	Filter za ugrađene pametne objekte
+	Filter for linked smart objects that are missing	Filter za povezane pametne objekte kojima nedostaje veza
+	Filter for smart objects linked locally	Filter za lokalno povezane pametne objekte
+	High Memory Photoshop Document	Photoshop dokument za veliku memoriju
+	How far to let the erasing spread	Koliko daleko brisanje sme da se širi
+	Image Compression	Kompresija slike
+	Import as New Group	Uvezi kao novu grupu
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	„Uvezi kao novu grupu” zadržava „{group}” i dodaje datoteku kao novu grupu pored nje.
+	Insert Menu Item…	Umetni stavku menija…
+	Insert Path	Umetni putanju
+	LZW	LZW
+	Layer Effects	Efekti sloja
+	Level:	Nivo:
+	Lining	Poravnate
+	Linked	Povezano
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Nakon otvaranja ove datoteke ostaće malo memorije. Prvo zatvorite druge aplikacije, inače Lienzu može ponestati memorije.
+	Load Solid Colors Only	Učitaj samo pune boje
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Svodi odsecanje u senkama i svetlima na minimum i sprečava promenu nijanse boja
+	No Adv. Blending	Bez naprednog mešanja
+	No Layer Effects	Bez efekata sloja
+	No Layer Mask	Bez maske sloja
+	No Vector Mask	Bez vektorske maske
+	No document.	Nema dokumenta.
+	No import is waiting. Import the file again.	Nijedan uvoz ne čeka. Ponovo uvezite datoteku.
+	No matching fonts	Nema odgovarajućih fontova
+	No menu item belongs to this chooser.	Nijedna stavka menija ne pripada ovom biraču.
+	No menu item is waiting.	Nijedna stavka menija ne čeka.
+	No note to delete	Nema beleške za brisanje
+	No options for the Add Anchor Point Tool.	Alatka za dodavanje tačke sidra nema opcija.
+	No options for the Delete Anchor Point Tool.	Alatka za brisanje tačke sidra nema opcija.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Nema putanje od koje bi se napravio oblik: nacrtajte je alatkom pero ili izaberite jednu na panelu Putanje.
+	No pixels are selected.	Nijedan piksel nije izabran.
+	No recorded step belongs to this editor.	Nijedan snimljeni korak ne pripada ovom uređivaču.
+	No slices are selected. Click a slice in the preview to select it.	Nijedan isečak nije izabran. Kliknite na isečak u pregledu da biste ga izabrali.
+	No step is waiting.	Nijedan korak ne čeka.
+	Not Clipped	Nije isečeno
+	Not Empty	Nije prazno
+	Not Linked	Nije povezano
+	Not Locked	Nije zaključano
+	Not Visible	Nije vidljivo
+	Note deleted, but the preference could not be saved: {error}	Beleška je obrisana, ali podešavanje nije moglo da se sačuva: {error}
+	Nudge	Pomeri korak po korak
+	Numerals	Cifre
+	Open anyway	Ipak otvori
+	Open as Smart Object…	Otvori kao pametni objekat…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Otvaranje ovog dokumenta koristi više memorije i može usporiti računar ili druge pokrenute aplikacije.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Otvaranje datoteke „{name}” zahteva procenjenih {est} GiB memorije ({avail} GiB je dostupno).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Otvaranje datoteke „{name}” zahteva procenjenih {est} GiB memorije. Dostupna memorija nije mogla da se izmeri.
+	Painting Mode	Režim slikanja
+	Percentile:	Percentil:
+	Preparing Free Transform	Priprema slobodne transformacije
+	Proportional	Proporcionalne
+	Proportional Lining	Proporcionalne poravnate
+	Proportional Oldstyle	Proporcionalne starinske
+	Record Again	Snimi ponovo
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	„Zameni” prvo briše sve u „{group}”, uključujući predpodešavanja koja ste tamo uredili ili premestili. Ovo se ne može poništiti.
+	Report an issue	Prijavi problem
+	Resize windows when zooming using the Zoom Tool	Menjaj veličinu prozora pri zumiranju alatkom lupa
+	Save Image Pyramid	Sačuvaj piramidu slike
+	Save Transparency	Sačuvaj providnost
+	Scroll all open document windows when using the hand tool	Pomeraj sve otvorene prozore dokumenata kada se koristi alatka ruka
+	Search and select fonts	Pretraži i izaberi fontove
+	Select Pixels	Izaberi piksele
+	Select an action first.	Prvo izaberite radnju.
+	Select an action step first.	Prvo izaberite korak radnje.
+	Selected Slices	Izabrani isečci
+	Set 	Skup 
+	Set 1	Skup 1
+	Set 10	Skup 10
+	Set 11	Skup 11
+	Set 12	Skup 12
+	Set 13	Skup 13
+	Set 14	Skup 14
+	Set 15	Skup 15
+	Set 16	Skup 16
+	Set 17	Skup 17
+	Set 18	Skup 18
+	Set 19	Skup 19
+	Set 2	Skup 2
+	Set 20	Skup 20
+	Set 3	Skup 3
+	Set 4	Skup 4
+	Set 5	Skup 5
+	Set 6	Skup 6
+	Set 7	Skup 7
+	Set 8	Skup 8
+	Set 9	Skup 9
+	Set as default	Postavi kao podrazumevano
+	Set exposure for stroke	Podesi ekspoziciju za potez
+	Set flow rate for stroke	Podesi brzinu protoka za potez
+	Set font size	Podesi veličinu fonta
+	Set font style	Podesi stil fonta
+	Set opacity for stroke	Podesi neprozirnost za potez
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Podesi izglađivanje za potez\nKoristite veće vrednosti da smanjite drhtanje poteza četkice
+	Set symmetry options for Painting	Podesi opcije simetrije za slikanje
+	Set text color	Podesi boju teksta
+	Set the brush angle	Podesi ugao četkice
+	Show Channels in Color	Prikaži kanale u boji
+	Show Statistics	Prikaži statistiku
+	Smoothing Options	Opcije izglađivanja
+	Source:	Izvor:
+	Start	Početak
+	Stylistic Sets	Stilski skupovi
+	Tabular	Tabelarne
+	Tabular Lining	Tabelarne poravnate
+	Tabular Oldstyle	Tabelarne starinske
+	The Record Again command changed.	Naredba „Snimi ponovo” je promenjena.
+	The action or insertion command changed. Request Insert Menu Item again.	Radnja ili naredba umetanja je promenjena. Ponovo zatražite „Umetni stavku menija”.
+	The actions changed. Request Record Again again.	Radnje su promenjene. Ponovo zatražite „Snimi ponovo”.
+	The command permissions changed. Request Insert Menu Item again.	Dozvole za naredbe su promenjene. Ponovo zatražite „Umetni stavku menija”.
+	The command permissions changed. Request Record Again again.	Dozvole za naredbe su promenjene. Ponovo zatražite „Snimi ponovo”.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Trenutni radni direktorijum ({path}) ne prijavljuje slobodan prostor, pa Lienz ne može da stane pre nego što se napuni, a velike datoteke iz njega ne dobijaju dodatni prostor bez ograničenja veličine radnog diska. Ovo upozorenje važi za trenutnu konfiguraciju; promene iznad stupaju na snagu pri „Primeni” ili „U redu”. Postavite ograničenje ili koristite lokalni disk.
+	The document changed. Please choose Clear All again.	Dokument je promenjen. Ponovo izaberite „Obriši sve”.
+	The document changed. Request Record Again again.	Dokument je promenjen. Ponovo zatražite „Snimi ponovo”.
+	The document or its notes changed. Please delete the note again.	Dokument ili njegove beleške su promenjeni. Ponovo obrišite belešku.
+	The preference could not be saved: {error}	Podešavanje nije moglo da se sačuva: {error}
+	The step editor could not be opened.	Uređivač koraka nije mogao da se otvori.
+	The step has no command editor.	Korak nema uređivač naredbe.
+	Tolerance for choosing related colors	Tolerancija za biranje srodnih boja
+	Top align text	Poravnaj tekst gore
+	Uncached Refresh	Osveži bez keša
+	Use relative positioning for reference point	Koristi relativno pozicioniranje za referentnu tačku
+	Use these settings for new arrows	Koristi ova podešavanja za nove strelice
+	Useful mixer brush combinations	Korisne kombinacije četkice za mešanje
+	ZIP	ZIP
+	Zoom current window to 1:1	Zumiraj trenutni prozor na 1:1
+	Zoom current window to fill the screen	Zumiraj trenutni prozor da popuni ekran
+	Zoom current window to screen size	Zumiraj trenutni prozor na veličinu ekrana
+	brush tool	alatka četkica
+	by Nodalia	od Nodalia
+	dodge tool	alatka za posvetljivanje
+	{message} into “{group}”	{message} u „{group}”
+	{ok} written to {dir}	{ok} upisano u {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Grupa četkica „{group}” već ima {n} vašu četkicu.|Grupa četkica „{group}” već ima {n} vaše četkice.|Grupa četkica „{group}” već ima {n} vaših četkica.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Grupa gradijenata „{group}” već postoji ({n} gradijent).|Grupa gradijenata „{group}” već postoji ({n} gradijenta).|Grupa gradijenata „{group}” već postoji ({n} gradijenata).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} izlaz resursa slike nije uspeo|{what}: {n} izlaza resursa slike nisu uspela|{what}: {n} izlaza resursa slike nije uspelo
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} datoteka nije uspela|{what}: {n} datoteke nisu uspele|{what}: {n} datoteka nije uspelo
