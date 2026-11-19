@@ -4629,3 +4629,144 @@ navigator	Zoom	Zoom
 	Content-aware fill	Umplere în funcție de conținut
 	Sample content from part of the image and use it to fill a small area	Preia conținut dintr-o parte a imaginii pentru a umple o zonă mică
 	Reset the crop box, image rotation, and aspect ratio settings	Resetează cadrul de decupare, rotirea imaginii și raportul de aspect
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	O comandă a fost anulată sau oprită în timpul procesării în lot. Continuați cu fișierul următor sau opriți?
+	A native image editor, layer by layer. No account, no cloud.	Un editor de imagini nativ, strat cu strat. Fără cont, fără cloud.
+	Allow Tool Recording	Permite înregistrarea instrumentelor
+	Allows rotation and scaling of selection	Permite rotirea și scalarea selecției
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Folosește întotdeauna presiunea pentru opacitate. Când este dezactivat, presetarea pensulei controlează presiunea
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Folosește întotdeauna presiunea pentru dimensiune. Când este dezactivat, presetarea pensulei controlează presiunea
+	Anti-alias brush application	Aplică pensula cu antialiasing
+	Are you sure you want to delete all notes?	Sigur doriți să ștergeți toate notele?
+	Bottom align text	Aliniază textul jos
+	Choose a menu command. Playback asks for its settings when needed.	Alegeți o comandă de meniu. Redarea cere setările ei când este nevoie.
+	Choose a remix mode	Alegeți un mod de remix
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Faceți clic și mutați spre stânga sau spre dreapta pentru a scala cu Instrumentul Zoom (doar OpenGL)
+	Click to open the Brush Preset picker	Faceți clic pentru a deschide selectorul de presetări pentru pensulă
+	Confirm or cancel the pending Record Again editor first.	Confirmați sau anulați mai întâi editorul Înregistrează din nou aflat în așteptare.
+	Confirm or cancel the pending menu item first.	Confirmați sau anulați mai întâi elementul de meniu aflat în așteptare.
+	Copy CSS	Copiază CSS
+	Could not use the type tool because the layer is locked.	Instrumentul de text nu a putut fi folosit deoarece stratul este blocat.
+	Delete Note	Șterge nota
+	Delete this note?	Ștergeți această notă?
+	Determines the spread of replaced color	Determină întinderea culorii înlocuite
+	Do not erase the foreground swatch color	Nu șterge culoarea mostrei din prim-plan
+	Draws background color over foreground colors	Desenează culoarea de fundal peste culorile din prim-plan
+	Enable to remix all layers	Activați pentru a remixa toate straturile
+	Erase range of similar colors	Șterge un interval de culori similare
+	Erase to History	Șterge în istoric
+	How far to let the erasing spread	Cât de departe să se întindă ștergerea
+	Insert Menu Item…	Inserare element de meniu…
+	Insert Path	Inserare traseu
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	După deschiderea acestui fișier va rămâne puțină memorie. Închideți mai întâi alte aplicații, altfel Lienzo poate rămâne fără memorie.
+	Load Solid Colors Only	Încarcă doar culorile unite
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Reduce la minimum tăierea în umbre și lumini și împiedică schimbarea nuanței culorilor
+	No document.	Niciun document.
+	No menu item belongs to this chooser.	Niciun element de meniu nu aparține acestui selector.
+	No menu item is waiting.	Niciun element de meniu nu este în așteptare.
+	No note to delete	Nicio notă de șters
+	No options for the Add Anchor Point Tool.	Instrumentul Adăugare punct de ancorare nu are opțiuni.
+	No options for the Delete Anchor Point Tool.	Instrumentul Ștergere punct de ancorare nu are opțiuni.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Niciun traseu din care să se creeze o formă: desenați unul cu instrumentul Pană sau selectați unul în panoul Trasee.
+	No pixels are selected.	Niciun pixel nu este selectat.
+	No recorded step belongs to this editor.	Niciun pas înregistrat nu aparține acestui editor.
+	No slices are selected. Click a slice in the preview to select it.	Nicio felie nu este selectată. Faceți clic pe o felie din previzualizare pentru a o selecta.
+	No step is waiting.	Niciun pas nu este în așteptare.
+	Note deleted, but the preference could not be saved: {error}	Nota a fost ștearsă, dar preferința nu a putut fi salvată: {error}
+	Nudge	Deplasare fină
+	Open as Smart Object…	Deschidere ca obiect inteligent…
+	Painting Mode	Mod de pictare
+	Preparing Free Transform	Se pregătește Transformarea liberă
+	Record Again	Înregistrează din nou
+	Report an issue	Raportați o problemă
+	Resize windows when zooming using the Zoom Tool	Redimensionează ferestrele la mărire cu Instrumentul Zoom
+	Scroll all open document windows when using the hand tool	Derulează toate ferestrele de document deschise când se folosește instrumentul Mână
+	Search and select fonts	Căutați și selectați fonturi
+	Select Pixels	Selectare pixeli
+	Select an action first.	Selectați mai întâi o acțiune.
+	Select an action step first.	Selectați mai întâi un pas al acțiunii.
+	Selected Slices	Felii selectate
+	Set exposure for stroke	Setare expunere pentru tras
+	Set flow rate for stroke	Setare debit de flux pentru tras
+	Set font size	Setare dimensiune font
+	Set font style	Setare stil font
+	Set opacity for stroke	Setare opacitate pentru tras
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Setare netezire pentru tras\nFolosiți valori mai mari pentru a reduce tremurul tragerilor de pensulă
+	Set symmetry options for Painting	Setare opțiuni de simetrie pentru pictare
+	Set text color	Setare culoare text
+	Set the brush angle	Setare unghi pensulă
+	Smoothing Options	Opțiuni de netezire
+	The Record Again command changed.	Comanda Înregistrează din nou s-a schimbat.
+	The action or insertion command changed. Request Insert Menu Item again.	Acțiunea sau comanda de inserare s-a schimbat. Solicitați din nou Inserare element de meniu.
+	The actions changed. Request Record Again again.	Acțiunile s-au schimbat. Solicitați din nou Înregistrează din nou.
+	The command permissions changed. Request Insert Menu Item again.	Permisiunile comenzilor s-au schimbat. Solicitați din nou Inserare element de meniu.
+	The command permissions changed. Request Record Again again.	Permisiunile comenzilor s-au schimbat. Solicitați din nou Înregistrează din nou.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Directorul de lucru curent ({path}) nu raportează spațiul liber, așa că Lienzo nu se poate opri înainte să se umple, iar fișierele mari nu primesc spațiu suplimentar din el fără o Limită de dimensiune a discului de lucru. Avertismentul se aplică configurației curente; modificările de mai sus intră în vigoare la Aplicare sau OK. Setați o limită sau folosiți un disc local.
+	The document changed. Please choose Clear All again.	Documentul s-a schimbat. Alegeți din nou Golire totală.
+	The document changed. Request Record Again again.	Documentul s-a schimbat. Solicitați din nou Înregistrează din nou.
+	The document or its notes changed. Please delete the note again.	Documentul sau notele lui s-au schimbat. Ștergeți nota din nou.
+	The preference could not be saved: {error}	Preferința nu a putut fi salvată: {error}
+	The step editor could not be opened.	Editorul de pași nu a putut fi deschis.
+	The step has no command editor.	Pasul nu are editor de comandă.
+	Tolerance for choosing related colors	Toleranță pentru alegerea culorilor înrudite
+	Top align text	Aliniază textul sus
+	Use relative positioning for reference point	Folosește poziționarea relativă pentru punctul de referință
+	Useful mixer brush combinations	Combinații utile pentru pensula de mixare
+	Zoom current window to 1:1	Mărește fereastra curentă la 1:1
+	Zoom current window to fill the screen	Mărește fereastra curentă să umple ecranul
+	Zoom current window to screen size	Mărește fereastra curentă la dimensiunea ecranului
+	brush tool	instrumentul pensulă
+	by Nodalia	de Nodalia
+	dodge tool	instrumentul de luminare
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} fișier a eșuat|{what}: {n} fișiere au eșuat|{what}: {n} de fișiere au eșuat
+	Align bottom edges	Aliniază marginile de jos
+	Align top edges	Aliniază marginile de sus
+	Align vertical centers	Aliniază centrele verticale
+	Canceled opening {name}	Deschiderea {name} a fost anulată
+	Canceled {label}	{label} a fost anulat
+	Center the gradient (offset 0, 0)	Centrează gradientul (decalaj 0, 0)
+	Click to restore the current color	Faceți clic pentru a restabili culoarea curentă
+	Click to sample the foreground color  ·  {key}-click for background	Faceți clic pentru a eșantiona culoarea din prim-plan  ·  {key}-clic pentru fundal
+	Clip Thumbnails to Document Bounds	Decupează miniaturile la limitele documentului
+	Color Blindness - Deuteranopia-type	Daltonism - tip deuteranopie
+	Color Blindness - Protanopia-type	Daltonism - tip protanopie
+	Contextual Task Bar	Bară de activități contextuală
+	Default Foreground and Background Colors (D)	Culori implicite pentru prim-plan și fundal (D)
+	Distribute horizontally	Distribuie orizontal
+	Distribute vertically	Distribuie vertical
+	Drag around the center to rotate the view  ·  Shift constrains to 15°	Trageți în jurul centrului pentru a roti vizualizarea  ·  Shift limitează la 15°
+	Embed All Linked	Încorporează toate conectate
+	Embed Linked	Încorporează cele conectate
+	Equalize Entire Image Based On Selected Area	Egalizează întreaga imagine pe baza zonei selectate
+	Equalize Selected Area Only	Egalizează doar zona selectată
+	Expand layer group on click	Extinde grupul de straturi la clic
+	Hide bar	Ascunde bara
+	Internet Standard RGB (sRGB)	RGB standard pentru internet (sRGB)
+	Large Thumbnails	Miniaturi mari
+	Legacy Macintosh RGB (Gamma 1.8)	RGB Macintosh vechi (Gamma 1,8)
+	Make Shape	Creare formă
+	Medium Thumbnails	Miniaturi medii
+	More options	Mai multe opțiuni
+	Move bar	Mută bara
+	Netscape Gray	Gri Netscape
+	No Thumbnails	Fără miniaturi
+	No settings saved: these raws can't keep a sidecar here	Nicio setare salvată: aceste fișiere raw nu pot păstra aici un fișier sidecar
+	Not a web color: click for the nearest web color	Nu este culoare web: faceți clic pentru cea mai apropiată culoare web
+	Nothing to save: these raws are at their default settings	Nimic de salvat: aceste fișiere raw au setările implicite
+	Open a document to select a color range.	Deschideți un document pentru a selecta un interval de culori.
+	Out of gamut for printing: click for the nearest printable color	În afara gamei pentru tipărire: faceți clic pentru cea mai apropiată culoare imprimabilă
+	Pick Color From Image	Alege culoarea din imagine
+	Pin bar position	Fixează poziția barei
+	Plugins…	Pluginuri…
+	Remember to turn off the printer's own color management in Print Settings…	Nu uitați să dezactivați gestionarea culorilor a imprimantei în Setări de tipărire…
+	Reset bar position	Resetează poziția barei
+	Sample: foreground color	Eșantion: culoarea din prim-plan
+	Save canceled	Salvare anulată
+	Save the settings to each raw's sidecar without opening it	Salvează setările în fișierul sidecar al fiecărui raw fără a-l deschide
+	Scroll All Windows	Derulare în toate ferestrele
+	Show hover bounds from Layers	Afișează limitele la trecerea cu mouse-ul din Straturi
+	Show layer bounds on hover	Afișează limitele stratului la trecerea cu mouse-ul
+	Small Thumbnails	Miniaturi mici
+	Some settings could not be saved; the raws stay open	Unele setări nu au putut fi salvate; fișierele raw rămân deschise
+	Switch Foreground and Background Colors (X)	Inversează culorile de prim-plan și de fundal (X)
+	Working CMY Plates	Plăci CMY de lucru
+	{label} is writing the file and can no longer be canceled	{label} scrie fișierul și nu mai poate fi anulat
