@@ -7,7 +7,7 @@ use super::{LienzoApp, Stroke, Tokens, icons, pos2};
 
 // ----------------------------------------------------------------------------- dock
 
-/// The panels and the canvas in the space left by the menus, bars and toolbar: craft-ui's
+/// The panels and the canvas in the space left by the menus, bars and toolbar: nodalia-ui's
 /// docking layout, with the icon rail at the window's end edge in the Studio themes.
 pub fn dock_area(app: &mut LienzoApp, ui: &mut egui::Ui) {
     let t = Tokens::get(ui.ctx());
@@ -33,7 +33,7 @@ pub fn dock_panel(app: &mut LienzoApp, ui: &mut egui::Ui) {
     let content = ui.available_rect_before_wrap();
     let range = crate::panels::dock_width_range(content.width());
     // The dock must leave the toolbox and the canvas's 200-point minimum room: the standard
-    // layout enforces the canvas minimum inside craft-ui, the fixed-size dock-edge panel does not.
+    // layout enforces the canvas minimum inside nodalia-ui, the fixed-size dock-edge panel does not.
     let toolbar_w = super::toolbar::toolbar_width(t.pro, app.ui.panels.toolbar_double);
     let max_dock = (*range.end()).min((content.width() - toolbar_w - crate::panel_docking::CANVAS_MIN_WIDTH - rw).max(1.0));
     let min_dock = (*range.start()).min(max_dock);

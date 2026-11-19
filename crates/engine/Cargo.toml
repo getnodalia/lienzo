@@ -37,7 +37,7 @@ base64 = "0.22"
 blake3 = { version = "1.8", default-features = false, features = ["pure"] }
 lienzo-codecs = { workspace = true }
 flate2 = { workspace = true }
-craft-print = { workspace = true }
+nodalia-print = { workspace = true }
 
 # Photoshop `.kys` shortcut sets (`edit.keyboardShortcuts` `importKys`); already in the tree
 # through lienzo-ui-egui and usvg.
@@ -56,7 +56,7 @@ chrono = { workspace = true, features = ["clock"] }
 [target.'cfg(windows)'.dependencies]
 same-file = "1"
 # `file.print` loads Windows.Data.Pdf.dll before calling into it (#5884): the safe binding
-# ui-egui and craft-print already use, pinned to the same version.
+# ui-egui and nodalia-print already use, pinned to the same version.
 winsafe = { version = "=0.0.29", default-features = false, features = ["kernel"] }
 
 # Printing on Unix: an IPP client for CUPS (pure Rust); the web build cannot print.

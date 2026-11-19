@@ -2,7 +2,7 @@
 resolver = "3"
 members = ["crates/*", "apps/*", "xtask"]
 default-members = ["crates/*", "apps/lienzo", "apps/lienzo-cli", "xtask"]
-exclude = ["vendor/craft-ui"]
+exclude = ["vendor/nodalia-ui"]
 
 [workspace.package]
 version = "0.3.7"
@@ -11,7 +11,7 @@ license = "MIT OR Apache-2.0"
 rust-version = "1.95"
 
 [workspace.dependencies]
-craft-ui = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d", features = ["serde"] }
+nodalia-ui = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1", features = ["serde"] }
 # Nodalia Design Language tokens (no features: no egui of its own, so the patched egui stays the only one).
 nodalia-theme = { git = "https://github.com/danielmigueltejedor/nodalia-design", rev = "44bfd0a37e6bd2837c473b4e5607b70e8d169e61" }
 # internal
@@ -42,11 +42,11 @@ lienzo-tablet = { path = "crates/tablet" }
 lienzo-ipp = { path = "crates/ipp" }
 
 # external
-craft-print = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d" }
-craft-pdf = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d", features = ["raster"] }
-craft-docpath = { version = "0.1.0", git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d" }
-craft-jpeg = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d" }
-craft-pcraft-format = { git = "https://github.com/getnodalia/foundation", rev = "b8f7d93b00dfb8f172938f3d2d796ae62dcfe123" }
+nodalia-print = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
+nodalia-pdf = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1", features = ["raster"] }
+nodalia-docpath = { version = "0.1.0", git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
+nodalia-jpeg = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
+nodalia-lienzo-format = { git = "https://github.com/getnodalia/foundation", rev = "00d3395e4a43dc1545938e9da9ea4a032bc9a158" }
 # In-app updates (check GitHub Releases, verify, replace the AppImage or the macOS app, restart).
 nodalia-update = { git = "https://github.com/danielmigueltejedor/nodalia-design", rev = "114848a2ff1a7c29c9a5432fb12e955fbe0aeef2", features = ["egui"] }
 thiserror = "2"
@@ -207,19 +207,13 @@ eframe = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc79968
 egui_demo_lib = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
 egui_inspection = { git = "https://github.com/getnodalia/foundation", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
 winit = { git = "https://github.com/getnodalia/foundation", rev = "a517b3846ee8457d84ee4975110bfda6797c44dc" }
-# craft-pdf's vendored Hayro trees: consumers patch the same craft-libs revision (crates/pdf README).
-hayro = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d" }
-hayro-syntax = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d" }
-hayro-interpret = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d" }
-hayro-jbig2 = { git = "https://github.com/getnodalia/foundation", rev = "1b34eba41e62138fc2438d2734523b302840b45d" }
+# nodalia-pdf's vendored Hayro trees: consumers patch the same nodalia-libs revision (crates/pdf README).
+hayro = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
+hayro-syntax = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
+hayro-interpret = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
+hayro-jbig2 = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
 
-# craft-ui is vendored (vendor/craft-ui, see vendor/craft-ui/VENDORED.md) so that a floating window
-# can have rounded corners; every craft-libs crate that depends on it gets this copy.
+# nodalia-ui is vendored (vendor/nodalia-ui, see vendor/nodalia-ui/VENDORED.md) so that a floating window
+# can have rounded corners; every nodalia-libs crate that depends on it gets this copy.
 [patch."https://github.com/getnodalia/foundation"]
-craft-ui = { path = "vendor/craft-ui" }
-
-# craft-libs at the pinned revisions names winprint.rs by its old home; resolve it from foundation,
-# where the same commits are kept (vendor/winprint.rs/main).
-[patch."https://github.com/storytold/winprint.rs"]
-craft-winprint-gdi = { git = "https://github.com/getnodalia/foundation", rev = "64e7afd4d1483512385012c340ecaaaf0f3beb7f" }
-winprint = { git = "https://github.com/getnodalia/foundation", rev = "51934db382f225454cf152a8657eb03789be63c4" }
+nodalia-ui = { path = "vendor/nodalia-ui" }

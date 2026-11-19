@@ -103,9 +103,9 @@ pub(super) fn style_props(st: &CharStyle, k: f32, fallback: &[String], idx: u32,
     if !st.font_family.is_empty() {
         fam.push(quote(&st.font_family));
     }
-    // Serif runs fall back to a Mincho face for Japanese (craft-fonts), others to a Gothic one.
-    if crate::craft_fonts::is_serif_family(&st.font_family) {
-        fam.extend(crate::craft_fonts::mincho_first(fallback).iter().map(|f| quote(f)));
+    // Serif runs fall back to a Mincho face for Japanese (nodalia-fonts), others to a Gothic one.
+    if crate::nodalia_fonts::is_serif_family(&st.font_family) {
+        fam.extend(crate::nodalia_fonts::mincho_first(fallback).iter().map(|f| quote(f)));
     } else {
         fam.extend(fallback.iter().map(|f| quote(f)));
     }

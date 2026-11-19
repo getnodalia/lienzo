@@ -1,4 +1,4 @@
-//! PDF import end-to-end through craft-pdf (pure Rust, no shared library).
+//! PDF import end-to-end through nodalia-pdf (pure Rust, no shared library).
 //!
 //! A six-page synthetic PDF (plain, CropBox offset, rotations 90/180/270 and an oversized
 //! CropBox) imports at 72 and 300 DPI as one artboard per page, with the page's print size kept,
@@ -151,7 +151,7 @@ fn imports_every_page_as_an_artboard_with_its_print_size() {
 /// A page over the renderer's side limit lowers the effective DPI instead of failing.
 #[test]
 fn huge_pages_lower_the_effective_dpi_within_the_renderer_bounds() {
-    // 3000 pt at 300 dpi would be 12500 px wide, over craft-pdf's 8192 px side limit.
+    // 3000 pt at 300 dpi would be 12500 px wide, over nodalia-pdf's 8192 px side limit.
     let pdf = one_page_pdf(3000.0, 100.0);
     let options = ImportOptions { pdf_dpi: 300.0, ..Default::default() };
     let result = import_with_options_and_interrupt("wide.pdf", &pdf, &options, &Interrupt::NONE).expect("PDF import");

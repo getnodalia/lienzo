@@ -1404,111 +1404,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "craft-docpath"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-
-[[package]]
-name = "craft-fonts-build"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-
-[[package]]
-name = "craft-i18n"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-dependencies = [
- "fixed_decimal",
- "icu_decimal",
- "icu_locale_core",
- "icu_locale_fallback",
- "icu_normalizer",
- "icu_plurals",
- "icu_properties",
- "icu_provider",
- "icu_provider_adapters",
- "icu_provider_blob",
- "log",
- "objc2-foundation 0.3.2",
- "sys-locale",
- "unicode-bidi",
- "windows-registry",
- "writeable",
-]
-
-[[package]]
-name = "craft-jpeg"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-dependencies = [
- "thiserror 2.0.21",
-]
-
-[[package]]
-name = "craft-pcraft-format"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=b8f7d93b00dfb8f172938f3d2d796ae62dcfe123#b8f7d93b00dfb8f172938f3d2d796ae62dcfe123"
-dependencies = [
- "serde",
- "serde_json",
- "thiserror 2.0.21",
-]
-
-[[package]]
-name = "craft-pdf"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-dependencies = [
- "bytemuck",
- "hayro",
- "hayro-interpret",
- "hayro-syntax",
- "thiserror 2.0.21",
-]
-
-[[package]]
-name = "craft-print"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-dependencies = [
- "craft-winprint-gdi",
- "log",
- "miniz_oxide 0.9.1",
- "roxmltree 0.21.1",
- "tempfile",
- "winprint",
- "winsafe",
-]
-
-[[package]]
-name = "craft-ui"
-version = "0.1.0"
-dependencies = [
- "craft-fonts-build",
- "craft-i18n",
- "egui",
- "epaint",
- "js-sys",
- "log",
- "objc2 0.6.5",
- "objc2-app-kit 0.3.2",
- "objc2-foundation 0.3.2",
- "serde",
- "skrifa 0.44.0",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "web-sys",
-]
-
-[[package]]
-name = "craft-winprint-gdi"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=64e7afd4d1483512385012c340ecaaaf0f3beb7f#64e7afd4d1483512385012c340ecaaaf0f3beb7f"
-dependencies = [
- "windows-sys 0.61.2",
-]
-
-[[package]]
 name = "crc32fast"
 version = "1.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2937,7 +2832,7 @@ dependencies = [
 [[package]]
 name = "hayro"
 version = "0.7.1"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
 dependencies = [
  "bytemuck",
  "hayro-interpret",
@@ -2967,7 +2862,7 @@ dependencies = [
 [[package]]
 name = "hayro-interpret"
 version = "0.7.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
 dependencies = [
  "bitflags 2.13.2",
  "hayro-cmap",
@@ -2985,7 +2880,7 @@ dependencies = [
 [[package]]
 name = "hayro-jbig2"
 version = "0.3.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
 dependencies = [
  "fearless_simd",
  "hayro-ccitt",
@@ -3009,7 +2904,7 @@ checksum = "bc2d80da85f31c3fdc0366431f44cfd645a9da1e242ed1f4a61f213d9765660f"
 [[package]]
 name = "hayro-syntax"
 version = "0.7.2"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
 dependencies = [
  "flate2",
  "hayro-ccitt",
@@ -4167,7 +4062,6 @@ dependencies = [
 name = "lienzo-codecs"
 version = "0.3.7"
 dependencies = [
- "craft-jpeg",
  "exr",
  "flate2",
  "half",
@@ -4176,6 +4070,7 @@ dependencies = [
  "jpeg-encoder",
  "jxl-oxide",
  "lienzo-heif",
+ "nodalia-jpeg",
  "png 0.18.1",
  "proptest",
  "rayon",
@@ -4229,7 +4124,6 @@ dependencies = [
  "base64 0.22.1",
  "blake3",
  "chrono",
- "craft-print",
  "exr",
  "flate2",
  "lienzo-affinity",
@@ -4252,6 +4146,7 @@ dependencies = [
  "lienzo-testkit",
  "lienzo-text",
  "lienzo-vector",
+ "nodalia-print",
  "rayon",
  "roxmltree 0.21.1",
  "same-file",
@@ -4270,7 +4165,6 @@ name = "lienzo-format"
 version = "0.3.7"
 dependencies = [
  "blake3",
- "craft-pcraft-format",
  "crc32fast",
  "exacl",
  "flate2",
@@ -4280,6 +4174,7 @@ dependencies = [
  "lienzo-doc",
  "lienzo-geom",
  "lienzo-raster",
+ "nodalia-lienzo-format",
  "proptest",
  "rustix 1.1.5",
  "ruzstd",
@@ -4329,8 +4224,6 @@ name = "lienzo-io"
 version = "0.3.7"
 dependencies = [
  "blake3",
- "craft-docpath",
- "craft-pdf",
  "crc32fast",
  "flate2",
  "imagesize",
@@ -4353,6 +4246,8 @@ dependencies = [
  "lienzo-vector",
  "lopdf",
  "miniz_oxide 0.9.1",
+ "nodalia-docpath",
+ "nodalia-pdf",
  "proptest",
  "resvg",
  "roxmltree 0.21.1",
@@ -4492,8 +4387,6 @@ version = "0.3.7"
 dependencies = [
  "base64 0.23.1",
  "chrono",
- "craft-print",
- "craft-ui",
  "eframe",
  "egui",
  "egui_extras",
@@ -4522,7 +4415,9 @@ dependencies = [
  "lienzo-text",
  "lienzo-vector",
  "log",
+ "nodalia-print",
  "nodalia-theme",
+ "nodalia-ui",
  "nodalia-update",
  "rayon",
  "serde",
@@ -4902,11 +4797,108 @@ dependencies = [
 ]
 
 [[package]]
+name = "nodalia-docpath"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+
+[[package]]
+name = "nodalia-fonts-build"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+
+[[package]]
+name = "nodalia-i18n"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+dependencies = [
+ "fixed_decimal",
+ "icu_decimal",
+ "icu_locale_core",
+ "icu_locale_fallback",
+ "icu_normalizer",
+ "icu_plurals",
+ "icu_properties",
+ "icu_provider",
+ "icu_provider_adapters",
+ "icu_provider_blob",
+ "log",
+ "objc2-foundation 0.3.2",
+ "sys-locale",
+ "unicode-bidi",
+ "windows-registry",
+ "writeable",
+]
+
+[[package]]
+name = "nodalia-jpeg"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+dependencies = [
+ "thiserror 2.0.21",
+]
+
+[[package]]
+name = "nodalia-lienzo-format"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=00d3395e4a43dc1545938e9da9ea4a032bc9a158#00d3395e4a43dc1545938e9da9ea4a032bc9a158"
+dependencies = [
+ "serde",
+ "serde_json",
+ "thiserror 2.0.21",
+]
+
+[[package]]
+name = "nodalia-pdf"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+dependencies = [
+ "bytemuck",
+ "hayro",
+ "hayro-interpret",
+ "hayro-syntax",
+ "thiserror 2.0.21",
+]
+
+[[package]]
+name = "nodalia-print"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+dependencies = [
+ "log",
+ "miniz_oxide 0.9.1",
+ "nodalia-winprint-gdi",
+ "roxmltree 0.21.1",
+ "tempfile",
+ "winprint",
+ "winsafe",
+]
+
+[[package]]
 name = "nodalia-theme"
 version = "0.1.0-alpha.1"
 source = "git+https://github.com/danielmigueltejedor/nodalia-design?rev=44bfd0a37e6bd2837c473b4e5607b70e8d169e61#44bfd0a37e6bd2837c473b4e5607b70e8d169e61"
 dependencies = [
  "egui",
+]
+
+[[package]]
+name = "nodalia-ui"
+version = "0.1.0"
+dependencies = [
+ "egui",
+ "epaint",
+ "js-sys",
+ "log",
+ "nodalia-fonts-build",
+ "nodalia-i18n",
+ "objc2 0.6.5",
+ "objc2-app-kit 0.3.2",
+ "objc2-foundation 0.3.2",
+ "serde",
+ "skrifa 0.44.0",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
 ]
 
 [[package]]
@@ -4918,6 +4910,14 @@ dependencies = [
  "serde_json",
  "sha2",
  "ureq",
+]
+
+[[package]]
+name = "nodalia-winprint-gdi"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=e6b9c3cb65bf6d11a75b0ee2c17b41aae14a6b7d#e6b9c3cb65bf6d11a75b0ee2c17b41aae14a6b7d"
+dependencies = [
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -9443,7 +9443,7 @@ dependencies = [
 [[package]]
 name = "winprint"
 version = "0.2.1"
-source = "git+https://github.com/getnodalia/foundation?rev=51934db382f225454cf152a8657eb03789be63c4#51934db382f225454cf152a8657eb03789be63c4"
+source = "git+https://github.com/getnodalia/foundation?rev=f74759aedd0d72605baf33ba882da0dd38e8476c#f74759aedd0d72605baf33ba882da0dd38e8476c"
 dependencies = [
  "flate2",
  "fmt-derive",

@@ -13,10 +13,10 @@ use std::time::{Duration, Instant};
 
 /// Exercise the real CLI's same-format Save, the native watcher and Lienzo's transaction.
 #[test]
-#[ignore = "set VECTORCRAFT_TEST_EDITOR and optionally PHOTO_NATIVE_LOGO_PSD/PHOTO_NATIVE_CONTAINER"]
+#[ignore = "set VECTORNODALIA_TEST_EDITOR and optionally PHOTO_NATIVE_LOGO_PSD/PHOTO_NATIVE_CONTAINER"]
 #[allow(clippy::cognitive_complexity, reason = "one opt-in walk through a real editor, step by step")]
 fn original_format_real_editor_save_watcher_and_psd_roundtrip() {
-    let editor = std::env::var_os("VECTORCRAFT_TEST_EDITOR").expect("VECTORCRAFT_TEST_EDITOR");
+    let editor = std::env::var_os("VECTORNODALIA_TEST_EDITOR").expect("VECTORNODALIA_TEST_EDITOR");
     let editor = Path::new(&editor);
     let mut photo = lienzo_engine::Session::new();
     let vector_path = std::env::var_os("PHOTO_NATIVE_VECTOR");

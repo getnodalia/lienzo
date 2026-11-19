@@ -3,8 +3,8 @@
 //! * [`fonts::FontDb`]: bundled fonts (Inter, JetBrains Mono; always available, including on the
 //!   web), optional system fonts from platform directory scans plus Fontconfig's Linux file list,
 //!   user font data, TrueType collections, PostScript-name lookup. Builds made with the optional
-//!   craft-fonts input
-//!   (`CRAFT_FONTS_DIR`, see [`craft_fonts`]) also carry its fonts of every script (a single-face
+//!   nodalia-fonts input
+//!   (`NODALIA_FONTS_DIR`, see [`nodalia_fonts`]) also carry its fonts of every script (a single-face
 //!   file under its manifest family name); the ones the fallback lists name are fallbacks.
 //! * [`layout`]: shaping and line layout with [parley] (HarfRust shaping, bidi, line breaking),
 //!   point and paragraph (box) text, per-run styles, Photoshop leading/indent/spacing rules.
@@ -20,13 +20,13 @@
 pub mod area;
 pub mod cjk;
 mod color_glyphs;
-pub mod craft_fonts;
 mod embolden;
 pub mod engine_data;
 pub mod font_class;
 pub mod fonts;
 pub mod glyphs;
 pub mod layout;
+pub mod nodalia_fonts;
 pub mod optical;
 pub mod psd;
 mod psd_path;
@@ -41,12 +41,12 @@ pub mod warp;
 use lienzo_color::PixelFormat;
 use lienzo_doc::TextLayer;
 
-pub use craft_fonts::{CRAFT_FONTS, CraftFont};
 pub use font_class::{FamilyTraits, FontClass, FontFormat};
 pub use fonts::{FaceInfo, FontDb, ResolvedFont};
 pub use layout::{
     ClusterInfo, LineInfo, PlacedGlyph, TextLayout, byte_index, char_index, hit_char, line_edge, line_index, line_step, text_point_inside, word_boundary,
 };
+pub use nodalia_fonts::{NODALIA_FONTS, NodaliaFont};
 pub use render::Rendered;
 
 /// Font database + layout context. Create once and reuse (font loading and shaping caches).

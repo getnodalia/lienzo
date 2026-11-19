@@ -15,7 +15,7 @@ lienzo-color = { workspace = true }
 lienzo-raster = { workspace = true }
 lienzo-doc = { workspace = true }
 lienzo-codecs = { workspace = true }
-craft-pcraft-format = { workspace = true }
+nodalia-lienzo-format = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true, features = ["unbounded_depth", "float_roundtrip"] }
 thiserror = { workspace = true }

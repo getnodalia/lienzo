@@ -12,13 +12,13 @@ use lienzo_doc::{Adjustment, ClippingPath, Effect, Fill, GlobalLight, Guides, La
 use lienzo_geom::{Affine, Size};
 use serde::{Deserialize, Serialize};
 
-pub use craft_pcraft_format::{FORMAT_VERSION, Hash, TileRef};
+pub use nodalia_lienzo_format::{FORMAT_VERSION, Hash, TileRef};
 
-/// The manifest: craft-pcraft-format's envelope (`format_version`, `generator`, the optional
+/// The manifest: nodalia-lienzo-format's envelope (`format_version`, `generator`, the optional
 /// `thumbnail` and `composite` previews) around the document [`DocM`]. A save with the full-size
 /// composite adds a `full_composite` member after the envelope; [`crate::read_full_composite`]
 /// reads it.
-pub type Manifest = craft_pcraft_format::Manifest<DocM>;
+pub type Manifest = nodalia_lienzo_format::Manifest<DocM>;
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct DocM {
