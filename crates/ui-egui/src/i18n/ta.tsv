@@ -4288,3 +4288,345 @@ navigator	Zoom	பெரிதாக்கல்
 	Content-aware fill	உள்ளடக்க அடிப்படையிலான நிரப்பு
 	Sample content from part of the image and use it to fill a small area	சிறிய பகுதியை நிரப்ப படத்தின் ஒரு பகுதியிலிருந்து உள்ளடக்கத்தை மாதிரி எடுக்கவும்
 	Reset the crop box, image rotation, and aspect ratio settings	வெட்டு சட்டகம், படச் சுழற்சி மற்றும் விகிதத்தை மீட்டமைக்கவும்
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	தொகுதி செயலாக்கத்தின் போது ஒரு கட்டளை ரத்து செய்யப்பட்டது அல்லது நிறுத்தப்பட்டது. அடுத்த கோப்புடன் தொடரவா அல்லது நிறுத்தவா?
+	A file is still being placed; try again when it has finished.	ஒரு கோப்பு இன்னும் வைக்கப்படுகிறது; அது முடிந்ததும் மீண்டும் முயலவும்.
+	A native image editor, layer by layer. No account, no cloud.	உள்ளமை பட எடிட்டர், அடுக்கு அடுக்காக. கணக்கு இல்லை, கிளவுடு இல்லை.
+	Allow Tool Recording	கருவி பதிவை அனுமதி
+	Allows rotation and scaling of selection	தேர்வைச் சுழற்றவும் அளவு மாற்றவும் அனுமதிக்கிறது
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	ஒளிபுகாமைக்கு எப்போதும் அழுத்தத்தைப் பயன்படுத்து. அணைத்திருக்கும்போது, தூரிகை முன்னமைவு அழுத்தத்தைக் கட்டுப்படுத்தும்
+	Always use Pressure for Size. When off, Brush Preset controls pressure	அளவுக்கு எப்போதும் அழுத்தத்தைப் பயன்படுத்து. அணைத்திருக்கும்போது, தூரிகை முன்னமைவு அழுத்தத்தைக் கட்டுப்படுத்தும்
+	Answer the open import question first, then import this file again.	திறந்துள்ள இறக்குமதி கேள்விக்கு முதலில் பதிலளிக்கவும், பின் இந்தக் கோப்பை மீண்டும் இறக்குமதி செய்யவும்.
+	Anti-alias brush application	தூரிகை பயன்பாட்டின் ஓரங்களை மென்மையாக்கு
+	Are you sure you want to delete all notes?	அனைத்துக் குறிப்புகளையும் நீக்க விரும்புகிறீர்களா?
+	Arrowhead options	அம்புத்தலை விருப்பங்கள்
+	Arrowheads	அம்புத்தலைகள்
+	Attribute	பண்புக்கூறு
+	Batch preview	தொகுதி முன்னோட்டம்
+	Bottom align text	உரையை கீழே சீரமை
+	CPU Rendering	CPU ரெண்டரிங்
+	Calculating…	கணக்கிடுகிறது…
+	Cancelled placing {name}	{name} வைப்பது ரத்து செய்யப்பட்டது
+	Choose a menu command. Playback asks for its settings when needed.	ஒரு மெனு கட்டளையைத் தேர்ந்தெடுக்கவும். தேவைப்படும்போது இயக்கம் அதன் அமைப்புகளைக் கேட்கும்.
+	Choose a remix mode	ரீமிக்ஸ் முறையைத் தேர்ந்தெடுக்கவும்
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	பெரிதாக்கு கருவியால் அளவை மாற்ற, கிளிக் செய்து இடது அல்லது வலது பக்கம் நகர்த்தவும் (OpenGL மட்டும்)
+	Click to open the Brush Preset picker	தூரிகை முன்னமைவு தேர்வியைத் திறக்க கிளிக் செய்யவும்
+	Click to refresh histogram with uncached data	தற்காலிகமாகச் சேமிக்கப்படாத தரவுடன் ஹிஸ்டோகிராமைப் புதுப்பிக்க கிளிக் செய்யவும்
+	Concavity	குழிவு
+	Confirm or cancel the pending Record Again editor first.	நிலுவையில் உள்ள “மீண்டும் பதிவுசெய்” எடிட்டரை முதலில் உறுதிசெய்யவும் அல்லது ரத்து செய்யவும்.
+	Confirm or cancel the pending menu item first.	நிலுவையில் உள்ள மெனு உருப்படியை முதலில் உறுதிசெய்யவும் அல்லது ரத்து செய்யவும்.
+	Copy CSS	CSS நகலெடு
+	Could not use the type tool because the layer is locked.	அடுக்கு பூட்டப்பட்டிருப்பதால் உரை கருவியைப் பயன்படுத்த முடியவில்லை.
+	Count:	எண்ணிக்கை:
+	Data Sets as Files is unavailable on the web	“கோப்புகளாகத் தரவுத் தொகுப்புகள்” வலையில் கிடைக்காது
+	Delete Note	குறிப்பை நீக்கு
+	Delete this note?	இந்தக் குறிப்பை நீக்கவா?
+	Determines the spread of replaced color	மாற்றப்பட்ட நிறத்தின் பரவலைத் தீர்மானிக்கிறது
+	Do not erase the foreground swatch color	முன்புற மாதிரி நிறத்தை அழிக்காதே
+	Drawn on the CPU: {reason}. Click for System Info.	CPU இல் வரையப்பட்டது: {reason}. கணினித் தகவலுக்கு கிளிக் செய்யவும்.
+	Draws background color over foreground colors	முன்புற நிறங்களின் மேல் பின்னணி நிறத்தை வரைகிறது
+	Dropped files weren't placed: their document was closed.	விடப்பட்ட கோப்புகள் வைக்கப்படவில்லை: அவற்றின் ஆவணம் மூடப்பட்டது.
+	Dropped files weren't placed: too many are waiting for their document.	விடப்பட்ட கோப்புகள் வைக்கப்படவில்லை: அவற்றின் ஆவணத்திற்காக மிக அதிகமானவை காத்திருக்கின்றன.
+	Effect	விளைவு
+	Empty	காலி
+	Enable to remix all layers	அனைத்து அடுக்குகளையும் ரீமிக்ஸ் செய்ய இயக்கவும்
+	End	முடிவு
+	Erase range of similar colors	ஒத்த நிறங்களின் வரம்பை அழி
+	Erase to History	வரலாறு வரை அழி
+	Filter for embedded smart objects	உட்பொதிக்கப்பட்ட ஸ்மார்ட் பொருள்களுக்கான வடிகட்டி
+	Filter for linked smart objects that are missing	காணாமல் போன இணைக்கப்பட்ட ஸ்மார்ட் பொருள்களுக்கான வடிகட்டி
+	Filter for smart objects linked locally	உள்ளூரில் இணைக்கப்பட்ட ஸ்மார்ட் பொருள்களுக்கான வடிகட்டி
+	High Memory Photoshop Document	அதிக நினைவக Photoshop ஆவணம்
+	How far to let the erasing spread	அழித்தல் எவ்வளவு தூரம் பரவ அனுமதிக்க வேண்டும்
+	Image Compression	பட அழுத்தம்
+	Import as New Group	புதிய குழுவாக இறக்குமதி செய்
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	“புதிய குழுவாக இறக்குமதி செய்” “{group}” ஐ வைத்துக்கொண்டு, கோப்பை அதன் அருகில் புதிய குழுவாகச் சேர்க்கிறது.
+	Insert Menu Item…	மெனு உருப்படியைச் செருகு…
+	Insert Path	பாதையைச் செருகு
+	LZW	LZW
+	Layer Effects	அடுக்கு விளைவுகள்
+	Level:	நிலை:
+	Linked	இணைக்கப்பட்டது
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	இந்தக் கோப்பைத் திறந்த பிறகு மிகக் குறைந்த நினைவகமே மிஞ்சும். முதலில் பிற பயன்பாடுகளை மூடவும், இல்லையெனில் Lienzo நினைவகம் தீர்ந்துவிடலாம்.
+	Load Solid Colors Only	திட நிறங்களை மட்டும் ஏற்று
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	நிழல்கள் மற்றும் ஒளிர்வுகளில் வெட்டுதலைக் குறைத்து, நிறங்கள் சாயல் மாறுவதைத் தடுக்கிறது
+	No Adv. Blending	மேம்பட்ட கலப்பு இல்லை
+	No Layer Effects	அடுக்கு விளைவுகள் இல்லை
+	No Layer Mask	அடுக்கு முகமூடி இல்லை
+	No Vector Mask	திசையன் முகமூடி இல்லை
+	No document.	ஆவணம் இல்லை.
+	No import is waiting. Import the file again.	எந்த இறக்குமதியும் காத்திருக்கவில்லை. கோப்பை மீண்டும் இறக்குமதி செய்யவும்.
+	No matching fonts	பொருந்தும் எழுத்துருக்கள் இல்லை
+	No menu item belongs to this chooser.	இந்தத் தேர்வியுடன் எந்த மெனு உருப்படியும் தொடர்புடையதல்ல.
+	No menu item is waiting.	எந்த மெனு உருப்படியும் காத்திருக்கவில்லை.
+	No note to delete	நீக்க குறிப்பு எதுவும் இல்லை
+	No options for the Add Anchor Point Tool.	நங்கூரப் புள்ளி சேர் கருவிக்கு விருப்பங்கள் இல்லை.
+	No options for the Delete Anchor Point Tool.	நங்கூரப் புள்ளி நீக்கு கருவிக்கு விருப்பங்கள் இல்லை.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	வடிவம் உருவாக்க பாதை இல்லை: பேனா கருவியால் ஒன்றை வரையவும் அல்லது பாதைகள் பலகத்தில் ஒன்றைத் தேர்ந்தெடுக்கவும்.
+	No pixels are selected.	எந்தப் பிக்சலும் தேர்ந்தெடுக்கப்படவில்லை.
+	No recorded step belongs to this editor.	இந்த எடிட்டருக்குரிய பதிவுசெய்த படி எதுவும் இல்லை.
+	No slices are selected. Click a slice in the preview to select it.	எந்தத் துண்டும் தேர்ந்தெடுக்கப்படவில்லை. தேர்ந்தெடுக்க முன்னோட்டத்தில் ஒரு துண்டைக் கிளிக் செய்யவும்.
+	No step is waiting.	எந்தப் படியும் காத்திருக்கவில்லை.
+	Not Clipped	வெட்டப்படாதது
+	Not Empty	காலியல்லாதது
+	Not Linked	இணைக்கப்படாதது
+	Not Locked	பூட்டப்படாதது
+	Not Visible	தெரியாதது
+	Note deleted, but the preference could not be saved: {error}	குறிப்பு நீக்கப்பட்டது, ஆனால் விருப்பத்தேர்வைச் சேமிக்க முடியவில்லை: {error}
+	Nudge	நகர்த்து
+	Open anyway	எப்படியும் திற
+	Open as Smart Object…	ஸ்மார்ட் பொருளாகத் திற…
+	Opening this document uses more memory and may slow down your computer or other running applications.	இந்த ஆவணத்தைத் திறப்பது அதிக நினைவகத்தைப் பயன்படுத்தும்; உங்கள் கணினி அல்லது ஓடும் பிற பயன்பாடுகள் மெதுவாகலாம்.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	“{name}” ஐத் திறக்க மதிப்பிடப்பட்ட {est} GiB நினைவகம் தேவை ({avail} GiB கிடைக்கிறது).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	“{name}” ஐத் திறக்க மதிப்பிடப்பட்ட {est} GiB நினைவகம் தேவை. கிடைக்கும் நினைவகத்தை அளவிட முடியவில்லை.
+	Painting Mode	வண்ணம் தீட்டும் முறை
+	Percentile:	சதவீத இடம்:
+	Preparing Free Transform	தன்னிச்சை உருமாற்றத்தைத் தயார்செய்கிறது
+	Record Again	மீண்டும் பதிவுசெய்
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	“மாற்று” முதலில் “{group}” இல் உள்ள அனைத்தையும் நீக்கும், நீங்கள் திருத்திய அல்லது அங்கு நகர்த்திய முன்னமைவுகள் உட்பட. இதைச் செயல்தவிர்க்க முடியாது.
+	Report an issue	சிக்கலைப் புகாரளி
+	Resize windows when zooming using the Zoom Tool	பெரிதாக்கு கருவியால் பெரிதாக்கும்போது சாளரங்களின் அளவை மாற்று
+	Save Image Pyramid	பட பிரமிடைச் சேமி
+	Save Transparency	ஒளிபுகுதன்மையைச் சேமி
+	Scroll all open document windows when using the hand tool	கை கருவியைப் பயன்படுத்தும்போது திறந்துள்ள அனைத்து ஆவணச் சாளரங்களையும் உருட்டு
+	Search and select fonts	எழுத்துருக்களைத் தேடித் தேர்ந்தெடு
+	Select Pixels	பிக்சல்களைத் தேர்ந்தெடு
+	Select an action first.	முதலில் ஒரு செயலைத் தேர்ந்தெடுக்கவும்.
+	Select an action step first.	முதலில் ஒரு செயல் படியைத் தேர்ந்தெடுக்கவும்.
+	Selected Slices	தேர்ந்தெடுத்த துண்டுகள்
+	Set 	தொகுப்பு 
+	Set 1	தொகுப்பு 1
+	Set 10	தொகுப்பு 10
+	Set 11	தொகுப்பு 11
+	Set 12	தொகுப்பு 12
+	Set 13	தொகுப்பு 13
+	Set 14	தொகுப்பு 14
+	Set 15	தொகுப்பு 15
+	Set 16	தொகுப்பு 16
+	Set 17	தொகுப்பு 17
+	Set 18	தொகுப்பு 18
+	Set 19	தொகுப்பு 19
+	Set 2	தொகுப்பு 2
+	Set 20	தொகுப்பு 20
+	Set 3	தொகுப்பு 3
+	Set 4	தொகுப்பு 4
+	Set 5	தொகுப்பு 5
+	Set 6	தொகுப்பு 6
+	Set 7	தொகுப்பு 7
+	Set 8	தொகுப்பு 8
+	Set 9	தொகுப்பு 9
+	Set as default	இயல்புநிலையாக அமை
+	Set exposure for stroke	கீறலுக்கான வெளிப்பாட்டை அமை
+	Set flow rate for stroke	கீறலுக்கான ஓட்ட வீதத்தை அமை
+	Set font size	எழுத்துரு அளவை அமை
+	Set font style	எழுத்துரு பாணியை அமை
+	Set opacity for stroke	கீறலுக்கான ஒளிபுகாமையை அமை
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	கீறலுக்கான மென்மையாக்கலை அமை\nதூரிகைக் கீறல்களின் நடுக்கத்தைக் குறைக்க அதிக மதிப்புகளைப் பயன்படுத்தவும்
+	Set symmetry options for Painting	வண்ணம் தீட்டலுக்கான சமச்சீர் விருப்பங்களை அமை
+	Set text color	உரை நிறத்தை அமை
+	Set the brush angle	தூரிகைக் கோணத்தை அமை
+	Show Channels in Color	சேனல்களை நிறத்தில் காட்டு
+	Show Statistics	புள்ளிவிவரங்களைக் காட்டு
+	Smoothing Options	மென்மையாக்கல் விருப்பங்கள்
+	Source:	மூலம்:
+	Start	தொடக்கம்
+	Stylistic Sets	பாணித் தொகுப்புகள்
+	The Record Again command changed.	“மீண்டும் பதிவுசெய்” கட்டளை மாறியது.
+	The action or insertion command changed. Request Insert Menu Item again.	செயல் அல்லது செருகல் கட்டளை மாறியது. “மெனு உருப்படியைச் செருகு” ஐ மீண்டும் கோரவும்.
+	The actions changed. Request Record Again again.	செயல்கள் மாறின. “மீண்டும் பதிவுசெய்” ஐ மீண்டும் கோரவும்.
+	The command permissions changed. Request Insert Menu Item again.	கட்டளை அனுமதிகள் மாறின. “மெனு உருப்படியைச் செருகு” ஐ மீண்டும் கோரவும்.
+	The command permissions changed. Request Record Again again.	கட்டளை அனுமதிகள் மாறின. “மீண்டும் பதிவுசெய்” ஐ மீண்டும் கோரவும்.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	தற்போதைய ஸ்க்ராட்ச் அடைவு ({path}) தனது காலி இடத்தைத் தெரிவிக்கவில்லை, எனவே Lienzo அது நிரம்புவதற்கு முன் நிற்க முடியாது, மேலும் ஸ்க்ராட்ச் அளவு வரம்பு இல்லாமல் பெரிய கோப்புகளுக்கு அதிலிருந்து கூடுதல் இடம் கிடைக்காது. இந்த எச்சரிக்கை தற்போதைய கட்டமைப்புக்குப் பொருந்தும்; மேலுள்ள மாற்றங்கள் செயல்படுத்து அல்லது சரி என்பதில் நடைமுறைக்கு வரும். ஒரு வரம்பை அமைக்கவும் அல்லது உள்ளூர் வட்டைப் பயன்படுத்தவும்.
+	The document changed. Please choose Clear All again.	ஆவணம் மாறியது. தயவுசெய்து “அனைத்தையும் அழி” ஐ மீண்டும் தேர்ந்தெடுக்கவும்.
+	The document changed. Request Record Again again.	ஆவணம் மாறியது. “மீண்டும் பதிவுசெய்” ஐ மீண்டும் கோரவும்.
+	The document or its notes changed. Please delete the note again.	ஆவணம் அல்லது அதன் குறிப்புகள் மாறின. தயவுசெய்து குறிப்பை மீண்டும் நீக்கவும்.
+	The preference could not be saved: {error}	விருப்பத்தேர்வைச் சேமிக்க முடியவில்லை: {error}
+	The step editor could not be opened.	படி எடிட்டரைத் திறக்க முடியவில்லை.
+	The step has no command editor.	இந்தப் படிக்கு கட்டளை எடிட்டர் இல்லை.
+	Tolerance for choosing related colors	தொடர்புடைய நிறங்களைத் தேர்வு செய்வதற்கான சகிப்பு
+	Top align text	உரையை மேலே சீரமை
+	Uncached Refresh	தற்காலிகமாகச் சேமிக்கப்படாத புதுப்பிப்பு
+	Use relative positioning for reference point	குறிப்புப் புள்ளிக்கு ஒப்பீட்டு நிலைப்படுத்தலைப் பயன்படுத்து
+	Use these settings for new arrows	புதிய அம்புகளுக்கு இந்த அமைப்புகளைப் பயன்படுத்து
+	Useful mixer brush combinations	பயனுள்ள கலப்புத் தூரிகை சேர்க்கைகள்
+	ZIP	ZIP
+	Zoom current window to 1:1	தற்போதைய சாளரத்தை 1:1 ஆகப் பெரிதாக்கு
+	Zoom current window to fill the screen	தற்போதைய சாளரத்தைத் திரை நிரம்பப் பெரிதாக்கு
+	Zoom current window to screen size	தற்போதைய சாளரத்தைத் திரை அளவிற்குப் பெரிதாக்கு
+	brush tool	தூரிகை கருவி
+	by Nodalia	Nodalia வழங்குவது
+	dodge tool	ஒளியேற்று கருவி
+	{message} into “{group}”	{message} “{group}” இல்
+	{ok} written to {dir}	{ok} {dir} இல் எழுதப்பட்டது
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	“{group}” தூரிகைக் குழுவில் ஏற்கனவே உங்கள் {n} தூரிகை உள்ளது.|“{group}” தூரிகைக் குழுவில் ஏற்கனவே உங்கள் {n} தூரிகைகள் உள்ளன.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	“{group}” சாய்வுக் குழு ஏற்கனவே உள்ளது ({n} சாய்வு).|“{group}” சாய்வுக் குழு ஏற்கனவே உள்ளது ({n} சாய்வுகள்).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} Image Assets வெளியீடு தோல்வியடைந்தது|{what}: {n} Image Assets வெளியீடுகள் தோல்வியடைந்தன
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} கோப்பு தோல்வியடைந்தது|{what}: {n} கோப்புகள் தோல்வியடைந்தன
+	Add to Favorites	பிடித்தவையில் சேர்
+	Align bottom edges	கீழ் விளிம்புகளைச் சீரமை
+	Align top edges	மேல் விளிம்புகளைச் சீரமை
+	Align vertical centers	செங்குத்து மையங்களைச் சீரமை
+	All Classes	அனைத்து வகைகள்
+	Allow Non-Linear History	நேரியல் அல்லாத வரலாற்றை அனுமதி
+	Alt-click a plane to set the clone source	குளோன் மூலத்தை அமைக்க ஒரு தளத்தை Alt-கிளிக் செய்யவும்
+	Blackletter	பிளாக்லெட்டர்
+	Color Aware	நிறம் அறிந்தது
+	Contextual Task Bar	சூழல் பணிப்பட்டி
+	Copy Color as HTML	நிறத்தை HTML ஆக நகலெடு
+	Copy Color's Hex Code	நிறத்தின் ஹெக்ஸ் குறியீட்டை நகலெடு
+	Could not write {name}: {error}	{name} ஐ எழுத முடியவில்லை: {error}
+	Dab	தொடுகை
+	Decontaminate Colors	நிறங்களைத் தூய்மையாக்கு
+	Decorative	அலங்காரம்
+	Distribute horizontally	கிடைமட்டமாகப் பகிர்
+	Distribute vertically	செங்குத்தாகப் பகிர்
+	Edge Detection	விளிம்பு கண்டறிதல்
+	Embed All Linked	இணைக்கப்பட்டவை அனைத்தையும் உட்பொதி
+	Embed Linked	இணைக்கப்பட்டதை உட்பொதி
+	Expand layer group on click	கிளிக் செய்யும்போது அடுக்குக் குழுவை விரி
+	Export Selected Styles…	தேர்ந்தெடுத்த பாணிகளை ஏற்றுமதி செய்…
+	Export Styles…	பாணிகளை ஏற்றுமதி செய்…
+	Font preview:	எழுத்துரு முன்னோட்டம்:
+	From:	இருந்து:
+	Full Document	முழு ஆவணம்
+	Global Refinements	உலகளாவிய மேம்பாடுகள்
+	Handwritten	கையெழுத்து
+	Hide Font Classes	எழுத்துரு வகைகளை மறை
+	Hide Styles	பாணிகளை மறை
+	High Quality Preview	உயர் தர முன்னோட்டம்
+	If you continue, saving over the original may permanently discard unreadable data. Save a copy to keep the original.	தொடர்ந்தால், அசலின் மீது சேமிப்பது படிக்க முடியாத தரவை நிரந்தரமாக நீக்கக்கூடும். அசலை வைத்திருக்க ஒரு நகலைச் சேமிக்கவும்.
+	Import Styles…	பாணிகளை இறக்குமதி செய்…
+	Internet Standard RGB (sRGB)	இணைய தர RGB (sRGB)
+	Kept {name}: written by another application	{name} வைக்கப்பட்டது: மற்றொரு பயன்பாட்டால் எழுதப்பட்டது
+	Legacy Macintosh RGB (Gamma 1.8)	பழைய Macintosh RGB (காமா 1.8)
+	Loose Curl	தளர்வான சுருள்
+	Loose Long	தளர்வான நீளம்
+	Loose Medium	தளர்வான நடுத்தரம்
+	Make Layer Visibility Changes Undoable	அடுக்குத் தெரிநிலை மாற்றங்களைச் செயல்தவிர்க்கக்கூடியதாக்கு
+	Merged Layers	ஒன்றிணைந்த அடுக்குகள்
+	Monospace	ஒரே அகலம்
+	New Group from Layers…	அடுக்குகளிலிருந்து புதிய குழு…
+	No favorite fonts yet: click the star beside a font to add it.	பிடித்த எழுத்துருக்கள் இன்னும் இல்லை: சேர்க்க ஒரு எழுத்துருவின் அருகிலுள்ள நட்சத்திரத்தைக் கிளிக் செய்யவும்.
+	No fonts match these filters.	இந்த வடிகட்டிகளுக்குப் பொருந்தும் எழுத்துருக்கள் இல்லை.
+	No similar fonts: the current font doesn't say what it looks like.	ஒத்த எழுத்துருக்கள் இல்லை: தற்போதைய எழுத்துரு தான் எப்படித் தோன்றும் என்பதைக் குறிப்பிடவில்லை.
+	Object Aware	பொருள் அறிந்தது
+	Object Aware needs a segmentation model, which isn't available yet	“பொருள் அறிந்தது”க்கு ஒரு பிரிவாக்க மாதிரி தேவை, அது இன்னும் கிடைக்கவில்லை
+	OpenType font	OpenType எழுத்துரு
+	Plugins…	செருகுநிரல்கள்…
+	Real-Time Refinement	நிகழ்நேர மேம்பாடு
+	Refine Edge Brush Tool	விளிம்பு மேம்படுத்தும் தூரிகை கருவி
+	Refine Hair	முடியை மேம்படுத்து
+	Refine Hair needs hair detection, which isn't available yet	“முடியை மேம்படுத்து”க்கு முடி கண்டறிதல் தேவை, அது இன்னும் கிடைக்கவில்லை
+	Refine Mode	மேம்படுத்தும் முறை
+	Remember Settings	அமைப்புகளை நினைவில் கொள்
+	Remove from Favorites	பிடித்தவையிலிருந்து நீக்கு
+	Sans Serif	சான்ஸ் செரிஃப்
+	Script	ஸ்கிரிப்ட்
+	Select and Mask was closed: another layer was selected	“தேர்ந்தெடு மற்றும் முகமூடி” மூடப்பட்டது: மற்றொரு அடுக்கு தேர்ந்தெடுக்கப்பட்டது
+	Select and Mask was closed: its document is no longer the active one	“தேர்ந்தெடு மற்றும் முகமூடி” மூடப்பட்டது: அதன் ஆவணம் இனி செயலில் இல்லை
+	Serif	செரிஃப்
+	Set the tone sliders from the image	படத்திலிருந்து தொனி நெகிழ்வுகளை அமை
+	Settings from {name}	{name} இலிருந்து அமைப்புகள்
+	Settings from {name}; {count} not supported: {names}	{name} இலிருந்து அமைப்புகள்; {count} ஆதரிக்கப்படவில்லை: {names}
+	Show All Fonts	அனைத்து எழுத்துருக்களையும் காட்டு
+	Show Favorite Fonts	பிடித்த எழுத்துருக்களைக் காட்டு
+	Show Font Classes	எழுத்துரு வகைகளைக் காட்டு
+	Show Similar Fonts	ஒத்த எழுத்துருக்களைக் காட்டு
+	Show Styles	பாணிகளைக் காட்டு
+	Show Variable Fonts	மாறி எழுத்துருக்களைக் காட்டு
+	Show hover bounds from Layers	அடுக்குகளிலிருந்து சுட்டி எல்லைகளைக் காட்டு
+	Show layer bounds on hover	சுட்டும்போது அடுக்கு எல்லைகளைக் காட்டு
+	Slab Serif	ஸ்லாப் செரிஃப்
+	Some layers, pixels or masks could not be read. Do you want to continue opening it?	சில அடுக்குகள், பிக்சல்கள் அல்லது முகமூடிகளைப் படிக்க முடியவில்லை. தொடர்ந்து திறக்க விரும்புகிறீர்களா?
+	Stylized dabs from a history state	ஒரு வரலாற்று நிலையிலிருந்து பாணியூட்டப்பட்ட தொடுகைகள்
+	The document “{name}” may be damaged.	“{name}” ஆவணம் சேதமடைந்திருக்கலாம்.
+	Tight Curl	இறுக்கமான சுருள்
+	Tight Long	இறுக்கமான நீளம்
+	Tight Medium	இறுக்கமான நடுத்தரம்
+	Tight Short	இறுக்கமான குறுகியது
+	Too many clone strokes: apply Vanishing Point first	மிக அதிகமான குளோன் கீறல்கள்: முதலில் மறைவுப் புள்ளியைப் பயன்படுத்தவும்
+	TrueType font	TrueType எழுத்துரு
+	Variable font	மாறி எழுத்துரு
+	View Mode	பார்வை முறை
+	Working CMY Plates	வேலை CMY தகடுகள்
+	{file} is not a style library (.asl)	{file} ஒரு பாணி நூலகம் அல்ல (.asl)
+@plural	Exported {n} style to {file}|Exported {n} styles to {file}	{n} பாணி {file} க்கு ஏற்றுமதி செய்யப்பட்டது|{n} பாணிகள் {file} க்கு ஏற்றுமதி செய்யப்பட்டன
+	A frame supports affine transforms; select its image for perspective transforms	சட்டம் அஃபைன் உருமாற்றங்களை ஆதரிக்கிறது; கண்ணோட்ட உருமாற்றங்களுக்கு அதன் படத்தைத் தேர்ந்தெடுக்கவும்
+	A frame supports affine transforms; select its image to warp it	சட்டம் அஃபைன் உருமாற்றங்களை ஆதரிக்கிறது; வளைக்க அதன் படத்தைத் தேர்ந்தெடுக்கவும்
+	Accelerated	முடுக்கப்பட்டது
+	Canceled opening {name}	{name} ஐத் திறப்பது ரத்து செய்யப்பட்டது
+	Canceled {label}	{label} ரத்து செய்யப்பட்டது
+	Center the gradient (offset 0, 0)	சாய்வை மையப்படுத்து (ஈடு 0, 0)
+	Channel Options…	சேனல் விருப்பங்கள்…
+	Click to restore the current color	தற்போதைய நிறத்தை மீட்டெடுக்க கிளிக் செய்யவும்
+	Click to sample the foreground color  ·  {key}-click for background	முன்புற நிறத்தை மாதிரி எடுக்க கிளிக் செய்யவும்  ·  பின்னணிக்கு {key}-கிளிக்
+	Clip Thumbnails to Document Bounds	சிறுபடங்களை ஆவண எல்லைகளுக்கு வெட்டு
+	Color Blindness - Deuteranopia-type	நிறக்குருடு - டியூட்டரனோபியா வகை
+	Color Blindness - Protanopia-type	நிறக்குருடு - புரோட்டனோபியா வகை
+	Convert to Frame…	சட்டமாக மாற்று…
+	Create a new custom frame	புதிய தனிப்பயன் சட்டத்தை உருவாக்கு
+	Create a new polygonal frame	புதிய பலகோணச் சட்டத்தை உருவாக்கு
+	Create a new triangular frame	புதிய முக்கோணச் சட்டத்தை உருவாக்கு
+	Create a single history state	ஒற்றை வரலாற்று நிலையை உருவாக்கு
+	Default Foreground and Background Colors (D)	இயல்புநிலை முன்புற மற்றும் பின்னணி நிறங்கள் (D)
+	Delete effect	விளைவை நீக்கு
+	Drag around the center to rotate the view  ·  Shift constrains to 15°	பார்வையைச் சுழற்ற மையத்தைச் சுற்றி இழுக்கவும்  ·  Shift 15° ஆகக் கட்டுப்படுத்தும்
+	Drag to move the selected path	தேர்ந்தெடுத்த பாதையை நகர்த்த இழுக்கவும்
+	Equalize Entire Image Based On Selected Area	தேர்ந்தெடுத்த பகுதியின் அடிப்படையில் முழுப் படத்தையும் சமப்படுத்து
+	Equalize Selected Area Only	தேர்ந்தெடுத்த பகுதியை மட்டும் சமப்படுத்து
+	Fit Content to Frame	உள்ளடக்கத்தைச் சட்டத்திற்குப் பொருத்து
+	Fit Frame to Content	சட்டத்தை உள்ளடக்கத்திற்குப் பொருத்து
+	Frame coordinates must be finite and within 600000 pixels	சட்ட ஆயத்தொலைவுகள் வரையறுக்கப்பட்டதாகவும் 600000 பிக்சல்களுக்குள்ளும் இருக்க வேண்டும்
+	Hide bar	பட்டியை மறை
+	Import Image…	படத்தை இறக்குமதி செய்…
+	Invalid frame transform	தவறான சட்ட உருமாற்றம்
+	Invalid nested file drop	தவறான உள்ளமை கோப்பு விடுதல்
+	Large Thumbnails	பெரிய சிறுபடங்கள்
+	Learn	கற்றுக்கொள்
+	Make Shape	வடிவத்தை உருவாக்கு
+	Medium Thumbnails	நடுத்தர சிறுபடங்கள்
+	More options	மேலும் விருப்பங்கள்
+	Move bar	பட்டியை நகர்த்து
+	Move effect down	விளைவைக் கீழே நகர்த்து
+	Move effect up	விளைவை மேலே நகர்த்து
+	Netscape Gray	Netscape சாம்பல்
+	New Frame	புதிய சட்டம்
+	New file	புதிய கோப்பு
+	No Thumbnails	சிறுபடங்கள் இல்லை
+	No settings saved: these raws can't keep a sidecar here	அமைப்புகள் சேமிக்கப்படவில்லை: இந்த RAW கோப்புகள் இங்கே துணைக் கோப்பை வைத்திருக்க முடியாது
+	Not a web color: click for the nearest web color	வலை நிறம் அல்ல: மிக நெருங்கிய வலை நிறத்திற்கு கிளிக் செய்யவும்
+	Nothing to save: these raws are at their default settings	சேமிக்க எதுவும் இல்லை: இந்த RAW கோப்புகள் இயல்புநிலை அமைப்புகளில் உள்ளன
+	On your computer	உங்கள் கணினியில்
+	Open a document to select a color range.	நிற வரம்பைத் தேர்ந்தெடுக்க ஒரு ஆவணத்தைத் திறக்கவும்.
+	Out of gamut for printing: click for the nearest printable color	அச்சிடுவதற்கான நிற வரம்பிற்கு வெளியே: மிக நெருங்கிய அச்சிடக்கூடிய நிறத்திற்கு கிளிக் செய்யவும்
+	Path operations	பாதை செயல்பாடுகள்
+	Pause For	இடைநிறுத்து
+	Pause For:	இடைநிறுத்து:
+	Pick Color From Image	படத்திலிருந்து நிறத்தைத் தேர்ந்தெடு
+	Pin bar position	பட்டியின் இடத்தை பின் செய்
+	Playback Options…	இயக்க விருப்பங்கள்…
+	Recently Used Colors	சமீபத்தில் பயன்படுத்திய நிறங்கள்
+	Remember to turn off the printer's own color management in Print Settings…	அச்சு அமைப்புகளில் அச்சுப்பொறியின் சொந்த நிற மேலாண்மையை அணைக்க மறக்காதீர்கள்…
+	Replace Image…	படத்தை மாற்று…
+	Reset bar position	பட்டியின் இடத்தை மீட்டமை
+	Sample: foreground color	மாதிரி: முன்புற நிறம்
+	Save canceled	சேமிப்பு ரத்து செய்யப்பட்டது
+	Save the settings to each raw's sidecar without opening it	ஒவ்வொரு RAW இன் துணைக் கோப்பிலும் அதைத் திறக்காமல் அமைப்புகளைச் சேமி
+	Scroll All Windows	அனைத்துச் சாளரங்களையும் உருட்டு
+	Shapes can't use patterns yet	வடிவங்கள் இன்னும் வடிவமைப்புகளைப் பயன்படுத்த முடியாது
+	Small Thumbnails	சிறிய சிறுபடங்கள்
+	Some settings could not be saved; the raws stay open	சில அமைப்புகளைச் சேமிக்க முடியவில்லை; RAW கோப்புகள் திறந்தே இருக்கும்
+	Source: {name}	மூலம்: {name}
+	Specify Channels:	சேனல்களைக் குறிப்பிடு:
+	Step by Step	படிப்படியாக
+	Stop Color	நிறுத்த நிறம்
+	Switch Foreground and Background Colors (X)	முன்புற மற்றும் பின்னணி நிறங்களை மாற்று (X)
+	The GPU compositor is still being prepared	GPU கலவையாக்கி இன்னும் தயாராகிறது
+	The History Brush source was deleted: set a new source in the History panel	வரலாற்றுத் தூரிகையின் மூலம் நீக்கப்பட்டது: வரலாறு பலகத்தில் புதிய மூலத்தை அமைக்கவும்
+	The frame is locked	சட்டம் பூட்டப்பட்டுள்ளது
+	The frame is unavailable	சட்டம் கிடைக்கவில்லை
+	Website	இணையதளம்
+	seconds	வினாடிகள்
+	{label} is writing the file and can no longer be canceled	{label} கோப்பை எழுதுகிறது, இனி ரத்து செய்ய முடியாது
+	{set} from {file} replaced the one from {earlier}	{file} இலிருந்து {set} ஆனது {earlier} இலிருந்து உள்ளதை மாற்றியது
+@plural	{n} action file loaded|{n} action files loaded	{n} செயல் கோப்பு ஏற்றப்பட்டது|{n} செயல் கோப்புகள் ஏற்றப்பட்டன
+@plural	{n} file could not be loaded: {errors}|{n} files could not be loaded: {errors}	{n} கோப்பை ஏற்ற முடியவில்லை: {errors}|{n} கோப்புகளை ஏற்ற முடியவில்லை: {errors}

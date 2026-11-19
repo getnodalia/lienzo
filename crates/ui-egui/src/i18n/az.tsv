@@ -4646,3 +4646,209 @@ smartSvg	SVG editor opened. Save the SVG to update this Smart Object.	SVG redakt
 	Content-aware fill	Məzmuna əsaslanan doldurma
 	Sample content from part of the image and use it to fill a small area	Kiçik sahəni doldurmaq üçün şəklin bir hissəsindən məzmun götürün
 	Reset the crop box, image rotation, and aspect ratio settings	Kəsmə çərçivəsini, şəkil fırlanmasını və aspekt nisbətini sıfırlayın
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Toplu emal zamanı əmr ləğv edildi və ya dayandırıldı. Növbəti faylla davam edək, yoxsa dayanaq?
+	A file is still being placed; try again when it has finished.	Fayl hələ də yerləşdirilir; bitəndən sonra yenidən cəhd edin.
+	A native image editor, layer by layer. No account, no cloud.	Yerli təsvir redaktoru, qat-qat. Hesabsız, buludsuz.
+	Allow Tool Recording	Alət qeydinə icazə ver
+	Allows rotation and scaling of selection	Seçimin fırladılmasına və ölçüsünün dəyişdirilməsinə icazə verir
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Qeyri-şəffaflıq üçün həmişə təzyiqdən istifadə et. Söndürüləndə təzyiqi fırça hazır ayarı idarə edir
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Ölçü üçün həmişə təzyiqdən istifadə et. Söndürüləndə təzyiqi fırça hazır ayarı idarə edir
+	Answer the open import question first, then import this file again.	Əvvəlcə açıq idxal sualına cavab verin, sonra bu faylı yenidən idxal edin.
+	Anti-alias brush application	Fırça tətbiqini hamarlaşdır
+	Are you sure you want to delete all notes?	Bütün qeydləri silmək istədiyinizə əminsiniz?
+	Arrowhead options	Ox ucu seçimləri
+	Arrowheads	Ox uclar
+	Attribute	Atribut
+	Batch preview	Toplu önbaxış
+	Bottom align text	Mətni aşağıdan hizala
+	Cancelled placing {name}	{name} yerləşdirilməsi ləğv edildi
+	Choose a menu command. Playback asks for its settings when needed.	Menyu əmri seçin. Oxutma lazım olduqda ayarlarını soruşur.
+	Choose a remix mode	Yenidən qarışdırma rejimi seçin
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Böyütmə alətilə miqyası dəyişmək üçün klikləyib sola və ya sağa çəkin (yalnız OpenGL)
+	Click to open the Brush Preset picker	Fırça hazır ayarları seçicisini açmaq üçün klikləyin
+	Concavity	Çökəklik
+	Confirm or cancel the pending Record Again editor first.	Əvvəlcə gözləyən «Yenidən qeyd et» redaktorunu təsdiqləyin və ya ləğv edin.
+	Confirm or cancel the pending menu item first.	Əvvəlcə gözləyən menyu bəndini təsdiqləyin və ya ləğv edin.
+	Copy CSS	CSS-i kopyala
+	Could not use the type tool because the layer is locked.	Qat kilidli olduğu üçün mətn alətindən istifadə etmək mümkün olmadı.
+	Data Sets as Files is unavailable on the web	«Məlumat dəstləri fayl kimi» vebdə mövcud deyil
+	Delete Note	Qeydi sil
+	Delete this note?	Bu qeyd silinsin?
+	Determines the spread of replaced color	Əvəz olunan rəngin yayılma dərəcəsini müəyyən edir
+	Do not erase the foreground swatch color	Ön plan nümunəsinin rəngini silmə
+	Draws background color over foreground colors	Ön plan rənglərinin üzərinə arxa plan rəngi çəkir
+	Dropped files weren't placed: their document was closed.	Atılan fayllar yerləşdirilmədi: sənədləri bağlandı.
+	Dropped files weren't placed: too many are waiting for their document.	Atılan fayllar yerləşdirilmədi: sənədlərini gözləyən çox fayl var.
+	Effect	Effekt
+	Empty	Boş
+	Enable to remix all layers	Bütün qatları yenidən qarışdırmaq üçün aktiv edin
+	End	Son
+	Erase range of similar colors	Oxşar rənglər diapazonunu sil
+	Erase to History	Tarixçəyə qədər sil
+	Filter for embedded smart objects	Daxil edilmiş ağıllı obyektlər üçün filtr
+	Filter for linked smart objects that are missing	Əlaqəsi itmiş əlaqəli ağıllı obyektlər üçün filtr
+	Filter for smart objects linked locally	Yerli əlaqəli ağıllı obyektlər üçün filtr
+	High Memory Photoshop Document	Yüksək yaddaşlı Photoshop sənədi
+	How far to let the erasing spread	Silmənin nə qədər yayılacağı
+	Image Compression	Təsvir sıxılması
+	Import as New Group	Yeni qrup kimi idxal et
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	«Yeni qrup kimi idxal et» «{group}» qrupunu saxlayır və faylı onun yanında yeni qrup kimi əlavə edir.
+	Insert Menu Item…	Menyu bəndi daxil et…
+	Insert Path	Yol daxil et
+	LZW	LZW
+	Layer Effects	Qat effektləri
+	Linked	Əlaqəli
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Bu fayl açıldıqdan sonra az yaddaş qalacaq. Əvvəlcə digər tətbiqləri bağlayın, əks halda Lienzo-nun yaddaşı çatmaya bilər.
+	Load Solid Colors Only	Yalnız bütöv rəngləri yüklə
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Kölgələrdə və işıqlarda kəsilməni azaldır və rənglərin çalarının dəyişməsinin qarşısını alır
+	No Adv. Blending	Qabaqcıl qarışdırma yoxdur
+	No Layer Effects	Qat effektləri yoxdur
+	No Layer Mask	Qat maskası yoxdur
+	No Vector Mask	Vektor maskası yoxdur
+	No document.	Sənəd yoxdur.
+	No import is waiting. Import the file again.	Gözləyən idxal yoxdur. Faylı yenidən idxal edin.
+	No menu item belongs to this chooser.	Bu seçiciyə aid menyu bəndi yoxdur.
+	No menu item is waiting.	Gözləyən menyu bəndi yoxdur.
+	No note to delete	Silinəcək qeyd yoxdur
+	No options for the Add Anchor Point Tool.	Dayaq nöqtəsi əlavə et alətinin seçimləri yoxdur.
+	No options for the Delete Anchor Point Tool.	Dayaq nöqtəsi sil alətinin seçimləri yoxdur.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Formanın yaradılacağı yol yoxdur: Qələm alətilə çəkin və ya Yollar panelində seçin.
+	No pixels are selected.	Heç bir piksel seçilməyib.
+	No recorded step belongs to this editor.	Bu redaktora aid qeydə alınmış addım yoxdur.
+	No slices are selected. Click a slice in the preview to select it.	Heç bir dilim seçilməyib. Seçmək üçün önbaxışda dilimə klikləyin.
+	No step is waiting.	Gözləyən addım yoxdur.
+	Not Clipped	Kəsilməyib
+	Not Empty	Boş deyil
+	Not Linked	Əlaqəli deyil
+	Not Locked	Kilidli deyil
+	Not Visible	Görünməz
+	Note deleted, but the preference could not be saved: {error}	Qeyd silindi, lakin üstünlük yadda saxlanılmadı: {error}
+	Nudge	Sürüşdür
+	Open anyway	Yenə də aç
+	Open as Smart Object…	Ağıllı obyekt kimi aç…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Bu sənədin açılması daha çox yaddaş istifadə edir və kompüterinizi və ya digər işləyən tətbiqləri yavaşlada bilər.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	«{name}» faylının açılması təxminən {est} GiB yaddaş tələb edir (mövcud: {avail} GiB).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	«{name}» faylının açılması təxminən {est} GiB yaddaş tələb edir. Mövcud yaddaşı ölçmək mümkün olmadı.
+	Painting Mode	Rəsm rejimi
+	Preparing Free Transform	Sərbəst çevirmə hazırlanır
+	Record Again	Yenidən qeyd et
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	«Əvəz et» əvvəlcə «{group}» içindəki hər şeyi, o cümlədən redaktə etdiyiniz və ya ora köçürdüyünüz hazır ayarları silir. Bunu geri qaytarmaq olmaz.
+	Report an issue	Problem barədə məlumat ver
+	Resize windows when zooming using the Zoom Tool	Böyütmə alətilə böyüdərkən pəncərələrin ölçüsünü dəyiş
+	Save Image Pyramid	Təsvir piramidasını yadda saxla
+	Save Transparency	Şəffaflığı yadda saxla
+	Scroll all open document windows when using the hand tool	Əl alətindən istifadə edərkən bütün açıq sənəd pəncərələrini sürüşdür
+	Search and select fonts	Şriftləri axtar və seç
+	Select Pixels	Pikselləri seç
+	Select an action first.	Əvvəlcə bir əməliyyat seçin.
+	Select an action step first.	Əvvəlcə bir əməliyyat addımı seçin.
+	Selected Slices	Seçilmiş dilimlər
+	Set 	Dəst 
+	Set as default	Susmaya görə təyin et
+	Set exposure for stroke	Zərbə üçün ekspozisiyanı təyin et
+	Set flow rate for stroke	Zərbə üçün axın sürətini təyin et
+	Set font size	Şrift ölçüsünü təyin et
+	Set font style	Şrift üslubunu təyin et
+	Set opacity for stroke	Zərbə üçün qeyri-şəffaflığı təyin et
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Zərbə üçün hamarlamanı təyin et\nFırça zərbələrinin titrəməsini azaltmaq üçün daha yüksək dəyərlərdən istifadə edin
+	Set symmetry options for Painting	Rəsm üçün simmetriya seçimlərini təyin et
+	Set text color	Mətn rəngini təyin et
+	Set the brush angle	Fırça bucağını təyin et
+	Smoothing Options	Hamarlama seçimləri
+	Start	Başlanğıc
+	The Record Again command changed.	«Yenidən qeyd et» əmri dəyişdi.
+	The action or insertion command changed. Request Insert Menu Item again.	Əməliyyat və ya daxiletmə əmri dəyişdi. «Menyu bəndi daxil et»i yenidən tələb edin.
+	The actions changed. Request Record Again again.	Əməliyyatlar dəyişdi. «Yenidən qeyd et»i yenidən tələb edin.
+	The command permissions changed. Request Insert Menu Item again.	Əmr icazələri dəyişdi. «Menyu bəndi daxil et»i yenidən tələb edin.
+	The command permissions changed. Request Record Again again.	Əmr icazələri dəyişdi. «Yenidən qeyd et»i yenidən tələb edin.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Cari müvəqqəti qovluq ({path}) boş yerini bildirmir, buna görə Lienzo dolmazdan əvvəl dayana bilmir və Müvəqqəti Yaddaş Limiti olmadan böyük fayllara əlavə yer ayırmır. Bu xəbərdarlıq cari konfiqurasiyaya aiddir; yuxarıdakı dəyişikliklər Tətbiq et və ya OK ilə qüvvəyə minir. Limit təyin edin və ya yerli diskdən istifadə edin.
+	The document changed. Please choose Clear All again.	Sənəd dəyişdi. Zəhmət olmasa «Hamısını təmizlə»ni yenidən seçin.
+	The document changed. Request Record Again again.	Sənəd dəyişdi. «Yenidən qeyd et»i yenidən tələb edin.
+	The document or its notes changed. Please delete the note again.	Sənəd və ya onun qeydləri dəyişdi. Zəhmət olmasa qeydi yenidən silin.
+	The preference could not be saved: {error}	Üstünlük yadda saxlanıla bilmədi: {error}
+	The step editor could not be opened.	Addım redaktoru açıla bilmədi.
+	The step has no command editor.	Addımın əmr redaktoru yoxdur.
+	Tolerance for choosing related colors	Əlaqəli rəngləri seçmək üçün tolerantlıq
+	Top align text	Mətni yuxarıdan hizala
+	Use relative positioning for reference point	İstinad nöqtəsi üçün nisbi mövqedən istifadə et
+	Use these settings for new arrows	Yeni oxlar üçün bu ayarlardan istifadə et
+	Useful mixer brush combinations	Faydalı qarışdırma fırçası birləşmələri
+	ZIP	ZIP
+	Zoom current window to 1:1	Cari pəncərəni 1:1 böyüt
+	Zoom current window to fill the screen	Cari pəncərəni ekranı dolduracaq şəkildə böyüt
+	Zoom current window to screen size	Cari pəncərəni ekran ölçüsünə böyüt
+	brush tool	fırça aləti
+	by Nodalia	Nodalia tərəfindən
+	dodge tool	işıqlandırma aləti
+	{message} into “{group}”	{message} «{group}» qrupuna
+	{ok} written to {dir}	{ok} {dir} qovluğuna yazıldı
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	«{group}» fırça qrupunda artıq sizin {n} fırçanız var.|«{group}» fırça qrupunda artıq sizin {n} fırçanız var.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	«{group}» qradiyent qrupu artıq mövcuddur ({n} qradiyent).|«{group}» qradiyent qrupu artıq mövcuddur ({n} qradiyent).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} Təsvir Aktivləri çıxışı uğursuz oldu|{what}: {n} Təsvir Aktivləri çıxışı uğursuz oldu
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} fayl uğursuz oldu|{what}: {n} fayl uğursuz oldu
+	A frame supports affine transforms; select its image for perspective transforms	Çərçivə affin çevirmələri dəstəkləyir; perspektiv çevirmələr üçün onun təsvirini seçin
+	A frame supports affine transforms; select its image to warp it	Çərçivə affin çevirmələri dəstəkləyir; təhrif etmək üçün onun təsvirini seçin
+	Accelerated	Sürətləndirilmiş
+	Canceled opening {name}	{name} açılması ləğv edildi
+	Canceled {label}	{label} ləğv edildi
+	Center the gradient (offset 0, 0)	Qradiyenti mərkəzləşdir (sürüşmə 0, 0)
+	Channel Options…	Kanal seçimləri…
+	Click to restore the current color	Cari rəngi bərpa etmək üçün klikləyin
+	Click to sample the foreground color  ·  {key}-click for background	Ön plan rəngini götürmək üçün klikləyin  ·  Arxa plan üçün {key}-klik
+	Clip Thumbnails to Document Bounds	Miniatürləri sənəd sərhədlərinə kəs
+	Color Blindness - Deuteranopia-type	Rəng korluğu - deyteranopiya tipi
+	Color Blindness - Protanopia-type	Rəng korluğu - protanopiya tipi
+	Create a new custom frame	Yeni fərdi çərçivə yarat
+	Create a new polygonal frame	Yeni çoxbucaqlı çərçivə yarat
+	Create a new triangular frame	Yeni üçbucaqlı çərçivə yarat
+	Create a single history state	Tək tarixçə vəziyyəti yarat
+	Default Foreground and Background Colors (D)	Susmaya görə ön və arxa plan rəngləri (D)
+	Drag around the center to rotate the view  ·  Shift constrains to 15°	Görünüşü fırlatmaq üçün mərkəz ətrafında çəkin  ·  Shift 15° ilə məhdudlaşdırır
+	Equalize Entire Image Based On Selected Area	Bütün təsviri seçilmiş sahəyə əsasən bərabərləşdir
+	Equalize Selected Area Only	Yalnız seçilmiş sahəni bərabərləşdir
+	Frame coordinates must be finite and within 600000 pixels	Çərçivə koordinatları sonlu olmalı və 600000 pikseldən çox olmamalıdır
+	Hide bar	Paneli gizlət
+	Invalid frame transform	Yanlış çərçivə çevirməsi
+	Invalid nested file drop	Yanlış iç-içə fayl atılması
+	Large Thumbnails	Böyük miniatürlər
+	Learn	Öyrən
+	Make Shape	Forma yarat
+	Medium Thumbnails	Orta miniatürlər
+	More options	Daha çox seçim
+	Move bar	Paneli köçür
+	Netscape Gray	Netscape boz
+	New Frame	Yeni çərçivə
+	New file	Yeni fayl
+	No Thumbnails	Miniatür yoxdur
+	No settings saved: these raws can't keep a sidecar here	Heç bir ayar yadda saxlanılmadı: bu RAW-lar burada yan fayl saxlaya bilmir
+	Not a web color: click for the nearest web color	Veb rəngi deyil: ən yaxın veb rəngi üçün klikləyin
+	Nothing to save: these raws are at their default settings	Yadda saxlanılacaq heç nə yoxdur: bu RAW-lar susmaya görə ayarlardadır
+	On your computer	Kompüterinizdə
+	Open a document to select a color range.	Rəng diapazonu seçmək üçün sənəd açın.
+	Out of gamut for printing: click for the nearest printable color	Çap üçün gamutdan kənardır: ən yaxın çap oluna bilən rəng üçün klikləyin
+	Pause For	Fasilə
+	Pause For:	Fasilə:
+	Pin bar position	Panelin mövqeyini sabitlə
+	Playback Options…	Oxutma seçimləri…
+	Remember to turn off the printer's own color management in Print Settings…	Çap ayarlarında printerin öz rəng idarəetməsini söndürməyi unutmayın…
+	Reset bar position	Panelin mövqeyini sıfırla
+	Sample: foreground color	Nümunə: ön plan rəngi
+	Save canceled	Yadda saxlama ləğv edildi
+	Save the settings to each raw's sidecar without opening it	Ayarları açmadan hər RAW-ın yan faylına yadda saxla
+	Scroll All Windows	Bütün pəncərələri sürüşdür
+	Small Thumbnails	Kiçik miniatürlər
+	Some settings could not be saved; the raws stay open	Bəzi ayarlar yadda saxlanıla bilmədi; RAW-lar açıq qalır
+	Source: {name}	Mənbə: {name}
+	Specify Channels:	Kanalları göstər:
+	Step by Step	Addım-addım
+	Switch Foreground and Background Colors (X)	Ön və arxa plan rənglərini dəyiş (X)
+	The GPU compositor is still being prepared	GPU kompozitoru hələ hazırlanır
+	The History Brush source was deleted: set a new source in the History panel	Tarixçə fırçasının mənbəyi silindi: Tarixçə panelində yeni mənbə təyin edin
+	The frame is locked	Çərçivə kilidlidir
+	The frame is unavailable	Çərçivə əlçatan deyil
+	Website	Veb sayt
+	seconds	saniyə
+	{label} is writing the file and can no longer be canceled	{label} faylı yazır və artıq ləğv edilə bilməz
+	{set} from {file} replaced the one from {earlier}	{file} faylından {set} {earlier} faylındakını əvəz etdi
+@plural	{n} action file loaded|{n} action files loaded	{n} əməliyyat faylı yükləndi|{n} əməliyyat faylı yükləndi
+@plural	{n} file could not be loaded: {errors}|{n} files could not be loaded: {errors}	{n} fayl yüklənə bilmədi: {errors}|{n} fayl yüklənə bilmədi: {errors}

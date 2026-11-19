@@ -3639,3 +3639,224 @@ curves	Smooth	تنعيم
 	Content-aware fill	ملء حسب المحتوى
 	Sample content from part of the image and use it to fill a small area	خذ محتوى من جزء من الصورة لملء منطقة صغيرة
 	Reset the crop box, image rotation, and aspect ratio settings	إعادة ضبط إطار الاقتصاص ودوران الصورة ونسبة الأبعاد
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	تم إلغاء أمر أو إيقافه أثناء المعالجة الدفعية. هل تريد المتابعة مع الملف التالي أم التوقف؟
+	A file is still being placed; try again when it has finished.	لا يزال ملف قيد الوضع؛ حاول مرة أخرى بعد اكتماله.
+	A native image editor, layer by layer. No account, no cloud.	محرر صور أصلي، طبقةً فوق طبقة. بلا حساب وبلا سحابة.
+	Allow Tool Recording	السماح بتسجيل الأداة
+	Allows rotation and scaling of selection	يتيح تدوير التحديد وتغيير حجمه
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	استخدم الضغط دائمًا للتعتيم. عند الإيقاف يتحكم إعداد الفرشاة المسبق في الضغط
+	Always use Pressure for Size. When off, Brush Preset controls pressure	استخدم الضغط دائمًا للحجم. عند الإيقاف يتحكم إعداد الفرشاة المسبق في الضغط
+	Answer the open import question first, then import this file again.	أجب أولًا عن سؤال الاستيراد المفتوح، ثم استورد هذا الملف مرة أخرى.
+	Anti-alias brush application	تنعيم حواف تطبيق الفرشاة
+	Are you sure you want to delete all notes?	هل أنت متأكد من حذف كل الملاحظات؟
+	Arrowhead options	خيارات رأس السهم
+	Arrowheads	رؤوس الأسهم
+	Attribute	السمة
+	Batch preview	معاينة الدفعة
+	Bottom align text	محاذاة النص إلى الأسفل
+	Cancelled placing {name}	تم إلغاء وضع {name}
+	Choose a menu command. Playback asks for its settings when needed.	اختر أمرًا من القائمة. يطلب التشغيل إعداداته عند الحاجة.
+	Choose a remix mode	اختر وضع إعادة المزج
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	انقر وحرّك يسارًا أو يمينًا لتغيير المقياس باستخدام أداة التكبير (OpenGL فقط)
+	Click to open the Brush Preset picker	انقر لفتح منتقي إعدادات الفرشاة المسبقة
+	Concavity	التقعر
+	Confirm or cancel the pending Record Again editor first.	أكّد محرر «تسجيل مرة أخرى» المعلق أو ألغِه أولًا.
+	Confirm or cancel the pending menu item first.	أكّد عنصر القائمة المعلق أو ألغِه أولًا.
+	Copy CSS	نسخ CSS
+	Could not use the type tool because the layer is locked.	تعذر استخدام أداة النص لأن الطبقة مقفلة.
+	Data Sets as Files is unavailable on the web	«مجموعات البيانات كملفات» غير متاحة على الويب
+	Delete Note	حذف الملاحظة
+	Delete this note?	هل تريد حذف هذه الملاحظة؟
+	Determines the spread of replaced color	يحدد مدى انتشار اللون المستبدل
+	Do not erase the foreground swatch color	عدم مسح لون عينة المقدمة
+	Draws background color over foreground colors	يرسم لون الخلفية فوق ألوان المقدمة
+	Dropped files weren't placed: their document was closed.	لم توضع الملفات المسقطة: تم إغلاق مستندها.
+	Dropped files weren't placed: too many are waiting for their document.	لم توضع الملفات المسقطة: عدد كبير منها ينتظر مستندها.
+	Effect	التأثير
+	Empty	فارغ
+	Enable to remix all layers	فعّل لإعادة مزج كل الطبقات
+	End	النهاية
+	Erase range of similar colors	مسح نطاق من الألوان المتشابهة
+	Erase to History	المسح إلى السجل
+	Filter for embedded smart objects	عامل تصفية للكائنات الذكية المضمّنة
+	Filter for linked smart objects that are missing	عامل تصفية للكائنات الذكية المرتبطة المفقودة
+	Filter for smart objects linked locally	عامل تصفية للكائنات الذكية المرتبطة محليًا
+	High Memory Photoshop Document	مستند Photoshop عالي الذاكرة
+	How far to let the erasing spread	إلى أي مدى يمتد المسح
+	Image Compression	ضغط الصورة
+	Import as New Group	استيراد كمجموعة جديدة
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	«استيراد كمجموعة جديدة» يُبقي «{group}» ويضيف الملف كمجموعة جديدة بجانبها.
+	Insert Menu Item…	إدراج عنصر قائمة…
+	Insert Path	إدراج مسار
+	LZW	LZW
+	Layer Effects	تأثيرات الطبقة
+	Lining	أرقام مصطفة
+	Linked	مرتبط
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	ستبقى ذاكرة قليلة بعد فتح هذا الملف. أغلق التطبيقات الأخرى أولًا، وإلا قد تنفد ذاكرة Lienzo.
+	Load Solid Colors Only	تحميل الألوان الصلبة فقط
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	يقلل القص في الظلال والإضاءات العالية ويمنع تغير تدرج الألوان
+	No Adv. Blending	بلا مزج متقدم
+	No Layer Effects	بلا تأثيرات طبقة
+	No Layer Mask	بلا قناع طبقة
+	No Vector Mask	بلا قناع متجهي
+	No document.	لا يوجد مستند.
+	No import is waiting. Import the file again.	لا يوجد استيراد في الانتظار. استورد الملف مرة أخرى.
+	No matching fonts	لا توجد خطوط مطابقة
+	No menu item belongs to this chooser.	لا يوجد عنصر قائمة يخص هذا المنتقي.
+	No menu item is waiting.	لا يوجد عنصر قائمة في الانتظار.
+	No note to delete	لا توجد ملاحظة لحذفها
+	No options for the Add Anchor Point Tool.	لا توجد خيارات لأداة إضافة نقطة ارتكاز.
+	No options for the Delete Anchor Point Tool.	لا توجد خيارات لأداة حذف نقطة ارتكاز.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	لا يوجد مسار لإنشاء شكل منه: ارسم واحدًا بأداة القلم أو حدد واحدًا في لوحة المسارات.
+	No pixels are selected.	لم يتم تحديد أي بكسل.
+	No recorded step belongs to this editor.	لا توجد خطوة مسجلة تخص هذا المحرر.
+	No slices are selected. Click a slice in the preview to select it.	لم يتم تحديد أي شريحة. انقر على شريحة في المعاينة لتحديدها.
+	No step is waiting.	لا توجد خطوة في الانتظار.
+	Not Clipped	غير مقصوص
+	Not Empty	غير فارغ
+	Not Linked	غير مرتبط
+	Not Locked	غير مقفل
+	Not Visible	غير مرئي
+	Note deleted, but the preference could not be saved: {error}	تم حذف الملاحظة، لكن تعذر حفظ التفضيل: {error}
+	Nudge	إزاحة
+	Numerals	الأرقام
+	Open anyway	افتح على أي حال
+	Open as Smart Object…	فتح ككائن ذكي…
+	Opening this document uses more memory and may slow down your computer or other running applications.	فتح هذا المستند يستهلك ذاكرة أكبر وقد يبطئ حاسوبك أو التطبيقات الأخرى قيد التشغيل.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	يتطلب فتح «{name}» نحو {est} جيبيبايت من الذاكرة (المتاح {avail} جيبيبايت).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	يتطلب فتح «{name}» نحو {est} جيبيبايت من الذاكرة. تعذر قياس الذاكرة المتاحة.
+	Painting Mode	وضع الرسم
+	Preparing Free Transform	جارٍ تجهيز التحويل الحر
+	Proportional	متناسب
+	Proportional Lining	أرقام مصطفة متناسبة
+	Proportional Oldstyle	أرقام قديمة متناسبة
+	Record Again	تسجيل مرة أخرى
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	«استبدال» يحذف كل ما في «{group}» أولًا، بما في ذلك الإعدادات المسبقة التي عدّلتها أو نقلتها إليها. لا يمكن التراجع عن ذلك.
+	Report an issue	الإبلاغ عن مشكلة
+	Resize windows when zooming using the Zoom Tool	تغيير حجم النوافذ عند التكبير بأداة التكبير
+	Save Image Pyramid	حفظ هرم الصورة
+	Save Transparency	حفظ الشفافية
+	Scroll all open document windows when using the hand tool	تمرير كل نوافذ المستندات المفتوحة عند استخدام أداة اليد
+	Search and select fonts	البحث عن الخطوط وتحديدها
+	Select Pixels	تحديد البكسلات
+	Select an action first.	اختر إجراءً أولًا.
+	Select an action step first.	اختر خطوة إجراء أولًا.
+	Selected Slices	الشرائح المحددة
+	Set 	مجموعة 
+	Set 1	المجموعة 1
+	Set 10	المجموعة 10
+	Set 11	المجموعة 11
+	Set 12	المجموعة 12
+	Set 13	المجموعة 13
+	Set 14	المجموعة 14
+	Set 15	المجموعة 15
+	Set 16	المجموعة 16
+	Set 17	المجموعة 17
+	Set 18	المجموعة 18
+	Set 19	المجموعة 19
+	Set 2	المجموعة 2
+	Set 20	المجموعة 20
+	Set 3	المجموعة 3
+	Set 4	المجموعة 4
+	Set 5	المجموعة 5
+	Set 6	المجموعة 6
+	Set 7	المجموعة 7
+	Set 8	المجموعة 8
+	Set 9	المجموعة 9
+	Set as default	تعيين كافتراضي
+	Set exposure for stroke	ضبط التعرض للضربة
+	Set flow rate for stroke	ضبط معدل التدفق للضربة
+	Set font size	ضبط حجم الخط
+	Set font style	ضبط نمط الخط
+	Set opacity for stroke	ضبط التعتيم للضربة
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	ضبط التنعيم للضربة\nاستخدم قيمًا أعلى لتقليل اهتزاز ضربات الفرشاة
+	Set symmetry options for Painting	ضبط خيارات التناظر للرسم
+	Set text color	ضبط لون النص
+	Set the brush angle	ضبط زاوية الفرشاة
+	Smoothing Options	خيارات التنعيم
+	Start	البداية
+	Stylistic Sets	المجموعات الأسلوبية
+	Tabular	جدولي
+	Tabular Lining	أرقام مصطفة جدولية
+	Tabular Oldstyle	أرقام قديمة جدولية
+	The Record Again command changed.	تغيّر أمر «تسجيل مرة أخرى».
+	The action or insertion command changed. Request Insert Menu Item again.	تغيّر الإجراء أو أمر الإدراج. اطلب «إدراج عنصر قائمة» مرة أخرى.
+	The actions changed. Request Record Again again.	تغيّرت الإجراءات. اطلب «تسجيل مرة أخرى» مرة أخرى.
+	The command permissions changed. Request Insert Menu Item again.	تغيّرت أذونات الأوامر. اطلب «إدراج عنصر قائمة» مرة أخرى.
+	The command permissions changed. Request Record Again again.	تغيّرت أذونات الأوامر. اطلب «تسجيل مرة أخرى» مرة أخرى.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	لا يُبلّغ دليل التخزين المؤقت الحالي ({path}) عن مساحته الحرة، لذا لا يستطيع Lienzo التوقف قبل امتلائه، ولا تحصل الملفات الكبيرة منه على مساحة إضافية دون تحديد حد لحجم التخزين المؤقت. ينطبق هذا التحذير على الإعداد الحالي؛ تسري التغييرات أعلاه عند «تطبيق» أو «موافق». حدّد حدًا أو استخدم قرصًا محليًا.
+	The document changed. Please choose Clear All again.	تغيّر المستند. اختر «مسح الكل» مرة أخرى.
+	The document changed. Request Record Again again.	تغيّر المستند. اطلب «تسجيل مرة أخرى» مرة أخرى.
+	The document or its notes changed. Please delete the note again.	تغيّر المستند أو ملاحظاته. احذف الملاحظة مرة أخرى.
+	The preference could not be saved: {error}	تعذر حفظ التفضيل: {error}
+	The step editor could not be opened.	تعذر فتح محرر الخطوة.
+	The step has no command editor.	لا يملك الخطوة محرر أوامر.
+	Tolerance for choosing related colors	التسامح لاختيار الألوان ذات الصلة
+	Top align text	محاذاة النص إلى الأعلى
+	Use relative positioning for reference point	استخدام التموضع النسبي لنقطة المرجع
+	Use these settings for new arrows	استخدام هذه الإعدادات للأسهم الجديدة
+	Useful mixer brush combinations	تركيبات مفيدة لفرشاة المزج
+	ZIP	ZIP
+	Zoom current window to 1:1	تكبير النافذة الحالية إلى 1:1
+	Zoom current window to fill the screen	تكبير النافذة الحالية لملء الشاشة
+	Zoom current window to screen size	تكبير النافذة الحالية إلى حجم الشاشة
+	brush tool	أداة الفرشاة
+	by Nodalia	من Nodalia
+	dodge tool	أداة التفتيح
+	{message} into “{group}”	{message} في «{group}»
+	{ok} written to {dir}	تمت كتابة {ok} في {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	يحتوي مجموعة الفرش «{group}» بالفعل على {n} من فرشك.|يحتوي مجموعة الفرش «{group}» بالفعل على {n} من فرشك.|يحتوي مجموعة الفرش «{group}» بالفعل على فرشاتين من فرشك.|يحتوي مجموعة الفرش «{group}» بالفعل على {n} فرش من فرشك.|يحتوي مجموعة الفرش «{group}» بالفعل على {n} فرشاة من فرشك.|يحتوي مجموعة الفرش «{group}» بالفعل على {n} فرشاة من فرشك.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	مجموعة التدرجات «{group}» موجودة بالفعل ({n} تدرج).|مجموعة التدرجات «{group}» موجودة بالفعل ({n} تدرج).|مجموعة التدرجات «{group}» موجودة بالفعل (تدرجان).|مجموعة التدرجات «{group}» موجودة بالفعل ({n} تدرجات).|مجموعة التدرجات «{group}» موجودة بالفعل ({n} تدرجًا).|مجموعة التدرجات «{group}» موجودة بالفعل ({n} تدرج).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: فشل {n} مخرج لأصول الصورة|{what}: فشل {n} مخرج لأصول الصورة|{what}: فشل مخرجان لأصول الصورة|{what}: فشلت {n} مخارج لأصول الصورة|{what}: فشل {n} مخرجًا لأصول الصورة|{what}: فشل {n} مخرج لأصول الصورة
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: فشل {n} ملف|{what}: فشل {n} ملف|{what}: فشل ملفان|{what}: فشلت {n} ملفات|{what}: فشل {n} ملفًا|{what}: فشل {n} ملف
+	A frame supports affine transforms; select its image for perspective transforms	يدعم الإطار التحويلات التآلفية؛ حدد صورته لتحويلات المنظور
+	A frame supports affine transforms; select its image to warp it	يدعم الإطار التحويلات التآلفية؛ حدد صورته لتشويهها
+	Apply to All	تطبيق على الكل
+	Automatically Create First Snapshot	إنشاء أول لقطة تلقائيًا
+	Automatically Create New Snapshot When Saving	إنشاء لقطة جديدة تلقائيًا عند الحفظ
+	Batch	دفعة
+	Color Picker	منتقي الألوان
+	Convert to Frame…	تحويل إلى إطار…
+	Create a new custom frame	إنشاء إطار مخصص جديد
+	Create a new polygonal frame	إنشاء إطار متعدد الأضلاع جديد
+	Create a new triangular frame	إنشاء إطار مثلثي جديد
+	Create new set	إنشاء مجموعة جديدة
+	Delete effect	حذف التأثير
+	Drag to move the selected path	اسحب لتحريك المسار المحدد
+	Duplicate	تكرار
+	Equalize Entire Image Based On Selected Area	معادلة الصورة كلها بناءً على المنطقة المحددة
+	Equalize Selected Area Only	معادلة المنطقة المحددة فقط
+	Fit Content to Frame	ملاءمة المحتوى للإطار
+	Fit Frame to Content	ملاءمة الإطار للمحتوى
+	Frame coordinates must be finite and within 600000 pixels	يجب أن تكون إحداثيات الإطار منتهية وضمن 600000 بكسل
+	Import Image…	استيراد صورة…
+	Invalid frame transform	تحويل إطار غير صالح
+	Invalid nested file drop	إسقاط ملف متداخل غير صالح
+	Learn	تعلّم
+	Locked	مقفل
+	Move effect down	تحريك التأثير لأسفل
+	Move effect up	تحريك التأثير لأعلى
+	New Frame	إطار جديد
+	New file	ملف جديد
+	No recent files	لا توجد ملفات حديثة
+	No settings saved: these raws can't keep a sidecar here	لم تُحفظ أي إعدادات: لا يمكن لملفات RAW هذه الاحتفاظ بملف جانبي هنا
+	Nothing to save: these raws are at their default settings	لا شيء للحفظ: ملفات RAW هذه على إعداداتها الافتراضية
+	On your computer	على حاسوبك
+	Path operations	عمليات المسار
+	Pick Color From Image	التقاط اللون من الصورة
+	Recent Files	الملفات الحديثة
+	Recently Used Colors	الألوان المستخدمة مؤخرًا
+	Replace Image…	استبدال الصورة…
+	Save the settings to each raw's sidecar without opening it	حفظ الإعدادات في الملف الجانبي لكل ملف RAW دون فتحه
+	Shapes can't use patterns yet	لا يمكن للأشكال استخدام الأنماط بعد
+	Show New Snapshot Dialog by Default	إظهار مربع حوار اللقطة الجديدة افتراضيًا
+	Solid Color	لون صلب
+	Some settings could not be saved; the raws stay open	تعذر حفظ بعض الإعدادات؛ تبقى ملفات RAW مفتوحة
+	Source: {name}	المصدر: {name}
+	Stop Color	لون التوقف
+	The GPU compositor is still being prepared	لا يزال مركّب GPU قيد التجهيز
+	The History Brush source was deleted: set a new source in the History panel	تم حذف مصدر فرشاة السجل: حدد مصدرًا جديدًا في لوحة السجل
+	The frame is locked	الإطار مقفل
+	The frame is unavailable	الإطار غير متاح
+	Tint Color	لون الصبغة
+	Website	الموقع الإلكتروني
