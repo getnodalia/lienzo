@@ -30,7 +30,7 @@ const SVG_EXTS: &[&str] = &["svg", "svgz"];
 static STOPPED: AtomicBool = AtomicBool::new(false);
 const CANVAS_ID: &str = "lienzo_canvas";
 
-/// Fonts the host serves next to the page (`lienzo_ui_egui::served_fonts`): craft-fonts' manifest
+/// Fonts the host serves next to the page (`lienzo_ui_egui::served_fonts`): nodalia-fonts' manifest
 /// format, each file relative to the site root. No manifest (a 404) means no served fonts.
 const FONTS_MANIFEST: &str = "fonts/manifest.txt";
 

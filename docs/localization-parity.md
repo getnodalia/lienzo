@@ -66,7 +66,7 @@ completed for the current UI) and Norwegian Bokmål `nb` (4,552 rows, combined f
 concept; none has had a native-speaker review yet. Bosnian `bs` (4,552 rows, Latin script,
 Ijekavian, added 2026-10-30) covers the same keys; its one/few/other plurals reuse the Russian
 rule, and Cyrillic `bs` locales read it too. It is AI-assisted, shares its wording with
-storytold/craft-i18n `locales/bs/`, and has not had a native-speaker review yet.
+getnodalia/foundation (nodalia/i18n) `locales/bs/`, and has not had a native-speaker review yet.
 
 Azerbaijani `az` (Latin script) brings the runtime registry to 29 languages including
 English. Its catalog has 4,606 entries, including the initial dynamic-label key union, current OpenType menus and five frame labels

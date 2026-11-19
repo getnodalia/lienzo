@@ -91,7 +91,7 @@ next to them.
 
 ### Optional build input: craft-fonts (not files in this repo)
 
-Builds made with `CRAFT_FONTS_DIR` (all official releases) embed fonts from
+Builds made with `NODALIA_FONTS_DIR` (all official releases) embed fonts from
 [storytold/craft-fonts](https://github.com/storytold/craft-fonts) at a pinned commit; no font file
 from it is committed here. Per-file authors, sources and licences:
 [craft-fonts `ATTRIBUTION.md`](https://github.com/storytold/craft-fonts/blob/main/ATTRIBUTION.md).

@@ -318,9 +318,9 @@ mod live_vectorcraft_tests {
 
     /// Opt-in executable test uses only our own PostScript, never user artwork or Adobe assets.
     #[test]
-    #[ignore = "set VECTORCRAFT_TEST_EDITOR to a local VectorCraft executable"]
+    #[ignore = "set VECTORNODALIA_TEST_EDITOR to a local VectorCraft executable"]
     fn real_vectorcraft_converts_eps_and_rejects_failed_open_without_blank_replacement() {
-        let editor = std::env::var_os("VECTORCRAFT_TEST_EDITOR").expect("VECTORCRAFT_TEST_EDITOR");
+        let editor = std::env::var_os("VECTORNODALIA_TEST_EDITOR").expect("VECTORNODALIA_TEST_EDITOR");
         let editor = Path::new(&editor);
         let (_send, stop) = mpsc::channel();
         let eps = b"%!PS-Adobe-3.0 EPSF-3.0\n%%BoundingBox: 0 0 8 6\n0 0 1 setrgbcolor 0 0 8 6 rectfill\nshowpage\n%%EOF\n";

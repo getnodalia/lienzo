@@ -66,11 +66,11 @@ fn rect_of(h: &Harness<'static, LienzoApp>, g: Group) -> Rect {
     probe::native_group_rect(h.state(), &h.ctx, g).unwrap_or_else(|| panic!("{g:?} not drawn"))
 }
 
-type Drawn = (Vec<(String, Rect)>, Vec<(craft_ui::docking::Hit<String>, Rect)>);
+type Drawn = (Vec<(String, Rect)>, Vec<(nodalia_ui::docking::Hit<String>, Rect)>);
 
 /// Every panel body and docking control drawn last frame.
 fn drawn(h: &Harness<'static, LienzoApp>) -> Drawn {
-    (crate::panel_docking::last_bodies(&h.ctx), craft_ui::docking::DockArea::<String>::hit_rects(&h.ctx, egui::Id::unique("lienzo-panel-docking")))
+    (crate::panel_docking::last_bodies(&h.ctx), nodalia_ui::docking::DockArea::<String>::hit_rects(&h.ctx, egui::Id::unique("lienzo-panel-docking")))
 }
 
 fn drag(h: &mut Harness<'static, LienzoApp>, from: Pos2, to: Pos2) {
@@ -115,7 +115,7 @@ fn dragging_the_splitter_resizes_and_survives_a_ui_state_round_trip() {
     let mut h = harness(app, vec2(1200.0, 800.0), ThemeKind::ProMedium);
     let props = rect_of(&h, Group::Properties);
     let color = rect_of(&h, Group::Color);
-    let split = probe::hit_rect(&h.ctx, &craft_ui::docking::Hit::Divider(craft_ui::docking::Divider::Group("properties".into())))
+    let split = probe::hit_rect(&h.ctx, &nodalia_ui::docking::Hit::Divider(nodalia_ui::docking::Divider::Group("properties".into())))
         .expect("divider below Properties")
         .center();
     // Less than Properties has above its minimum, so the groups above don't give way.
@@ -227,7 +227,7 @@ fn tiny_windows_do_not_panic() {
                 assert!(r.height() >= 0.0 && r.is_finite());
             }
             // Drag a splitter way off-screen.
-            let divider = hits.iter().find(|(hit, _)| matches!(hit, craft_ui::docking::Hit::Divider(craft_ui::docking::Divider::Group(_))));
+            let divider = hits.iter().find(|(hit, _)| matches!(hit, nodalia_ui::docking::Hit::Divider(nodalia_ui::docking::Divider::Group(_))));
             if let Some((_, r)) = divider {
                 let p = r.center();
                 drag(&mut h, p, p + vec2(0.0, 5000.0));
@@ -822,7 +822,7 @@ fn brush_settings_window_is_closed_on_restart_but_can_be_reopened() {
     assert!(workspace.ui.panels.brush_settings, "switching workspaces still restores their saved layout");
 }
 
-/// The saved `docking` value is the app's own serialization of `craft_ui::docking::Layout`. A
+/// The saved `docking` value is the app's own serialization of `nodalia_ui::docking::Layout`. A
 /// value from an older/foreign docking schema that no longer deserializes is dropped (the
 /// legacy layout is rebuilt); the rest of the workspace still applies, and nothing panics.
 /// Panel widths still migrate separately through `panels::migrate_panel_state`, but a split/tab
@@ -929,5 +929,5 @@ fn a_workspace_from_a_newer_version_shows_the_default_and_stays_saved() {
     app.run("window.panel.close", json!({"panel": "layers"})).unwrap();
     frame(&mut app);
     let docking = &app.session.prefs().panel_layout["docking"];
-    assert_eq!(docking["version"], json!(craft_ui::docking::Workspace::<String>::VERSION), "a changed layout replaces it: {docking}");
+    assert_eq!(docking["version"], json!(nodalia_ui::docking::Workspace::<String>::VERSION), "a changed layout replaces it: {docking}");
 }

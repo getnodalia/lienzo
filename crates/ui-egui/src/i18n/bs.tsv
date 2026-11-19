@@ -13,7 +13,7 @@
 # Bosnian computing vocabulary (sloj, maska, odabir, četkica, gradijent, zamućenje, neprozirnost
 # ...). No proprietary localisation resource, string table or product UI was consulted or copied;
 # in particular not any localisation of Adobe Photoshop. Add entries the same way. AI-assisted
-# (Claude Code), not yet reviewed by a native speaker; shared with storytold/craft-i18n
+# (Claude Code), not yet reviewed by a native speaker; shared with getnodalia/foundation (nodalia/i18n)
 # (locales/bs/lienzo.tsv and common.tsv).
 # Conventions: Bosnian Latin script, Ijekavian, standard Bosnian vocabulary where the neighbouring
 # languages differ (historija, sačuvaj, tačka, datoteka, postavke), sentence case. Commands are

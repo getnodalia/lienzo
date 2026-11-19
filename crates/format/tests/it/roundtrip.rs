@@ -216,11 +216,11 @@ fn nesting_beyond_the_load_limit_is_refused_at_save() {
     assert!(matches!(e, FormatError::LimitExceeded(_)), "{e}");
 }
 
-/// craft-pcraft-format's default manifest nesting limit is computed from its own copy of the
+/// nodalia-lienzo-format's default manifest nesting limit is computed from its own copy of the
 /// group depth, so the two must stay equal.
 #[test]
-fn group_depth_matches_craft_pcraft_format() {
-    assert_eq!(MAX_GROUP_DEPTH, craft_pcraft_format::MAX_GROUP_DEPTH);
+fn group_depth_matches_nodalia_pcraft_format() {
+    assert_eq!(MAX_GROUP_DEPTH, nodalia_lienzo_format::MAX_GROUP_DEPTH);
 }
 
 #[test]

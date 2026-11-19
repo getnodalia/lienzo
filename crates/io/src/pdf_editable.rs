@@ -1,4 +1,4 @@
-//! Experimental editable PDF import: a `craft-pdf` device turns painted paths into shape layers
+//! Experimental editable PDF import: a `nodalia-pdf` device turns painted paths into shape layers
 //! and embedded-font text into text layers.
 //!
 //! Solid fills and strokes become [`ShapeLayer`]s in document pixels; embedded fonts whose glyphs
@@ -22,13 +22,6 @@ use std::sync::Arc;
 use std::sync::atomic::{AtomicBool, AtomicU8, Ordering};
 use std::time::Duration;
 
-use craft_pdf::interpret::color::Color as HayroColor;
-use craft_pdf::interpret::font::{FontData, Glyph, OutlineFontData};
-use craft_pdf::interpret::{
-    BlendMode, ClipPath, Context, Device, GlyphDrawMode, Image, InterpreterCache, InterpreterSettings, InterpreterWarning, Paint, PathDrawMode, SoftMask,
-    TransformExt, interpret_page,
-};
-use craft_pdf::syntax::page::Page;
 use kurbo::{Affine as KurboAffine, BezPath, Cap, Join, PathEl};
 use lienzo_color::{Color, ColorMode, PixelFormat, SampleType};
 use lienzo_doc::text::{CharStyle, TextRun};
@@ -36,6 +29,13 @@ use lienzo_doc::vector::{FillRule, Knot, LineCap, LineJoin, Path, PathOp, ShapeL
 use lienzo_doc::{Fill, Layer, LayerContent, TextLayer};
 use lienzo_geom::{Affine, Point, Rect, TILE_SIZE};
 use lienzo_raster::Interrupt;
+use nodalia_pdf::interpret::color::Color as HayroColor;
+use nodalia_pdf::interpret::font::{FontData, Glyph, OutlineFontData};
+use nodalia_pdf::interpret::{
+    BlendMode, ClipPath, Context, Device, GlyphDrawMode, Image, InterpreterCache, InterpreterSettings, InterpreterWarning, Paint, PathDrawMode, SoftMask,
+    TransformExt, interpret_page,
+};
+use nodalia_pdf::syntax::page::Page;
 
 /// Most layers one editable page may create; past it the page falls back to raster.
 const MAX_LAYERS: usize = 20_000;
@@ -49,7 +49,7 @@ const MAX_GLYPHS: usize = 100_000;
 const MAX_GLYPH_BYTES: usize = 16 << 20;
 /// Cap on fill/stroke glyph comparisons so hostile pages cannot make pairing quadratic forever.
 const MAX_PAIR_CHECKS: usize = 1_000_000;
-/// How often the watcher copies the interrupt into craft-pdf's cancellation flag. The Device's
+/// How often the watcher copies the interrupt into nodalia-pdf's cancellation flag. The Device's
 /// callbacks are only reached per paint, so a page with one long path still needs this; 20 ms
 /// keeps wakeups negligible while staying responsive.
 const POLL: Duration = Duration::from_millis(20);
@@ -623,8 +623,8 @@ impl<'a> Device<'a> for PathDevice<'_> {
             PathDrawMode::Fill(rule) => {
                 let mut path = path;
                 path.fill_rule = match rule {
-                    craft_pdf::interpret::FillRule::NonZero => FillRule::NonZero,
-                    craft_pdf::interpret::FillRule::EvenOdd => FillRule::EvenOdd,
+                    nodalia_pdf::interpret::FillRule::NonZero => FillRule::NonZero,
+                    nodalia_pdf::interpret::FillRule::EvenOdd => FillRule::EvenOdd,
                 };
                 self.push_shape(path, Some(Fill::Solid(color)), None);
             }
@@ -685,8 +685,8 @@ impl<'a> Device<'a> for PathDevice<'_> {
             return;
         }
         let text = match glyph.as_unicode() {
-            Some(craft_pdf::interpret::hayro_cmap::BfString::Char(c)) => c.to_string(),
-            Some(craft_pdf::interpret::hayro_cmap::BfString::String(s)) => s,
+            Some(nodalia_pdf::interpret::hayro_cmap::BfString::Char(c)) => c.to_string(),
+            Some(nodalia_pdf::interpret::hayro_cmap::BfString::String(s)) => s,
             None => {
                 // No Unicode means the text layer could not be edited faithfully.
                 self.unsupported("text without a Unicode mapping");
@@ -973,7 +973,7 @@ fn knots_affine(transform: &KurboAffine) -> Affine {
 }
 
 /// A Hayro stroke as Lienzo's stroke: width in pixels, dashes in multiples of the width.
-fn to_stroke(stroke: &craft_pdf::interpret::StrokeProps, color: Color, scale: f64) -> Option<ShapeStroke> {
+fn to_stroke(stroke: &nodalia_pdf::interpret::StrokeProps, color: Color, scale: f64) -> Option<ShapeStroke> {
     if !stroke.line_width.is_finite() || stroke.line_width < 0.0 || !scale.is_finite() || scale <= 0.0 {
         return None;
     }
@@ -1495,7 +1495,7 @@ mod tests {
 
     #[test]
     fn odd_and_zero_dash_arrays_are_normalised() {
-        let mut stroke = craft_pdf::interpret::StrokeProps {
+        let mut stroke = nodalia_pdf::interpret::StrokeProps {
             line_width: 2.0,
             line_cap: Cap::Butt,
             line_join: Join::Miter,

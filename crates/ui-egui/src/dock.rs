@@ -1,7 +1,7 @@
 //! The native dock's state (#88): the panel groups of the end-side dock column, their order,
 //! tab order, hidden tabs, heights and collapse.
 //!
-//! craft-ui's docking draws every layout (`crate::panel_docking`). Until the workspace is
+//! nodalia-ui's docking draws every layout (`crate::panel_docking`). Until the workspace is
 //! customized, the default layout is built each frame from this state: one dock column of the
 //! shown groups, top to bottom, where a group the user never resized gets its default height and
 //! the last expanded group (Layers by default) fills what the others leave. The Window menu's
@@ -345,7 +345,7 @@ pub(crate) fn snapshot(app: &LienzoApp) -> Value {
 }
 
 /// A saved layout's workspace from a newer version stays as saved while the default layout
-/// shows in its place (craft-ui: keep it on disk, don't overwrite it).
+/// shows in its place (nodalia-ui: keep it on disk, don't overwrite it).
 pub(crate) fn keep_newer(app: &LienzoApp, layout: &mut Value) {
     if let (None, Some(kept), Some(layout)) = (&app.ui.docking, &app.ui.docking_kept, layout.as_object_mut()) {
         layout.extend(kept.clone());
@@ -494,9 +494,9 @@ pub fn restore(app: &mut LienzoApp) {
 /// (a workspace or `panelLayout`). Missing or invalid dock parts are left alone; old
 /// layouts without Timeline visibility restore it closed.
 ///
-/// `craft_ui::docking::DockArea` keeps only transient drag/focus data in `ctx.data`; the
-/// split/tab arrangement is the app's own `craft_ui::docking::Layout` JSON stored here. If a
-/// layout saved by a different craft-ui revision no longer deserializes, it is dropped and the
+/// `nodalia_ui::docking::DockArea` keeps only transient drag/focus data in `ctx.data`; the
+/// split/tab arrangement is the app's own `nodalia_ui::docking::Layout` JSON stored here. If a
+/// layout saved by a different nodalia-ui revision no longer deserializes, it is dropped and the
 /// legacy layout is rebuilt (the split/tab arrangement resets). Panel widths are a separate
 /// `egui::PanelState` migration and still carry over.
 pub fn apply(app: &mut LienzoApp, v: &Value) {

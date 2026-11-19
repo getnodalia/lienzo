@@ -124,8 +124,8 @@ cp "$WORK/bin/lienzo-cli" "$APP/Contents/MacOS/lienzo-cli"
 cp "$ROOT/assets/app-icon/lienzo.icns" "$APP/Contents/Resources/Lienzo.icns"
 # Notices for the bundled font fallback, included before the bundle is signed.
 cp "$ROOT/NOTICE" "$ROOT/ATTRIBUTION.md" "$APP/Contents/Resources/"
-# Licences of the embedded craft-fonts fonts (only when built with CRAFT_FONTS_DIR).
-if [[ -n "${CRAFT_FONTS_DIR:-}" ]]; then
+# Licences of the embedded nodalia-fonts fonts (only when built with NODALIA_FONTS_DIR).
+if [[ -n "${NODALIA_FONTS_DIR:-}" ]]; then
   mkdir -p "$APP/Contents/Resources/Licenses"
   copy_font_licences "$APP/Contents/Resources/Licenses"
 fi

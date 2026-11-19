@@ -42,7 +42,7 @@ pub(super) fn open(app: &mut LienzoApp) -> Result<Value, String> {
 pub(crate) fn body(ui: &mut egui::Ui, fields: &mut Map<String, Value>) {
     ui.label(tl!("Choose a menu command. Playback asks for its settings when needed."));
     let mut id = fields.get("id").and_then(Value::as_str).unwrap_or("image.imageSize").to_string();
-    craft_ui::ComboBox::from_id_salt("actions-insert-menu").selected_text(super::label_of(&id)).show_ui(ui, |ui| {
+    nodalia_ui::ComboBox::from_id_salt("actions-insert-menu").selected_text(super::label_of(&id)).show_ui(ui, |ui| {
         for command in lienzo_engine::atn_cmds::menu_item_commands() {
             ui.selectable_value(&mut id, command.to_string(), super::label_of(command));
         }

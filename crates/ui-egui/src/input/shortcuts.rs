@@ -423,10 +423,10 @@ pub(crate) fn forwarded_keys_down(ctx: &egui::Context) -> Vec<Key> {
     ctx.data(|d| d.get_temp::<std::collections::BTreeSet<Key>>(forwarded_down_id())).unwrap_or_default().into_iter().collect()
 }
 
-/// Keys that a floating panel's own OS window left over (craft-ui's
+/// Keys that a floating panel's own OS window left over (nodalia-ui's
 /// `DockOutput::forwarded_events`, with the modifiers held in that window) run through
 /// [`handle`] in the frame they arrive, as if pressed in the main window: tool keys, undo and
-/// the clipboard work while a floating window has the keyboard. craft-ui forwards nothing while
+/// the clipboard work while a floating window has the keyboard. nodalia-ui forwards nothing while
 /// one of that window's widgets has keyboard focus. egui-winit sends ⌘C, ⌘X and ⌘V there as
 /// `Copy`, `Cut` and `Paste` too, so [`clipboard_keys`] turns them into presses first.
 pub(crate) fn handle_forwarded(app: &mut LienzoApp, ctx: &egui::Context, events: Vec<egui::Event>, modifiers: Modifiers) {

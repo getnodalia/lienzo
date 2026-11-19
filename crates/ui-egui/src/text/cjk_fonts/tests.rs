@@ -27,7 +27,7 @@ fn lazy_fallbacks_follow_ui_font_size_and_survive_size_changes() {
     }
 }
 
-/// A face discovered by [`CraftFontProvider`] during a pass that also changes Interface > UI
+/// A face discovered by [`NodaliaFontProvider`] during a pass that also changes Interface > UI
 /// Font Size must use the scale of the definitions active in that pass. The size plugin moves
 /// the provider to the new scale only after `ctx.set_fonts` queued the rescaled definitions;
 /// updating the provider in `set_ui_font_size` would put the new scale on a face laid out
@@ -39,9 +39,9 @@ fn discovered_faces_use_the_scale_of_the_definitions_they_were_laid_out_with() {
         Some(synthetic_font(&[(0x0E01, 0x0E5B)]))
     }
     let ctx = egui::Context::default();
-    crate::theme::install_fonts_with(&ctx, craft_only(|| None));
+    crate::theme::install_fonts_with(&ctx, nodalia_only(|| None));
     ctx.run_ui(Default::default(), |_| {}).textures_delta.clear();
-    let mut provider = CraftFontProvider::new(
+    let mut provider = NodaliaFontProvider::new(
         &Sources {
             locale: || Some("en".into()),
             files: no_files,
@@ -50,13 +50,13 @@ fn discovered_faces_use_the_scale_of_the_definitions_they_were_laid_out_with() {
             scripts: |script| if script == Script::Thai { vec![PathBuf::from("synthetic-thai.ttf")] } else { Vec::new() },
             covers: scripts::covering_face,
             embedded: no_embedded,
-            eager_craft_fonts: false,
+            eager_nodalia_fonts: false,
         },
         1.0,
     );
     provider.reader = thai_reader;
     let provider = std::sync::Arc::new(provider);
-    ctx.data_mut(|d| d.insert_temp(craft_provider_id(), provider.clone()));
+    ctx.data_mut(|d| d.insert_temp(nodalia_provider_id(), provider.clone()));
     let as_provider: std::sync::Arc<dyn FontProvider> = provider.clone();
     ctx.set_font_providers(vec![as_provider]);
 
@@ -64,7 +64,7 @@ fn discovered_faces_use_the_scale_of_the_definitions_they_were_laid_out_with() {
     // provider discovered for Thai.
     let inter_scale = |ctx: &egui::Context| -> Option<f32> { ctx.fonts(|f| f.definitions().font_data.get("Inter").map(|data| data.tweak.scale)) };
     let thai_scale = |ctx: &egui::Context| -> Option<f32> {
-        ctx.fonts(|f| f.discovered_fonts().iter().find(|insert| insert.name.starts_with("craft-system-")).map(|insert| insert.data.tweak.scale))
+        ctx.fonts(|f| f.discovered_fonts().iter().find(|insert| insert.name.starts_with("nodalia-system-")).map(|insert| insert.data.tweak.scale))
     };
     // A frame that checks the state during the change pass, before laying out Thai (the
     // character that makes the provider discover a face).
@@ -292,9 +292,9 @@ fn provider_skips_missing_and_corrupt_script_candidates_before_registering() {
         scripts: provider_corrupt_thai_candidates,
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: false,
+        eager_nodalia_fonts: false,
     };
-    let provider = CraftFontProvider::new(&sources, 1.0);
+    let provider = NodaliaFontProvider::new(&sources, 1.0);
     let insert = provided_insert(&provider, 'ก').expect("the valid Thai candidate is reached");
     assert_eq!(insert.data.index, 0);
     assert_eq!(insert.data.bytes(), std::fs::read(fake_dir().join("thai.ttf")).expect("Thai test font").as_slice());
@@ -305,7 +305,7 @@ fn provider_skips_missing_and_corrupt_script_candidates_before_registering() {
     drop(cache);
 
     let missing_only = Sources { scripts: provider_missing_thai_candidate, ..sources };
-    let provider = CraftFontProvider::new(&missing_only, 1.0);
+    let provider = NodaliaFontProvider::new(&missing_only, 1.0);
     assert!(provided(&provider, 'ก').is_none(), "no readable script candidate leaves the character missing");
     let cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
     assert_eq!(cache.failed_reads.len(), 1);
@@ -326,7 +326,7 @@ fn fake_sources(locale: fn() -> Option<String>) -> Sources {
         scripts: |_| Vec::new(),
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: false,
+        eager_nodalia_fonts: false,
     }
 }
 
@@ -340,7 +340,7 @@ fn picks_preferred_script_skips_unreadable_and_exhausts() {
     assert_eq!(data.index, 0);
     assert_eq!(fb.tried, vec![CjkScript::Korean]);
     // Han on an English locale: system fallback keeps the locale order (SC first); the
-    // Japanese-first craft-manifest baseline is a separate provider/lazy-craft path.
+    // Japanese-first nodalia-manifest baseline is a separate provider/lazy-craft path.
     // SC, TC, JA have nothing readable here, and the last-resort file was already loaded,
     // so nothing new; everything is now tried.
     assert!(fb.next_font('日', CjkChar::Han).is_none());
@@ -366,7 +366,7 @@ fn han_follows_locale() {
             scripts: |_| Vec::new(),
             covers: scripts::covering_face,
             embedded: no_embedded,
-            eager_craft_fonts: false,
+            eager_nodalia_fonts: false,
         });
         fb.order = Some(cjk::script_order(Some(loc)));
         assert!(fb.next_font('日', CjkChar::Han).is_none());
@@ -535,7 +535,7 @@ fn script_sources() -> Sources {
         },
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: false,
+        eager_nodalia_fonts: false,
     }
 }
 
@@ -674,13 +674,13 @@ fn eager_sources(locale: fn() -> Option<String>) -> Sources {
         pending: || false,
         scripts: |_| Vec::new(),
         covers: scripts::covering_face,
-        embedded: craft_embedded_iso,
-        eager_craft_fonts: true,
+        embedded: nodalia_embedded_iso,
+        eager_nodalia_fonts: true,
     }
 }
 
-/// No system fonts at all: craft-fonts alone draws CJK through the lazy loader.
-fn craft_only(locale: fn() -> Option<String>) -> Sources {
+/// No system fonts at all: nodalia-fonts alone draws CJK through the lazy loader.
+fn nodalia_only(locale: fn() -> Option<String>) -> Sources {
     Sources {
         locale,
         files: |_| vec![],
@@ -688,25 +688,25 @@ fn craft_only(locale: fn() -> Option<String>) -> Sources {
         pending: || false,
         scripts: |_| Vec::new(),
         covers: scripts::covering_face,
-        embedded: craft_embedded_iso,
-        eager_craft_fonts: false,
+        embedded: nodalia_embedded_iso,
+        eager_nodalia_fonts: false,
     }
 }
 
 /// The migration baseline's first craft face covering `c`: the first non-empty face in
 /// manifest order (what the old family stack appended first), not the UI-first sort.
-fn baseline_face(c: char) -> Option<&'static CraftFont> {
-    craft_fonts::CRAFT_FONTS.iter().find(|f| !f.bytes.is_empty() && scripts::face_covers(f.bytes, 0, c))
+fn baseline_face(c: char) -> Option<&'static NodaliaFont> {
+    nodalia_fonts::NODALIA_FONTS.iter().find(|f| !f.bytes.is_empty() && scripts::face_covers(f.bytes, 0, c))
 }
 
 /// A test-only craft face backed by a collection built with [`two_face_ttc`]: face 0 maps
-/// Thai only, face 1 maps 龍. `craft_insert` would install face 0, so the craft coverage
+/// Thai only, face 1 maps 龍. `nodalia_insert` would install face 0, so the craft coverage
 /// helpers must not accept it for 龍 even though a later face covers the character.
-fn ttc_craft_face() -> &'static CraftFont {
-    static FACE: std::sync::OnceLock<CraftFont> = std::sync::OnceLock::new();
+fn ttc_nodalia_face() -> &'static NodaliaFont {
+    static FACE: std::sync::OnceLock<NodaliaFont> = std::sync::OnceLock::new();
     FACE.get_or_init(|| {
         let bytes: &'static [u8] = Box::leak(two_face_ttc(&synthetic_font(&[(0x0E01, 0x0E5B)]), &synthetic_font(&[(0x9F8D, 0x9F8D)])).into_boxed_slice());
-        CraftFont { family: "Synthetic Collection", style: "Regular", scripts: &["Hans"], bytes }
+        NodaliaFont { family: "Synthetic Collection", style: "Regular", scripts: &["Hans"], bytes }
     })
 }
 
@@ -714,30 +714,30 @@ fn ttc_craft_face() -> &'static CraftFont {
 /// any-face coverage check returned the face for a character only a later collection face
 /// maps, which then drew tofu in the installed face 0.
 #[test]
-fn craft_face_coverage_matches_the_face_craft_insert_installs() {
-    let face = ttc_craft_face();
+fn nodalia_face_coverage_matches_the_face_nodalia_insert_installs() {
+    let face = ttc_nodalia_face();
     // Precondition: an any-face check really accepts 龍 (face 1), so this regression would
     // fail if the helpers went back to `scripts::covering_face`.
     assert_eq!(scripts::covering_face(face.bytes, '龍'), Some(1), "face 1 maps 龍");
     assert!(!scripts::face_covers(face.bytes, 0, '龍'), "the installed face 0 does not map 龍");
-    assert!(!craft_face_installs_coverage(face, '龍'), "face 0 lacks the glyph; craft_insert installs face 0");
-    assert!(craft_face_installs_coverage(face, 'ก'), "face 0 maps Thai");
+    assert!(!nodalia_face_installs_coverage(face, '龍'), "face 0 lacks the glyph; nodalia_insert installs face 0");
+    assert!(nodalia_face_installs_coverage(face, 'ก'), "face 0 maps Thai");
 }
 
-static EMPTY_CRAFT_FACE: CraftFont = CraftFont { family: "Empty", style: "Regular", scripts: &["Zsym"], bytes: &[] };
+static EMPTY_NODALIA_FACE: NodaliaFont = NodaliaFont { family: "Empty", style: "Regular", scripts: &["Zsym"], bytes: &[] };
 
-fn only_empty_craft_face(_: &'static str) -> Vec<&'static CraftFont> {
-    vec![&EMPTY_CRAFT_FACE]
+fn only_empty_nodalia_face(_: &'static str) -> Vec<&'static NodaliaFont> {
+    vec![&EMPTY_NODALIA_FACE]
 }
 
 /// A craft entry without bytes, or a face injected only by a test that is absent from the
 /// global manifest, has no installable face index: selection must return `None`, not a face
 /// name egui cannot resolve.
 #[test]
-fn craft_face_selection_ignores_empty_and_unindexed_faces() {
-    assert!(!craft_face_installs_coverage(&EMPTY_CRAFT_FACE, '☃'));
-    assert!(craft_face_for(only_empty_craft_face, "Zsym", '☃').is_none());
-    assert!(craft_face_manifest(only_empty_craft_face, "Zsym", '☃').is_none());
+fn nodalia_face_selection_ignores_empty_and_unindexed_faces() {
+    assert!(!nodalia_face_installs_coverage(&EMPTY_NODALIA_FACE, '☃'));
+    assert!(nodalia_face_for(only_empty_nodalia_face, "Zsym", '☃').is_none());
+    assert!(nodalia_face_manifest(only_empty_nodalia_face, "Zsym", '☃').is_none());
 }
 
 /// Every script the lazy fallback can see has a valid ISO 15924 tag, so its injected craft
@@ -774,25 +774,25 @@ fn fallback_scripts_map_to_iso_15924_tags() {
     for (script, iso) in expected {
         assert_eq!(script_iso(script), iso, "{script:?}");
     }
-    assert_eq!(craft_embedded(CjkScript::Japanese).len(), craft_embedded_iso("Jpan").len());
+    assert_eq!(nodalia_embedded(CjkScript::Japanese).len(), nodalia_embedded_iso("Jpan").len());
 }
 
-/// No system fonts at all: craft-fonts alone draws CJK, in the locale's script order.
+/// No system fonts at all: nodalia-fonts alone draws CJK, in the locale's script order.
 #[test]
-fn craft_fonts_render_cjk_without_system_fonts() {
-    let Some(ui_font) = craft_fonts::japanese_for_ui().first().copied() else {
-        eprintln!("skipping: built without craft-fonts (set CRAFT_FONTS_DIR to a craft-fonts checkout)");
+fn nodalia_fonts_render_cjk_without_system_fonts() {
+    let Some(ui_font) = nodalia_fonts::japanese_for_ui().first().copied() else {
+        eprintln!("skipping: built without nodalia-fonts (set NODALIA_FONTS_DIR to a nodalia-fonts checkout)");
         return;
     };
-    let Some(chinese) = craft_fonts::CRAFT_FONTS.iter().find(|f| f.family == "Noto Sans CJK SC" && f.style == "Regular") else {
-        eprintln!("skipping: the craft-fonts manifest has no Simplified Chinese face");
+    let Some(chinese) = nodalia_fonts::NODALIA_FONTS.iter().find(|f| f.family == "Noto Sans CJK SC" && f.style == "Regular") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Simplified Chinese face");
         return;
     };
     // The craft manifest's Japanese faces come before Noto Sans CJK SC and the baseline
     // appended them in manifest order, so a non-CJK/unknown effective locale keeps Shippori
     // Mincho (the first covering face). An explicit locale keeps its own UI-first script face.
     let Some(baseline) = baseline_face('日') else {
-        eprintln!("skipping: the craft-fonts manifest has no face covering 日");
+        eprintln!("skipping: the nodalia-fonts manifest has no face covering 日");
         return;
     };
     for (locale, expected) in [
@@ -802,7 +802,7 @@ fn craft_fonts_render_cjk_without_system_fonts() {
         ((|| None) as fn() -> Option<String>, baseline),
     ] {
         let ctx = egui::Context::default();
-        crate::theme::install_fonts_with(&ctx, craft_only(locale));
+        crate::theme::install_fonts_with(&ctx, nodalia_only(locale));
         assert!(render(&ctx, "日本語の文字"), "tofu in 日本語の文字");
         assert!(render(&ctx, "レイヤー 1"), "tofu in kana");
         let fonts = ctx.fonts(|f| f.definitions().clone());
@@ -819,13 +819,13 @@ fn craft_fonts_render_cjk_without_system_fonts() {
     }
 }
 
-fn provided_insert(provider: &CraftFontProvider, c: char) -> Option<FontInsert> {
+fn provided_insert(provider: &NodaliaFontProvider, c: char) -> Option<FontInsert> {
     let mut buf = [0u8; 4];
     let cluster = c.encode_utf8(&mut buf);
     provider.font_for(&FallbackRequest { cluster, family: &FontFamily::Proportional })
 }
 
-fn provided(provider: &CraftFontProvider, c: char) -> Option<String> {
+fn provided(provider: &NodaliaFontProvider, c: char) -> Option<String> {
     provided_insert(provider, c).map(|insert| insert.name)
 }
 
@@ -837,13 +837,13 @@ fn test_sources(locale: fn() -> Option<String>) -> Sources {
         pending: || false,
         scripts: no_script_files,
         covers: scripts::covering_face,
-        embedded: craft_embedded_iso,
-        eager_craft_fonts: false,
+        embedded: nodalia_embedded_iso,
+        eager_nodalia_fonts: false,
     }
 }
 
-fn test_provider(locale: fn() -> Option<String>) -> CraftFontProvider {
-    CraftFontProvider::new(&test_sources(locale), 1.0)
+fn test_provider(locale: fn() -> Option<String>) -> NodaliaFontProvider {
+    NodaliaFontProvider::new(&test_sources(locale), 1.0)
 }
 
 #[test]
@@ -868,7 +868,7 @@ fn no_files(_: CjkScript) -> Vec<FontFile> {
 /// covers the sample Han character).
 fn hant_system_file() -> Option<PathBuf> {
     static FILE: std::sync::OnceLock<Option<PathBuf>> = std::sync::OnceLock::new();
-    let face = craft_fonts::CRAFT_FONTS.iter().find(|f| f.family == "Noto Sans CJK SC" && !f.bytes.is_empty())?;
+    let face = nodalia_fonts::NODALIA_FONTS.iter().find(|f| f.family == "Noto Sans CJK SC" && !f.bytes.is_empty())?;
     FILE.get_or_init(|| {
         let path = std::env::temp_dir().join(format!("lienzo-hant-{}.otf", std::process::id()));
         std::fs::write(&path, face.bytes).ok().map(|()| path)
@@ -885,38 +885,38 @@ fn hant_files(script: CjkScript) -> Vec<FontFile> {
 }
 
 #[test]
-fn craft_font_provider_keeps_the_baseline_face_for_unknown_locales() {
-    let Some(ui_font) = craft_fonts::japanese_for_ui().first().copied() else {
-        eprintln!("skipping: built without craft-fonts (set CRAFT_FONTS_DIR to a craft-fonts checkout)");
+fn nodalia_font_provider_keeps_the_baseline_face_for_unknown_locales() {
+    let Some(ui_font) = nodalia_fonts::japanese_for_ui().first().copied() else {
+        eprintln!("skipping: built without nodalia-fonts (set NODALIA_FONTS_DIR to a nodalia-fonts checkout)");
         return;
     };
-    let Some(ui_index) = craft_index(ui_font) else { return };
-    let Some((sc_index, sc)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans CJK SC") else {
-        eprintln!("skipping: the craft-fonts manifest has no Simplified Chinese face");
+    let Some(ui_index) = nodalia_index(ui_font) else { return };
+    let Some((sc_index, sc)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans CJK SC") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Simplified Chinese face");
         return;
     };
-    let Some((korean_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "NanumGothic") else {
-        eprintln!("skipping: the craft-fonts manifest has no Korean face");
+    let Some((korean_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "NanumGothic") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Korean face");
         return;
     };
-    let Some((arabic_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans Arabic") else {
-        eprintln!("skipping: the craft-fonts manifest has no Arabic face");
+    let Some((arabic_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans Arabic") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Arabic face");
         return;
     };
-    let Some((devanagari_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans Devanagari") else {
-        eprintln!("skipping: the craft-fonts manifest has no Devanagari face");
+    let Some((devanagari_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans Devanagari") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Devanagari face");
         return;
     };
     let Some(baseline_han) = baseline_face('日') else {
-        eprintln!("skipping: the craft-fonts manifest has no face covering 日");
+        eprintln!("skipping: the nodalia-fonts manifest has no face covering 日");
         return;
     };
     let Some(baseline_kana) = baseline_face('あ') else {
-        eprintln!("skipping: the craft-fonts manifest has no face covering あ");
+        eprintln!("skipping: the nodalia-fonts manifest has no face covering あ");
         return;
     };
-    let baseline_han_index = craft_index(baseline_han).expect("a manifest face has an index");
-    let baseline_kana_index = craft_index(baseline_kana).expect("a manifest face has an index");
+    let baseline_han_index = nodalia_index(baseline_han).expect("a manifest face has an index");
+    let baseline_kana_index = nodalia_index(baseline_kana).expect("a manifest face has an index");
     let baseline_han_name = format!("craft-font-{baseline_han_index}");
     let baseline_kana_name = format!("craft-font-{baseline_kana_index}");
     let ui_name = format!("craft-font-{ui_index}");
@@ -966,12 +966,12 @@ fn craft_font_provider_keeps_the_baseline_face_for_unknown_locales() {
             pending: || false,
             scripts: no_script_files,
             covers: scripts::covering_face,
-            embedded: craft_embedded_iso,
-            eager_craft_fonts: false,
+            embedded: nodalia_embedded_iso,
+            eager_nodalia_fonts: false,
         };
-        let hant = CraftFontProvider::new(&sources, 1.0);
+        let hant = NodaliaFontProvider::new(&sources, 1.0);
         let got = provided(&hant, '龍').expect("the system Hant face");
-        assert!(got.starts_with("craft-system-"), "the system Hant face comes before the SC craft fallback: {got}");
+        assert!(got.starts_with("nodalia-system-"), "the system Hant face comes before the SC craft fallback: {got}");
         assert_ne!(got, sc_name, "the SC craft face must not pre-empt a system Hant face");
     }
 
@@ -982,7 +982,7 @@ fn craft_font_provider_keeps_the_baseline_face_for_unknown_locales() {
 }
 
 static PENDING_LAST_RESORT: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
-static PENDING_CRAFT_SC: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
+static PENDING_NODALIA_SC: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
 static PENDING_READY: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
 static STRICT_PENDING: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(true);
 
@@ -990,8 +990,8 @@ fn pending_last_resort() -> bool {
     PENDING_LAST_RESORT.load(std::sync::atomic::Ordering::Relaxed)
 }
 
-fn pending_craft_sc() -> bool {
-    PENDING_CRAFT_SC.load(std::sync::atomic::Ordering::Relaxed)
+fn pending_nodalia_sc() -> bool {
+    PENDING_NODALIA_SC.load(std::sync::atomic::Ordering::Relaxed)
 }
 
 fn pending_ready() -> bool {
@@ -1013,7 +1013,7 @@ fn ready_hant_files(script: CjkScript) -> Vec<FontFile> {
 #[test]
 fn provider_uses_the_requested_collection_family_and_its_exact_coverage() {
     let path = fake_dir().join("families.ttc");
-    let provider = CraftFontProvider::new(&test_sources(|| Some("en".into())), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources(|| Some("en".into())), 1.0);
     let file = |family: &str| vec![FontFile { path: path.clone(), family: family.into() }];
 
     let insert = provider.system_insert_files(file("JetBrains Mono"), 'A').expect("face 1 covers A");
@@ -1031,7 +1031,7 @@ fn provider_uses_the_requested_collection_family_and_its_exact_coverage() {
 #[test]
 fn cached_system_face_returns_the_current_scale() {
     let path = fake_dir().join("families.ttc");
-    let provider = CraftFontProvider::new(&test_sources(|| Some("en".into())), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources(|| Some("en".into())), 1.0);
     let file = || vec![FontFile { path: path.clone(), family: "JetBrains Mono".into() }];
 
     let first = provider.system_insert_files(file(), 'A').expect("face 1 covers A");
@@ -1045,20 +1045,20 @@ fn cached_system_face_returns_the_current_scale() {
 
 #[test]
 fn provider_honours_the_injected_embedded_faces() {
-    let Some(ui_font) = craft_fonts::japanese_for_ui().first().copied() else {
-        eprintln!("skipping: built without craft-fonts (set CRAFT_FONTS_DIR to a craft-fonts checkout)");
+    let Some(ui_font) = nodalia_fonts::japanese_for_ui().first().copied() else {
+        eprintln!("skipping: built without nodalia-fonts (set NODALIA_FONTS_DIR to a nodalia-fonts checkout)");
         return;
     };
-    if craft_index(ui_font).is_none() {
+    if nodalia_index(ui_font).is_none() {
         return;
     }
     let Some(baseline) = baseline_face('あ') else { return };
-    let baseline_name = format!("craft-font-{}", craft_index(baseline).expect("a manifest face has an index"));
-    let with_craft = test_provider((|| Some("en_US".into())) as fn() -> Option<String>);
-    assert_eq!(provided(&with_craft, 'あ').as_deref(), Some(baseline_name.as_str()));
+    let baseline_name = format!("craft-font-{}", nodalia_index(baseline).expect("a manifest face has an index"));
+    let with_nodalia = test_provider((|| Some("en_US".into())) as fn() -> Option<String>);
+    assert_eq!(provided(&with_nodalia, 'あ').as_deref(), Some(baseline_name.as_str()));
 
-    let no_craft = Sources { embedded: no_embedded, ..test_sources((|| Some("en_US".into())) as fn() -> Option<String>) };
-    let provider = CraftFontProvider::new(&no_craft, 1.0);
+    let no_nodalia = Sources { embedded: no_embedded, ..test_sources((|| Some("en_US".into())) as fn() -> Option<String>) };
+    let provider = NodaliaFontProvider::new(&no_nodalia, 1.0);
     assert!(provided(&provider, 'あ').is_none(), "the provider must use Sources::embedded, not the global craft table");
 }
 
@@ -1067,9 +1067,9 @@ fn provider_reaches_a_fontconfig_match_after_six_missing_candidates() {
     let mut files: Vec<FontFile> =
         (0..MAX_SCRIPT_READS).map(|i| FontFile { path: fake_dir().join(format!("missing-{i}.ttf")), family: String::new() }).collect();
     files.push(fake("hant.ttf"));
-    let provider = CraftFontProvider::new(&test_sources((|| Some("zh-Hant-TW".into())) as fn() -> Option<String>), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources((|| Some("zh-Hant-TW".into())) as fn() -> Option<String>), 1.0);
     let insert = provider.system_insert_files(files, '龍').expect("the seventh (Fontconfig) candidate must be reachable");
-    assert!(insert.name.starts_with("craft-system-"));
+    assert!(insert.name.starts_with("nodalia-system-"));
     let cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
     assert_eq!(cache.reads, 1, "only the real file counts as a read; absent paths do not");
     assert_eq!(cache.failed_reads.len(), MAX_SCRIPT_READS);
@@ -1077,7 +1077,7 @@ fn provider_reaches_a_fontconfig_match_after_six_missing_candidates() {
 
 #[test]
 fn provider_caches_failed_reads_and_face_lookups_across_characters() {
-    let provider = CraftFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
     let missing = fake("missing-cache.ttf");
     assert!(provider.system_insert_files(vec![missing.clone()], '日').is_none());
     assert!(provider.system_insert_files(vec![missing.clone()], '本').is_none());
@@ -1120,7 +1120,7 @@ fn counted_ttc_read(path: &std::path::Path) -> Option<Vec<u8>> {
 fn provider_charges_a_ttc_blob_once_for_multiple_selected_faces() {
     let path = fake_dir().join("families.ttc");
     let size = std::fs::metadata(&path).expect("test collection").len() as usize;
-    let mut provider = CraftFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
+    let mut provider = NodaliaFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
     provider.reader = counted_ttc_read;
     TTC_READS.store(0, std::sync::atomic::Ordering::Relaxed);
     let first = provider.system_insert_files(vec![FontFile { path: path.clone(), family: "Inter".into() }], 'A').expect("face 0 covers A");
@@ -1143,7 +1143,7 @@ fn provider_evicts_an_earlier_selected_blob_under_budget_pressure() {
     let size = bytes.len();
     let second_path = fake_dir().join("budget-selected-second.ttf");
     std::fs::write(&second_path, &bytes).expect("write a second test font");
-    let provider = CraftFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
     {
         let mut cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
         cache.max_bytes = size;
@@ -1165,7 +1165,7 @@ fn provider_evicts_an_earlier_selected_blob_under_budget_pressure() {
 fn provider_returns_a_transient_valid_face_when_the_blob_cannot_be_retained() {
     let path = fake("font.ttf").path;
     let size = std::fs::metadata(&path).expect("test font").len() as usize;
-    let provider = CraftFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
     {
         let mut cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
         cache.max_bytes = size.saturating_sub(1);
@@ -1186,7 +1186,7 @@ fn provider_returns_a_transient_valid_face_when_the_blob_cannot_be_retained() {
 /// valid font: its bytes are cached within the budget and it is not marked invalid.
 #[test]
 fn provider_cache_evicts_retained_bytes_within_the_budget() {
-    let provider = CraftFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
     let bytes = synthetic_font(&[(0x0E01, 0x0E5B)]);
     let size = bytes.len();
     assert!(size > 0);
@@ -1217,7 +1217,7 @@ fn provider_cache_evicts_retained_bytes_within_the_budget() {
 /// when a tiny budget evicts every retained candidate before it.
 #[test]
 fn provider_reaches_a_later_covering_candidate_under_budget_pressure() {
-    let provider = CraftFontProvider::new(&test_sources((|| Some("zh-Hant-TW".into())) as fn() -> Option<String>), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources((|| Some("zh-Hant-TW".into())) as fn() -> Option<String>), 1.0);
     let bytes = synthetic_font(&[(0x0E01, 0x0E5B)]);
     {
         let mut cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
@@ -1232,7 +1232,7 @@ fn provider_reaches_a_later_covering_candidate_under_budget_pressure() {
     let covering = fake("hant.ttf").path;
     files.push(FontFile { path: covering.clone(), family: String::new() });
     let insert = provider.system_insert_files(files, '龍').expect("the later covering candidate must be reached");
-    assert!(insert.name.starts_with("craft-system-"), "{insert:?}");
+    assert!(insert.name.starts_with("nodalia-system-"), "{insert:?}");
     let cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
     assert!(cache.faces.iter().any(|face| face.path == covering), "the covering file became a selected face");
     assert!(cache.reads >= 13, "all retained candidates plus the matching file were read");
@@ -1242,7 +1242,7 @@ fn provider_reaches_a_later_covering_candidate_under_budget_pressure() {
 /// earlier characters. Reads are no longer globally capped; only retained bytes are bounded.
 #[test]
 fn provider_has_no_lifetime_read_cap_for_the_final_fontconfig_candidate() {
-    let provider = CraftFontProvider::new(&test_sources((|| Some("zh-Hant-TW".into())) as fn() -> Option<String>), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources((|| Some("zh-Hant-TW".into())) as fn() -> Option<String>), 1.0);
     let bytes = synthetic_font(&[(0x0E01, 0x0E5B)]);
     {
         let mut cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
@@ -1258,7 +1258,7 @@ fn provider_has_no_lifetime_read_cap_for_the_final_fontconfig_candidate() {
     let insert = provider
         .system_insert_files(vec![FontFile { path: covering, family: String::new() }], '龍')
         .expect("the final candidate must still be read after 130 successful reads");
-    assert!(insert.name.starts_with("craft-system-"), "{insert:?}");
+    assert!(insert.name.starts_with("nodalia-system-"), "{insert:?}");
     let cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
     assert_eq!(cache.reads, 131, "130 non-covering reads plus the final candidate");
 }
@@ -1276,7 +1276,7 @@ fn counted_slow_read(path: &std::path::Path) -> Option<Vec<u8>> {
 #[test]
 fn provider_serialises_concurrent_reads_of_the_same_path() {
     let path = fake("font.ttf").path;
-    let mut provider = CraftFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
+    let mut provider = NodaliaFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
     provider.reader = counted_slow_read;
     CONCURRENT_READS.store(0, std::sync::atomic::Ordering::Relaxed);
     let provider = std::sync::Arc::new(provider);
@@ -1301,7 +1301,7 @@ fn provider_serialises_concurrent_reads_of_the_same_path() {
 /// with a valid font that simply does not cover the requested character.
 #[test]
 fn provider_negative_caches_invalid_fonts_separately_from_noncovering_faces() {
-    let provider = CraftFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources((|| Some("en".into())) as fn() -> Option<String>), 1.0);
     let invalid = fake("not-a-font-cache.ttf").path;
     std::fs::write(&invalid, b"this is not a font").expect("write invalid bytes");
     let truncated = fake("truncated-font-cache.ttf").path;
@@ -1328,7 +1328,7 @@ fn provider_negative_caches_invalid_fonts_separately_from_noncovering_faces() {
     drop(cache);
     let file = vec![FontFile { path: inter, family: String::new() }];
     let insert = provider.system_insert_files(file, 'A').expect("the cached valid font still covers A");
-    assert!(insert.name.starts_with("craft-system-"), "{insert:?}");
+    assert!(insert.name.starts_with("nodalia-system-"), "{insert:?}");
 }
 
 #[test]
@@ -1343,7 +1343,7 @@ fn pending_scan_recovers_through_real_layout_and_the_lazy_reload() {
         scripts: no_script_files,
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: true,
+        eager_nodalia_fonts: true,
     };
     crate::theme::install_fonts_with(&ctx, sources);
     let frame = |ctx: &egui::Context| {
@@ -1368,8 +1368,8 @@ fn pending_scan_recovers_through_real_layout_and_the_lazy_reload() {
 
 #[test]
 fn strict_policy_first_frame_after_the_scan_is_accepted() {
-    if craft_fonts::CRAFT_FONTS.is_empty() {
-        eprintln!("skipping: the eager provider is only installed with craft-fonts");
+    if nodalia_fonts::NODALIA_FONTS.is_empty() {
+        eprintln!("skipping: the eager provider is only installed with nodalia-fonts");
         return;
     }
     let ctx = egui::Context::default();
@@ -1382,7 +1382,7 @@ fn strict_policy_first_frame_after_the_scan_is_accepted() {
         scripts: no_script_files,
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: true,
+        eager_nodalia_fonts: true,
     };
     crate::theme::install_fonts_with(&ctx, sources);
     ctx.run_ui(Default::default(), |ui| {
@@ -1411,7 +1411,7 @@ fn pending_strict_policy_startup_is_not_fake_acceptance() {
         scripts: no_script_files,
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: true,
+        eager_nodalia_fonts: true,
     };
     crate::theme::install_fonts_with(&ctx, sources);
     let _ = ctx.run_ui(Default::default(), |ui| {
@@ -1421,13 +1421,13 @@ fn pending_strict_policy_startup_is_not_fake_acceptance() {
 
 #[test]
 fn language_change_reloads_eager_faces_through_the_app_context() {
-    let Some(ui_font) = craft_fonts::japanese_for_ui().first().copied() else {
-        eprintln!("skipping: built without craft-fonts (set CRAFT_FONTS_DIR to a craft-fonts checkout)");
+    let Some(ui_font) = nodalia_fonts::japanese_for_ui().first().copied() else {
+        eprintln!("skipping: built without nodalia-fonts (set NODALIA_FONTS_DIR to a nodalia-fonts checkout)");
         return;
     };
-    let Some(ui_index) = craft_index(ui_font) else { return };
-    let Some((sc_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans CJK SC") else {
-        eprintln!("skipping: the craft-fonts manifest has no Simplified Chinese face");
+    let Some(ui_index) = nodalia_index(ui_font) else { return };
+    let Some((sc_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans CJK SC") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Simplified Chinese face");
         return;
     };
     let ui_name = format!("craft-font-{ui_index}");
@@ -1555,10 +1555,10 @@ fn malformed_selected_collection_face_falls_back_before_lazy_and_provider_regist
     assert_eq!(fallback.registered.len(), 1);
     assert_eq!(fallback.registered[0].1, valid.path, "the malformed collection is not registered");
 
-    let provider = CraftFontProvider::new(&test_sources(|| Some("en".into())), 1.0);
+    let provider = NodaliaFontProvider::new(&test_sources(|| Some("en".into())), 1.0);
     let insert = provider.system_insert_files(candidates, 'A').expect("the provider reaches the valid alternative");
     assert_eq!(insert.data.index, 0, "the provider does not hand the malformed selected face to epaint");
-    assert!(insert.name.starts_with("craft-system-"), "{insert:?}");
+    assert!(insert.name.starts_with("nodalia-system-"), "{insert:?}");
 
     // Installing the selected font under the strict policy must not panic: only the valid
     // fallback reaches egui's family builder.
@@ -1618,12 +1618,12 @@ fn lazy_loader_registers_each_loaded_font_once() {
 /// A craft face is registered once: a later request for the same embedded file must not add
 /// another font with a new name and a duplicate blob.
 #[test]
-fn lazy_loader_registers_an_embedded_craft_face_once() {
+fn lazy_loader_registers_an_embedded_nodalia_face_once() {
     if baseline_face('あ').is_none() {
-        eprintln!("skipping: built without craft-fonts (set CRAFT_FONTS_DIR to a craft-fonts checkout)");
+        eprintln!("skipping: built without nodalia-fonts (set NODALIA_FONTS_DIR to a nodalia-fonts checkout)");
         return;
     }
-    let mut fallback = CjkFallback::new(craft_only(|| Some("en".into())));
+    let mut fallback = CjkFallback::new(nodalia_only(|| Some("en".into())));
     fallback.load_embedded(CjkScript::Japanese, 'あ').expect("the manifest covers kana");
     assert!(fallback.load_embedded(CjkScript::Japanese, 'あ').is_none(), "the same embedded face is not registered twice");
     assert_eq!(fallback.registered.len(), 1);
@@ -1643,13 +1643,13 @@ fn provider_uses_system_script_candidates_and_last_resort_for_non_cjk() {
         },
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: false,
+        eager_nodalia_fonts: false,
     };
-    let provider = CraftFontProvider::new(&sources, 1.0);
+    let provider = NodaliaFontProvider::new(&sources, 1.0);
     let tamil = provided(&provider, 'த').expect("Tamil system candidate");
-    assert!(tamil.starts_with("craft-system-"), "{tamil}");
+    assert!(tamil.starts_with("nodalia-system-"), "{tamil}");
     let ethiopic = provided(&provider, 'ሀ').expect("last-resort face");
-    assert!(ethiopic.starts_with("craft-system-"), "{ethiopic}");
+    assert!(ethiopic.starts_with("nodalia-system-"), "{ethiopic}");
 }
 
 static PROVIDER_SCRIPT_CALLS: Mutex<Vec<CjkScript>> = Mutex::new(Vec::new());
@@ -1673,9 +1673,9 @@ fn provider_tries_each_script_once_when_the_preferred_script_repeats_the_order()
         scripts: no_script_files,
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: false,
+        eager_nodalia_fonts: false,
     };
-    let provider = CraftFontProvider::new(&sources, 1.0);
+    let provider = NodaliaFontProvider::new(&sources, 1.0);
     assert!(provided(&provider, '한').is_none(), "the test source has no Hangul face");
     let calls = PROVIDER_SCRIPT_CALLS.lock().unwrap_or_else(std::sync::PoisonError::into_inner).clone();
     assert_eq!(calls, vec![CjkScript::Korean, CjkScript::TraditionalChinese, CjkScript::SimplifiedChinese, CjkScript::Japanese]);
@@ -1687,7 +1687,7 @@ fn provider_tries_each_script_once_when_the_preferred_script_repeats_the_order()
 #[test]
 fn provider_missing_symbol_and_empty_cluster_do_not_touch_system_fonts() {
     let sources = Sources { embedded: no_embedded, ..test_sources(|| Some("en".into())) };
-    let provider = CraftFontProvider::new(&sources, 1.0);
+    let provider = NodaliaFontProvider::new(&sources, 1.0);
     assert!(provider.font_for(&FallbackRequest { cluster: "", family: &FontFamily::Proportional }).is_none());
     assert!(provided(&provider, '☃').is_none(), "no injected Zsym craft face covers the symbol");
     let cache = provider.system.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
@@ -1696,9 +1696,9 @@ fn provider_missing_symbol_and_empty_cluster_do_not_touch_system_fonts() {
 }
 
 #[test]
-fn provider_applies_the_current_scale_to_craft_faces() {
+fn provider_applies_the_current_scale_to_nodalia_faces() {
     if baseline_face('あ').is_none() {
-        eprintln!("skipping: built without craft-fonts (set CRAFT_FONTS_DIR to a craft-fonts checkout)");
+        eprintln!("skipping: built without nodalia-fonts (set NODALIA_FONTS_DIR to a nodalia-fonts checkout)");
         return;
     }
     let provider = test_provider(|| Some("en".into()));
@@ -1718,11 +1718,11 @@ fn provider_applies_the_current_scale_to_craft_faces() {
 fn system_face_names_are_bounded_independently_of_font_blobs() {
     let mut cache = SystemCache::default();
     for i in 0..MAX_SYSTEM_FACE_NAMES + 4 {
-        cache.remember_face(PathBuf::from(format!("face-{i}.ttf")), i as u32, format!("craft-system-{i}"));
+        cache.remember_face(PathBuf::from(format!("face-{i}.ttf")), i as u32, format!("nodalia-system-{i}"));
     }
     assert_eq!(cache.faces.len(), MAX_SYSTEM_FACE_NAMES);
-    assert_eq!(cache.faces.first().map(|face| face.name.as_str()), Some("craft-system-4"), "the oldest names are evicted first");
-    assert_eq!(cache.faces.last().map(|face| face.name.as_str()), Some("craft-system-1027"));
+    assert_eq!(cache.faces.first().map(|face| face.name.as_str()), Some("nodalia-system-4"), "the oldest names are evicted first");
+    assert_eq!(cache.faces.last().map(|face| face.name.as_str()), Some("nodalia-system-1027"));
     assert!(cache.files.is_empty() && cache.retained_bytes == 0, "face names do not retain or charge font bytes");
 }
 
@@ -1737,84 +1737,84 @@ fn pending_fontconfig_defers_the_last_resort_instead_of_returning_none_forever()
         scripts: no_script_files,
         covers: scripts::covering_face,
         embedded: no_embedded,
-        eager_craft_fonts: false,
+        eager_nodalia_fonts: false,
     };
-    let provider = CraftFontProvider::new(&sources, 1.0);
+    let provider = NodaliaFontProvider::new(&sources, 1.0);
     assert!(provided(&provider, '龍').is_none(), "pending Hant scan must not fall through to a last resort");
     PENDING_LAST_RESORT.store(false, std::sync::atomic::Ordering::Relaxed);
     let got = provided(&provider, '龍').expect("after the scan the last resort is usable");
-    assert!(got.starts_with("craft-system-"), "{got}");
+    assert!(got.starts_with("nodalia-system-"), "{got}");
 }
 
 #[test]
-fn pending_fontconfig_does_not_cache_the_lower_priority_sc_craft_face_for_hant() {
-    let Some((sc_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans CJK SC") else {
-        eprintln!("skipping: the craft-fonts manifest has no Simplified Chinese face");
+fn pending_fontconfig_does_not_cache_the_lower_priority_sc_nodalia_face_for_hant() {
+    let Some((sc_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans CJK SC") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Simplified Chinese face");
         return;
     };
-    PENDING_CRAFT_SC.store(true, std::sync::atomic::Ordering::Relaxed);
+    PENDING_NODALIA_SC.store(true, std::sync::atomic::Ordering::Relaxed);
     let sources = Sources {
         locale: || Some("zh-Hant-TW".into()),
         files: no_files,
         last_resort: Vec::new,
-        pending: pending_craft_sc,
+        pending: pending_nodalia_sc,
         scripts: no_script_files,
         covers: scripts::covering_face,
-        embedded: craft_embedded_iso,
-        eager_craft_fonts: false,
+        embedded: nodalia_embedded_iso,
+        eager_nodalia_fonts: false,
     };
-    let provider = CraftFontProvider::new(&sources, 1.0);
+    let provider = NodaliaFontProvider::new(&sources, 1.0);
     assert!(provided(&provider, '龍').is_none(), "a pending Hant scan must not return (and cache) the lower-priority SC craft face");
-    PENDING_CRAFT_SC.store(false, std::sync::atomic::Ordering::Relaxed);
+    PENDING_NODALIA_SC.store(false, std::sync::atomic::Ordering::Relaxed);
     let expected = format!("craft-font-{sc_index}");
     assert_eq!(provided(&provider, '龍').as_deref(), Some(expected.as_str()));
 }
 
 #[test]
-fn every_craft_face_is_available_to_both_ui_families() {
+fn every_nodalia_face_is_available_to_both_ui_families() {
     let mut checked = 0;
-    for (i, face) in craft_fonts::CRAFT_FONTS.iter().enumerate() {
+    for (i, face) in nodalia_fonts::NODALIA_FONTS.iter().enumerate() {
         if face.bytes.is_empty() {
             continue;
         }
-        let insert = craft_insert(i, face, 1.0);
+        let insert = nodalia_insert(i, face, 1.0);
         assert_eq!(insert.name, format!("craft-font-{i}"));
         assert!(insert.families.iter().any(|f| f.family == FontFamily::Proportional), "{} is missing from Proportional", face.family);
         assert!(insert.families.iter().any(|f| f.family == FontFamily::Monospace), "{} is missing from Monospace", face.family);
         checked += 1;
     }
     if checked == 0 {
-        eprintln!("skipping: built without craft-fonts (set CRAFT_FONTS_DIR to a craft-fonts checkout)");
+        eprintln!("skipping: built without nodalia-fonts (set NODALIA_FONTS_DIR to a nodalia-fonts checkout)");
     }
 }
 
 #[test]
-fn the_craft_provider_shapes_the_first_headless_frame_in_both_families() {
-    let Some(ui_font) = craft_fonts::japanese_for_ui().first().copied() else {
-        eprintln!("skipping: built without craft-fonts (set CRAFT_FONTS_DIR to a craft-fonts checkout)");
+fn the_nodalia_provider_shapes_the_first_headless_frame_in_both_families() {
+    let Some(ui_font) = nodalia_fonts::japanese_for_ui().first().copied() else {
+        eprintln!("skipping: built without nodalia-fonts (set NODALIA_FONTS_DIR to a nodalia-fonts checkout)");
         return;
     };
-    let Some(ui_index) = craft_index(ui_font) else { return };
-    let Some((sc_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans CJK SC") else {
-        eprintln!("skipping: the craft-fonts manifest has no Simplified Chinese face");
+    let Some(ui_index) = nodalia_index(ui_font) else { return };
+    let Some((sc_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans CJK SC") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Simplified Chinese face");
         return;
     };
-    let Some((korean_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "NanumGothic") else {
-        eprintln!("skipping: the craft-fonts manifest has no Korean face");
+    let Some((korean_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "NanumGothic") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Korean face");
         return;
     };
-    let Some((arabic_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans Arabic") else {
-        eprintln!("skipping: the craft-fonts manifest has no Arabic face");
+    let Some((arabic_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans Arabic") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Arabic face");
         return;
     };
-    let Some((devanagari_index, _)) = craft_fonts::CRAFT_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans Devanagari") else {
-        eprintln!("skipping: the craft-fonts manifest has no Devanagari face");
+    let Some((devanagari_index, _)) = nodalia_fonts::NODALIA_FONTS.iter().enumerate().find(|(_, f)| f.family == "Noto Sans Devanagari") else {
+        eprintln!("skipping: the nodalia-fonts manifest has no Devanagari face");
         return;
     };
     let Some(baseline_kana) = baseline_face('か') else { return };
     let Some(baseline_han) = baseline_face('日') else { return };
-    let baseline_kana_index = craft_index(baseline_kana).expect("a manifest face has an index");
-    let baseline_han_index = craft_index(baseline_han).expect("a manifest face has an index");
+    let baseline_kana_index = nodalia_index(baseline_kana).expect("a manifest face has an index");
+    let baseline_han_index = nodalia_index(baseline_han).expect("a manifest face has an index");
     for (locale, text, expected) in [
         ((|| Some("ja_JP".into())) as fn() -> Option<String>, "かな", ui_index),
         ((|| Some("en_US".into())) as fn() -> Option<String>, "かな", baseline_kana_index),
@@ -1859,7 +1859,7 @@ fn the_craft_provider_shapes_the_first_headless_frame_in_both_families() {
         .textures_delta
         .clear();
         let discovered = ctx.fonts(|f| f.discovered_fonts().to_vec());
-        assert!(discovered.iter().any(|insert| insert.name.starts_with("craft-system-")), "the system Hant face draws the first frame: {discovered:?}");
+        assert!(discovered.iter().any(|insert| insert.name.starts_with("nodalia-system-")), "the system Hant face draws the first frame: {discovered:?}");
         assert!(
             !discovered.iter().any(|insert| insert.name == format!("craft-font-{sc_index}")),
             "the Simplified Chinese face must not pre-empt the Hant system font: {discovered:?}"
@@ -1868,7 +1868,7 @@ fn the_craft_provider_shapes_the_first_headless_frame_in_both_families() {
 }
 
 #[test]
-fn ui_works_without_craft_fonts() {
+fn ui_works_without_nodalia_fonts() {
     // The pre-craft-fonts behaviour: no embedded fonts, no system fonts. Latin renders,
     // Japanese is tried (and stays missing) without panicking, and the loader exhausts.
     let ctx = egui::Context::default();
@@ -1882,15 +1882,15 @@ fn ui_works_without_craft_fonts() {
             scripts: |_| Vec::new(),
             covers: scripts::covering_face,
             embedded: no_embedded,
-            eager_craft_fonts: false,
+            eager_nodalia_fonts: false,
         },
     );
     assert!(render(&ctx, "Layer 1 – café"));
     assert!(!render(&ctx, "日本語の文字"));
     let n = ctx.fonts(|f| f.definitions().font_data.keys().filter(|k| k.starts_with(FONT_PREFIX)).count());
     assert_eq!(n, 0);
-    if craft_fonts::CRAFT_FONTS.is_empty() {
-        assert!(craft_embedded(CjkScript::Japanese).is_empty());
+    if nodalia_fonts::NODALIA_FONTS.is_empty() {
+        assert!(nodalia_embedded(CjkScript::Japanese).is_empty());
     }
 }
 

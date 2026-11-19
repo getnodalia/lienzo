@@ -274,7 +274,7 @@ impl eframe::App for LienzoApp {
         }
         // While a text field of a floating panel's own window has the keyboard, the dock area
         // hands that window the text keys in this input and converts them there.
-        if craft_ui::docking::typing_window(ctx).is_none() {
+        if nodalia_ui::docking::typing_window(ctx).is_none() {
             shortcuts::clipboard_keys(ctx, ctx.text_edit_focused() || self.ui.text_edit.is_some(), raw_input);
         }
         // Windows precision touchpads and some Linux Wayland compositors send pinches

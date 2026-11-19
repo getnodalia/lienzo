@@ -15,9 +15,9 @@ use crate::manifest::{ContentM, FORMAT_VERSION, Hash, LayerM, Manifest};
 use crate::zip::{ZipReader, ZipWriter};
 use crate::{FormatError, LoadOptions, Result, SaveOptions};
 
-use craft_pcraft_format::{BLOBS_DIR, COMPOSITE_DIR, TILES_DIR, blob_path, tile_path};
+use nodalia_lienzo_format::{BLOBS_DIR, COMPOSITE_DIR, TILES_DIR, blob_path, tile_path};
 // `SAVE_LOCK` is the file a directory save holds an exclusive lock on for its whole transaction (#4957).
-pub(crate) use craft_pcraft_format::{COMPOSITE, MANIFEST, SAVE_LOCK, THUMB};
+pub(crate) use nodalia_lienzo_format::{COMPOSITE, MANIFEST, SAVE_LOCK, THUMB};
 /// The flattened document at its canvas size, a PNG in [`COMPOSITE_DIR`], named by the manifest's
 /// `full_composite` member.
 pub(crate) const FULL_COMPOSITE: &str = "composite/full.png";
@@ -253,14 +253,14 @@ pub fn read_entry(file: &mut impl std::io::Read, len: u64, max: usize, path: &st
 // Loading
 // ---------------------------------------------------------------------------
 
-/// The limits a manifest is checked against: craft-pcraft-format's item limit, the JSON nesting
-/// of [`convert::MAX_GROUP_DEPTH`] nested groups ([`craft_pcraft_format::manifest_depth`]) and at
+/// The limits a manifest is checked against: nodalia-lienzo-format's item limit, the JSON nesting
+/// of [`convert::MAX_GROUP_DEPTH`] nested groups ([`nodalia_lienzo_format::manifest_depth`]) and at
 /// most `max_manifest_bytes` bytes. The saver checks the same nesting and items, so every bundle
 /// it writes loads again.
-fn manifest_limits(max_manifest_bytes: usize) -> craft_pcraft_format::Limits {
-    let mut limits = craft_pcraft_format::Limits::default();
+fn manifest_limits(max_manifest_bytes: usize) -> nodalia_lienzo_format::Limits {
+    let mut limits = nodalia_lienzo_format::Limits::default();
     limits.max_manifest_bytes = max_manifest_bytes;
-    limits.max_depth = craft_pcraft_format::manifest_depth(convert::MAX_GROUP_DEPTH);
+    limits.max_depth = nodalia_lienzo_format::manifest_depth(convert::MAX_GROUP_DEPTH);
     limits
 }
 
@@ -285,7 +285,7 @@ fn manifest_json(manifest: &Manifest, full_composite: bool) -> Result<Vec<u8>> {
         serde_json::to_vec_pretty(manifest)?
     };
     // The nesting and the items only: a save checks no manifest size.
-    craft_pcraft_format::check_manifest(&json, &manifest_limits(usize::MAX))?;
+    nodalia_lienzo_format::check_manifest(&json, &manifest_limits(usize::MAX))?;
     Ok(json)
 }
 
@@ -293,7 +293,7 @@ fn manifest_json(manifest: &Manifest, full_composite: bool) -> Result<Vec<u8>> {
 /// `null`. A member that names any entry other than [`FULL_COMPOSITE`] is refused.
 pub(crate) fn read_full_composite_entry(src: &dyn ByteSource, opts: &LoadOptions) -> Result<Option<&'static str>> {
     let raw = src.get(MANIFEST, opts.max_manifest_bytes)?;
-    let manifest = craft_pcraft_format::parse_manifest(&raw, &manifest_limits(opts.max_manifest_bytes))?;
+    let manifest = nodalia_lienzo_format::parse_manifest(&raw, &manifest_limits(opts.max_manifest_bytes))?;
     match manifest.get(FULL_COMPOSITE_MEMBER) {
         None | Some(serde_json::Value::Null) => Ok(None),
         Some(serde_json::Value::String(entry)) if entry == FULL_COMPOSITE => Ok(Some(FULL_COMPOSITE)),
@@ -307,7 +307,7 @@ pub(crate) fn read_manifest(src: &dyn ByteSource, opts: &LoadOptions) -> Result<
     // nesting and the items in one pass, then parses without that limit.
     let limits = manifest_limits(opts.max_manifest_bytes);
     let mut layers = Vec::new();
-    let mut m: Manifest = craft_pcraft_format::read_manifest_with(&raw, &limits, crate::migrate::STEPS, FORMAT_VERSION, |mut document| {
+    let mut m: Manifest = nodalia_lienzo_format::read_manifest_with(&raw, &limits, crate::migrate::STEPS, FORMAT_VERSION, |mut document| {
         layers = take_array(&mut document, "/layers");
         Ok::<_, FormatError>(serde_json::from_value(document)?)
     })?;
@@ -947,8 +947,8 @@ impl BundleGc {
             COMPOSITE => (&self.composite, "preview.png"),
             FULL_COMPOSITE => (&self.composite, "full.png"),
             _ => match relative.split_once('/') {
-                Some((TILES_DIR, name)) if name.strip_suffix(craft_pcraft_format::OBJECT_SUFFIX).is_some_and(is_valid_hash) => (&self.tiles, name),
-                Some((BLOBS_DIR, name)) if name.strip_suffix(craft_pcraft_format::OBJECT_SUFFIX).is_some_and(is_valid_hash) => (&self.blobs, name),
+                Some((TILES_DIR, name)) if name.strip_suffix(nodalia_lienzo_format::OBJECT_SUFFIX).is_some_and(is_valid_hash) => (&self.tiles, name),
+                Some((BLOBS_DIR, name)) if name.strip_suffix(nodalia_lienzo_format::OBJECT_SUFFIX).is_some_and(is_valid_hash) => (&self.blobs, name),
                 _ => return Err(FormatError::Unsupported(format!("invalid bundle cleanup target: {relative}"))),
             },
         };

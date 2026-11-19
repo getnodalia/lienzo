@@ -136,7 +136,7 @@ impl Desktop {
     /// The OS window of the floating window holding `panel`, once the dock area opened one.
     fn window_of(&self, panel: &str) -> Option<ViewportId> {
         let window = lay(self.h.state()).floating.iter().find(|window| window.contains(&panel.to_owned()))?;
-        let viewport = craft_ui::docking::DockArea::<String>::window_viewport(area_id(), window.id);
+        let viewport = nodalia_ui::docking::DockArea::<String>::window_viewport(area_id(), window.id);
         self.host.borrow().windows.contains_key(&viewport).then_some(viewport)
     }
 
@@ -174,7 +174,7 @@ fn app_with_document() -> LienzoApp {
 }
 
 /// The × of a native window's bar, in its coordinates: an 18 pt square 7 pt from the trailing
-/// edge (craft-ui's `OTHER_CLOSE`; this host is not macOS).
+/// edge (nodalia-ui's `OTHER_CLOSE`; this host is not macOS).
 fn close_button(rect: Rect) -> Pos2 {
     pos2(rect.width() - 16.0, 9.0)
 }
@@ -187,7 +187,11 @@ fn undocking_a_panel_opens_its_own_window_and_the_studio_card_stays_in_the_main_
     let viewport = desktop.window_of("info").expect("Info floats in its own OS window");
     let window = lay(desktop.h.state()).floating.iter().find(|window| window.contains(&"info".to_owned())).unwrap().clone();
     assert!(
-        craft_ui::docking::DockArea::<String>::floating_layer(area_id(), &window).is_none_or(|layer| desktop.h.ctx.memory(|m| m.area_rect(layer.id)).is_none()),
+        nodalia_ui::docking::DockArea::<String>::floating_layer(area_id(), &window).is_none_or(|layer| desktop
+            .h
+            .ctx
+            .memory(|m| m.area_rect(layer.id))
+            .is_none()),
         "and not in the main window"
     );
     // Undock Panel's window opens over its place in the main window.
@@ -207,7 +211,7 @@ fn undocking_a_panel_opens_its_own_window_and_the_studio_card_stays_in_the_main_
     desktop.steps(3);
     let card = legacy(desktop.h.state()).floating.into_iter().find(|window| window.id == PROPERTIES_WINDOW).expect("the Studio Properties card");
     assert!(desktop.host.borrow().windows.is_empty(), "the card opens no OS window");
-    let layer = craft_ui::docking::DockArea::<String>::floating_layer(area_id(), &card).unwrap();
+    let layer = nodalia_ui::docking::DockArea::<String>::floating_layer(area_id(), &card).unwrap();
     assert!(desktop.h.ctx.memory(|m| m.area_rect(layer.id)).is_some(), "the card is drawn in the main window");
     let refused = desktop.h.state_mut().run("window.panel.window", json!({"panel": "properties"}));
     assert!(refused.is_err(), "{refused:?}");
@@ -234,7 +238,7 @@ fn the_studio_card_stays_in_the_main_window_after_a_reload() {
     let card = lay(desktop.h.state()).floating.iter().find(|window| window.contains(&"properties".to_owned())).expect("the card").clone();
     assert_eq!(card.id, PROPERTIES_WINDOW);
     assert!(desktop.host.borrow().windows.is_empty(), "the card opens no OS window");
-    let layer = craft_ui::docking::DockArea::<String>::floating_layer(area_id(), &card).unwrap();
+    let layer = nodalia_ui::docking::DockArea::<String>::floating_layer(area_id(), &card).unwrap();
     assert!(desktop.h.ctx.memory(|m| m.area_rect(layer.id)).is_some(), "the card is drawn in the main window");
     let refused = desktop.h.state_mut().run("window.panel.window", json!({"panel": "properties"}));
     assert!(refused.is_err(), "{refused:?}");

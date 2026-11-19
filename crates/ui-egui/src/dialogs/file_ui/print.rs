@@ -136,8 +136,8 @@ pub(super) fn take_turned_page(f: &mut Map<String, Value>, r: &Value) {
 /// Takes the paper from the printer's driver settings (Windows), as Photoshop does.
 pub(super) fn driver_page(f: &mut Map<String, Value>) -> bool {
     let printer = s(f, "printer", "");
-    let settings = f.get("printerSettings").and_then(Value::as_str).and_then(|h| craft_print::rgb::DevMode::from_hex(h).ok());
-    match lienzo_engine::print_cmds::try_with_spooler(|| craft_print::rgb::page(&printer, settings.as_ref())) {
+    let settings = f.get("printerSettings").and_then(Value::as_str).and_then(|h| nodalia_print::rgb::DevMode::from_hex(h).ok());
+    match lienzo_engine::print_cmds::try_with_spooler(|| nodalia_print::rgb::page(&printer, settings.as_ref())) {
         Some(Ok(pg)) => {
             f.insert("paper".into(), json!([pg.paper.0, pg.paper.1]));
             f.insert("printable".into(), json!([pg.printable.0, pg.printable.1, pg.printable.2, pg.printable.3]));
@@ -485,8 +485,8 @@ pub(super) fn print_body(app: &mut LienzoApp, ui: &mut egui::Ui, f: &mut Map<Str
                     number(ui, f, "copies", tl!("Copies"), 1.0..=999.0, "", 1.0);
                     if ui.button(tl!("Print Settings…")).clicked() {
                         let printer = s(f, "printer", "");
-                        let current = f.get("printerSettings").and_then(Value::as_str).and_then(|h| craft_print::rgb::DevMode::from_hex(h).ok());
-                        match lienzo_engine::print_cmds::try_with_spooler(|| craft_print::rgb::settings_dialog(&printer, current.as_ref(), None)) {
+                        let current = f.get("printerSettings").and_then(Value::as_str).and_then(|h| nodalia_print::rgb::DevMode::from_hex(h).ok());
+                        match lienzo_engine::print_cmds::try_with_spooler(|| nodalia_print::rgb::settings_dialog(&printer, current.as_ref(), None)) {
                             Some(Ok(Some(dm))) => {
                                 f.insert("printerSettings".into(), json!(dm.to_hex()));
                                 driver_page(f);

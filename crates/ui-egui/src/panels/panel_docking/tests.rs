@@ -14,18 +14,18 @@ fn hidden(app: &LienzoApp, panel: &str) -> bool {
     app.ui.docking.as_ref().is_some_and(|workspace| workspace.hidden.iter().any(|(id, _)| id == panel))
 }
 
-fn hit_rect(h: &Harness<'static, LienzoApp>, hit: craft_ui::docking::Hit<String>) -> egui::Rect {
-    let hits = craft_ui::docking::DockArea::<String>::hit_rects(&h.ctx, area_id());
+fn hit_rect(h: &Harness<'static, LienzoApp>, hit: nodalia_ui::docking::Hit<String>) -> egui::Rect {
+    let hits = nodalia_ui::docking::DockArea::<String>::hit_rects(&h.ctx, area_id());
     hits.iter().find(|(drawn, _)| *drawn == hit).map(|(_, rect)| *rect).unwrap_or_else(|| panic!("{hit:?} is not drawn"))
 }
 
 fn tab_rect(h: &Harness<'static, LienzoApp>, panel: &str) -> egui::Rect {
-    hit_rect(h, craft_ui::docking::Hit::Tab(panel.to_owned()))
+    hit_rect(h, nodalia_ui::docking::Hit::Tab(panel.to_owned()))
 }
 
 fn floating_rect(h: &Harness<'static, LienzoApp>, panel: &str) -> egui::Rect {
     let window = lay(h.state()).floating.iter().find(|window| window.contains(&panel.to_owned())).unwrap();
-    let layer = craft_ui::docking::DockArea::<String>::floating_layer(area_id(), window).unwrap();
+    let layer = nodalia_ui::docking::DockArea::<String>::floating_layer(area_id(), window).unwrap();
     h.ctx.memory(|memory| memory.area_rect(layer.id)).unwrap()
 }
 
@@ -145,10 +145,10 @@ fn drag(h: &mut Harness<'static, LienzoApp>, from: Pos2, to: Pos2) {
 
 /// The canvas's rect: from the area's start to the dock column's inner edge.
 fn canvas_rect(h: &Harness<'static, LienzoApp>) -> egui::Rect {
-    let hits = craft_ui::docking::DockArea::<String>::hit_rects(&h.ctx, area_id());
+    let hits = nodalia_ui::docking::DockArea::<String>::hit_rects(&h.ctx, area_id());
     let divider = hits
         .iter()
-        .find(|(hit, _)| matches!(hit, craft_ui::docking::Hit::Divider(craft_ui::docking::Divider::Column(_))))
+        .find(|(hit, _)| matches!(hit, nodalia_ui::docking::Hit::Divider(nodalia_ui::docking::Divider::Column(_))))
         .map(|(_, rect)| *rect)
         .expect("the dock column's edge is drawn");
     egui::Rect::from_min_max(egui::pos2(0.0, divider.top()), egui::pos2(divider.left(), divider.bottom()))
@@ -175,8 +175,8 @@ fn a_fresh_launch_draws_the_native_groups_beside_the_protected_canvas() {
     let tops: Vec<f32> = ["color", "properties", "layers"].iter().map(|panel| tab_rect(&h, panel).top()).collect();
     assert!(tops.windows(2).all(|pair| pair[0] < pair[1]), "top to bottom: {tops:?}");
     assert!(tab_rect(&h, "color").left() > canvas.right(), "the dock is at the end edge");
-    let hits = craft_ui::docking::DockArea::<String>::hit_rects(&h.ctx, area_id());
-    assert!(!hits.iter().any(|(hit, _)| *hit == craft_ui::docking::Hit::Tab(CANVAS.into())), "the canvas has no tab");
+    let hits = nodalia_ui::docking::DockArea::<String>::hit_rects(&h.ctx, area_id());
+    assert!(!hits.iter().any(|(hit, _)| *hit == nodalia_ui::docking::Hit::Tab(CANVAS.into())), "the canvas has no tab");
     for command in ["window.panel.close", "window.panel.float"] {
         assert!(h.state_mut().run(command, json!({"panel": CANVAS})).is_err(), "{command}");
     }
@@ -299,7 +299,7 @@ fn shared_layout_keeps_panel_identity_across_themes_and_respects_workspace_lock(
 #[test]
 fn capture_custom_panel_docking_visual_fixtures() {
     let _gpu = lienzo_testkit::gpu_lock();
-    let Some(directory) = std::env::var_os("CRAFT_UI_DOCKING_FIXTURES").map(std::path::PathBuf::from) else { return };
+    let Some(directory) = std::env::var_os("NODALIA_UI_DOCKING_FIXTURES").map(std::path::PathBuf::from) else { return };
     std::fs::create_dir_all(&directory).unwrap();
     for theme in crate::theme::ThemeKind::ALL {
         for width in [800.0, 1280.0] {
@@ -389,7 +389,7 @@ fn serialized_layout_actions_cover_geometry_reorder_accordion_and_atomic_rejecti
     let mut app = app();
     app.run("window.panel.move", json!({"panel":"swatches","anchor":"layers","zone":"top"})).unwrap();
     app.run("window.panel.layout", json!({"action":{"ResizeSplit":{"path":[],"size":{"Ratio":0.35}}}})).unwrap();
-    assert!(matches!(lay(&app).root, Some(Node::Split { size: craft_ui::layout::SplitSize::Ratio(value), .. }) if (value - 0.35).abs() < 0.001));
+    assert!(matches!(lay(&app).root, Some(Node::Split { size: nodalia_ui::layout::SplitSize::Ratio(value), .. }) if (value - 0.35).abs() < 0.001));
     app.run("window.panel.float", json!({"panel":"properties"})).unwrap();
     app.run("window.panel.layout", json!({"action":{"MoveFloating":{"panel":"properties","rect":[44,66,360,450]}}})).unwrap();
     assert_eq!(lay(&app).floating.iter().find(|group| group.contains(&"properties".to_string())).unwrap().rect, [44.0, 66.0, 360.0, 450.0]);
@@ -407,7 +407,7 @@ fn serialized_layout_actions_cover_geometry_reorder_accordion_and_atomic_rejecti
         assert_eq!(app.ui.docking, before);
         assert_eq!(app.ui.docking_returns, hidden);
     }
-    let stack = Node::Stack { entries: vec![craft_ui::docking::StackEntry { panel: "layers".into(), open: true, height: Some(100.0) }] };
+    let stack = Node::Stack { entries: vec![nodalia_ui::docking::StackEntry { panel: "layers".into(), open: true, height: Some(100.0) }] };
     app.ui.docking = Some(Workspace::new(Layout { root: Some(with_canvas(stack, 300.0)), floating: Vec::new() }));
     app.run("window.panel.layout", json!({"action":{"SetStackOpen":{"panel":"layers","open":false}}})).unwrap();
     app.run("window.panel.layout", json!({"action":{"ResizeStack":{"panel":"layers","height":150}}})).unwrap();
@@ -463,7 +463,7 @@ fn populated_canvas_keeps_a_real_opacity_edit_after_floating_and_redocking() {
     app.run("select.deselect", json!({})).unwrap();
     let layer = app.session.active().unwrap().active_layer.unwrap();
     app.run("window.panel.float", json!({"panel":"properties","x":40,"y":140,"width":310,"height":490})).unwrap();
-    let directory = std::env::var_os("CRAFT_UI_DOCKING_FIXTURES").map(std::path::PathBuf::from);
+    let directory = std::env::var_os("NODALIA_UI_DOCKING_FIXTURES").map(std::path::PathBuf::from);
     let builder = Harness::builder().with_size(vec2(1280.0, 800.0));
     let builder = if directory.is_some() { builder.wgpu() } else { builder };
     let mut ready = false;
@@ -846,7 +846,7 @@ fn floating_group_grip_redocks_all_tabs_as_one_atomic_move() {
     app.run("window.panel.float", json!({"panel":"swatches","x":30,"y":60})).unwrap();
     app.run("window.panel.move", json!({"panel":"patterns","anchor":"swatches"})).unwrap();
     let mut h = harness(app, vec2(1280.0, 800.0));
-    let from = hit_rect(&h, craft_ui::docking::Hit::DragBar("swatches".into())).center();
+    let from = hit_rect(&h, nodalia_ui::docking::Hit::DragBar("swatches".into())).center();
     let to = tab_rect(&h, "layers").center();
     drag(&mut h, from, to);
     let layout = lay(h.state());
@@ -939,7 +939,7 @@ fn the_dock_edge_layout_only_applies_with_the_canvas_alone() {
     let tabs = |panel: &str| Node::Tabs { panels: vec![panel.to_owned()], active: 0 };
     let dock = |panels: Vec<&str>, width: f32| Node::Dock {
         side: Side::End,
-        columns: vec![Column::new(vec![craft_ui::docking::Group::new(panels.into_iter().map(str::to_owned).collect(), 0)], width)],
+        columns: vec![Column::new(vec![nodalia_ui::docking::Group::new(panels.into_iter().map(str::to_owned).collect(), 0)], width)],
     };
     let aside = |first: Node<String>| Node::Split {
         axis: SplitAxis::Horizontal,
@@ -988,7 +988,7 @@ fn the_dock_edge_layout_only_applies_with_the_canvas_alone() {
 #[test]
 fn the_end_dock_is_only_the_horizontal_split_s_second_child() {
     let tabs = |panel: &str| Node::Tabs { panels: vec![panel.to_owned()], active: 0 };
-    let dock = Node::Dock { side: Side::End, columns: vec![Column::new(vec![craft_ui::docking::Group::new(vec!["color".to_owned()], 0)], 260.0)] };
+    let dock = Node::Dock { side: Side::End, columns: vec![Column::new(vec![nodalia_ui::docking::Group::new(vec!["color".to_owned()], 0)], 260.0)] };
     let mut vertical =
         Node::Split { axis: SplitAxis::Vertical, size: SplitSize::FixedSecond(300.0), first: Box::new(tabs(CANVAS)), second: Box::new(dock.clone()) };
     assert!(end_dock_node(&vertical).is_none(), "a vertical split has no end dock");
@@ -1283,7 +1283,7 @@ fn ui_set_dock_width_scales_every_column() {
             _ => root,
         };
         let Node::Dock { columns, .. } = dock else { panic!("the end dock is missing") };
-        columns.push(Column::new(vec![craft_ui::docking::Group::new(vec![extra.to_owned()], 0)], 180.0));
+        columns.push(Column::new(vec![nodalia_ui::docking::Group::new(vec![extra.to_owned()], 0)], 180.0));
     }
     app.ui.docking = Some(Workspace::new(layout));
     // The extra 180-point column first comes up to its 220-point minimum; the rest of the change
@@ -1355,7 +1355,7 @@ fn ui_set_dock_width_queues_and_scales_every_column_when_drawn() {
             _ => root,
         };
         let Node::Dock { columns, .. } = dock else { panic!("the end dock is missing") };
-        columns.push(Column::new(vec![craft_ui::docking::Group::new(vec![extra.to_owned()], 0)], 180.0));
+        columns.push(Column::new(vec![nodalia_ui::docking::Group::new(vec![extra.to_owned()], 0)], 180.0));
     }
     app.ui.docking = Some(Workspace::new(layout));
     let mut h = dock_panel_harness(app, vec2(1280.0, 800.0), crate::theme::ThemeKind::ProMedium);
@@ -1513,7 +1513,7 @@ fn an_iconic_dock_column_takes_its_iconic_width() {
     assert!((dock_width(&app) - expanded).abs() < 0.5, "expanding restores the expanded width, got {} (was {expanded})", dock_width(&app));
 }
 
-/// Collapsing a column through craft-ui's action leaves `iconic_width` unset; the dock must use
+/// Collapsing a column through nodalia-ui's action leaves `iconic_width` unset; the dock must use
 /// the renderer's 36-point default rather than the expanded width.
 #[test]
 fn an_iconic_only_dock_keeps_its_narrow_panel() {
@@ -1581,8 +1581,8 @@ fn iconic_widths_follow_the_renderer_clamp() {
     };
     let Node::Dock { columns, .. } = dock else { panic!("the end dock is missing") };
     columns[0].iconic_width = None;
-    assert!((dock_width(&app) - ICONIC_WIDTH).abs() < 0.5, "no saved width displays craft-ui's default 36, got {}", dock_width(&app));
-    let style = craft_ui::docking::DockStyle::default();
+    assert!((dock_width(&app) - ICONIC_WIDTH).abs() < 0.5, "no saved width displays nodalia-ui's default 36, got {}", dock_width(&app));
+    let style = nodalia_ui::docking::DockStyle::default();
     assert_eq!((style.iconic_width, style.iconic_max_width), (ICONIC_WIDTH, ICONIC_MAX_WIDTH), "the renderer's defaults");
 }
 /// Closing every panel leaves the dock with nothing in it, which the dock-edge layout uses to
@@ -1616,7 +1616,7 @@ fn iconic_cap_surplus_goes_to_expandable_columns() {
         let Node::Dock { columns, .. } = dock else { panic!("the end dock is missing") };
         columns[0].iconic = true;
         columns[0].iconic_width = Some(240.0);
-        columns.push(Column::new(vec![craft_ui::docking::Group::new(vec![extra.to_owned()], 0)], 220.0));
+        columns.push(Column::new(vec![nodalia_ui::docking::Group::new(vec![extra.to_owned()], 0)], 220.0));
     }
     app.ui.docking = Some(Workspace::new(layout));
     set_dock_width(&mut app, 600.0);
@@ -1649,7 +1649,7 @@ fn dock_panel_draws_the_actual_minimum_during_and_after_a_drag() {
             _ => root,
         };
         let Node::Dock { columns, .. } = dock else { panic!("the end dock is missing") };
-        columns.push(Column::new(vec![craft_ui::docking::Group::new(vec![extra.to_owned()], 0)], 180.0));
+        columns.push(Column::new(vec![nodalia_ui::docking::Group::new(vec![extra.to_owned()], 0)], 180.0));
     }
     app.ui.docking = Some(Workspace::new(layout));
     let mut h = dock_edge_harness(app, vec2(1280.0, 800.0));
@@ -1717,7 +1717,7 @@ fn constrained_width_does_not_panic_while_resizing() {
                 _ => root,
             };
             let Node::Dock { columns, .. } = dock else { panic!("the end dock is missing") };
-            columns.push(Column::new(vec![craft_ui::docking::Group::new(vec![extra.to_owned()], 0)], 180.0));
+            columns.push(Column::new(vec![nodalia_ui::docking::Group::new(vec![extra.to_owned()], 0)], 180.0));
         }
         app.ui.docking = Some(Workspace::new(layout));
         app
@@ -1798,7 +1798,7 @@ fn app_with_columns(widths: &[f32], iconic: bool) -> LienzoApp {
         .zip(PANELS.iter())
         .enumerate()
         .map(|(index, (width, (id, _, _)))| {
-            let mut column = Column::new(vec![craft_ui::docking::Group::new(vec![(*id).to_owned()], 0)], *width);
+            let mut column = Column::new(vec![nodalia_ui::docking::Group::new(vec![(*id).to_owned()], 0)], *width);
             if iconic {
                 column.iconic = true;
                 column.iconic_width = Some(*width);
@@ -1979,8 +1979,8 @@ fn narrow_canvas(h: &Harness<'static, LienzoApp>) -> egui::Rect {
 }
 
 /// The panel a dock column's control acts on; `None` for floating-window and split controls.
-fn dock_hit_panel(hit: &craft_ui::docking::Hit<String>) -> Option<&String> {
-    use craft_ui::docking::{Divider, Hit};
+fn dock_hit_panel(hit: &nodalia_ui::docking::Hit<String>) -> Option<&String> {
+    use nodalia_ui::docking::{Divider, Hit};
     match hit {
         Hit::Tab(p)
         | Hit::DragBar(p)
@@ -1999,7 +1999,7 @@ fn dock_hit_panel(hit: &craft_ui::docking::Hit<String>) -> Option<&String> {
 /// Asserts that every control of the end dock's panels keeps its clipped `interact_rect`, what is
 /// drawn and clickable, inside `dock`, and returns how many have a full `rect` past it.
 fn dock_controls_clipped(h: &Harness<'static, LienzoApp>, dock: egui::Rect) -> usize {
-    use craft_ui::docking::DockArea;
+    use nodalia_ui::docking::DockArea;
     let panels: Vec<&String> = end_columns(h.state()).iter().flat_map(|c| c.groups.iter().flat_map(|g| g.panels.iter())).collect();
     let area = area_id();
     let hits = DockArea::<String>::hit_rects(&h.ctx, area);
