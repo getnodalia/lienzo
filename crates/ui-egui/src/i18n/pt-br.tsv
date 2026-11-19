@@ -4556,3 +4556,184 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Preenchimento com base no conteúdo
 	Sample content from part of the image and use it to fill a small area	Amostra o conteúdo de parte da imagem para preencher uma área pequena
 	Reset the crop box, image rotation, and aspect ratio settings	Redefinir a moldura de corte, a rotação da imagem e a proporção
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Um comando foi cancelado ou interrompido durante o processamento em lote. Continuar com o próximo arquivo ou parar?
+	A file is still being placed; try again when it has finished.	Um arquivo ainda está sendo posicionado; tente novamente quando ele terminar.
+	A native image editor, layer by layer. No account, no cloud.	Um editor de imagens nativo, camada por camada. Sem conta, sem nuvem.
+	Allow Tool Recording	Permitir gravação de ferramentas
+	Allows rotation and scaling of selection	Permite girar e dimensionar a seleção
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Sempre usar a pressão para a opacidade. Quando desativado, a predefinição do pincel controla a pressão
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Sempre usar a pressão para o tamanho. Quando desativado, a predefinição do pincel controla a pressão
+	Answer the open import question first, then import this file again.	Responda primeiro à pergunta de importação em aberto e depois importe este arquivo novamente.
+	Anti-alias brush application	Aplicar o pincel com suavização de serrilhado
+	Are you sure you want to delete all notes?	Tem certeza de que deseja excluir todas as anotações?
+	Arrowhead options	Opções de pontas de seta
+	Arrowheads	Pontas de seta
+	Attribute	Atributo
+	Batch preview	Visualização do lote
+	Bottom align text	Alinhar o texto na parte inferior
+	CPU Rendering	Renderização pela CPU
+	Calculating…	Calculando…
+	Cancelled placing {name}	Posicionamento de {name} cancelado
+	Choose a menu command. Playback asks for its settings when needed.	Escolha um comando de menu. A reprodução pede suas configurações quando necessário.
+	Choose a remix mode	Escolher um modo de remix
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Clique e mova para a esquerda ou para a direita para dimensionar com a ferramenta Zoom (somente OpenGL)
+	Click to open the Brush Preset picker	Clique para abrir o seletor de predefinições de pincel
+	Click to refresh histogram with uncached data	Clique para atualizar o histograma com dados não armazenados em cache
+	Concavity	Concavidade
+	Confirm or cancel the pending Record Again editor first.	Confirme ou cancele primeiro o editor pendente de Gravar novamente.
+	Confirm or cancel the pending menu item first.	Confirme ou cancele primeiro o item de menu pendente.
+	Copy CSS	Copiar CSS
+	Could not use the type tool because the layer is locked.	Não foi possível usar a ferramenta Texto porque a camada está bloqueada.
+	Count:	Contagem:
+	Data Sets as Files is unavailable on the web	“Conjuntos de dados como arquivos” não está disponível na web
+	Delete Note	Excluir anotação
+	Delete this note?	Excluir esta anotação?
+	Determines the spread of replaced color	Determina a abrangência da cor substituída
+	Do not erase the foreground swatch color	Não apagar a cor da amostra do primeiro plano
+	Drawn on the CPU: {reason}. Click for System Info.	Desenhado na CPU: {reason}. Clique para ver as informações do sistema.
+	Draws background color over foreground colors	Desenha a cor do plano de fundo sobre as cores do primeiro plano
+	Dropped files weren't placed: their document was closed.	Os arquivos soltos não foram posicionados: o documento deles foi fechado.
+	Dropped files weren't placed: too many are waiting for their document.	Os arquivos soltos não foram posicionados: há arquivos demais aguardando o documento.
+	Effect	Efeito
+	Empty	Vazio
+	Enable to remix all layers	Ativar para remixar todas as camadas
+	End	Fim
+	Erase range of similar colors	Apagar um intervalo de cores semelhantes
+	Erase to History	Apagar para o histórico
+	Filter for embedded smart objects	Filtro para objetos inteligentes incorporados
+	Filter for linked smart objects that are missing	Filtro para objetos inteligentes vinculados que estão ausentes
+	Filter for smart objects linked locally	Filtro para objetos inteligentes vinculados localmente
+	High Memory Photoshop Document	Documento do Photoshop de alta memória
+	How far to let the erasing spread	Até onde deixar a eliminação se espalhar
+	Image Compression	Compactação de imagem
+	Import as New Group	Importar como novo grupo
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	“Importar como novo grupo” mantém “{group}” e adiciona o arquivo como um novo grupo ao lado dele.
+	Insert Menu Item…	Inserir item de menu…
+	Insert Path	Inserir demarcador
+	LZW	LZW
+	Layer Effects	Efeitos de camada
+	Level:	Nível:
+	Lining	Alinhados
+	Linked	Vinculado
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Restaria pouca memória após abrir este arquivo. Feche outros aplicativos primeiro, ou o Lienzo pode ficar sem memória.
+	Load Solid Colors Only	Carregar somente cores sólidas
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Minimiza o corte nas sombras e nos realces e evita mudanças de matiz nas cores
+	No Adv. Blending	Sem mesclagem avançada
+	No Layer Effects	Sem efeitos de camada
+	No Layer Mask	Sem máscara de camada
+	No Vector Mask	Sem máscara vetorial
+	No document.	Nenhum documento.
+	No import is waiting. Import the file again.	Nenhuma importação está aguardando. Importe o arquivo novamente.
+	No matching fonts	Nenhuma fonte correspondente
+	No menu item belongs to this chooser.	Nenhum item de menu pertence a este seletor.
+	No menu item is waiting.	Nenhum item de menu está aguardando.
+	No note to delete	Nenhuma anotação para excluir
+	No options for the Add Anchor Point Tool.	Sem opções para a ferramenta Adicionar ponto de ancoragem.
+	No options for the Delete Anchor Point Tool.	Sem opções para a ferramenta Excluir ponto de ancoragem.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Nenhum demarcador para criar uma forma: desenhe um com a ferramenta Caneta ou selecione um no painel Demarcadores.
+	No pixels are selected.	Nenhum pixel está selecionado.
+	No recorded step belongs to this editor.	Nenhuma etapa gravada pertence a este editor.
+	No slices are selected. Click a slice in the preview to select it.	Nenhuma fatia está selecionada. Clique em uma fatia na visualização para selecioná-la.
+	No step is waiting.	Nenhuma etapa está aguardando.
+	Not Clipped	Não recortado
+	Not Empty	Não vazio
+	Not Linked	Não vinculado
+	Not Locked	Não bloqueado
+	Not Visible	Não visível
+	Note deleted, but the preference could not be saved: {error}	Anotação excluída, mas não foi possível salvar a preferência: {error}
+	Nudge	Deslocar
+	Numerals	Numerais
+	Open anyway	Abrir assim mesmo
+	Open as Smart Object…	Abrir como objeto inteligente…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Abrir este documento usa mais memória e pode deixar o computador ou outros aplicativos em execução mais lentos.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Abrir “{name}” requer cerca de {est} GiB de memória ({avail} GiB disponíveis).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Abrir “{name}” requer cerca de {est} GiB de memória. Não foi possível medir a memória disponível.
+	Painting Mode	Modo de pintura
+	Percentile:	Percentil:
+	Preparing Free Transform	Preparando a Transformação livre
+	Proportional	Proporcionais
+	Proportional Lining	Proporcionais alinhados
+	Proportional Oldstyle	Proporcionais old style
+	Record Again	Gravar novamente
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	“Substituir” exclui primeiro tudo em “{group}”, inclusive as predefinições que você editou ou moveu para lá. Isso não pode ser desfeito.
+	Report an issue	Relatar um problema
+	Resize windows when zooming using the Zoom Tool	Redimensionar as janelas ao aplicar zoom com a ferramenta Zoom
+	Save Image Pyramid	Salvar pirâmide de imagem
+	Save Transparency	Salvar transparência
+	Scroll all open document windows when using the hand tool	Rolar todas as janelas de documento abertas ao usar a ferramenta Mão
+	Search and select fonts	Pesquisar e selecionar fontes
+	Select Pixels	Selecionar pixels
+	Select an action first.	Selecione uma ação primeiro.
+	Select an action step first.	Selecione uma etapa da ação primeiro.
+	Selected Slices	Fatias selecionadas
+	Set 	Conjunto 
+	Set 1	Conjunto 1
+	Set 10	Conjunto 10
+	Set 11	Conjunto 11
+	Set 12	Conjunto 12
+	Set 13	Conjunto 13
+	Set 14	Conjunto 14
+	Set 15	Conjunto 15
+	Set 16	Conjunto 16
+	Set 17	Conjunto 17
+	Set 18	Conjunto 18
+	Set 19	Conjunto 19
+	Set 2	Conjunto 2
+	Set 20	Conjunto 20
+	Set 3	Conjunto 3
+	Set 4	Conjunto 4
+	Set 5	Conjunto 5
+	Set 6	Conjunto 6
+	Set 7	Conjunto 7
+	Set 8	Conjunto 8
+	Set 9	Conjunto 9
+	Set as default	Definir como padrão
+	Set exposure for stroke	Definir a exposição do traço
+	Set flow rate for stroke	Definir a taxa de fluxo do traço
+	Set font size	Definir o tamanho da fonte
+	Set font style	Definir o estilo da fonte
+	Set opacity for stroke	Definir a opacidade do traço
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Definir a suavização do traço\nUse valores mais altos para reduzir a tremedeira dos traços do pincel
+	Set symmetry options for Painting	Definir as opções de simetria para a pintura
+	Set text color	Definir a cor do texto
+	Set the brush angle	Definir o ângulo do pincel
+	Show Channels in Color	Mostrar os canais em cores
+	Show Statistics	Mostrar estatísticas
+	Smoothing Options	Opções de suavização
+	Source:	Origem:
+	Start	Início
+	Stylistic Sets	Conjuntos estilísticos
+	Tabular	Tabulares
+	Tabular Lining	Tabulares alinhados
+	Tabular Oldstyle	Tabulares old style
+	The Record Again command changed.	O comando Gravar novamente foi alterado.
+	The action or insertion command changed. Request Insert Menu Item again.	O comando de ação ou de inserção foi alterado. Solicite “Inserir item de menu” novamente.
+	The actions changed. Request Record Again again.	As ações foram alteradas. Solicite “Gravar novamente” outra vez.
+	The command permissions changed. Request Insert Menu Item again.	As permissões do comando foram alteradas. Solicite “Inserir item de menu” novamente.
+	The command permissions changed. Request Record Again again.	As permissões do comando foram alteradas. Solicite “Gravar novamente” outra vez.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	O disco de trabalho atual ({path}) não informa o espaço livre, então o Lienzo não pode parar antes que ele encha, e arquivos grandes não ganham espaço extra dele sem um Limite de tamanho do disco de trabalho. Este aviso se aplica à configuração atual; as alterações acima entram em vigor com Aplicar ou OK. Defina um limite ou use um disco local.
+	The document changed. Please choose Clear All again.	O documento foi alterado. Escolha Limpar tudo novamente.
+	The document changed. Request Record Again again.	O documento foi alterado. Solicite “Gravar novamente” outra vez.
+	The document or its notes changed. Please delete the note again.	O documento ou suas anotações foram alterados. Exclua a anotação novamente.
+	The preference could not be saved: {error}	Não foi possível salvar a preferência: {error}
+	The step editor could not be opened.	Não foi possível abrir o editor de etapas.
+	The step has no command editor.	A etapa não tem um editor de comandos.
+	Tolerance for choosing related colors	Tolerância para escolher cores relacionadas
+	Top align text	Alinhar o texto na parte superior
+	Uncached Refresh	Atualização sem cache
+	Use relative positioning for reference point	Usar posicionamento relativo para o ponto de referência
+	Use these settings for new arrows	Usar estas configurações para novas setas
+	Useful mixer brush combinations	Combinações úteis do pincel misturador
+	ZIP	ZIP
+	Zoom current window to 1:1	Aplicar zoom de 1:1 na janela atual
+	Zoom current window to fill the screen	Aplicar zoom na janela atual para preencher a tela
+	Zoom current window to screen size	Aplicar zoom na janela atual para o tamanho da tela
+	brush tool	ferramenta Pincel
+	by Nodalia	por Nodalia
+	dodge tool	ferramenta Subexposição
+	{message} into “{group}”	{message} em “{group}”
+	{ok} written to {dir}	{ok} gravados em {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	O grupo de pincéis “{group}” já tem {n} pincel seu.|O grupo de pincéis “{group}” já tem {n} pincéis seus.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	O grupo de gradientes “{group}” já existe ({n} gradiente).|O grupo de gradientes “{group}” já existe ({n} gradientes).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} saída de Recursos de imagem falhou|{what}: {n} saídas de Recursos de imagem falharam
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} arquivo falhou|{what}: {n} arquivos falharam

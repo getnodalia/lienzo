@@ -4373,3 +4373,184 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	İçeriğe göre doldurma
 	Sample content from part of the image and use it to fill a small area	Küçük bir alanı doldurmak için görüntünün bir bölümünden içerik örnekleyin
 	Reset the crop box, image rotation, and aspect ratio settings	Kırpma çerçevesini, görüntü döndürmesini ve en-boy oranını sıfırlayın
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Toplu işlem sırasında bir komut iptal edildi veya durduruldu. Sonraki dosyayla devam edilsin mi, yoksa durdurulsun mu?
+	A file is still being placed; try again when it has finished.	Bir dosya hâlâ yerleştiriliyor; bittiğinde tekrar deneyin.
+	A native image editor, layer by layer. No account, no cloud.	Katman katman çalışan yerel bir görüntü düzenleyici. Hesap yok, bulut yok.
+	Allow Tool Recording	Araç Kaydına İzin Ver
+	Allows rotation and scaling of selection	Seçimin döndürülmesine ve ölçeklenmesine izin verir
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Opaklık için her zaman Basıncı kullan. Kapalıyken basıncı Fırça Ön Ayarı denetler
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Boyut için her zaman Basıncı kullan. Kapalıyken basıncı Fırça Ön Ayarı denetler
+	Answer the open import question first, then import this file again.	Önce açık içe aktarma sorusunu yanıtlayın, sonra bu dosyayı yeniden içe aktarın.
+	Anti-alias brush application	Fırça uygulamasında kenar yumuşatma kullan
+	Are you sure you want to delete all notes?	Tüm notları silmek istediğinizden emin misiniz?
+	Arrowhead options	Ok ucu seçenekleri
+	Arrowheads	Ok uçları
+	Attribute	Öznitelik
+	Batch preview	Toplu önizleme
+	Bottom align text	Metni alta hizala
+	CPU Rendering	CPU ile Oluşturma
+	Calculating…	Hesaplanıyor…
+	Cancelled placing {name}	{name} yerleştirme iptal edildi
+	Choose a menu command. Playback asks for its settings when needed.	Bir menü komutu seçin. Oynatma, gerektiğinde ayarlarını sorar.
+	Choose a remix mode	Bir remiks modu seçin
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Yakınlaştırma Aracı ile ölçeklemek için tıklayıp sola veya sağa sürükleyin (yalnızca OpenGL)
+	Click to open the Brush Preset picker	Fırça Ön Ayarı seçiciyi açmak için tıklayın
+	Click to refresh histogram with uncached data	Histogramı önbelleğe alınmamış verilerle yenilemek için tıklayın
+	Concavity	Çöküklük
+	Confirm or cancel the pending Record Again editor first.	Önce bekleyen Yeniden Kaydet düzenleyicisini onaylayın veya iptal edin.
+	Confirm or cancel the pending menu item first.	Önce bekleyen menü öğesini onaylayın veya iptal edin.
+	Copy CSS	CSS'yi Kopyala
+	Could not use the type tool because the layer is locked.	Katman kilitli olduğu için metin aracı kullanılamadı.
+	Count:	Sayı:
+	Data Sets as Files is unavailable on the web	Veri Kümeleri Dosya Olarak özelliği web'de kullanılamıyor
+	Delete Note	Notu Sil
+	Delete this note?	Bu not silinsin mi?
+	Determines the spread of replaced color	Değiştirilen rengin yayılımını belirler
+	Do not erase the foreground swatch color	Ön plan örnek rengini silme
+	Drawn on the CPU: {reason}. Click for System Info.	CPU üzerinde çiziliyor: {reason}. Sistem Bilgisi için tıklayın.
+	Draws background color over foreground colors	Ön plan renklerinin üzerine arka plan rengiyle çizer
+	Dropped files weren't placed: their document was closed.	Bırakılan dosyalar yerleştirilmedi: belgeleri kapatıldı.
+	Dropped files weren't placed: too many are waiting for their document.	Bırakılan dosyalar yerleştirilmedi: belgelerini bekleyen çok sayıda dosya var.
+	Effect	Efekt
+	Empty	Boş
+	Enable to remix all layers	Tüm katmanları remikslemek için etkinleştirin
+	End	Bitiş
+	Erase range of similar colors	Benzer renk aralığını sil
+	Erase to History	Geçmişe Sil
+	Filter for embedded smart objects	Gömülü akıllı nesneler için filtre
+	Filter for linked smart objects that are missing	Bağlantısı eksik bağlı akıllı nesneler için filtre
+	Filter for smart objects linked locally	Yerel olarak bağlı akıllı nesneler için filtre
+	High Memory Photoshop Document	Yüksek Bellekli Photoshop Belgesi
+	How far to let the erasing spread	Silmenin ne kadar yayılacağını belirler
+	Image Compression	Görüntü Sıkıştırma
+	Import as New Group	Yeni Grup Olarak İçe Aktar
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Yeni Grup Olarak İçe Aktar, “{group}” grubunu korur ve dosyayı yanına yeni bir grup olarak ekler.
+	Insert Menu Item…	Menü Öğesi Ekle…
+	Insert Path	Yol Ekle
+	LZW	LZW
+	Layer Effects	Katman Efektleri
+	Level:	Düzey:
+	Lining	Hizalı
+	Linked	Bağlı
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Bu dosya açıldıktan sonra çok az bellek kalacak. Önce diğer uygulamaları kapatın, aksi halde Lienzo belleği tükenebilir.
+	Load Solid Colors Only	Yalnızca Düz Renkleri Yükle
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Gölgelerde ve açık tonlarda kırpmayı en aza indirir ve renklerin tonunun kaymasını önler
+	No Adv. Blending	Gelişmiş Karışım Yok
+	No Layer Effects	Katman Efekti Yok
+	No Layer Mask	Katman Maskesi Yok
+	No Vector Mask	Vektör Maskesi Yok
+	No document.	Belge yok.
+	No import is waiting. Import the file again.	Bekleyen içe aktarma yok. Dosyayı yeniden içe aktarın.
+	No matching fonts	Eşleşen yazı tipi yok
+	No menu item belongs to this chooser.	Bu seçiciye ait menü öğesi yok.
+	No menu item is waiting.	Bekleyen menü öğesi yok.
+	No note to delete	Silinecek not yok
+	No options for the Add Anchor Point Tool.	Çapa Noktası Ekleme Aracı için seçenek yok.
+	No options for the Delete Anchor Point Tool.	Çapa Noktası Silme Aracı için seçenek yok.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Şekil oluşturulacak yol yok: Kalem aracıyla bir yol çizin veya Yollar panelinde birini seçin.
+	No pixels are selected.	Hiçbir piksel seçili değil.
+	No recorded step belongs to this editor.	Bu düzenleyiciye ait kayıtlı adım yok.
+	No slices are selected. Click a slice in the preview to select it.	Hiçbir dilim seçili değil. Seçmek için önizlemede bir dilime tıklayın.
+	No step is waiting.	Bekleyen adım yok.
+	Not Clipped	Kırpılmamış
+	Not Empty	Boş Değil
+	Not Linked	Bağlı Değil
+	Not Locked	Kilitli Değil
+	Not Visible	Görünür Değil
+	Note deleted, but the preference could not be saved: {error}	Not silindi ancak tercih kaydedilemedi: {error}
+	Nudge	Kaydır
+	Numerals	Rakamlar
+	Open anyway	Yine de aç
+	Open as Smart Object…	Akıllı Nesne Olarak Aç…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Bu belgeyi açmak daha fazla bellek kullanır ve bilgisayarınızı veya çalışan diğer uygulamaları yavaşlatabilir.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	“{name}” dosyasını açmak tahmini {est} GiB bellek gerektiriyor ({avail} GiB kullanılabilir).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	“{name}” dosyasını açmak tahmini {est} GiB bellek gerektiriyor. Kullanılabilir bellek ölçülemedi.
+	Painting Mode	Boyama Modu
+	Percentile:	Yüzdelik:
+	Preparing Free Transform	Serbest Dönüştürme hazırlanıyor
+	Proportional	Orantılı
+	Proportional Lining	Orantılı Hizalı
+	Proportional Oldstyle	Orantılı Eski Stil
+	Record Again	Yeniden Kaydet
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Değiştir, önce “{group}” içindeki her şeyi siler; orada düzenlediğiniz veya taşıdığınız ön ayarlar da dahildir. Bu işlem geri alınamaz.
+	Report an issue	Sorun bildir
+	Resize windows when zooming using the Zoom Tool	Yakınlaştırma Aracı ile yakınlaştırırken pencereleri yeniden boyutlandır
+	Save Image Pyramid	Görüntü Piramidini Kaydet
+	Save Transparency	Saydamlığı Kaydet
+	Scroll all open document windows when using the hand tool	El aracını kullanırken tüm açık belge pencerelerini kaydır
+	Search and select fonts	Yazı tiplerini ara ve seç
+	Select Pixels	Pikselleri Seç
+	Select an action first.	Önce bir eylem seçin.
+	Select an action step first.	Önce bir eylem adımı seçin.
+	Selected Slices	Seçili Dilimler
+	Set 	Küme 
+	Set 1	Küme 1
+	Set 10	Küme 10
+	Set 11	Küme 11
+	Set 12	Küme 12
+	Set 13	Küme 13
+	Set 14	Küme 14
+	Set 15	Küme 15
+	Set 16	Küme 16
+	Set 17	Küme 17
+	Set 18	Küme 18
+	Set 19	Küme 19
+	Set 2	Küme 2
+	Set 20	Küme 20
+	Set 3	Küme 3
+	Set 4	Küme 4
+	Set 5	Küme 5
+	Set 6	Küme 6
+	Set 7	Küme 7
+	Set 8	Küme 8
+	Set 9	Küme 9
+	Set as default	Varsayılan olarak ayarla
+	Set exposure for stroke	Fırça darbesi için pozlamayı ayarla
+	Set flow rate for stroke	Fırça darbesi için akış hızını ayarla
+	Set font size	Yazı tipi boyutunu ayarla
+	Set font style	Yazı tipi stilini ayarla
+	Set opacity for stroke	Fırça darbesi için opaklığı ayarla
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Fırça darbesi için pürüzsüzleştirmeyi ayarla\nFırça darbelerinin titremesini azaltmak için daha yüksek değerler kullanın
+	Set symmetry options for Painting	Boyama için simetri seçeneklerini ayarla
+	Set text color	Metin rengini ayarla
+	Set the brush angle	Fırça açısını ayarla
+	Show Channels in Color	Kanalları Renkli Göster
+	Show Statistics	İstatistikleri Göster
+	Smoothing Options	Pürüzsüzleştirme Seçenekleri
+	Source:	Kaynak:
+	Start	Başlangıç
+	Stylistic Sets	Stilistik Kümeler
+	Tabular	Tablo
+	Tabular Lining	Tablo Hizalı
+	Tabular Oldstyle	Tablo Eski Stil
+	The Record Again command changed.	Yeniden Kaydet komutu değişti.
+	The action or insertion command changed. Request Insert Menu Item again.	Eylem veya ekleme komutu değişti. Menü Öğesi Ekle'yi yeniden isteyin.
+	The actions changed. Request Record Again again.	Eylemler değişti. Yeniden Kaydet'i yeniden isteyin.
+	The command permissions changed. Request Insert Menu Item again.	Komut izinleri değişti. Menü Öğesi Ekle'yi yeniden isteyin.
+	The command permissions changed. Request Record Again again.	Komut izinleri değişti. Yeniden Kaydet'i yeniden isteyin.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Geçerli karalama dizini ({path}) boş alanını bildirmiyor; bu yüzden Lienzo dolmadan önce duramaz ve Karalama Boyutu Sınırı olmadan büyük dosyalar ondan ek alan alamaz. Bu uyarı geçerli yapılandırma için geçerlidir; yukarıdaki değişiklikler Uygula veya Tamam ile devreye girer. Bir sınır belirleyin veya yerel bir disk kullanın.
+	The document changed. Please choose Clear All again.	Belge değişti. Lütfen Tümünü Temizle'yi yeniden seçin.
+	The document changed. Request Record Again again.	Belge değişti. Yeniden Kaydet'i yeniden isteyin.
+	The document or its notes changed. Please delete the note again.	Belge veya notları değişti. Lütfen notu yeniden silin.
+	The preference could not be saved: {error}	Tercih kaydedilemedi: {error}
+	The step editor could not be opened.	Adım düzenleyicisi açılamadı.
+	The step has no command editor.	Adımın komut düzenleyicisi yok.
+	Tolerance for choosing related colors	İlgili renkleri seçmek için tolerans
+	Top align text	Metni üste hizala
+	Uncached Refresh	Önbelleksiz Yenile
+	Use relative positioning for reference point	Referans noktası için göreli konumlandırma kullan
+	Use these settings for new arrows	Yeni oklar için bu ayarları kullan
+	Useful mixer brush combinations	Yararlı karıştırıcı fırça birleşimleri
+	ZIP	ZIP
+	Zoom current window to 1:1	Geçerli pencereyi 1:1 yakınlaştır
+	Zoom current window to fill the screen	Geçerli pencereyi ekranı dolduracak şekilde yakınlaştır
+	Zoom current window to screen size	Geçerli pencereyi ekran boyutuna yakınlaştır
+	brush tool	fırça aracı
+	by Nodalia	Nodalia tarafından
+	dodge tool	soldurma aracı
+	{message} into “{group}”	{message} → “{group}”
+	{ok} written to {dir}	{ok}, {dir} konumuna yazıldı
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	“{group}” fırça grubunda zaten {n} fırçanız var.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	“{group}” degrade grubu zaten var ({n} degrade).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} Görüntü Varlığı çıktısı başarısız oldu
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} dosya başarısız oldu
