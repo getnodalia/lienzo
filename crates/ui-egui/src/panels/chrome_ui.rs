@@ -21,6 +21,9 @@ pub struct ChromeState {
     /// View mode for recent files on the Home screen: true = visual thumbnail card grid, false = text list.
     #[serde(default = "yes")]
     pub home_recent_grid: bool,
+    /// The template gallery's category chip on the Home screen; empty is "All".
+    #[serde(default)]
+    pub home_template_category: String,
 }
 
 fn yes() -> bool {
@@ -44,7 +47,7 @@ impl ChromeState {
 
 impl Default for ChromeState {
     fn default() -> Self {
-        Self { status_info: "dimensions".into(), home: None, home_recent_grid: true }
+        Self { status_info: "dimensions".into(), home: None, home_recent_grid: true, home_template_category: String::new() }
     }
 }
 

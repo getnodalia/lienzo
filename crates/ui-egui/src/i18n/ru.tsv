@@ -5006,3 +5006,20 @@ shape	Appearance	Оформление
 @plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Группа градиентов «{group}» уже существует ({n} градиент).|Группа градиентов «{group}» уже существует ({n} градиента).|Группа градиентов «{group}» уже существует ({n} градиентов).
 @plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: не удалось создать {n} выходной ресурс изображения|{what}: не удалось создать {n} выходных ресурса изображения|{what}: не удалось создать {n} выходных ресурсов изображения
 @plural	{what}: {n} file failed|{what}: {n} files failed	{what}: не удалось обработать {n} файл|{what}: не удалось обработать {n} файла|{what}: не удалось обработать {n} файлов
+# Template gallery on the Home screen
+	Start from a template	Начать с шаблона
+	Social	Соцсети
+	Print & paper	Печать и бумага
+	Web & art	Веб и искусство
+	Quiet Quote	Тихая цитата
+	Weekend Notes	Заметки выходного дня
+	Little Things	Мелочи
+	Video Thumbnail	Обложка видео
+	Evening Poster	Вечерний плакат
+	Coast Postcard	Открытка с побережья
+	Garden Invitation	Приглашение в сад
+	Business Card	Визитная карточка
+	Dusk Hills	Холмы в сумерках
+	Web Banner	Веб-баннер
+	Album Cover	Обложка альбома
+	Colour Palette	Цветовая палитра
