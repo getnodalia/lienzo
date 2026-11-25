@@ -811,6 +811,10 @@ fn show_layout(app: &mut LienzoApp, ui: &mut egui::Ui, dock_only: bool) {
         // Nodalia: the canvas and every panel group stand apart on the window frame.
         style.gap = crate::theme::ISLAND_GAP;
         style.dock_gap = Some(crate::theme::ISLAND_GAP);
+        // No bar above the column: it left an empty strip over the panel island, so the
+        // inspector started lower than the toolbox and the canvas. The rail collapses and
+        // expands groups, and a group's tabs still drag it.
+        style.column_bar_height = 0.0;
     }
     style.background = t.card;
     // Studio themes leave the strip transparent over the dock's card; a floating group has no
