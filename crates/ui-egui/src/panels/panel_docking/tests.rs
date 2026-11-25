@@ -2364,3 +2364,31 @@ fn native_migration_still_waits_and_runs_without_an_accepted_explicit_request() 
         assert!(h.ctx.data_mut(|data| data.get_persisted::<egui::PanelState>(key)).is_none(), "the unchanged native migration consumes its state once");
     }
 }
+
+/// In the Nodalia islands the dock's panel island starts where the column does, level with the
+/// canvas and the toolbox, with no bar above its tabs.
+#[test]
+fn nodalia_dock_island_starts_at_the_top_of_its_column() {
+    let mut ready = false;
+    let mut h = Harness::builder().with_size(vec2(1400.0, 900.0)).with_step_dt(1.0 / 60.0).build_ui_state(
+        move |ui, app: &mut LienzoApp| {
+            if !ready {
+                LienzoApp::setup_context(ui.ctx(), crate::theme::ThemeKind::Nodalia);
+                ready = true;
+                return;
+            }
+            crate::panels::dock_area(app, ui);
+            egui::CentralPanel::default().show(ui, |_| {});
+        },
+        app(),
+    );
+    h.run_steps(4);
+    let column_top = canvas_rect(&h).top();
+    let hits = nodalia_ui::docking::DockArea::<String>::hit_rects(&h.ctx, area_id());
+    let first_tab = hits
+        .iter()
+        .filter(|(hit, rect)| matches!(hit, nodalia_ui::docking::Hit::Tab(_)) && rect.left() > canvas_rect(&h).right())
+        .map(|(_, rect)| rect.top())
+        .fold(f32::INFINITY, f32::min);
+    assert!(first_tab - column_top < 1.0, "tabs start {} below the column top ({column_top}); an empty bar is drawn above the island", first_tab - column_top);
+}
