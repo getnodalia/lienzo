@@ -4737,3 +4737,20 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 @plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	O grupo de gradientes “{group}” já existe ({n} gradiente).|O grupo de gradientes “{group}” já existe ({n} gradientes).
 @plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} saída de Recursos de imagem falhou|{what}: {n} saídas de Recursos de imagem falharam
 @plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} arquivo falhou|{what}: {n} arquivos falharam
+# Template gallery on the Home screen
+	Start from a template	Começar com um modelo
+	Social	Redes sociais
+	Print & paper	Impressão e papel
+	Web & art	Web e arte
+	Quiet Quote	Citação tranquila
+	Weekend Notes	Notas de fim de semana
+	Little Things	Pequenas coisas
+	Video Thumbnail	Miniatura de vídeo
+	Evening Poster	Cartaz da noite
+	Coast Postcard	Cartão-postal da costa
+	Garden Invitation	Convite de jardim
+	Business Card	Cartão de visita
+	Dusk Hills	Colinas ao entardecer
+	Web Banner	Banner para web
+	Album Cover	Capa de álbum
+	Colour Palette	Paleta de cores
