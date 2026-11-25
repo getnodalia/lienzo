@@ -486,7 +486,7 @@ mod tests {
                 let doc = build(t.id, lang, scale).unwrap();
                 let img = lienzo_compose::thumbnail(&doc, 4000);
                 let mut out = format!("P6\n{} {}\n255\n", img.width, img.height).into_bytes();
-                for px in img.pixels.chunks_exact(4) {
+                for px in img.pixels.as_chunks::<4>().0 {
                     // Over white, so a transparent edge is visible as such.
                     let a = u16::from(px[3]);
                     out.extend(px[..3].iter().map(|c| ((u16::from(*c) * a + 255 * (255 - a)) / 255) as u8));
