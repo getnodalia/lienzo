@@ -48,6 +48,8 @@ for working in layers, with no account and no cloud. It runs on Linux, macOS and
 ## What it does
 
 - Layers, masks, adjustment layers, smart objects, selections, paths, type and brushes.
+- A template gallery on Home with twelve calm starting points (social posts, a poster, a postcard,
+  a business card, a web banner and more), each with named layers and live text.
 - Opens and saves Photoshop documents (PSD and PSB), plus its own `.pcraft` format and the usual
   image formats.
 - The Nodalia interface: rounded islands, Lienzo's accent, Sora and Inter, round window controls
