@@ -4371,9 +4371,9 @@ navigator	Zoom	ज़ूम
 	Auto Add/Delete	स्वतः जोड़ें/हटाएँ
 	Don't also tick Mirror Image in Print Settings…: the two flips cancel out.	प्रिंट सेटिंग… में मिरर इमेज पर भी निशान न लगाएँ: दोनों पलटाव एक-दूसरे को रद्द कर देते हैं।
 	Print Settings…	प्रिंट सेटिंग…
-	Remember to turn off the printer's own color management in Print Settings…	प्रिंट सेटिंग… में प्रिंटर का अपना रंग प्रबंधन बंद करना न भूलें
+	Remember to turn off the printer's own color management in Print Settings…	प्रिंटर का अपना रंग प्रबंधन बंद करना न भूलें: प्रिंट सेटिंग…
 	Sent to {printer}	{printer} को भेजा गया
-	set in Print Settings…	प्रिंट सेटिंग… में सेट किया गया
+	set in Print Settings…	सेट किया गया: प्रिंट सेटिंग…
 	ICO is limited to 256 × 256 pixels	ICO 256 × 256 पिक्सल तक सीमित है
 	Memory usage percent	मेमोरी उपयोग प्रतिशत
 	Show Favorite Fonts	पसंदीदा फ़ॉन्ट दिखाएँ
@@ -4920,7 +4920,7 @@ smartSvg	SVG editor opened. Save the SVG to update this Smart Object.	SVG सं
 	Click to sample the foreground colour  ·  {key}-click for background	अग्रभूमि रंग का नमूना लेने के लिए क्लिक करें  ·  पृष्ठभूमि के लिए {key}-क्लिक करें
 	Out of gamut for printing: click for the nearest printable colour	प्रिंट के लिए गैमट से बाहर: निकटतम प्रिंट योग्य रंग के लिए क्लिक करें
 	Not a web colour: click for the nearest web colour	वेब रंग नहीं है: निकटतम वेब रंग के लिए क्लिक करें
-	Remember to turn off the printer's own colour management in Print Settings…	प्रिंट सेटिंग… में प्रिंटर का अपना रंग प्रबंधन बंद करना न भूलें
+	Remember to turn off the printer's own colour management in Print Settings…	प्रिंटर का अपना रंग प्रबंधन बंद करना न भूलें: प्रिंट सेटिंग…
 	How the camera's colour filter mosaic is filled in. It is applied when the file opens; the preview shows the method it was opened with.	कैमरे के रंग फ़िल्टर मोज़ेक को कैसे भरा जाता है। यह फ़ाइल खुलते समय लागू होता है; पूर्वावलोकन उसी तरीके को दिखाता है जिससे वह खोली गई थी।
 	Hirakawa–Parks: the cleanest edges and the least colour fringing, the slowest.	हिराकावा–पार्क्स: सबसे साफ़ किनारे और सबसे कम रंग की झालर, सबसे धीमा।
 	Gradient-corrected interpolation: sharp and fast, with some colour fringing on fine detail.	ग्रेडिएंट-सुधारित इंटरपोलेशन: तीखा और तेज़, महीन विवरण पर कुछ रंग की झालर के साथ।
