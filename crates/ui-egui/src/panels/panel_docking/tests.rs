@@ -197,6 +197,42 @@ fn a_fresh_launch_draws_the_native_groups_beside_the_protected_canvas() {
     assert!(tab_rect(&h, "properties").top() - color.bottom() < 12.0, "a collapsed group shows only its tabs");
 }
 
+/// Nodalia draws the dock column's first group flush with the top of the column, level with the
+/// toolbox and canvas islands: no bar above the tabs, and no »/« button outside the islands.
+/// Studio keeps its column bar.
+#[test]
+fn nodalia_dock_column_has_no_bar_above_its_first_group() {
+    let top_gap = |theme: crate::theme::ThemeKind| {
+        let mut ready = false;
+        let mut h = Harness::builder().with_size(vec2(1280.0, 800.0)).with_step_dt(1.0 / 60.0).build_ui_state(
+            move |ui, app: &mut LienzoApp| {
+                if !ready {
+                    LienzoApp::setup_context(ui.ctx(), theme);
+                    ready = true;
+                    return;
+                }
+                crate::panels::dock_area(app, ui);
+                egui::CentralPanel::default().show(ui, |_| {});
+            },
+            app(),
+        );
+        h.run_steps(4);
+        let hits = nodalia_ui::docking::DockArea::<String>::hit_rects(&h.ctx, area_id());
+        let divider = hits
+            .iter()
+            .find(|(hit, _)| matches!(hit, nodalia_ui::docking::Hit::Divider(nodalia_ui::docking::Divider::Column(_))))
+            .map(|(_, rect)| *rect)
+            .expect("the dock column's edge is drawn");
+        tab_rect(&h, "color").top() - divider.top()
+    };
+    let nodalia = top_gap(crate::theme::ThemeKind::Nodalia);
+    let light = top_gap(crate::theme::ThemeKind::NodaliaLight);
+    let studio = top_gap(crate::theme::ThemeKind::ProMedium);
+    assert!(nodalia.abs() < 1.0, "dark Nodalia: the first tab starts at the column's top, not {nodalia} below it");
+    assert!(light.abs() < 1.0, "light Nodalia: the first tab starts at the column's top, not {light} below it");
+    assert!(studio > 10.0, "Studio keeps its column bar: {studio}");
+}
+
 /// A panel no saved workspace has placed opens in its native group, or as that group in its
 /// native place in the dock column, not as a tab of whichever group comes first.
 #[test]
