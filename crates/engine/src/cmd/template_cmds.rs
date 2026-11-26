@@ -22,6 +22,7 @@ use crate::presets::{always, bad};
 use crate::{Result, Session};
 
 mod designs;
+mod names;
 
 use designs::TEMPLATES;
 
@@ -132,7 +133,15 @@ pub fn build(name: &str, lang: Lang, scale: f64) -> Result<Document> {
     let mut canvas = Canvas { s: &mut session, k, pt: 72.0 / template.ppi.max(1.0), lang };
     (template.build)(&mut canvas)?;
     let state = session.active().ok_or_else(|| bad(CMD, "the template made no document"))?;
-    Ok(state.doc.as_ref().clone())
+    let mut doc = state.doc.as_ref().clone();
+    if lang == Lang::Es {
+        // The Background `file.new` made is the one layer the template did not name itself.
+        let background: Vec<_> = doc.layers.iter().filter(|l| doc.is_background(l.id)).map(|l| l.id).collect();
+        for layer in doc.layers.iter_mut().filter(|l| background.contains(&l.id)) {
+            layer.name = "Fondo".to_string();
+        }
+    }
+    Ok(doc)
 }
 
 // ---------- the command ----------
@@ -296,13 +305,21 @@ impl Canvas<'_> {
         }
     }
 
+    /// A layer's name in the template's language.
+    fn name(&self, english: &str) -> String {
+        match self.lang {
+            Lang::En => english.to_string(),
+            Lang::Es => names::spanish(english).unwrap_or_else(|| english.to_string()),
+        }
+    }
+
     fn scaled(&self, r: [f32; 4]) -> Vec<f32> {
         r.iter().map(|v| v * self.k).collect()
     }
 
     /// Creates a shape layer and returns its id.
     fn shape(&mut self, name: &str, mut params: Value, paint: &Paint, stroke: Option<(f32, &'static str, f32)>) -> Result<u64> {
-        params["name"] = json!(name);
+        params["name"] = json!(self.name(name));
         params["fill"] = paint.json();
         params["stroke"] = match stroke {
             Some((width, color, alpha)) => json!({"width": (width * self.k).max(0.5), "color": color, "opacity": (alpha * 100.0).round(), "align": "center"}),
@@ -358,7 +375,7 @@ impl Canvas<'_> {
     /// A text layer in a box.
     fn text(&mut self, name: &str, t: Type) -> Result<u64> {
         let params = json!({
-            "name": name,
+            "name": self.name(name),
             "text": t.text,
             "box": self.scaled(t.at),
             "font": t.font,
@@ -388,13 +405,29 @@ mod tests {
         for t in templates() {
             let en = build(t.id, Lang::En, 0.25).unwrap();
             let es = build(t.id, Lang::Es, 0.25).unwrap();
-            assert_eq!(layer_names(&en), layer_names(&es), "{} differs between languages", t.id);
+            assert_eq!(en.layers.len(), es.layers.len(), "{} differs between languages", t.id);
             assert!(en.layers.len() >= 6, "{} has only {} layers", t.id, en.layers.len());
             assert_eq!(en.name, t.name);
             assert_eq!(es.name, t.name_es);
             let want = (t.size.0 as f32 * 0.25).round() as u32;
             assert_eq!(en.size.width, want, "{} width", t.id);
             assert!((en.resolution_dpi - t.ppi).abs() < f32::EPSILON);
+        }
+    }
+
+    #[test]
+    fn spanish_templates_name_every_layer_in_spanish() {
+        for t in templates() {
+            let en = build(t.id, Lang::En, 0.2).unwrap();
+            let es = build(t.id, Lang::Es, 0.2).unwrap();
+            for (e, s) in layer_names(&en).iter().zip(layer_names(&es)) {
+                if e == "Background" {
+                    assert_eq!(s, "Fondo", "{}: the Background layer", t.id);
+                } else {
+                    assert_eq!(Some(s), names::spanish(e), "{}: layer {e} has no Spanish name", t.id);
+                }
+            }
+            assert!(layer_names(&en).iter().any(|n| n == "Background"), "{} lost its Background", t.id);
         }
     }
 
@@ -430,17 +463,17 @@ mod tests {
     fn text_is_live_text_in_the_chosen_language() {
         let en = build("quiet-quote", Lang::En, 0.3).unwrap();
         let es = build("quiet-quote", Lang::Es, 0.3).unwrap();
-        let text = |d: &Document| {
+        let text = |d: &Document, layer: &str| {
             d.layers
                 .iter()
                 .find_map(|l| match &l.content {
-                    lienzo_doc::LayerContent::Text(t) if l.name == "Quote" => Some(t.text.clone()),
+                    lienzo_doc::LayerContent::Text(t) if l.name == layer => Some(t.text.clone()),
                     _ => None,
                 })
                 .unwrap_or_default()
         };
-        assert!(text(&en).starts_with("Slow down"));
-        assert!(text(&es).starts_with("Ve despacio"));
+        assert!(text(&en, "Quote").starts_with("Slow down"));
+        assert!(text(&es, "Cita").starts_with("Ve despacio"));
     }
 
     #[test]

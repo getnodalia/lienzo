@@ -444,6 +444,7 @@ impl<P: Clone + Eq + Hash + Debug + Send + Sync + 'static> Renderer<'_, P> {
         let color = if visual_active { self.style.text } else { self.style.inactive_text };
         let galley = self.tab_label(ui, panel, &label, color, (rect.width() - TAB_PADDING).max(0.0));
         let elided = galley.elided;
+        let corners = self.floating_corners(rect);
         let tab_id = self.id.with(("tab", panel));
         let pointer_focus = self.pointer_focus(ui, tab_id);
         let response = tabs::Tab::new(tab_id, &label, visual_active)
@@ -451,9 +452,11 @@ impl<P: Clone + Eq + Hash + Debug + Send + Sync + 'static> Renderer<'_, P> {
             .focus_stroke(if pointer_focus { Stroke::NONE } else { Stroke::new(1.0, self.style.accent) })
             .show_at(ui, rect, |ui, response| {
                 let painter = ui.painter().with_clip_rect(rect.intersect(ui.clip_rect()));
+                // A tab on a corner of a rounded card (a dock group, a floating window) takes the
+                // card's corner, or its square fill would cover the card's rounded pocket.
                 painter.rect_filled(
                     rect,
-                    0.0,
+                    corners,
                     if visual_active || response.hovered() { self.style.active_background } else { self.style.tab_background },
                 );
                 let at = pos2(rect.left() + TAB_PADDING * 0.5, rect.center().y - galley.size().y * 0.5);
