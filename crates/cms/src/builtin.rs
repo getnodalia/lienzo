@@ -118,7 +118,7 @@ impl Builtin {
         alias.or_else(|| {
             Builtin::ALL
                 .into_iter()
-                .find(|b| b.description().eq_ignore_ascii_case(s) || b.description().replace("Lienzo", "PhotoCraft").eq_ignore_ascii_case(s)) // rebrand: keep
+                .find(|b| b.description().eq_ignore_ascii_case(s) || b.description().replace("Lienzo", "PhotoCraft").eq_ignore_ascii_case(s))
         })
     }
 
@@ -348,8 +348,8 @@ mod tests {
 
     #[test]
     fn former_descriptions_still_name_their_builtins() {
-        assert_eq!(Builtin::from_id("Linear sRGB (PhotoCraft)"), Some(Builtin::LinearSrgb)); // rebrand: keep
-        assert_eq!(Builtin::from_id("ACEScg (AP1, linear, PhotoCraft)"), Some(Builtin::AcesCg)); // rebrand: keep
+        assert_eq!(Builtin::from_id("Linear sRGB (PhotoCraft)"), Some(Builtin::LinearSrgb));
+        assert_eq!(Builtin::from_id("ACEScg (AP1, linear, PhotoCraft)"), Some(Builtin::AcesCg));
         assert_eq!(Builtin::from_id("Linear sRGB (Lienzo)"), Some(Builtin::LinearSrgb));
         assert_eq!(Builtin::from_id("Linear sRGB (Elsewhere)"), None);
     }

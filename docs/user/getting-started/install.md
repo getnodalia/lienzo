@@ -39,7 +39,6 @@ Pick one file from the release. Use `x86_64` for Intel and AMD, or `aarch64` for
 | AppImage            | `lienzo-<version>-linux-x86_64.AppImage` | Runs anywhere and needs no install.                                                |
 | Debian and Ubuntu   | `lienzo-<version>-linux-x86_64.deb`      |                                                                                    |
 | Fedora and openSUSE | `lienzo-<version>-linux-x86_64.rpm`      |                                                                                    |
-| Flatpak             | `lienzo-<version>-linux-x86_64.flatpak`  | Run `flatpak install --user <file>`, then `flatpak run dev.danielmiguelt.Lienzo`. |
 | Tarball             | `lienzo-<version>-linux-x86_64.tar.gz`   | Unpack it anywhere.                                                                |
 
 The first time you run the AppImage, it adds its icon and menu entry under `~/.local/share`. Set `LIENZO_NO_DESKTOP_INTEGRATION=1` to skip that. For RISC-V, take the `riscv64` file: `lienzo-<version>-linux-riscv64.tar.gz`, `.deb` or `.rpm`. The RISC-V tarball needs glibc 2.39 or newer.

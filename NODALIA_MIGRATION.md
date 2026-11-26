@@ -27,7 +27,6 @@ the interface uses Nodalia Design throughout.
 | craft-common-actions `release.yml`, `refresh-contributors.yml` | `.github/workflows/release.yml` | Lienzo's own `release-*.yml`, plus a contributors step | checking whether `release.yml` is still needed |
 | craft-common-actions `windows-arm64.yml` | `.github/workflows/windows-arm64.yml` | a Foundation workflow | writing it |
 | storytold/photocraft-corpus | `xtask/src/corpus_pins.rs`, `docs/development.md` | a Foundation vendor branch with the same commits | mirroring it |
-| Weekly sync from the upstream project | `.github/workflows/upstream-sync.yml` | none: intended, renames upstream names | — |
 
 ## Technical debt
 
