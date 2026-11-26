@@ -115,7 +115,7 @@ fn layer_controls(app: &mut LienzoApp, ui: &mut egui::Ui, layer: &Layer) {
         let b = app.layer_frame_bounds(layer, s);
         egui::Grid::new("props-grid").num_columns(2).spacing([12.0, 6.0]).show(ui, |ui| {
             for (k, v) in [("X", b.x0.to_string()), ("Y", b.y0.to_string()), ("W", b.width().to_string()), ("H", b.height().to_string())] {
-                ui.label(RichText::new(k).color(t.text_dim));
+                ui.label(RichText::new(tl!(k)).color(t.text_dim));
                 ui.label(RichText::new(format!("{v} px")).font(theme::mono(12.0)).color(t.text));
                 ui.end_row();
             }
