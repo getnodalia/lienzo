@@ -21,8 +21,7 @@ HTTPS validates certificates and host names against the operating system's trust
 
 Tags must be semantic versions (`v0.8.0` or `0.8.0`); only published stable versions newer
 than the installed workspace version trigger a notice. Drafts and prereleases do not trigger it.
-Flatpak builds also check for releases; repository-managed installations are updated through
-their package manager. Web/headless frontends have no update transport. No release-workflow
+Repository-managed installations are updated through their package manager. Web/headless frontends have no update transport. No release-workflow
 changes are required: publishing a newer stable GitHub Release makes it discoverable.
 
 ## Cutting a release
@@ -56,8 +55,8 @@ without one to upload workflow artifacts only.
 | macOS 11+ (universal: Apple silicon + Intel) | `lienzo-<v>-macos-universal.dmg`, `lienzo-cli-<v>-macos-universal.zip` | `macos-15` |
 | Windows 10+ x64 | `lienzo-<v>-windows-x64.msi`, `lienzo-<v>-windows-x64-portable.zip`, `lienzo-<v>-windows-x64-symbols.zip` | `windows-latest` |
 | Windows 10+ x86 (32-bit) | `lienzo-<v>-windows-x86.msi`, `lienzo-<v>-windows-x86-portable.zip`, `lienzo-<v>-windows-x86-symbols.zip` | `windows-latest` |
-| Linux x86_64 | `lienzo-<v>-linux-x86_64.{AppImage,AppImage.zsync,deb,rpm,tar.gz,flatpak}` | `ubuntu-22.04` (Flatpak: `ubuntu-24.04`) |
-| Linux aarch64 | `lienzo-<v>-linux-aarch64.{AppImage,AppImage.zsync,deb,rpm,tar.gz,flatpak}` | `ubuntu-22.04-arm` (Flatpak: `ubuntu-24.04-arm`) |
+| Linux x86_64 | `lienzo-<v>-linux-x86_64.{AppImage,AppImage.zsync,deb,rpm,tar.gz}` | `ubuntu-22.04` |
+| Linux aarch64 | `lienzo-<v>-linux-aarch64.{AppImage,AppImage.zsync,deb,rpm,tar.gz}` | `ubuntu-22.04-arm` |
 | Linux riscv64 (glibc 2.39+) | `lienzo-<v>-linux-riscv64.tar.gz` | cross-compiled on `ubuntu-24.04` (ports.ubuntu.com riscv64 libs); CLI smoke-tested under QEMU |
 | FreeBSD 14 x86_64 | `lienzo-<v>-freebsd-x86_64.tar.gz` | FreeBSD 14.3 VM on `ubuntu-latest` |
 | Web | `lienzo-web-<v>.zip` (static site; see [`packaging/web/README.md`](../packaging/web/README.md)) | `ubuntu-latest` |
@@ -250,41 +249,13 @@ Why these formats:
   (`nfpm.yaml`). It doesn't need cargo-deb and cargo-generate-rpm metadata in our crates, and
   it can build both formats on Ubuntu.
 - **.tar.gz** is for people who manage their own `/opt` or `~/.local`.
-- **Flatpak bundle** (`.flatpak`) is a single file that installs into Flatpak, sandboxed and
-  updatable by installing a newer bundle, for people who prefer Flatpak to AppImage.
-  `packaging/linux/flatpak-bundle.sh` repackages the job's `.tar.gz` with
-  `packaging/linux/flatpak/dev.danielmiguelt.Lienzo.bundle.yml` on the freedesktop 26.08
-  runtime. It does no Rust build and needs no network inside `flatpak-builder`, so the bundle
-  holds the same binaries as the other formats. A separate `flatpak` job per architecture
-  (`ubuntu-24.04` and `ubuntu-24.04-arm`, for flatpak-builder 1.4) downloads the Linux job's
-  artifact, runs the script, installs the bundle and runs `lienzo-cli --version` inside the
-  sandbox as a smoke test. The bundle names Flathub as its runtime repo, so users install
-  it with:
-
-  ```sh
-  flatpak install --user lienzo-<v>-linux-x86_64.flatpak   # pulls org.freedesktop.Platform//26.08 from Flathub if missing
-  flatpak run dev.danielmiguelt.Lienzo
-  ```
-
-  Sandbox permissions (justified in the manifest): Wayland with X11 fallback, IPC (X11
-  shared memory), `dri` for the GPU, the CUPS socket, Avahi and `~/.cups` (read-only) for
-  printing, and read/write access to Pictures and Documents. Every
-  other file goes through the file-chooser and document portals. Network access enables update
-  checks and makes the optional loopback `--control` server reachable from the host. Host fonts
-  are read from `/run/host/fonts` and `/run/host/user-fonts`. Locally (on Linux, with `flatpak` and
-  `flatpak-builder`): `packaging/linux/package.sh --formats tar && packaging/linux/flatpak-bundle.sh`.
-- **Flathub**: `packaging/linux/flatpak/dev.danielmiguelt.Lienzo.yml` builds from source and
-  is ready for a Flathub submission (it keeps the same runtime and `finish-args` as the bundle
-  manifest, which packaging-lint checks). CI doesn't build it. A real build needs vendored crate
-  sources (`cargo-sources.json` from `flatpak-cargo-generator.py`) and adds 20+ minutes per
-  architecture. Build it by hand with the commands in the manifest's header.
 
 All Linux binaries are built on Ubuntu 22.04 and need **glibc ≥ 2.35**: Ubuntu 22.04+,
 Debian 12+, Fedora 36+, RHEL 10, openSUSE Tumbleweed. They link only glibc and libgcc_s. X11,
 Wayland, xkbcommon, Vulkan and EGL are loaded at runtime from the system, which is also where
 the GPU driver has to come from. That's why the .deb and .rpm declare them as dependencies
 (the full list, and why each is there, is in `packaging/linux/nfpm.yaml`) and the AppImage
-doesn't bundle them. The Flatpak gets them from the freedesktop runtime. Because the AppImage
+doesn't bundle them. Because the AppImage
 and the tarball can't declare dependencies, `lienzo` checks for the libraries its session
 (X11 or Wayland) needs before it opens a window (`apps/lienzo/src/linux_libs.rs`) and, if
 one is missing, prints the package to install and exits with status 1 instead of crashing.
@@ -340,8 +311,8 @@ caching, the iframe snippet and the `?webgl` / `?cpu` flags.
 
 All secrets live in the repository's **`release` environment** (*Settings → Environments →
 release*). Restrict its deployment branches to `release`. Every job in `release.yml` that
-signs or publishes declares `environment: release` (the Flatpak and FreeBSD jobs sign nothing
-and don't), so only pushes to that branch, or manual runs on it, can read the secrets. Each secret is optional. If one is missing, that platform's artifacts are unsigned and
+signs or publishes declares `environment: release` (the FreeBSD job signs nothing
+and doesn't), so only pushes to that branch, or manual runs on it, can read the secrets. Each secret is optional. If one is missing, that platform's artifacts are unsigned and
 the run shows a `::warning::`.
 
 | Secret | Used for |
@@ -377,5 +348,4 @@ The outputs are committed, so packaging never needs those tools.
 
 `.github/workflows/packaging-lint.yml` runs in seconds on any change to `packaging/`, the
 workflows or the icons. It runs actionlint, shellcheck, a PowerShell parse, xmllint,
-`desktop-file-validate`, `appstreamcli validate`, and a YAML check that the two Flatpak
-manifests agree on the runtime and permissions.
+`desktop-file-validate`, `appstreamcli validate`.

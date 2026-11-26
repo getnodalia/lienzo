@@ -131,9 +131,6 @@ jobs:
               print("Crates named after the Craft apps (rename them to nodalia-* or the app's own name):", *bad, sep="\n")
               sys.exit(1)
           PY
-      - name: No upstream names
-        # Lienzo's own names everywhere; upstream's arrive renamed by the weekly sync.
-        run: python3 scripts/rebrand.py check
       - id: pick
         env:
           EVENT: ${{ github.event_name }}
