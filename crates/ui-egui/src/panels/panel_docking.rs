@@ -867,7 +867,10 @@ fn show_layout(app: &mut LienzoApp, ui: &mut egui::Ui, dock_only: bool) {
                 nodalia_ui::docking::PanelLimits { min: egui::vec2(220.0, 0.0), max: egui::vec2(1_000_000.0, 0.0) }
             } else {
                 // The native group's smallest height, tab strip included.
-                let height = PANELS.iter().find(|p| p.0 == id).map_or(80.0, |p| p.2.min_height() - strip);
+                // A column squeezes a group down to its small minimum; a group that stands on its
+                // own (beside the canvas, floating) keeps room for its whole layout.
+                let in_column = in_dock_column(&layout, id);
+                let height = PANELS.iter().find(|p| p.0 == id).map_or(80.0, |p| (if in_column { p.2.min_height() } else { p.2.framed_min_height() }) - strip);
                 nodalia_ui::docking::PanelLimits { min: egui::vec2(220.0, height), ..Default::default() }
             }
         },

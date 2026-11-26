@@ -2433,3 +2433,105 @@ fn nodalia_dock_island_keeps_its_top_corners_round_under_the_active_tab() {
         assert!(r.corner_radius.nw > 0, "a square fill {:?} covers the island's rounded top-left corner", r.rect);
     }
 }
+
+/// The dock in the Nodalia theme, whose groups are rounded islands.
+fn nodalia_harness(app: LienzoApp, size: egui::Vec2) -> Harness<'static, LienzoApp> {
+    let mut ready = false;
+    let mut harness = Harness::builder().with_size(size).with_step_dt(1.0 / 60.0).build_ui_state(
+        move |ui, app: &mut LienzoApp| {
+            if !ready {
+                LienzoApp::setup_context(ui.ctx(), crate::theme::ThemeKind::Nodalia);
+                ready = true;
+                return;
+            }
+            crate::panels::dock_area(app, ui);
+            egui::CentralPanel::default().show(ui, |_| {});
+        },
+        app,
+    );
+    harness.run_steps(4);
+    harness
+}
+
+fn rect_shapes(h: &Harness<'static, LienzoApp>) -> Vec<egui::epaint::RectShape> {
+    fn collect(shape: &egui::Shape, out: &mut Vec<egui::epaint::RectShape>) {
+        match shape {
+            egui::Shape::Rect(rect) => out.push(rect.clone()),
+            egui::Shape::Vec(shapes) => shapes.iter().for_each(|s| collect(s, out)),
+            _ => {}
+        }
+    }
+    let mut all = Vec::new();
+    h.output().shapes.iter().for_each(|clipped| collect(&clipped.shape, &mut all));
+    all
+}
+
+fn same_rect(a: egui::Rect, b: egui::Rect) -> bool {
+    (a.min - b.min).abs().max_elem() < 1.5 && (a.max - b.max).abs().max_elem() < 1.5
+}
+
+/// A group docked above, below or beside the canvas is an island like the dock column's groups:
+/// its fill and outline have rounded corners on all four sides, not a square slab (the Layers
+/// panel dragged over the drawing area).
+#[test]
+fn nodalia_groups_beside_the_canvas_are_round_islands_on_every_side() {
+    for zone in ["top", "bottom", "left", "right"] {
+        let mut app = app();
+        app.run("window.panel.close", json!({"panel":"properties"})).unwrap();
+        app.run("window.panel.group", json!({"panel":"layers","operation":"move","anchor":"canvas","zone":zone})).unwrap();
+        let h = nodalia_harness(app, vec2(1400.0, 900.0));
+        let group = probe::group_rect(h.state(), &h.ctx, "layers").unwrap_or_else(|| panic!("{zone}: the Layers group is drawn"));
+        assert!(!in_dock_column(&lay(h.state()), "layers"), "{zone}: the group stands beside the canvas, not in the dock column");
+        let on_group: Vec<_> = rect_shapes(&h).into_iter().filter(|r| same_rect(r.rect, group)).collect();
+        assert!(on_group.iter().any(|r| r.fill.a() > 0), "{zone}: the group's card is filled ({group:?})");
+        assert!(on_group.iter().any(|r| r.fill.a() == 0 && r.stroke.width > 0.0), "{zone}: the group's outline is drawn ({group:?})");
+        for r in on_group {
+            let c = r.corner_radius;
+            assert!(c.nw > 0 && c.ne > 0 && c.sw > 0 && c.se > 0, "{zone}: a square card or outline {:?} {c:?}", r.rect);
+        }
+        // The active tab sits on the card's top-left corner and follows its curve.
+        let corner = group.left_top();
+        let tab_fills: Vec<_> = rect_shapes(&h)
+            .into_iter()
+            .filter(|r| (r.rect.left_top() - corner).abs().max_elem() < 0.5 && r.fill.a() > 0 && r.rect.width() < group.width())
+            .collect();
+        assert!(!tab_fills.is_empty(), "{zone}: something is filled on the group's top-left corner");
+        for r in tab_fills {
+            assert!(r.corner_radius.nw > 0, "{zone}: a square fill {:?} covers the group's rounded corner", r.rect);
+        }
+    }
+}
+
+/// The canvas draws its own island, so no card is painted under it, and groups beside it do not
+/// push it into the dock column.
+#[test]
+fn nodalia_canvas_gets_no_card_of_its_own_and_dock_groups_stay_round() {
+    let mut app = app();
+    app.run("window.panel.close", json!({"panel":"properties"})).unwrap();
+    app.run("window.panel.group", json!({"panel":"layers","operation":"move","anchor":"canvas","zone":"top"})).unwrap();
+    let h = nodalia_harness(app, vec2(1400.0, 900.0));
+    let canvas = probe::panel_rect(&h.ctx, CANVAS).expect("the canvas is drawn");
+    assert!(
+        !rect_shapes(&h).iter().any(|r| r.fill.a() > 0 && r.corner_radius.nw > 0 && same_rect(r.rect, canvas) && r.stroke.width > 0.0),
+        "the canvas is not wrapped in a group card"
+    );
+    let swatches = probe::group_rect(h.state(), &h.ctx, "swatches").expect("the Color group is drawn");
+    assert!(rect_shapes(&h).iter().any(|r| same_rect(r.rect, swatches) && r.corner_radius.nw > 0), "the dock column's group is still a round card");
+}
+
+/// A group standing beside the canvas cannot be squeezed until the Layers footer falls below its
+/// edge: the group keeps room for its header rows, a layer row and the footer.
+#[test]
+fn nodalia_layers_group_beside_the_canvas_keeps_its_footer_when_squeezed() {
+    let mut app = app();
+    app.run("file.new", json!({"width":480,"height":360})).unwrap();
+    app.run("window.panel.close", json!({"panel":"properties"})).unwrap();
+    app.run("window.panel.group", json!({"panel":"layers","operation":"move","anchor":"canvas","zone":"top"})).unwrap();
+    app.run("window.panel.layout", json!({"action":{"ResizeSplit":{"path":[false],"size":{"Ratio":0.05}}}})).unwrap();
+    let mut h = nodalia_harness(app, vec2(1400.0, 900.0));
+    h.run_steps(4);
+    let group = probe::group_rect(h.state(), &h.ctx, "layers").expect("the Layers group is drawn");
+    assert!(group.height() >= Group::Layers.framed_min_height() - 1.0, "the group was squeezed to {} points", group.height());
+    let button = h.get_by_label("Create a new layer").rect();
+    assert!(button.bottom() <= group.bottom() + 0.5, "the Layers footer {button:?} is cut off below the group {group:?}");
+}

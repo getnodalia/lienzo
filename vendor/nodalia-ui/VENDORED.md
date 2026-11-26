@@ -11,7 +11,9 @@ island. Files touched: `src/docking/chrome.rs`, `src/docking/surface.rs`.
 `DockStyle::dock_radius` does the same for the docked groups (cards in a column), and a tab that
 sits on a corner of a rounded card (a dock group or a floating window) is filled with that
 corner's radius, so the active tab no longer squares the card's top corner
-(`src/docking/render/group.rs`, `tab`).
+(`src/docking/render/group.rs`, `tab`). A group of the split tree (a panel docked above, below
+or beside the canvas) is a card too, except a lone protected panel such as the canvas
+(`group`, `GroupKind::Frame`).
 
 To update: copy the new `crates/ui/src` over this one, re-apply the change above, and move the
 revision in the workspace `Cargo.toml`, in this file and in the header of `Cargo.toml`.
