@@ -259,15 +259,20 @@ pub(crate) fn kerning_label((mode, kern): (lienzo_doc::text::Kerning, f32)) -> S
 /// (Photoshop's range, -1000..10000). `None` for anything else.
 pub(crate) fn parse_kerning(s: &str) -> Option<serde_json::Value> {
     let s = s.trim();
-    match s.to_ascii_lowercase().as_str() {
-        "metrics" => Some(json!("metrics")),
-        "optical" => Some(json!("optical")),
-        _ => crate::numeric_expression::parse(s).filter(|v| v.is_finite() && (-1000.0..=10000.0).contains(v)).map(|v| json!(v.round())),
+    let lower = s.to_lowercase();
+    // The two names are typed as they are drawn: in the interface language, or in English.
+    if lower == "metrics" || lower == tl!("Metrics").to_lowercase() {
+        return Some(json!("metrics"));
     }
+    if lower == "optical" || lower == tl!("Optical").to_lowercase() {
+        return Some(json!("optical"));
+    }
+    crate::numeric_expression::parse(s).filter(|v| v.is_finite() && (-1000.0..=10000.0).contains(v)).map(|v| json!(v.round()))
 }
 
 /// Photoshop's editable kerning combo: type a value or Metrics/Optical, or pick a preset.
 pub(super) fn kerning_field(ui: &mut egui::Ui, shown: &str, width: f32) -> Option<serde_json::Value> {
+    let shown = tl!(shown);
     let id = ui.make_persistent_id("props-kern-text");
     let mut buf: String = ui.data_mut(|d| d.get_temp::<String>(id)).unwrap_or_else(|| shown.to_string());
     let mut out = None;
@@ -286,7 +291,7 @@ pub(super) fn kerning_field(ui: &mut egui::Ui, shown: &str, width: f32) -> Optio
         let (press, close) = crate::press_menu::PressCombo::before(ui, "props-kern-presets");
         let combo = crate::widgets::combo_list(ui, "props-kern-presets", "", 16.0, close, |ui| {
             for p in presets {
-                let item = ui.selectable_label(p == shown, p);
+                let item = ui.selectable_label(tl!(p) == shown, tl!(p));
                 if press.chosen(ui, &item) {
                     out = parse_kerning(p);
                 }
@@ -433,7 +438,7 @@ pub(super) fn toggle_cell(ui: &mut egui::Ui, w: f32, on: bool, tip: &str, paint:
             t.text_dim
         },
     );
-    let tip = tip.to_string();
+    let tip = tl!(tip).to_string();
     resp.widget_info(|| egui::WidgetInfo::selected(egui::Role::Button, enabled, on, &tip));
-    resp.on_hover_text(tl!(&tip)).clicked()
+    resp.on_hover_text(&tip).clicked()
 }

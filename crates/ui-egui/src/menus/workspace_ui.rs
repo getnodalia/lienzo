@@ -387,7 +387,7 @@ pub fn windows(app: &mut LienzoApp, ctx: &egui::Context) {
         crate::analysis_ui::panel_window(app, ctx, "modifier-keys", tl!("Modifier Keys"), vec2(-420.0, 80.0), 150.0, |ui| {
             close = crate::analysis_ui::title_row(ui, tl!("Modifier Keys"));
             ui.horizontal(|ui| {
-                for (label, on) in [(&*shift, &mut s.sticky_shift), (&*cmd, &mut s.sticky_command), (&*alt, &mut s.sticky_alt)] {
+                for (label, on) in [(tl!(&shift), &mut s.sticky_shift), (tl!(&cmd), &mut s.sticky_command), (tl!(&alt), &mut s.sticky_alt)] {
                     if ui.add(egui::Button::new(RichText::new(label).size(14.0)).selected(*on).min_size(vec2(40.0, 30.0))).clicked() {
                         *on = !*on;
                     }
@@ -408,7 +408,7 @@ fn dialog(app: &mut LienzoApp, ctx: &egui::Context) {
     let title = title(&kind);
     let names: Vec<String> = app.session.prefs().workspaces.keys().cloned().collect();
     let mut result: Option<bool> = None;
-    egui::Window::new(title)
+    egui::Window::new(tl!(title))
         .id(egui::Id::unique("shell-dialog"))
         .title_bar(false)
         .frame(crate::analysis_ui::float_frame(&t))

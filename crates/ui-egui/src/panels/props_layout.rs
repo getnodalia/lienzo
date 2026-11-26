@@ -23,9 +23,9 @@ pub const COL_GAP: f32 = 8.0;
 pub fn stacked_label(ui: &mut egui::Ui, s: &str, column: &[&str], w: f32, pad: f32) {
     let t = Tokens::get(ui.ctx());
     let font = egui::FontId::proportional(12.0);
-    let widest = column.iter().map(|c| ui.painter().layout_no_wrap((*c).to_owned(), font.clone(), t.text_dim).size().x).fold(0.0, f32::max);
+    let widest = column.iter().map(|c| ui.painter().layout_no_wrap(tl!(c).to_owned(), font.clone(), t.text_dim).size().x).fold(0.0, f32::max);
     let (r, _) = ui.allocate_exact_size(vec2(w, 22.0), Sense::hover());
-    ui.painter().text(pos2(r.right() - pad - widest / 2.0, r.center().y), egui::Align2::CENTER_CENTER, s, font, t.text_dim);
+    ui.painter().text(pos2(r.right() - pad - widest / 2.0, r.center().y), egui::Align2::CENTER_CENTER, tl!(s), font, t.text_dim);
 }
 
 /// Icon for a layer kind (the same glyphs as the Layers panel's kind filter).
@@ -47,9 +47,9 @@ pub fn kind_label(layer: &Layer) -> String {
         return tl!("Frame").into();
     }
     match &layer.content {
-        LayerContent::Adjustment(a) => a.label().to_string(),
-        LayerContent::Group(g) if g.artboard.is_some() => "Artboard".to_string(),
-        other => format!("{} Layer", other.kind_name()),
+        LayerContent::Adjustment(a) => tl!(a.label()).to_string(),
+        LayerContent::Group(g) if g.artboard.is_some() => tl!("Artboard").to_string(),
+        other => tl!(&format!("{} Layer", other.kind_name())).to_string(),
     }
 }
 
@@ -100,7 +100,7 @@ pub fn section(ui: &mut egui::Ui, id: &str, title: &str) -> bool {
         open = !open;
         ui.data_mut(|d| d.insert_temp(key, open));
     }
-    let label = title.to_string();
+    let label = tl!(title).to_string();
     resp.widget_info(move || egui::WidgetInfo::selected(egui::Role::DisclosureTriangle, true, open, &label));
     record(ui.ctx(), title, r);
     if open {
