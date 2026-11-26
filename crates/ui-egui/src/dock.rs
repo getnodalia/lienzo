@@ -102,6 +102,17 @@ impl Group {
         }
     }
 
+    /// The smallest height (tab strip included) a group has where nothing squeezes it in a
+    /// column: docked above, below or beside the canvas, or floating. A group that lays out its own
+    /// list and footer needs room for its header rows, a row of the list and the footer, or the
+    /// footer ends up below the group's edge and is cut off; the others scroll as a whole.
+    pub fn framed_min_height(self) -> f32 {
+        match self {
+            Group::Layers => 270.0,
+            g => g.min_height(),
+        }
+    }
+
     pub fn tabs(self, pro: bool) -> &'static [&'static str] {
         match self {
             // Photoshop Essentials: Color | Swatches | Gradients | Patterns.

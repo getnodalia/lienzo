@@ -46,8 +46,16 @@ impl<P: Clone + Eq + Hash + Debug + Send + Sync + 'static> Renderer<'_, P> {
     /// tabs follow the panel tabs and fit with them ([`fit_with_extra`]). `minimized` hides the body
     /// but keeps the strip. Tabs, strip, header and drag bar are mirrored in right-to-left layout.
     pub(super) fn group(&mut self, ui: &mut Ui, panels: &[P], active: usize, minimized: bool, rect: Rect, kind: GroupKind) -> bool {
-        // A rounded dock group is a card: its fill first, the strip and body on top of it.
-        let round = kind == GroupKind::Dock && self.style.dock_radius > 0.0 && crate::docking::targets::usable(rect);
+        // A rounded group is a card: its fill first, the strip and body on top of it. That is a
+        // group of a dock column and a group of the split tree (a panel docked above, below or
+        // beside the canvas), but not a floating window's group (the window is the card) nor a
+        // lone protected panel such as the canvas, which draws its own surface.
+        let card = match kind {
+            GroupKind::Dock => true,
+            GroupKind::Frame => !stripless(panels, &*self.content),
+            GroupKind::Floating { .. } => false,
+        };
+        let round = card && self.style.dock_radius > 0.0 && crate::docking::targets::usable(rect);
         if round {
             let radius = self.style.dock_radius.clamp(0.0, 255.0).round() as u8;
             ui.painter().rect_filled(rect, radius, self.style.background);
@@ -187,8 +195,8 @@ impl<P: Clone + Eq + Hash + Debug + Send + Sync + 'static> Renderer<'_, P> {
         if !minimized {
             self.contents(ui, selected, Rect::from_min_max(pos2(rect.left(), strip.bottom()), rect.max));
         }
-        // A rounded dock group's outline follows its corners.
-        let radius = if kind == GroupKind::Dock { self.style.dock_radius.clamp(0.0, 255.0).round() as u8 } else { 0 };
+        // A rounded card's outline follows its corners.
+        let radius = if self.dock_frame.is_some() { self.style.dock_radius.clamp(0.0, 255.0).round() as u8 } else { 0 };
         ui.painter().rect_stroke(rect, radius, self.style.border, StrokeKind::Inside);
         false
     }
