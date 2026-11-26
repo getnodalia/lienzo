@@ -405,7 +405,7 @@ fn settings_tab(app: &mut LienzoApp, ui: &mut egui::Ui) {
             let current = app.session.tools.current_preset.clone().filter(|n| app.session.tools.presets.iter().any(|p| p.name.eq_ignore_ascii_case(n)));
             let update =
                 ui.add_enabled_ui(current.is_some(), |ui| icons::button(ui, "check", 24.0, false, tl!("Update the current brush with these settings"))).inner;
-            update.widget_info(|| egui::WidgetInfo::labeled(egui::Role::Button, current.is_some(), "Update the current brush with these settings"));
+            update.widget_info(|| egui::WidgetInfo::labeled(egui::Role::Button, current.is_some(), tl!("Update the current brush with these settings")));
             if update.clicked() {
                 run_or_status(app, "brush.presets.update", json!({ "brush": serde_json::to_value(&b).unwrap_or(Value::Null) }));
             }

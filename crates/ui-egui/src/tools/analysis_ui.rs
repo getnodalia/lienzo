@@ -960,7 +960,7 @@ fn dialog(app: &mut LienzoApp, ctx: &egui::Context) {
         _ => "Measurement Scale Marker",
     };
     let mut result: Option<bool> = None;
-    egui::Window::new(title)
+    egui::Window::new(tl!(title))
         .id(egui::Id::unique("analysis-dialog"))
         .title_bar(false)
         .collapsible(false)

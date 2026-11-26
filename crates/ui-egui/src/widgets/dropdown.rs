@@ -132,7 +132,7 @@ fn dropdown_with<T: PartialEq + Clone>(
     // A scrubby caption drawn just before the dropdown names it; otherwise its own name does.
     let response = match take_label_scrub_name(ui, response.response.rect) {
         Some(label) => response.response.labelled_by(label),
-        None => response.response.accessible_name(name),
+        None => response.response.accessible_name(crate::i18n::t(name)),
     };
     press.after(&response);
     if combo_box_arrow_keys(ui, &response, current, options) {
@@ -510,7 +510,7 @@ pub fn dropdown_with_tooltips<T: PartialEq + Clone>(ui: &mut Ui, id: &str, name:
     });
     let response = match take_label_scrub_name(ui, response.response.rect) {
         Some(label) => response.response.labelled_by(label),
-        None => response.response.accessible_name(name),
+        None => response.response.accessible_name(crate::i18n::t(name)),
     };
     press.after(&response);
     if let Some((_, _, tip)) = options.iter().find(|(v, _, _)| v == current) {
