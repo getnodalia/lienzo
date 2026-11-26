@@ -120,6 +120,17 @@ jobs:
               print("Git dependencies outside getnodalia and nodalia-design:", *bad, sep="\n")
               sys.exit(1)
           PY
+      - name: No crate is named after the Craft apps
+        run: |
+          python3 - <<'PY'
+          import sys, tomllib
+          with open("Cargo.lock", "rb") as fh:
+              lock = tomllib.load(fh)
+          bad = sorted({p["name"] for p in lock.get("package", []) if p["name"].startswith(("craft-", "craft_"))})
+          if bad:
+              print("Crates named after the Craft apps (rename them to nodalia-* or the app's own name):", *bad, sep="\n")
+              sys.exit(1)
+          PY
       - name: No upstream names
         # Lienzo's own names everywhere; upstream's arrive renamed by the weekly sync.
         run: python3 scripts/rebrand.py check
