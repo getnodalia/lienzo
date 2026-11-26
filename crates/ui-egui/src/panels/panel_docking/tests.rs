@@ -2481,7 +2481,7 @@ fn nodalia_groups_beside_the_canvas_are_round_islands_on_every_side() {
         app.run("window.panel.group", json!({"panel":"layers","operation":"move","anchor":"canvas","zone":zone})).unwrap();
         let h = nodalia_harness(app, vec2(1400.0, 900.0));
         let group = probe::group_rect(h.state(), &h.ctx, "layers").unwrap_or_else(|| panic!("{zone}: the Layers group is drawn"));
-        assert!(!in_dock_column(&lay(h.state()), "layers"), "{zone}: the group stands beside the canvas, not in the dock column");
+        assert!(!in_dock_column(lay(h.state()), "layers"), "{zone}: the group stands beside the canvas, not in the dock column");
         let on_group: Vec<_> = rect_shapes(&h).into_iter().filter(|r| same_rect(r.rect, group)).collect();
         assert!(on_group.iter().any(|r| r.fill.a() > 0), "{zone}: the group's card is filled ({group:?})");
         assert!(on_group.iter().any(|r| r.fill.a() == 0 && r.stroke.width > 0.0), "{zone}: the group's outline is drawn ({group:?})");
