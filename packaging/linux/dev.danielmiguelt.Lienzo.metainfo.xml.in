@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- AppStream metadata (software centres, Flathub). Template: package.sh and the Flatpak
-     manifest substitute @VERSION@ and @DATE@ from Cargo.toml and the build date. -->
+<!-- AppStream metadata. Template: package.sh substitutes @VERSION@ and @DATE@ from Cargo.toml and the build date. -->
 <component type="desktop-application">
   <id>dev.danielmiguelt.Lienzo</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT OR Apache-2.0</project_license>
   <name>Lienzo</name>
   <summary>Edit photos and layered PSD documents</summary>
-  <developer id="ai.storyteller">
+  <developer id="dev.danielmiguelt">
     <name>Nodalia</name>
   </developer>
   <description>
@@ -26,10 +25,9 @@
   <launchable type="desktop-id">dev.danielmiguelt.Lienzo.desktop</launchable>
   <icon type="stock">dev.danielmiguelt.Lienzo</icon>
   <!-- Only url types known to appstream 0.15 (Ubuntu 22.04, where CI validates): no vcs-browser. -->
-  <url type="homepage">https://getartcraft.com/apps/photocraft</url>
-  <url type="bugtracker">https://github.com/storytold/photocraft/issues</url>
-  <url type="help">https://github.com/storytold/photocraft</url>
-  <url type="contact">https://discord.gg/artcraft</url>
+  <url type="homepage">https://getnodalia.com</url>
+  <url type="bugtracker">https://github.com/getnodalia/lienzo/issues</url>
+  <url type="help">https://github.com/getnodalia/lienzo</url>
   <categories>
     <category>Graphics</category>
     <category>RasterGraphics</category>
@@ -44,7 +42,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Editing The Great Wave off Kanagawa with type layers and adjustment layers</caption>
-      <image>https://raw.githubusercontent.com/storytold/photocraft/main/docs/images/photocraft-demo.jpg</image>
+      <image>https://raw.githubusercontent.com/getnodalia/nodalia-web/main/assets/screens/lienzo/lienzo-editor-dark.jpg</image>
     </screenshot>
   </screenshots>
   <branding>

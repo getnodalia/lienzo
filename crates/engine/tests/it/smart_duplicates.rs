@@ -259,6 +259,7 @@ fn inspect_and_replace_contents_report_shared_instances() {
 #[cfg(feature = "corpus")]
 #[test]
 fn photoshop_placed_copies_import_as_shared_instances() {
+    skip_without_oracles!("photoshop");
     let path = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus/photoshop/smart-filters/sf-none-plain.psd");
     let bytes = std::fs::read(&path).unwrap_or_else(|e| panic!("{}: {e} (run `cargo xtask corpus --all`)", path.display()));
     let mut file = lienzo_psd::PsdFile::from_bytes(&bytes).unwrap();

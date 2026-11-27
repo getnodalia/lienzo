@@ -4842,3 +4842,223 @@ cameraRaw	White Balance: As Shot	Vitbalans: som tagen
 	Content-aware fill	Innehållsbaserad fyllning
 	Sample content from part of the image and use it to fill a small area	Hämta innehåll från en del av bilden för att fylla ett litet område
 	Reset the crop box, image rotation, and aspect ratio settings	Återställ beskärningsramen, bildrotationen och bildförhållandet
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Ett kommando avbröts eller stoppades under batchbearbetningen. Fortsätta med nästa fil eller stoppa?
+	A file is still being placed; try again when it has finished.	En fil placeras fortfarande; försök igen när den är klar.
+	A native image editor, layer by layer. No account, no cloud.	En inbyggd bildredigerare, lager för lager. Inget konto, inget moln.
+	Allow Tool Recording	Tillåt inspelning av verktyg
+	Allows rotation and scaling of selection	Tillåter rotation och skalning av markeringen
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Använd alltid tryck för opacitet. När det är av styr penselförinställningen trycket
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Använd alltid tryck för storlek. När det är av styr penselförinställningen trycket
+	Answer the open import question first, then import this file again.	Svara först på den öppna importfrågan och importera sedan filen igen.
+	Anti-alias brush application	Kantutjämna penselpåföring
+	Are you sure you want to delete all notes?	Vill du verkligen ta bort alla anteckningar?
+	Arrowhead options	Alternativ för pilspetsar
+	Arrowheads	Pilspetsar
+	Attribute	Attribut
+	Batch preview	Batchförhandsvisning
+	Bottom align text	Justera text längst ned
+	Cancelled placing {name}	Avbröt placeringen av {name}
+	Choose a menu command. Playback asks for its settings when needed.	Välj ett menykommando. Uppspelningen frågar efter dess inställningar vid behov.
+	Choose a remix mode	Välj ett remixläge
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Klicka och flytta åt vänster eller höger för att skala med zoomverktyget (endast OpenGL)
+	Click to open the Brush Preset picker	Klicka för att öppna väljaren för penselförinställningar
+	Concavity	Konkavitet
+	Confirm or cancel the pending Record Again editor first.	Bekräfta eller avbryt först den väntande redigeraren för Spela in igen.
+	Confirm or cancel the pending menu item first.	Bekräfta eller avbryt först det väntande menyalternativet.
+	Copy CSS	Kopiera CSS
+	Could not use the type tool because the layer is locked.	Textverktyget kunde inte användas eftersom lagret är låst.
+	Data Sets as Files is unavailable on the web	Datauppsättningar som filer är inte tillgängligt på webben
+	Delete Note	Ta bort anteckning
+	Delete this note?	Ta bort den här anteckningen?
+	Determines the spread of replaced color	Avgör spridningen för den ersatta färgen
+	Do not erase the foreground swatch color	Radera inte förgrundsfärgens färgruta
+	Draws background color over foreground colors	Ritar bakgrundsfärgen över förgrundsfärgerna
+	Dropped files weren't placed: their document was closed.	Släppta filer placerades inte: deras dokument stängdes.
+	Dropped files weren't placed: too many are waiting for their document.	Släppta filer placerades inte: för många väntar på sitt dokument.
+	Effect	Effekt
+	Empty	Tom
+	Enable to remix all layers	Aktivera för att remixa alla lager
+	End	Slut
+	Erase range of similar colors	Radera ett intervall av liknande färger
+	Erase to History	Radera till historik
+	Filter for embedded smart objects	Filter för inbäddade smarta objekt
+	Filter for linked smart objects that are missing	Filter för länkade smarta objekt vars länk saknas
+	Filter for smart objects linked locally	Filter för lokalt länkade smarta objekt
+	High Memory Photoshop Document	Photoshop-dokument med högt minnesbehov
+	How far to let the erasing spread	Hur långt raderingen får sprida sig
+	Image Compression	Bildkomprimering
+	Import as New Group	Importera som ny grupp
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Importera som ny grupp behåller ”{group}” och lägger till filen som en ny grupp bredvid.
+	Insert Menu Item…	Infoga menyalternativ…
+	Insert Path	Infoga bana
+	LZW	LZW
+	Layer Effects	Lagereffekter
+	Lining	Justerade
+	Linked	Länkad
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Det blir lite minne kvar efter att filen öppnats. Stäng andra appar först, annars kan Lienzo få slut på minne.
+	Load Solid Colors Only	Läs endast in enfärgade
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Minimerar klippning i skuggor och högdagrar och hindrar färgerna från att byta nyans
+	No Adv. Blending	Ingen avancerad blandning
+	No Layer Effects	Inga lagereffekter
+	No Layer Mask	Ingen lagermask
+	No Vector Mask	Ingen vektormask
+	No document.	Inget dokument.
+	No import is waiting. Import the file again.	Ingen import väntar. Importera filen igen.
+	No matching fonts	Inga matchande typsnitt
+	No menu item belongs to this chooser.	Inget menyalternativ hör till den här väljaren.
+	No menu item is waiting.	Inget menyalternativ väntar.
+	No note to delete	Ingen anteckning att ta bort
+	No options for the Add Anchor Point Tool.	Verktyget Lägg till ankarpunkt har inga alternativ.
+	No options for the Delete Anchor Point Tool.	Verktyget Ta bort ankarpunkt har inga alternativ.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Ingen bana att göra en form av: rita en med pennverktyget eller markera en i panelen Banor.
+	No pixels are selected.	Inga pixlar är markerade.
+	No recorded step belongs to this editor.	Inget inspelat steg hör till den här redigeraren.
+	No slices are selected. Click a slice in the preview to select it.	Inga skivor är markerade. Klicka på en skiva i förhandsvisningen för att markera den.
+	No step is waiting.	Inget steg väntar.
+	Not Clipped	Inte urklippt
+	Not Empty	Inte tom
+	Not Linked	Inte länkad
+	Not Locked	Inte låst
+	Not Visible	Inte synlig
+	Note deleted, but the preference could not be saved: {error}	Anteckningen togs bort, men inställningen kunde inte sparas: {error}
+	Nudge	Flytta stegvis
+	Numerals	Siffror
+	Open anyway	Öppna ändå
+	Open as Smart Object…	Öppna som smart objekt…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Att öppna det här dokumentet använder mer minne och kan göra datorn eller andra program långsammare.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Att öppna ”{name}” kräver uppskattningsvis {est} GiB minne ({avail} GiB tillgängligt).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Att öppna ”{name}” kräver uppskattningsvis {est} GiB minne. Det tillgängliga minnet kunde inte mätas.
+	Painting Mode	Målarläge
+	Preparing Free Transform	Förbereder Fri transformering
+	Proportional	Proportionella
+	Proportional Lining	Proportionella justerade
+	Proportional Oldstyle	Proportionella med gammaldags stil
+	Record Again	Spela in igen
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Ersätt tar först bort allt i ”{group}”, inklusive förinställningar som du har redigerat eller flyttat dit. Det går inte att ångra.
+	Report an issue	Rapportera ett problem
+	Resize windows when zooming using the Zoom Tool	Ändra storlek på fönster vid zoomning med zoomverktyget
+	Save Image Pyramid	Spara bildpyramid
+	Save Transparency	Spara transparens
+	Scroll all open document windows when using the hand tool	Rulla alla öppna dokumentfönster när handverktyget används
+	Search and select fonts	Sök efter och välj typsnitt
+	Select Pixels	Markera pixlar
+	Select an action first.	Välj en åtgärd först.
+	Select an action step first.	Välj ett åtgärdssteg först.
+	Selected Slices	Markerade skivor
+	Set 	Uppsättning 
+	Set 1	Uppsättning 1
+	Set 10	Uppsättning 10
+	Set 11	Uppsättning 11
+	Set 12	Uppsättning 12
+	Set 13	Uppsättning 13
+	Set 14	Uppsättning 14
+	Set 15	Uppsättning 15
+	Set 16	Uppsättning 16
+	Set 17	Uppsättning 17
+	Set 18	Uppsättning 18
+	Set 19	Uppsättning 19
+	Set 2	Uppsättning 2
+	Set 20	Uppsättning 20
+	Set 3	Uppsättning 3
+	Set 4	Uppsättning 4
+	Set 5	Uppsättning 5
+	Set 6	Uppsättning 6
+	Set 7	Uppsättning 7
+	Set 8	Uppsättning 8
+	Set 9	Uppsättning 9
+	Set as default	Ange som standard
+	Set exposure for stroke	Ange exponering för penseldrag
+	Set flow rate for stroke	Ange flödeshastighet för penseldrag
+	Set font size	Ange teckenstorlek
+	Set font style	Ange teckenstil
+	Set opacity for stroke	Ange opacitet för penseldrag
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Ange utjämning för penseldrag\nAnvänd högre värden för att minska darrigheten i penseldrag
+	Set symmetry options for Painting	Ange symmetrialternativ för målning
+	Set text color	Ange textfärg
+	Set the brush angle	Ange penselvinkel
+	Smoothing Options	Utjämningsalternativ
+	Start	Start
+	Stylistic Sets	Stilistiska uppsättningar
+	Tabular	Tabell
+	Tabular Lining	Tabell justerade
+	Tabular Oldstyle	Tabell med gammaldags stil
+	The Record Again command changed.	Kommandot Spela in igen ändrades.
+	The action or insertion command changed. Request Insert Menu Item again.	Åtgärden eller infogningskommandot ändrades. Begär Infoga menyalternativ igen.
+	The actions changed. Request Record Again again.	Åtgärderna ändrades. Begär Spela in igen igen.
+	The command permissions changed. Request Insert Menu Item again.	Kommandobehörigheterna ändrades. Begär Infoga menyalternativ igen.
+	The command permissions changed. Request Record Again again.	Kommandobehörigheterna ändrades. Begär Spela in igen igen.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Den aktuella arbetskatalogen ({path}) rapporterar inte sitt lediga utrymme, så Lienzo kan inte stoppa innan den fylls, och stora filer får inget extra utrymme från den utan en gräns för arbetsdiskens storlek. Varningen gäller den aktuella konfigurationen; ändringarna ovan börjar gälla vid Verkställ eller OK. Ange en gräns eller använd en lokal disk.
+	The document changed. Please choose Clear All again.	Dokumentet ändrades. Välj Rensa alla igen.
+	The document changed. Request Record Again again.	Dokumentet ändrades. Begär Spela in igen igen.
+	The document or its notes changed. Please delete the note again.	Dokumentet eller dess anteckningar ändrades. Ta bort anteckningen igen.
+	The preference could not be saved: {error}	Inställningen kunde inte sparas: {error}
+	The step editor could not be opened.	Stegredigeraren kunde inte öppnas.
+	The step has no command editor.	Steget har ingen kommandoredigerare.
+	Tolerance for choosing related colors	Tolerans för val av närliggande färger
+	Top align text	Justera text längst upp
+	Use relative positioning for reference point	Använd relativ positionering för referenspunkten
+	Use these settings for new arrows	Använd de här inställningarna för nya pilar
+	Useful mixer brush combinations	Användbara kombinationer för blandningspenseln
+	ZIP	ZIP
+	Zoom current window to 1:1	Zooma aktuellt fönster till 1:1
+	Zoom current window to fill the screen	Zooma aktuellt fönster så att det fyller skärmen
+	Zoom current window to screen size	Zooma aktuellt fönster till skärmstorlek
+	brush tool	penselverktyg
+	by Nodalia	av Nodalia
+	dodge tool	skuggningsverktyg
+	{message} into “{group}”	{message} i ”{group}”
+	{ok} written to {dir}	{ok} skrevs till {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Penselgruppen ”{group}” har redan {n} egen pensel.|Penselgruppen ”{group}” har redan {n} egna penslar.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Toningsgruppen ”{group}” finns redan ({n} toning).|Toningsgruppen ”{group}” finns redan ({n} toningar).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} bildresursutdata misslyckades|{what}: {n} bildresursutdata misslyckades
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} fil misslyckades|{what}: {n} filer misslyckades
+	A frame supports affine transforms; select its image for perspective transforms	En ram stöder affina transformeringar; markera dess bild för perspektivtransformeringar
+	A frame supports affine transforms; select its image to warp it	En ram stöder affina transformeringar; markera dess bild för att förvränga den
+	Convert to Frame…	Konvertera till ram…
+	Create a new custom frame	Skapa en ny anpassad ram
+	Create a new polygonal frame	Skapa en ny månghörnig ram
+	Create a new triangular frame	Skapa en ny triangulär ram
+	Drag to move the selected path	Dra för att flytta den markerade banan
+	Equalize Entire Image Based On Selected Area	Utjämna hela bilden utifrån markerat område
+	Equalize Selected Area Only	Utjämna endast markerat område
+	Fit Content to Frame	Anpassa innehåll till ram
+	Fit Frame to Content	Anpassa ram till innehåll
+	Frame coordinates must be finite and within 600000 pixels	Ramkoordinater måste vara ändliga och inom 600000 pixlar
+	Import Image…	Importera bild…
+	Invalid frame transform	Ogiltig ramtransformering
+	Invalid nested file drop	Ogiltig nästlad filsläppning
+	Learn	Lär dig
+	New Frame	Ny ram
+	New file	Ny fil
+	No settings saved: these raws can't keep a sidecar here	Inga inställningar sparades: de här råfilerna kan inte ha en sidecar-fil här
+	Nothing to save: these raws are at their default settings	Inget att spara: de här råfilerna har standardinställningar
+	On your computer	På din dator
+	Recently Used Colors	Nyligen använda färger
+	Replace Image…	Ersätt bild…
+	Save the settings to each raw's sidecar without opening it	Spara inställningarna i varje råfils sidecar-fil utan att öppna den
+	Shapes can't use patterns yet	Former kan inte använda mönster ännu
+	Some settings could not be saved; the raws stay open	Vissa inställningar kunde inte sparas; råfilerna förblir öppna
+	Source: {name}	Källa: {name}
+	Stop Color	Stoppfärg
+	The GPU compositor is still being prepared	GPU-kompositorn förbereds fortfarande
+	The History Brush source was deleted: set a new source in the History panel	Källan för historikpenseln togs bort: ange en ny källa i panelen Historik
+	The frame is locked	Ramen är låst
+	The frame is unavailable	Ramen är inte tillgänglig
+	Website	Webbplats
+# Template gallery on the Home screen
+	Start from a template	Börja från en mall
+	Social	Sociala medier
+	Print & paper	Tryck och papper
+	Web & art	Webb och konst
+	Quiet Quote	Stilla citat
+	Weekend Notes	Helganteckningar
+	Little Things	Små saker
+	Video Thumbnail	Videominiatyr
+	Evening Poster	Kvällsaffisch
+	Coast Postcard	Vykort från kusten
+	Garden Invitation	Trädgårdsinbjudan
+	Business Card	Visitkort
+	Dusk Hills	Kullar i skymningen
+	Web Banner	Webbanner
+	Album Cover	Albumomslag
+	Colour Palette	Färgpalett

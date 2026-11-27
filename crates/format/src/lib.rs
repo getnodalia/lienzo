@@ -57,7 +57,7 @@ pub const EXTENSION: &str = "lienzo";
 
 /// The extension native documents had before Lienzo had one of its own (upstream's). Such files
 /// still open, by name and by content; nothing new is saved with it.
-pub const LEGACY_EXTENSION: &str = craft_pcraft_format::EXTENSION;
+pub const LEGACY_EXTENSION: &str = nodalia_lienzo_format::EXTENSION;
 
 /// `true` for an extension (without the dot, any case) that names a native document: Lienzo's
 /// own or the older one.
@@ -94,9 +94,9 @@ impl FormatError {
     }
 }
 
-impl From<craft_pcraft_format::Error> for FormatError {
-    fn from(e: craft_pcraft_format::Error) -> Self {
-        use craft_pcraft_format::Error;
+impl From<nodalia_lienzo_format::Error> for FormatError {
+    fn from(e: nodalia_lienzo_format::Error) -> Self {
+        use nodalia_lienzo_format::Error;
         match e {
             Error::Corrupt(m) => FormatError::Corrupt(m),
             Error::Unsupported(m) => FormatError::Unsupported(m),
@@ -168,7 +168,7 @@ pub const BROWSER_MAX_TOTAL_BYTES: u64 = 1 << 30;
 impl Default for LoadOptions {
     fn default() -> Self {
         #[cfg_attr(not(target_arch = "wasm32"), allow(unused_mut))]
-        let mut limits = craft_pcraft_format::Limits::default();
+        let mut limits = nodalia_lienzo_format::Limits::default();
         #[cfg(target_arch = "wasm32")]
         {
             limits.max_blob_bytes = limits.max_blob_bytes.min(BROWSER_MAX_BLOB_BYTES);

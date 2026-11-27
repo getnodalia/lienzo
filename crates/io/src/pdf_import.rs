@@ -1,7 +1,7 @@
-//! PDF import: craft-pdf (a Rust PDF reader and renderer built on Hayro) rasterizes the
+//! PDF import: nodalia-pdf (a Rust PDF reader and renderer built on Hayro) rasterizes the
 //! selected pages, and each page becomes one artboard.
 //!
-//! Raster pages only: editable text and vector import would need craft-pdf's `interpret`
+//! Raster pages only: editable text and vector import would need nodalia-pdf's `interpret`
 //! device and is not part of this importer. The renderer's hard output bounds (8192 px per
 //! side and 64M px per page) and a document-wide strip budget are respected by lowering the
 //! effective DPI, so each page keeps its physical size: pixels / resolution * 72 pt.
@@ -14,10 +14,6 @@
 
 use crate::{ImportOptions, ImportResult, IoError};
 #[cfg(not(target_arch = "wasm32"))]
-use craft_pdf::interpret::InterpreterSettings;
-#[cfg(not(target_arch = "wasm32"))]
-use craft_pdf::raster::{self, RenderCache};
-#[cfg(not(target_arch = "wasm32"))]
 use lienzo_color::{ColorMode, PixelFormat, SampleType};
 #[cfg(not(target_arch = "wasm32"))]
 use lienzo_doc::{Artboard, Document, Group, Layer, LayerContent};
@@ -26,6 +22,10 @@ use lienzo_geom::{Rect, Size};
 use lienzo_raster::Interrupt;
 #[cfg(not(target_arch = "wasm32"))]
 use lienzo_raster::Surface;
+#[cfg(not(target_arch = "wasm32"))]
+use nodalia_pdf::interpret::InterpreterSettings;
+#[cfg(not(target_arch = "wasm32"))]
+use nodalia_pdf::raster::{self, RenderCache};
 #[cfg(not(target_arch = "wasm32"))]
 use std::sync::Arc;
 #[cfg(not(target_arch = "wasm32"))]
@@ -59,7 +59,7 @@ pub fn import(name: &str, bytes: &[u8], opts: &ImportOptions, ctl: &Interrupt) -
 
     ctl.check().map_err(|_| IoError::Cancelled)?;
     let requested = if opts.pdf_dpi.is_finite() && opts.pdf_dpi > 0.0 { f64::from(opts.pdf_dpi) } else { 300.0 };
-    let pdf = craft_pdf::open_slice_with_options(bytes, None, &craft_pdf::OpenOptions::default()).map_err(open_error)?;
+    let pdf = nodalia_pdf::open_slice_with_options(bytes, None, &nodalia_pdf::OpenOptions::default()).map_err(open_error)?;
     let total = pdf.pages().len();
     if total == 0 {
         return Err(IoError::Unsupported("PDF has no pages".into()));
@@ -182,7 +182,7 @@ pub fn import(name: &str, bytes: &[u8], opts: &ImportOptions, ctl: &Interrupt) -
             size: Some([width, height]),
             offset: [0.0, 0.0],
             // PDF pages composite onto white, as every PDF viewer and the previous importer did.
-            // craft-pdf returns premultiplied RGBA8; an opaque background makes alpha 1, so the
+            // nodalia-pdf returns premultiplied RGBA8; an opaque background makes alpha 1, so the
             // bytes below can be written as straight alpha. A transparent background would need
             // un-premultiplying (dividing each colour by alpha) first.
             background: [255, 255, 255, 255],
@@ -192,7 +192,7 @@ pub fn import(name: &str, bytes: &[u8], opts: &ImportOptions, ctl: &Interrupt) -
         if rendered.diagnostics.image_decode_failed {
             warnings.push(format!("PDF page {page_number}: an image could not be decoded and is missing"));
         }
-        // craft-pdf's hayro backend does not emit this flag yet (its README says so); keep the
+        // nodalia-pdf's hayro backend does not emit this flag yet (its README says so); keep the
         // warning ready so a backend that starts reporting font substitution needs no change here.
         if rendered.diagnostics.unsupported_font {
             warnings.push(format!("PDF page {page_number}: a font could not be used and was substituted, so text may look different"));
@@ -235,15 +235,15 @@ pub fn import(name: &str, bytes: &[u8], opts: &ImportOptions, ctl: &Interrupt) -
     Ok(ImportResult { warnings, document: doc, source_read_only: false, preview_only: false })
 }
 
-/// Renders one page, forwarding `ctl`'s cancellation to craft-pdf while it interprets content.
+/// Renders one page, forwarding `ctl`'s cancellation to nodalia-pdf while it interprets content.
 ///
-/// craft-pdf checks `InterpreterSettings::cancelled` between content operators, so a dense
+/// nodalia-pdf checks `InterpreterSettings::cancelled` between content operators, so a dense
 /// vector page (CAD, maps) can be stopped part-way through. `Interrupt` is a borrowed callback
 /// while the setting needs an owned flag, so a scoped watcher thread copies one into the other
 /// every few milliseconds until the render returns.
 #[cfg(not(target_arch = "wasm32"))]
 fn render_page<'a>(
-    page: &'a craft_pdf::syntax::page::Page<'a>,
+    page: &'a nodalia_pdf::syntax::page::Page<'a>,
     cache: &RenderCache<'a>,
     options: &raster::Options,
     ctl: &Interrupt,
@@ -309,10 +309,10 @@ fn effective_dpi(requested: f64, sizes: &[(f64, f64)], max_side: u64, max_page_p
     }
 }
 
-/// Maps a craft-pdf open failure to the importer's error.
+/// Maps a nodalia-pdf open failure to the importer's error.
 #[cfg(not(target_arch = "wasm32"))]
-fn open_error(error: craft_pdf::OpenError) -> IoError {
-    use craft_pdf::OpenError;
+fn open_error(error: nodalia_pdf::OpenError) -> IoError {
+    use nodalia_pdf::OpenError;
     match error {
         OpenError::InputLimit { limit } => IoError::Unsupported(format!("PDF is larger than the {limit}-byte input limit")),
         OpenError::Allocation => IoError::Unsupported("PDF needs more memory than is available".into()),
@@ -321,7 +321,7 @@ fn open_error(error: craft_pdf::OpenError) -> IoError {
     }
 }
 
-/// Maps a craft-pdf render failure to the importer's error.
+/// Maps a nodalia-pdf render failure to the importer's error.
 #[cfg(not(target_arch = "wasm32"))]
 fn render_error(page: usize, dpi: f64, error: raster::Error) -> IoError {
     use raster::Error;
@@ -384,7 +384,7 @@ mod tests {
     #[test]
     fn a_dense_page_stops_when_the_interrupt_fires_mid_render() {
         let pdf = dense_operator_pdf(1_000_000).expect("writing the dense PDF");
-        let document = craft_pdf::open_slice_with_options(&pdf, None, &craft_pdf::OpenOptions::default()).expect("the dense PDF opens");
+        let document = nodalia_pdf::open_slice_with_options(&pdf, None, &nodalia_pdf::OpenOptions::default()).expect("the dense PDF opens");
         let cache = RenderCache::new();
         let options =
             raster::Options { scale: [1.0, 1.0], size: Some([200, 100]), offset: [0.0, 0.0], background: [255, 255, 255, 255], color_replacement: None };

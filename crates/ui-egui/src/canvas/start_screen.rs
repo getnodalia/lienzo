@@ -367,6 +367,8 @@ fn creator_home(app: &mut LienzoApp, ui: &mut egui::Ui, look: &nodalia_theme::cr
             .zip(&textures)
             .map(|((path, (name, folder)), tex)| home::Recent { name, folder, path, thumb: tex.as_ref().map(|t| (t.id(), t.size_vec2())) })
             .collect();
+        crate::home_templates_ui::show(app, ui, look);
+        ui.add_space(24.0);
         let mut grid = app.ui.chrome.home_recent_grid;
         recent_pick = home::recents(ui, look, &labels, &list, &mut grid);
         app.ui.chrome.home_recent_grid = grid;

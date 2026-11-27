@@ -9,8 +9,8 @@ workspace = true
 
 [dependencies]
 chrono = { workspace = true }
-craft-print = { workspace = true }
-craft-ui = { workspace = true }
+nodalia-print = { workspace = true }
+nodalia-ui = { workspace = true }
 lienzo-geom = { workspace = true }
 lienzo-color = { workspace = true }
 lienzo-cms = { workspace = true }
@@ -51,7 +51,7 @@ web-time = { workspace = true }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 # Floating panels open in their own OS windows on the desktop; the web keeps them in the page.
-craft-ui = { workspace = true, features = ["native-windows"] }
+nodalia-ui = { workspace = true, features = ["native-windows"] }
 nodalia-update = { workspace = true }
 rayon = { workspace = true }
 # Safe native UI-language APIs (Windows/macOS); no subprocess or web dependency.

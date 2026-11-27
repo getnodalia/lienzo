@@ -1091,7 +1091,7 @@ pub fn install_fonts_with(ctx: &egui::Context, cjk: crate::cjk_fonts::Sources) {
     if let Some(mono) = mono {
         fonts.families.entry(FontFamily::Monospace).or_default().insert(0, mono);
     }
-    // The optional craft-fonts input carries Japanese, Simplified Chinese, Korean, Arabic, Thai and
+    // The optional nodalia-fonts input carries Japanese, Simplified Chinese, Korean, Arabic, Thai and
     // other faces. They are not registered into this static stack: `cjk_fonts` installs a
     // per-character font provider for them, so a broad Simplified Chinese face is not put in the
     // family stack ahead of the Japanese or Korean face, and a locale without a Traditional Chinese
@@ -1127,7 +1127,7 @@ pub fn install_fonts_with(ctx: &egui::Context, cjk: crate::cjk_fonts::Sources) {
     {
         ctx.add_plugin(UiFontSizePlugin { applied: size, defer_after_install: true });
     }
-    // CJK, Thai, Arabic, Indic and other script fallback fonts (craft-fonts' Japanese ones if built in, then
+    // CJK, Thai, Arabic, Indic and other script fallback fonts (nodalia-fonts' Japanese ones if built in, then
     // the system's) are registered on demand (cjk_fonts.rs).
     crate::cjk_fonts::install_with(ctx, cjk);
 }
@@ -1216,7 +1216,7 @@ impl egui::Plugin for UiFontSizePlugin {
         // The provider must use the scale of the definitions that were active while this pass
         // laid out text. A face it discovers during the pass is inserted at that old scale; after
         // `set_fonts` the rescaled definitions take effect and the provider follows them.
-        crate::cjk_fonts::set_craft_font_scale(ctx, font_scale(size));
+        crate::cjk_fonts::set_nodalia_font_scale(ctx, font_scale(size));
         self.applied = size;
         ctx.request_repaint();
     }

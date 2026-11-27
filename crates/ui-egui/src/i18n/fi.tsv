@@ -4845,3 +4845,206 @@ cameraRaw	White Balance: As Shot	Valkotasapaino: kuvauksen mukainen
 	Content-aware fill	Sisältöön perustuva täyttö
 	Sample content from part of the image and use it to fill a small area	Ota sisältöä kuvan osasta pienen alueen täyttämiseksi
 	Reset the crop box, image rotation, and aspect ratio settings	Palauta rajauskehys, kuvan kierto ja kuvasuhde
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Komento peruutettiin tai pysäytettiin eräajon aikana. Jatketaanko seuraavaan tiedostoon vai pysäytetäänkö?
+	A file is still being placed; try again when it has finished.	Tiedostoa sijoitetaan vielä; yritä uudelleen, kun se on valmis.
+	A native image editor, layer by layer. No account, no cloud.	Natiivi kuvankäsittelyohjelma, kerros kerrokselta. Ei tiliä, ei pilveä.
+	Allow Tool Recording	Salli työkalujen tallennus
+	Allows rotation and scaling of selection	Sallii valinnan kiertämisen ja skaalaamisen
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Käytä aina painetta peittävyyteen. Kun asetus on pois päältä, sivellinasetus ohjaa painetta
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Käytä aina painetta kokoon. Kun asetus on pois päältä, sivellinasetus ohjaa painetta
+	Answer the open import question first, then import this file again.	Vastaa ensin avoimeen tuontikysymykseen ja tuo sitten tämä tiedosto uudelleen.
+	Anti-alias brush application	Käytä sivellintä reunanpehmennyksellä
+	Are you sure you want to delete all notes?	Haluatko varmasti poistaa kaikki muistiinpanot?
+	Arrowhead options	Nuolenkärkien asetukset
+	Arrowheads	Nuolenkärjet
+	Attribute	Määrite
+	Batch preview	Erän esikatselu
+	Bottom align text	Tasaa teksti alas
+	Cancelled placing {name}	Kohteen {name} sijoitus peruutettiin
+	Choose a menu command. Playback asks for its settings when needed.	Valitse valikkokomento. Toisto kysyy sen asetuksia tarvittaessa.
+	Choose a remix mode	Valitse remix-tila
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Skaalaa zoomaustyökalulla napsauttamalla ja siirtämällä vasemmalle tai oikealle (vain OpenGL)
+	Click to open the Brush Preset picker	Avaa sivellinasetusten valitsin napsauttamalla
+	Concavity	Koveruus
+	Confirm or cancel the pending Record Again editor first.	Vahvista tai peruuta ensin odottava Tallenna uudelleen -muokkain.
+	Confirm or cancel the pending menu item first.	Vahvista tai peruuta ensin odottava valikkokohta.
+	Copy CSS	Kopioi CSS
+	Could not use the type tool because the layer is locked.	Tekstityökalua ei voitu käyttää, koska kerros on lukittu.
+	Data Sets as Files is unavailable on the web	Tietojoukot tiedostoina ei ole käytettävissä verkossa
+	Delete Note	Poista muistiinpano
+	Delete this note?	Poistetaanko tämä muistiinpano?
+	Determines the spread of replaced color	Määrittää korvattavan värin leviämisen
+	Do not erase the foreground swatch color	Älä pyyhi edustavärin värimallia
+	Draws background color over foreground colors	Piirtää taustavärin edustavärien päälle
+	Dropped files weren't placed: their document was closed.	Pudotettuja tiedostoja ei sijoitettu: niiden asiakirja suljettiin.
+	Dropped files weren't placed: too many are waiting for their document.	Pudotettuja tiedostoja ei sijoitettu: liian moni odottaa asiakirjaansa.
+	Effect	Tehoste
+	Empty	Tyhjä
+	Enable to remix all layers	Ota käyttöön, jos haluat remiksata kaikki kerrokset
+	End	Loppu
+	Erase range of similar colors	Pyyhi samankaltaisten värien alue
+	Erase to History	Pyyhi historiaan
+	Filter for embedded smart objects	Upotettujen älykkäiden objektien suodatin
+	Filter for linked smart objects that are missing	Suodatin linkitetyille älykkäille objekteille, joiden linkki puuttuu
+	Filter for smart objects linked locally	Suodatin paikallisesti linkitetyille älykkäille objekteille
+	High Memory Photoshop Document	Paljon muistia vaativa Photoshop-asiakirja
+	How far to let the erasing spread	Kuinka kauas pyyhkiminen saa levitä
+	Image Compression	Kuvan pakkaus
+	Import as New Group	Tuo uutena ryhmänä
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Tuo uutena ryhmänä säilyttää ryhmän ”{group}” ja lisää tiedoston uutena ryhmänä sen viereen.
+	Insert Menu Item…	Lisää valikkokohta…
+	Insert Path	Lisää polku
+	LZW	LZW
+	Layer Effects	Kerrostehosteet
+	Lining	Tasakorkeat
+	Linked	Linkitetty
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Tämän tiedoston avaamisen jälkeen muistia jää vähän. Sulje ensin muut sovellukset, muuten Lienzon muisti voi loppua.
+	Load Solid Colors Only	Lataa vain yksiväriset
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Minimoi leikkautumisen varjoissa ja kirkkaimmissa kohdissa eikä anna värien sävyn muuttua
+	No Adv. Blending	Ei edistynyttä sekoitusta
+	No Layer Effects	Ei kerrostehosteita
+	No Layer Mask	Ei kerrosmaskia
+	No Vector Mask	Ei vektorimaskia
+	No document.	Ei asiakirjaa.
+	No import is waiting. Import the file again.	Ei odottavaa tuontia. Tuo tiedosto uudelleen.
+	No matching fonts	Ei vastaavia fontteja
+	No menu item belongs to this chooser.	Tähän valitsimeen ei kuulu mitään valikkokohtaa.
+	No menu item is waiting.	Ei odottavaa valikkokohtaa.
+	No note to delete	Ei poistettavaa muistiinpanoa
+	No options for the Add Anchor Point Tool.	Ankkuripisteen lisäystyökalulla ei ole asetuksia.
+	No options for the Delete Anchor Point Tool.	Ankkuripisteen poistotyökalulla ei ole asetuksia.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Ei polkua, josta muotoa voisi tehdä: piirrä sellainen kynätyökalulla tai valitse jokin Polut-paneelista.
+	No pixels are selected.	Pikseleitä ei ole valittu.
+	No recorded step belongs to this editor.	Tähän muokkaimeen ei kuulu tallennettua vaihetta.
+	No slices are selected. Click a slice in the preview to select it.	Viipaleita ei ole valittu. Valitse viipale napsauttamalla sitä esikatselussa.
+	No step is waiting.	Ei odottavaa vaihetta.
+	Not Clipped	Ei leikattu
+	Not Empty	Ei tyhjä
+	Not Linked	Ei linkitetty
+	Not Locked	Ei lukittu
+	Not Visible	Ei näkyvissä
+	Note deleted, but the preference could not be saved: {error}	Muistiinpano poistettiin, mutta asetusta ei voitu tallentaa: {error}
+	Nudge	Siirrä pykälä kerrallaan
+	Numerals	Numerot
+	Open anyway	Avaa silti
+	Open as Smart Object…	Avaa älykkäänä objektina…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Tämän asiakirjan avaaminen käyttää enemmän muistia ja voi hidastaa tietokonetta tai muita käynnissä olevia sovelluksia.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Tiedoston ”{name}” avaaminen vaatii arviolta {est} GiB muistia ({avail} GiB käytettävissä).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Tiedoston ”{name}” avaaminen vaatii arviolta {est} GiB muistia. Käytettävissä olevaa muistia ei voitu mitata.
+	Painting Mode	Maalaustila
+	Preparing Free Transform	Valmistellaan vapaata muunnosta
+	Proportional	Suhteelliset
+	Proportional Lining	Suhteelliset tasakorkeat
+	Proportional Oldstyle	Suhteelliset vanhanaikaiset
+	Record Again	Tallenna uudelleen
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Korvaa poistaa ensin kaiken ryhmästä ”{group}”, myös siellä muokkaamasi tai sinne siirtämäsi asetukset. Tätä ei voi kumota.
+	Report an issue	Ilmoita ongelmasta
+	Resize windows when zooming using the Zoom Tool	Muuta ikkunoiden kokoa zoomattaessa zoomaustyökalulla
+	Save Image Pyramid	Tallenna kuvapyramidi
+	Save Transparency	Tallenna läpinäkyvyys
+	Scroll all open document windows when using the hand tool	Vieritä kaikkia avoimia asiakirjaikkunoita käsityökalua käytettäessä
+	Search and select fonts	Hae ja valitse fontteja
+	Select Pixels	Valitse pikselit
+	Select an action first.	Valitse ensin toiminto.
+	Select an action step first.	Valitse ensin toiminnon vaihe.
+	Selected Slices	Valitut viipaleet
+	Set 	Sarja 
+	Set 1	Sarja 1
+	Set 10	Sarja 10
+	Set 11	Sarja 11
+	Set 12	Sarja 12
+	Set 13	Sarja 13
+	Set 14	Sarja 14
+	Set 15	Sarja 15
+	Set 16	Sarja 16
+	Set 17	Sarja 17
+	Set 18	Sarja 18
+	Set 19	Sarja 19
+	Set 2	Sarja 2
+	Set 20	Sarja 20
+	Set 3	Sarja 3
+	Set 4	Sarja 4
+	Set 5	Sarja 5
+	Set 6	Sarja 6
+	Set 7	Sarja 7
+	Set 8	Sarja 8
+	Set 9	Sarja 9
+	Set as default	Aseta oletukseksi
+	Set exposure for stroke	Aseta vedon valotus
+	Set flow rate for stroke	Aseta vedon virtausnopeus
+	Set font size	Aseta fontin koko
+	Set font style	Aseta fontin tyyli
+	Set opacity for stroke	Aseta vedon peittävyys
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Aseta vedon tasoitus\nSuuremmat arvot vähentävät siveltimenvetojen tärinää
+	Set symmetry options for Painting	Aseta maalauksen symmetria-asetukset
+	Set text color	Aseta tekstin väri
+	Set the brush angle	Aseta siveltimen kulma
+	Smoothing Options	Tasoitusasetukset
+	Start	Alku
+	Stylistic Sets	Tyylilliset sarjat
+	Tabular	Taulukko
+	Tabular Lining	Taulukko tasakorkeat
+	Tabular Oldstyle	Taulukko vanhanaikaiset
+	The Record Again command changed.	Tallenna uudelleen -komento muuttui.
+	The action or insertion command changed. Request Insert Menu Item again.	Toiminto tai lisäyskomento muuttui. Pyydä Lisää valikkokohta uudelleen.
+	The actions changed. Request Record Again again.	Toiminnot muuttuivat. Pyydä Tallenna uudelleen uudelleen.
+	The command permissions changed. Request Insert Menu Item again.	Komentojen oikeudet muuttuivat. Pyydä Lisää valikkokohta uudelleen.
+	The command permissions changed. Request Record Again again.	Komentojen oikeudet muuttuivat. Pyydä Tallenna uudelleen uudelleen.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Nykyinen työkansio ({path}) ei ilmoita vapaata tilaansa, joten Lienzo ei voi pysähtyä ennen sen täyttymistä, eivätkä suuret tiedostot saa siitä lisätilaa ilman työlevyn kokorajaa. Tämä varoitus koskee nykyistä kokoonpanoa; yllä olevat muutokset tulevat voimaan Käytä- tai OK-painikkeella. Aseta raja tai käytä paikallista levyä.
+	The document changed. Please choose Clear All again.	Asiakirja muuttui. Valitse Tyhjennä kaikki uudelleen.
+	The document changed. Request Record Again again.	Asiakirja muuttui. Pyydä Tallenna uudelleen uudelleen.
+	The document or its notes changed. Please delete the note again.	Asiakirja tai sen muistiinpanot muuttuivat. Poista muistiinpano uudelleen.
+	The preference could not be saved: {error}	Asetusta ei voitu tallentaa: {error}
+	The step editor could not be opened.	Vaihemuokkainta ei voitu avata.
+	The step has no command editor.	Vaiheella ei ole komentomuokkainta.
+	Tolerance for choosing related colors	Toleranssi liittyvien värien valintaan
+	Top align text	Tasaa teksti ylös
+	Use relative positioning for reference point	Käytä suhteellista sijoittelua vertailupisteelle
+	Use these settings for new arrows	Käytä näitä asetuksia uusiin nuoliin
+	Useful mixer brush combinations	Hyödyllisiä sekoitussiveltimen yhdistelmiä
+	ZIP	ZIP
+	Zoom current window to 1:1	Zoomaa nykyinen ikkuna kokoon 1:1
+	Zoom current window to fill the screen	Zoomaa nykyinen ikkuna täyttämään näyttö
+	Zoom current window to screen size	Zoomaa nykyinen ikkuna näytön kokoon
+	brush tool	sivellintyökalu
+	by Nodalia	Tekijä: Nodalia
+	dodge tool	vaalennustyökalu
+	{message} into “{group}”	{message} ryhmään ”{group}”
+	{ok} written to {dir}	{ok} kirjoitettiin kohteeseen {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Sivellinryhmässä ”{group}” on jo {n} oma sivellin.|Sivellinryhmässä ”{group}” on jo {n} omaa sivellintä.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Liukuväriryhmä ”{group}” on jo olemassa ({n} liukuväri).|Liukuväriryhmä ”{group}” on jo olemassa ({n} liukuväriä).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} kuvaresurssin tuloste epäonnistui|{what}: {n} kuvaresurssin tulostetta epäonnistui
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} tiedosto epäonnistui|{what}: {n} tiedostoa epäonnistui
+	A frame supports affine transforms; select its image for perspective transforms	Kehys tukee affiineja muunnoksia; valitse sen kuva perspektiivimuunnoksia varten
+	A frame supports affine transforms; select its image to warp it	Kehys tukee affiineja muunnoksia; valitse sen kuva vääristääksesi sitä
+	Convert to Frame…	Muunna kehykseksi…
+	Create a new custom frame	Luo uusi mukautettu kehys
+	Create a new polygonal frame	Luo uusi monikulmiokehys
+	Create a new triangular frame	Luo uusi kolmiokehys
+	Drag to move the selected path	Siirrä valittua polkua vetämällä
+	Equalize Entire Image Based On Selected Area	Tasaa koko kuva valitun alueen perusteella
+	Equalize Selected Area Only	Tasaa vain valittu alue
+	Fit Content to Frame	Sovita sisältö kehykseen
+	Fit Frame to Content	Sovita kehys sisältöön
+	Frame coordinates must be finite and within 600000 pixels	Kehyksen koordinaattien on oltava äärellisiä ja 600000 pikselin sisällä
+	Import Image…	Tuo kuva…
+	Invalid frame transform	Virheellinen kehyksen muunnos
+	Invalid nested file drop	Virheellinen sisäkkäinen tiedoston pudotus
+	Learn	Opi
+	New Frame	Uusi kehys
+	New file	Uusi tiedosto
+	No settings saved: these raws can't keep a sidecar here	Asetuksia ei tallennettu: näille raw-tiedostoille ei voi tässä pitää sidecar-tiedostoa
+	Nothing to save: these raws are at their default settings	Ei tallennettavaa: näissä raw-tiedostoissa on oletusasetukset
+	On your computer	Tietokoneellasi
+	Recently Used Colors	Viimeksi käytetyt värit
+	Replace Image…	Korvaa kuva…
+	Save the settings to each raw's sidecar without opening it	Tallenna asetukset kunkin raw-tiedoston sidecar-tiedostoon avaamatta sitä
+	Shapes can't use patterns yet	Muodot eivät voi vielä käyttää kuvioita
+	Some settings could not be saved; the raws stay open	Kaikkia asetuksia ei voitu tallentaa; raw-tiedostot pysyvät auki
+	Source: {name}	Lähde: {name}
+	Stop Color	Pysäytysväri
+	The GPU compositor is still being prepared	GPU-kompositoria valmistellaan vielä
+	The History Brush source was deleted: set a new source in the History panel	Historiasiveltimen lähde poistettiin: aseta uusi lähde Historia-paneelissa
+	The frame is locked	Kehys on lukittu
+	The frame is unavailable	Kehys ei ole käytettävissä
+	Website	Verkkosivusto

@@ -4386,3 +4386,203 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Vyplnění podle obsahu
 	Sample content from part of the image and use it to fill a small area	Vzít obsah z části obrázku k vyplnění malé oblasti
 	Reset the crop box, image rotation, and aspect ratio settings	Obnovit rámeček ořezu, otočení obrázku a poměr stran
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Příkaz byl během dávkového zpracování zrušen nebo zastaven. Pokračovat dalším souborem, nebo zastavit?
+	A file is still being placed; try again when it has finished.	Soubor se stále umisťuje; zkuste to znovu, až bude hotov.
+	A native image editor, layer by layer. No account, no cloud.	Nativní editor obrázků po vrstvách. Bez účtu, bez cloudu.
+	Allow Tool Recording	Povolit záznam nástrojů
+	Allows rotation and scaling of selection	Umožňuje otáčení a změnu měřítka výběru
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Vždy používat tlak pro krytí. Je-li vypnuto, tlak řídí předvolba štětce
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Vždy používat tlak pro velikost. Je-li vypnuto, tlak řídí předvolba štětce
+	Answer the open import question first, then import this file again.	Nejprve odpovězte na otevřenou otázku k importu a poté tento soubor naimportujte znovu.
+	Anti-alias brush application	Použít štětec s vyhlazením hran
+	Are you sure you want to delete all notes?	Opravdu chcete odstranit všechny poznámky?
+	Arrowhead options	Možnosti hrotů šipek
+	Arrowheads	Hroty šipek
+	Attribute	Atribut
+	Batch preview	Náhled dávky
+	Bottom align text	Zarovnat text dolů
+	CPU Rendering	Vykreslování procesorem
+	Calculating…	Počítání…
+	Cancelled placing {name}	Umístění souboru {name} bylo zrušeno
+	Choose a menu command. Playback asks for its settings when needed.	Vyberte příkaz nabídky. Přehrávání se na jeho nastavení zeptá, když to bude potřeba.
+	Choose a remix mode	Vyberte režim remixu
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Kliknutím a pohybem doleva nebo doprava změníte měřítko nástrojem Lupa (pouze OpenGL)
+	Click to open the Brush Preset picker	Kliknutím otevřete výběr předvoleb štětce
+	Click to refresh histogram with uncached data	Kliknutím obnovíte histogram z dat, která nejsou v mezipaměti
+	Concavity	Konkávnost
+	Confirm or cancel the pending Record Again editor first.	Nejprve potvrďte nebo zrušte čekající editor Znovu zaznamenat.
+	Confirm or cancel the pending menu item first.	Nejprve potvrďte nebo zrušte čekající položku nabídky.
+	Copy CSS	Kopírovat CSS
+	Could not use the type tool because the layer is locked.	Textový nástroj nelze použít, protože je vrstva zamčená.
+	Count:	Počet:
+	Data Sets as Files is unavailable on the web	Datové sady jako soubory nejsou na webu dostupné
+	Delete Note	Odstranit poznámku
+	Delete this note?	Odstranit tuto poznámku?
+	Determines the spread of replaced color	Určuje rozsah nahrazené barvy
+	Do not erase the foreground swatch color	Nemazat barvu vzorku popředí
+	Drawn on the CPU: {reason}. Click for System Info.	Kresleno na procesoru: {reason}. Kliknutím zobrazíte informace o systému.
+	Draws background color over foreground colors	Kreslí barvu pozadí přes barvy popředí
+	Dropped files weren't placed: their document was closed.	Přetažené soubory nebyly umístěny: jejich dokument byl zavřen.
+	Dropped files weren't placed: too many are waiting for their document.	Přetažené soubory nebyly umístěny: příliš mnoho jich čeká na svůj dokument.
+	Effect	Efekt
+	Empty	Prázdné
+	Enable to remix all layers	Zapněte, chcete-li remixovat všechny vrstvy
+	End	Konec
+	Erase range of similar colors	Mazat rozsah podobných barev
+	Erase to History	Vymazat do historie
+	Filter for embedded smart objects	Filtr pro vložené chytré objekty
+	Filter for linked smart objects that are missing	Filtr pro propojené chytré objekty s chybějícím propojením
+	Filter for smart objects linked locally	Filtr pro lokálně propojené chytré objekty
+	High Memory Photoshop Document	Dokument Photoshopu s velkou paměťovou náročností
+	How far to let the erasing spread	Jak daleko se má mazání rozšířit
+	Image Compression	Komprese obrázku
+	Import as New Group	Importovat jako novou skupinu
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Volba Importovat jako novou skupinu ponechá skupinu „{group}“ a přidá soubor jako novou skupinu vedle ní.
+	Insert Menu Item…	Vložit položku nabídky…
+	Insert Path	Vložit cestu
+	LZW	LZW
+	Layer Effects	Efekty vrstvy
+	Level:	Úroveň:
+	Lining	Zarovnané
+	Linked	Propojeno
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Po otevření tohoto souboru zbude málo paměti. Nejprve zavřete jiné aplikace, jinak může Lienzo dojít paměť.
+	Load Solid Colors Only	Načíst pouze plné barvy
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Minimalizuje ořezání ve stínech a světlech a zabraňuje posunu odstínu barev
+	No Adv. Blending	Bez pokročilého prolnutí
+	No Layer Effects	Bez efektů vrstvy
+	No Layer Mask	Bez masky vrstvy
+	No Vector Mask	Bez vektorové masky
+	No document.	Žádný dokument.
+	No import is waiting. Import the file again.	Žádný import nečeká. Naimportujte soubor znovu.
+	No matching fonts	Žádná odpovídající písma
+	No menu item belongs to this chooser.	K tomuto výběru nepatří žádná položka nabídky.
+	No menu item is waiting.	Žádná položka nabídky nečeká.
+	No note to delete	Žádná poznámka k odstranění
+	No options for the Add Anchor Point Tool.	Nástroj Přidat kotevní bod nemá žádné možnosti.
+	No options for the Delete Anchor Point Tool.	Nástroj Odstranit kotevní bod nemá žádné možnosti.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Žádná cesta, ze které by šel vytvořit tvar: nakreslete ji nástrojem Pero nebo ji vyberte na panelu Cesty.
+	No pixels are selected.	Nejsou vybrány žádné pixely.
+	No recorded step belongs to this editor.	K tomuto editoru nepatří žádný zaznamenaný krok.
+	No slices are selected. Click a slice in the preview to select it.	Nejsou vybrány žádné řezy. Kliknutím na řez v náhledu jej vyberete.
+	No step is waiting.	Žádný krok nečeká.
+	Not Clipped	Bez ořezové masky
+	Not Empty	Neprázdné
+	Not Linked	Nepropojeno
+	Not Locked	Nezamčeno
+	Not Visible	Neviditelné
+	Note deleted, but the preference could not be saved: {error}	Poznámka byla odstraněna, ale předvolbu se nepodařilo uložit: {error}
+	Nudge	Posunout
+	Numerals	Číslice
+	Open anyway	Přesto otevřít
+	Open as Smart Object…	Otevřít jako chytrý objekt…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Otevření tohoto dokumentu spotřebuje více paměti a může zpomalit počítač nebo jiné spuštěné aplikace.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Otevření souboru „{name}“ vyžaduje odhadem {est} GiB paměti (k dispozici {avail} GiB).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Otevření souboru „{name}“ vyžaduje odhadem {est} GiB paměti. Dostupnou paměť se nepodařilo změřit.
+	Painting Mode	Režim malování
+	Percentile:	Percentil:
+	Preparing Free Transform	Příprava volné transformace
+	Proportional	Proporcionální
+	Proportional Lining	Proporcionální zarovnané
+	Proportional Oldstyle	Proporcionální staré
+	Record Again	Znovu zaznamenat
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Volba Nahradit nejprve odstraní vše ve skupině „{group}“, včetně předvoleb, které jste tam upravili nebo přesunuli. Tuto akci nelze vrátit zpět.
+	Report an issue	Nahlásit problém
+	Resize windows when zooming using the Zoom Tool	Měnit velikost oken při přibližování nástrojem Lupa
+	Save Image Pyramid	Uložit pyramidu obrázku
+	Save Transparency	Uložit průhlednost
+	Scroll all open document windows when using the hand tool	Při používání nástroje Ruka posouvat všechna otevřená okna dokumentů
+	Search and select fonts	Vyhledat a vybrat písma
+	Select Pixels	Vybrat pixely
+	Select an action first.	Nejprve vyberte akci.
+	Select an action step first.	Nejprve vyberte krok akce.
+	Selected Slices	Vybrané řezy
+	Set 	Sada 
+	Set 1	Sada 1
+	Set 10	Sada 10
+	Set 11	Sada 11
+	Set 12	Sada 12
+	Set 13	Sada 13
+	Set 14	Sada 14
+	Set 15	Sada 15
+	Set 16	Sada 16
+	Set 17	Sada 17
+	Set 18	Sada 18
+	Set 19	Sada 19
+	Set 2	Sada 2
+	Set 20	Sada 20
+	Set 3	Sada 3
+	Set 4	Sada 4
+	Set 5	Sada 5
+	Set 6	Sada 6
+	Set 7	Sada 7
+	Set 8	Sada 8
+	Set 9	Sada 9
+	Set as default	Nastavit jako výchozí
+	Set exposure for stroke	Nastavit expozici tahu
+	Set flow rate for stroke	Nastavit rychlost toku tahu
+	Set font size	Nastavit velikost písma
+	Set font style	Nastavit styl písma
+	Set opacity for stroke	Nastavit krytí tahu
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Nastavit vyhlazování tahu\nVyšší hodnoty snižují chvění tahů štětce
+	Set symmetry options for Painting	Nastavit možnosti symetrie pro malování
+	Set text color	Nastavit barvu textu
+	Set the brush angle	Nastavit úhel štětce
+	Show Channels in Color	Zobrazit kanály barevně
+	Show Statistics	Zobrazit statistiky
+	Smoothing Options	Možnosti vyhlazování
+	Source:	Zdroj:
+	Start	Začátek
+	Stylistic Sets	Stylistické sady
+	Tabular	Tabulkové
+	Tabular Lining	Tabulkové zarovnané
+	Tabular Oldstyle	Tabulkové staré
+	The Record Again command changed.	Příkaz Znovu zaznamenat se změnil.
+	The action or insertion command changed. Request Insert Menu Item again.	Akce nebo příkaz vložení se změnil. Požádejte o Vložit položku nabídky znovu.
+	The actions changed. Request Record Again again.	Akce se změnily. Požádejte o Znovu zaznamenat znovu.
+	The command permissions changed. Request Insert Menu Item again.	Oprávnění příkazů se změnila. Požádejte o Vložit položku nabídky znovu.
+	The command permissions changed. Request Record Again again.	Oprávnění příkazů se změnila. Požádejte o Znovu zaznamenat znovu.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Aktuální pracovní složka ({path}) neuvádí volné místo, takže Lienzo se nemůže zastavit dříve, než se zaplní, a velké soubory z ní bez limitu velikosti pracovního disku nezískají další prostor. Toto varování platí pro aktuální konfiguraci; změny výše se projeví po kliknutí na Použít nebo OK. Nastavte limit nebo použijte místní disk.
+	The document changed. Please choose Clear All again.	Dokument se změnil. Vyberte znovu Vymazat vše.
+	The document changed. Request Record Again again.	Dokument se změnil. Požádejte o Znovu zaznamenat znovu.
+	The document or its notes changed. Please delete the note again.	Dokument nebo jeho poznámky se změnily. Odstraňte poznámku znovu.
+	The preference could not be saved: {error}	Předvolbu se nepodařilo uložit: {error}
+	The step editor could not be opened.	Editor kroku se nepodařilo otevřít.
+	The step has no command editor.	Krok nemá editor příkazu.
+	Tolerance for choosing related colors	Tolerance pro výběr příbuzných barev
+	Top align text	Zarovnat text nahoru
+	Uncached Refresh	Obnovit bez mezipaměti
+	Use relative positioning for reference point	Použít relativní umístění pro referenční bod
+	Use these settings for new arrows	Použít tato nastavení pro nové šipky
+	Useful mixer brush combinations	Užitečné kombinace míchacího štětce
+	ZIP	ZIP
+	Zoom current window to 1:1	Přiblížit aktuální okno na 1:1
+	Zoom current window to fill the screen	Přiblížit aktuální okno na celou obrazovku
+	Zoom current window to screen size	Přiblížit aktuální okno na velikost obrazovky
+	brush tool	nástroj Štětec
+	by Nodalia	od Nodalia
+	dodge tool	nástroj Zesvětlení
+	{message} into “{group}”	{message} do skupiny „{group}“
+	{ok} written to {dir}	{ok} zapsáno do {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Skupina štětců „{group}“ již obsahuje {n} váš štětec.|Skupina štětců „{group}“ již obsahuje {n} vaše štětce.|Skupina štětců „{group}“ již obsahuje {n} vašich štětců.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Skupina přechodů „{group}“ již existuje ({n} přechod).|Skupina přechodů „{group}“ již existuje ({n} přechody).|Skupina přechodů „{group}“ již existuje ({n} přechodů).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: výstup {n} obrazového prvku selhal|{what}: výstupy {n} obrazových prvků selhaly|{what}: výstupů {n} obrazových prvků selhalo
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} soubor selhal|{what}: {n} soubory selhaly|{what}: {n} souborů selhalo
+	Apply to All	Použít na vše
+	Create new set	Vytvořit novou sadu
+# Template gallery on the Home screen
+	Start from a template	Začít ze šablony
+	Social	Sociální sítě
+	Print & paper	Tisk a papír
+	Web & art	Web a umění
+	Quiet Quote	Klidný citát
+	Weekend Notes	Víkendové poznámky
+	Little Things	Malé věci
+	Video Thumbnail	Náhled videa
+	Evening Poster	Večerní plakát
+	Coast Postcard	Pohlednice z pobřeží
+	Garden Invitation	Pozvánka do zahrady
+	Business Card	Vizitka
+	Dusk Hills	Pahorky za soumraku
+	Web Banner	Webový banner
+	Album Cover	Obal alba
+	Colour Palette	Barevná paleta

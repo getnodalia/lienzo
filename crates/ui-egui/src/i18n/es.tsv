@@ -4695,3 +4695,57 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	dodge tool	herramienta Sobreexponer
 	{message} into “{group}”	{message} en «{group}»
 	{ok} written to {dir}	{ok} escritos en {dir}
+# Added by the Spanish completion pass: OpenType numerals and stylistic sets, Copy CSS, Open as Smart Object, plurals
+	Copy CSS	Copiar CSS
+	Lining	Alineados
+	Numerals	Cifras
+	Open as Smart Object…	Abrir como objeto inteligente…
+	Proportional	Proporcionales
+	Proportional Lining	Alineados proporcionales
+	Proportional Oldstyle	Estilo antiguo proporcional
+	Set 	Conjunto 
+	Set 1	Conjunto 1
+	Set 2	Conjunto 2
+	Set 3	Conjunto 3
+	Set 4	Conjunto 4
+	Set 5	Conjunto 5
+	Set 6	Conjunto 6
+	Set 7	Conjunto 7
+	Set 8	Conjunto 8
+	Set 9	Conjunto 9
+	Set 10	Conjunto 10
+	Set 11	Conjunto 11
+	Set 12	Conjunto 12
+	Set 13	Conjunto 13
+	Set 14	Conjunto 14
+	Set 15	Conjunto 15
+	Set 16	Conjunto 16
+	Set 17	Conjunto 17
+	Set 18	Conjunto 18
+	Set 19	Conjunto 19
+	Set 20	Conjunto 20
+	Stylistic Sets	Conjuntos estilísticos
+	Tabular	Tabulares
+	Tabular Lining	Alineados tabulares
+	Tabular Oldstyle	Estilo antiguo tabular
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	El grupo de pinceles «{group}» ya tiene {n} pincel suyo.|El grupo de pinceles «{group}» ya tiene {n} pinceles suyos.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	El grupo de degradados «{group}» ya existe ({n} degradado).|El grupo de degradados «{group}» ya existe ({n} degradados).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: ha fallado {n} salida de Recursos de imagen|{what}: han fallado {n} salidas de Recursos de imagen
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: ha fallado {n} archivo|{what}: han fallado {n} archivos
+# Template gallery on the Home screen
+	Start from a template	Empezar desde una plantilla
+	Social	Redes sociales
+	Print & paper	Impresión y papel
+	Web & art	Web y arte
+	Quiet Quote	Cita tranquila
+	Weekend Notes	Notas del fin de semana
+	Little Things	Pequeñas cosas
+	Video Thumbnail	Miniatura de vídeo
+	Evening Poster	Cartel de noche
+	Coast Postcard	Postal de costa
+	Garden Invitation	Invitación de jardín
+	Business Card	Tarjeta de visita
+	Dusk Hills	Colinas al atardecer
+	Web Banner	Cabecera web
+	Album Cover	Portada de disco
+	Colour Palette	Paleta de color

@@ -4587,3 +4587,144 @@ navigator	Zoom	תקריב
 	Content-aware fill	מילוי לפי תוכן
 	Sample content from part of the image and use it to fill a small area	דגום תוכן מחלק מהתמונה כדי למלא אזור קטן
 	Reset the crop box, image rotation, and aspect ratio settings	אפס את מסגרת החיתוך, סיבוב התמונה ויחס הגובה-רוחב
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	פקודה בוטלה או הופסקה במהלך העיבוד האצוותי. להמשיך לקובץ הבא או לעצור?
+	A native image editor, layer by layer. No account, no cloud.	עורך תמונות מקורי, שכבה אחר שכבה. בלי חשבון, בלי ענן.
+	Allow Tool Recording	אפשר הקלטת כלים
+	Allows rotation and scaling of selection	מאפשר סיבוב ושינוי קנה מידה של הבחירה
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	השתמש תמיד בלחץ עבור אטימות. כשהאפשרות כבויה, הגדרת המברשת הקבועה שולטת בלחץ
+	Always use Pressure for Size. When off, Brush Preset controls pressure	השתמש תמיד בלחץ עבור גודל. כשהאפשרות כבויה, הגדרת המברשת הקבועה שולטת בלחץ
+	Anti-alias brush application	החל את המברשת עם החלקת קצוות
+	Are you sure you want to delete all notes?	האם למחוק את כל ההערות?
+	Bottom align text	יישור טקסט לתחתית
+	Choose a menu command. Playback asks for its settings when needed.	בחר פקודת תפריט. ההפעלה תבקש את ההגדרות שלה בעת הצורך.
+	Choose a remix mode	בחר מצב רמיקס
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	לחץ וגרור שמאלה או ימינה כדי לשנות קנה מידה בעזרת כלי התקריב (OpenGL בלבד)
+	Click to open the Brush Preset picker	לחץ כדי לפתוח את בורר הגדרות המברשת הקבועות
+	Confirm or cancel the pending Record Again editor first.	אשר או בטל תחילה את עורך ההקלטה החוזרת הממתין.
+	Confirm or cancel the pending menu item first.	אשר או בטל תחילה את פריט התפריט הממתין.
+	Copy CSS	העתק CSS
+	Could not use the type tool because the layer is locked.	לא ניתן להשתמש בכלי הטקסט כי השכבה נעולה.
+	Delete Note	מחק הערה
+	Delete this note?	למחוק את ההערה הזו?
+	Determines the spread of replaced color	קובע את מידת הפיזור של הצבע המוחלף
+	Do not erase the foreground swatch color	אל תמחק את צבע דוגמית הקדמה
+	Draws background color over foreground colors	מצייר את צבע הרקע מעל צבעי הקדמה
+	Enable to remix all layers	הפעל כדי לערבל מחדש את כל השכבות
+	Erase range of similar colors	מחק טווח של צבעים דומים
+	Erase to History	מחק להיסטוריה
+	How far to let the erasing spread	עד כמה המחיקה רשאית להתפשט
+	Insert Menu Item…	הוסף פריט תפריט…
+	Insert Path	הוסף נתיב
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	לאחר פתיחת הקובץ יישאר מעט זיכרון. סגור תחילה יישומים אחרים, אחרת ייתכן של-Lienzo ייגמר הזיכרון.
+	Load Solid Colors Only	טען צבעים אחידים בלבד
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	ממזער חיתוך בצללים ובהארות ומונע מהצבעים לסטות בגוון
+	No document.	אין מסמך.
+	No menu item belongs to this chooser.	אף פריט תפריט אינו שייך לבורר הזה.
+	No menu item is waiting.	אין פריט תפריט ממתין.
+	No note to delete	אין הערה למחיקה
+	No options for the Add Anchor Point Tool.	לכלי הוספת נקודת עוגן אין אפשרויות.
+	No options for the Delete Anchor Point Tool.	לכלי מחיקת נקודת עוגן אין אפשרויות.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	אין נתיב שממנו אפשר ליצור צורה: צייר נתיב בעזרת כלי הקולמוס או בחר נתיב בחלונית נתיבים.
+	No pixels are selected.	לא נבחרו פיקסלים.
+	No recorded step belongs to this editor.	אף שלב מוקלט אינו שייך לעורך הזה.
+	No slices are selected. Click a slice in the preview to select it.	לא נבחרו פרוסות. לחץ על פרוסה בתצוגה המקדימה כדי לבחור אותה.
+	No step is waiting.	אין שלב ממתין.
+	Note deleted, but the preference could not be saved: {error}	ההערה נמחקה, אך לא ניתן היה לשמור את ההעדפה: {error}
+	Nudge	הזזה עדינה
+	Open as Smart Object…	פתח כאובייקט חכם…
+	Painting Mode	מצב ציור
+	Preparing Free Transform	מכין טרנספורמציה חופשית
+	Record Again	הקלט שוב
+	Report an issue	דווח על בעיה
+	Resize windows when zooming using the Zoom Tool	שנה את גודל החלונות בעת תקריב בעזרת כלי התקריב
+	Scroll all open document windows when using the hand tool	גלול את כל חלונות המסמכים הפתוחים בעת שימוש בכלי היד
+	Search and select fonts	חפש ובחר גופנים
+	Select Pixels	בחר פיקסלים
+	Select an action first.	בחר תחילה פעולה.
+	Select an action step first.	בחר תחילה שלב בפעולה.
+	Selected Slices	פרוסות שנבחרו
+	Set exposure for stroke	הגדר חשיפה עבור משיכה
+	Set flow rate for stroke	הגדר קצב זרימה עבור משיכה
+	Set font size	הגדר גודל גופן
+	Set font style	הגדר סגנון גופן
+	Set opacity for stroke	הגדר אטימות עבור משיכה
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	הגדר החלקה עבור משיכה\nהשתמש בערכים גבוהים יותר כדי להפחית רעידות במשיכות מברשת
+	Set symmetry options for Painting	הגדר אפשרויות סימטריה לציור
+	Set text color	הגדר צבע טקסט
+	Set the brush angle	הגדר את זווית המברשת
+	Smoothing Options	אפשרויות החלקה
+	The Record Again command changed.	הפקודה הקלט שוב השתנתה.
+	The action or insertion command changed. Request Insert Menu Item again.	הפעולה או פקודת ההוספה השתנו. בקש שוב את הוסף פריט תפריט.
+	The actions changed. Request Record Again again.	הפעולות השתנו. בקש שוב את הקלט שוב.
+	The command permissions changed. Request Insert Menu Item again.	הרשאות הפקודות השתנו. בקש שוב את הוסף פריט תפריט.
+	The command permissions changed. Request Record Again again.	הרשאות הפקודות השתנו. בקש שוב את הקלט שוב.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	ספריית הסקרץ' הנוכחית ({path}) אינה מדווחת על המקום הפנוי שלה, ולכן Lienzo לא יכול לעצור לפני שהיא מתמלאת, וקבצים גדולים אינם מקבלים ממנה מקום נוסף ללא מגבלת גודל סקרץ'. האזהרה חלה על התצורה הנוכחית; השינויים שלמעלה ייכנסו לתוקף ב"החל" או ב"אישור". הגדר מגבלה או השתמש בכונן מקומי.
+	The document changed. Please choose Clear All again.	המסמך השתנה. בחר שוב נקה הכול.
+	The document changed. Request Record Again again.	המסמך השתנה. בקש שוב את הקלט שוב.
+	The document or its notes changed. Please delete the note again.	המסמך או ההערות שלו השתנו. מחק את ההערה שוב.
+	The preference could not be saved: {error}	לא ניתן היה לשמור את ההעדפה: {error}
+	The step editor could not be opened.	לא ניתן היה לפתוח את עורך השלבים.
+	The step has no command editor.	לשלב אין עורך פקודה.
+	Tolerance for choosing related colors	סבילות לבחירת צבעים קשורים
+	Top align text	יישור טקסט לראש
+	Use relative positioning for reference point	השתמש במיקום יחסי עבור נקודת הייחוס
+	Useful mixer brush combinations	שילובים שימושיים של מברשת מערבלת
+	Zoom current window to 1:1	תקריב החלון הנוכחי ל-1:1
+	Zoom current window to fill the screen	תקריב החלון הנוכחי למילוי המסך
+	Zoom current window to screen size	תקריב החלון הנוכחי לגודל המסך
+	brush tool	כלי מברשת
+	by Nodalia	מאת Nodalia
+	dodge tool	כלי הבהרה
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} קובץ נכשל|{what}: {n} קבצים נכשלו
+	Align bottom edges	יישור הקצוות התחתונים
+	Align top edges	יישור הקצוות העליונים
+	Align vertical centers	יישור המרכזים האנכיים
+	Canceled opening {name}	פתיחת {name} בוטלה
+	Canceled {label}	{label} בוטל
+	Center the gradient (offset 0, 0)	מרכז את המעבר ההדרגתי (היסט 0, 0)
+	Click to restore the current color	לחץ כדי לשחזר את הצבע הנוכחי
+	Click to sample the foreground color  ·  {key}-click for background	לחץ כדי לדגום את צבע הקדמה  ·  לחיצה עם {key} לרקע
+	Clip Thumbnails to Document Bounds	חתוך תמונות ממוזערות לגבולות המסמך
+	Color Blindness - Deuteranopia-type	עיוורון צבעים - מסוג דאוטרנופיה
+	Color Blindness - Protanopia-type	עיוורון צבעים - מסוג פרוטנופיה
+	Contextual Task Bar	סרגל משימות הקשרי
+	Default Foreground and Background Colors (D)	צבעי קדמה ורקע ברירת מחדל (D)
+	Distribute horizontally	פיזור אופקי
+	Distribute vertically	פיזור אנכי
+	Drag around the center to rotate the view  ·  Shift constrains to 15°	גרור סביב המרכז כדי לסובב את התצוגה  ·  Shift מגביל ל-15°
+	Embed All Linked	הטמע את כל המקושרים
+	Embed Linked	הטמע מקושרים
+	Equalize Entire Image Based On Selected Area	השווה את כל התמונה לפי האזור שנבחר
+	Equalize Selected Area Only	השווה את האזור שנבחר בלבד
+	Expand layer group on click	הרחב קבוצת שכבות בלחיצה
+	Hide bar	הסתר סרגל
+	Internet Standard RGB (sRGB)	RGB סטנדרטי לאינטרנט (sRGB)
+	Large Thumbnails	תמונות ממוזערות גדולות
+	Legacy Macintosh RGB (Gamma 1.8)	RGB ישן של Macintosh (גמא 1.8)
+	Make Shape	צור צורה
+	Medium Thumbnails	תמונות ממוזערות בינוניות
+	More options	אפשרויות נוספות
+	Move bar	הזז סרגל
+	Netscape Gray	אפור Netscape
+	No Thumbnails	ללא תמונות ממוזערות
+	No settings saved: these raws can't keep a sidecar here	לא נשמרו הגדרות: קובצי raw אלה לא יכולים להחזיק כאן קובץ sidecar
+	Not a web color: click for the nearest web color	לא צבע אינטרנט: לחץ לצבע האינטרנט הקרוב ביותר
+	Nothing to save: these raws are at their default settings	אין מה לשמור: קובצי raw אלה בהגדרות ברירת המחדל
+	Open a document to select a color range.	פתח מסמך כדי לבחור טווח צבעים.
+	Out of gamut for printing: click for the nearest printable color	מחוץ לסולם הצבעים להדפסה: לחץ לצבע הקרוב ביותר שניתן להדפיס
+	Pick Color From Image	בחר צבע מהתמונה
+	Pin bar position	נעץ את מיקום הסרגל
+	Plugins…	תוספים…
+	Remember to turn off the printer's own color management in Print Settings…	זכור לכבות את ניהול הצבע של המדפסת בהגדרות הדפסה…
+	Reset bar position	אפס את מיקום הסרגל
+	Sample: foreground color	דגימה: צבע קדמה
+	Save canceled	השמירה בוטלה
+	Save the settings to each raw's sidecar without opening it	שמור את ההגדרות בקובץ ה-sidecar של כל raw בלי לפתוח אותו
+	Scroll All Windows	גלילה בכל החלונות
+	Show hover bounds from Layers	הצג גבולות ריחוף מתוך שכבות
+	Show layer bounds on hover	הצג גבולות שכבה בריחוף
+	Small Thumbnails	תמונות ממוזערות קטנות
+	Some settings could not be saved; the raws stay open	לא ניתן היה לשמור חלק מההגדרות; קובצי ה-raw נשארים פתוחים
+	Switch Foreground and Background Colors (X)	החלף בין צבעי הקדמה והרקע (X)
+	Working CMY Plates	לוחות CMY עובדים
+	{label} is writing the file and can no longer be canceled	{label} כותב את הקובץ ואי אפשר עוד לבטל

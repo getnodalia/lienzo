@@ -4825,3 +4825,201 @@ shape	Appearance	Оформление
 	Content-aware fill	Заполнение с учётом содержимого
 	Sample content from part of the image and use it to fill a small area	Взять содержимое из части изображения для заполнения небольшой области
 	Reset the crop box, image rotation, and aspect ratio settings	Сбросить рамку кадрирования, поворот изображения и соотношение сторон
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Команда была отменена или остановлена во время пакетной обработки. Продолжить со следующим файлом или остановиться?
+	A file is still being placed; try again when it has finished.	Файл всё ещё размещается; повторите попытку после завершения.
+	A native image editor, layer by layer. No account, no cloud.	Нативный редактор изображений со слоями. Без учётной записи и без облака.
+	Allow Tool Recording	Разрешить запись инструментов
+	Allows rotation and scaling of selection	Разрешает поворот и масштабирование выделенной области
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Всегда использовать нажим для непрозрачности. Если выключено, нажимом управляет набор параметров кисти
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Всегда использовать нажим для размера. Если выключено, нажимом управляет набор параметров кисти
+	Answer the open import question first, then import this file again.	Сначала ответьте на открытый вопрос об импорте, а затем снова импортируйте этот файл.
+	Anti-alias brush application	Применять кисть со сглаживанием
+	Are you sure you want to delete all notes?	Удалить все заметки?
+	Arrowhead options	Параметры наконечников стрелок
+	Arrowheads	Наконечники стрелок
+	Attribute	Атрибут
+	Batch preview	Предпросмотр пакета
+	Bottom align text	Выровнять текст по нижнему краю
+	CPU Rendering	Отрисовка на CPU
+	Calculating…	Вычисление…
+	Cancelled placing {name}	Размещение «{name}» отменено
+	Choose a menu command. Playback asks for its settings when needed.	Выберите команду меню. При воспроизведении настройки запрашиваются по мере необходимости.
+	Choose a remix mode	Выберите режим ремикса
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Щёлкните и перемещайте влево или вправо, чтобы изменить масштаб инструментом «Масштаб» (только OpenGL)
+	Click to open the Brush Preset picker	Щёлкните, чтобы открыть выбор наборов параметров кисти
+	Click to refresh histogram with uncached data	Щёлкните, чтобы обновить гистограмму по некэшированным данным
+	Concavity	Вогнутость
+	Confirm or cancel the pending Record Again editor first.	Сначала подтвердите или отмените ожидающий редактор «Записать снова».
+	Confirm or cancel the pending menu item first.	Сначала подтвердите или отмените ожидающий пункт меню.
+	Copy CSS	Копировать CSS
+	Could not use the type tool because the layer is locked.	Не удалось использовать инструмент «Текст»: слой заблокирован.
+	Count:	Количество:
+	Data Sets as Files is unavailable on the web	Наборы данных как файлы недоступны в веб-версии
+	Delete Note	Удалить заметку
+	Delete this note?	Удалить эту заметку?
+	Determines the spread of replaced color	Определяет разброс заменяемого цвета
+	Do not erase the foreground swatch color	Не стирать цвет образца основного цвета
+	Drawn on the CPU: {reason}. Click for System Info.	Отрисовка на CPU: {reason}. Нажмите, чтобы открыть сведения о системе.
+	Draws background color over foreground colors	Рисует фоновым цветом поверх основных цветов
+	Dropped files weren't placed: their document was closed.	Перетащенные файлы не размещены: их документ был закрыт.
+	Dropped files weren't placed: too many are waiting for their document.	Перетащенные файлы не размещены: слишком много файлов ожидают своего документа.
+	Effect	Эффект
+	Empty	Пусто
+	Enable to remix all layers	Включите, чтобы сделать ремикс всех слоёв
+	End	Конец
+	Erase range of similar colors	Стирать диапазон похожих цветов
+	Erase to History	Стирание в историю
+	Filter for embedded smart objects	Фильтр для встроенных смарт-объектов
+	Filter for linked smart objects that are missing	Фильтр для связанных смарт-объектов с утерянной связью
+	Filter for smart objects linked locally	Фильтр для смарт-объектов, связанных локально
+	High Memory Photoshop Document	Документ Photoshop с большим объёмом памяти
+	How far to let the erasing spread	Насколько далеко должно распространяться стирание
+	Image Compression	Сжатие изображения
+	Import as New Group	Импортировать как новую группу
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	«Импортировать как новую группу» сохраняет «{group}» и добавляет файл как новую группу рядом с ней.
+	Insert Menu Item…	Вставить пункт меню…
+	Insert Path	Вставить контур
+	LZW	LZW
+	Layer Effects	Эффекты слоя
+	Level:	Уровень:
+	Lining	Выровненные
+	Linked	Связано
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	После открытия этого файла останется мало памяти. Сначала закройте другие приложения, иначе у Lienzo может не хватить памяти.
+	Load Solid Colors Only	Загружать только сплошные цвета
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Сводит к минимуму отсечение в тенях и светах и не даёт цветам менять оттенок
+	No Adv. Blending	Без дополнительного наложения
+	No Layer Effects	Без эффектов слоя
+	No Layer Mask	Без слой-маски
+	No Vector Mask	Без векторной маски
+	No document.	Нет документа.
+	No import is waiting. Import the file again.	Нет ожидающего импорта. Импортируйте файл снова.
+	No matching fonts	Нет подходящих шрифтов
+	No menu item belongs to this chooser.	Этому выбору не соответствует ни один пункт меню.
+	No menu item is waiting.	Нет ожидающего пункта меню.
+	No note to delete	Нет заметки для удаления
+	No options for the Add Anchor Point Tool.	У инструмента «Добавить опорную точку» нет параметров.
+	No options for the Delete Anchor Point Tool.	У инструмента «Удалить опорную точку» нет параметров.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Нет контура для создания фигуры: нарисуйте его пером или выберите на панели «Контуры».
+	No pixels are selected.	Не выбрано ни одного пикселя.
+	No recorded step belongs to this editor.	Этому редактору не соответствует ни один записанный шаг.
+	No slices are selected. Click a slice in the preview to select it.	Фрагменты не выбраны. Щёлкните фрагмент в предпросмотре, чтобы выбрать его.
+	No step is waiting.	Нет ожидающего шага.
+	Not Clipped	Без обтравки
+	Not Empty	Не пусто
+	Not Linked	Не связано
+	Not Locked	Не заблокировано
+	Not Visible	Не видно
+	Note deleted, but the preference could not be saved: {error}	Заметка удалена, но не удалось сохранить настройку: {error}
+	Nudge	Сдвиг
+	Numerals	Цифры
+	Open anyway	Всё равно открыть
+	Open as Smart Object…	Открыть как смарт-объект…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Для открытия этого документа потребуется больше памяти, что может замедлить компьютер или другие запущенные приложения.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Для открытия «{name}» требуется примерно {est} ГиБ памяти (доступно {avail} ГиБ).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Для открытия «{name}» требуется примерно {est} ГиБ памяти. Не удалось определить объём доступной памяти.
+	Painting Mode	Режим рисования
+	Percentile:	Процентиль:
+	Preparing Free Transform	Подготовка свободной трансформации
+	Proportional	Пропорциональные
+	Proportional Lining	Пропорциональные выровненные
+	Proportional Oldstyle	Пропорциональные старого стиля
+	Record Again	Записать снова
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	«Заменить» сначала удаляет всё в «{group}», включая наборы, которые вы там изменили или переместили. Это действие нельзя отменить.
+	Report an issue	Сообщить о проблеме
+	Resize windows when zooming using the Zoom Tool	Изменять размер окон при масштабировании инструментом «Масштаб»
+	Save Image Pyramid	Сохранять пирамиду изображений
+	Save Transparency	Сохранить прозрачность
+	Scroll all open document windows when using the hand tool	Прокручивать все открытые окна документов при использовании инструмента «Рука»
+	Search and select fonts	Поиск и выбор шрифтов
+	Select Pixels	Выбрать пиксели
+	Select an action first.	Сначала выберите операцию.
+	Select an action step first.	Сначала выберите шаг операции.
+	Selected Slices	Выбранные фрагменты
+	Set 	Набор 
+	Set 1	Набор 1
+	Set 10	Набор 10
+	Set 11	Набор 11
+	Set 12	Набор 12
+	Set 13	Набор 13
+	Set 14	Набор 14
+	Set 15	Набор 15
+	Set 16	Набор 16
+	Set 17	Набор 17
+	Set 18	Набор 18
+	Set 19	Набор 19
+	Set 2	Набор 2
+	Set 20	Набор 20
+	Set 3	Набор 3
+	Set 4	Набор 4
+	Set 5	Набор 5
+	Set 6	Набор 6
+	Set 7	Набор 7
+	Set 8	Набор 8
+	Set 9	Набор 9
+	Set as default	Установить по умолчанию
+	Set exposure for stroke	Задать экспозицию для мазка
+	Set flow rate for stroke	Задать скорость потока для мазка
+	Set font size	Задать размер шрифта
+	Set font style	Задать начертание шрифта
+	Set opacity for stroke	Задать непрозрачность для мазка
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Задать сглаживание для мазка\nБолее высокие значения уменьшают дрожание мазков кисти
+	Set symmetry options for Painting	Задать параметры симметрии для рисования
+	Set text color	Задать цвет текста
+	Set the brush angle	Задать угол кисти
+	Show Channels in Color	Показывать каналы цветными
+	Show Statistics	Показать статистику
+	Smoothing Options	Параметры сглаживания
+	Source:	Источник:
+	Start	Начало
+	Stylistic Sets	Стилистические наборы
+	Tabular	Моноширинные
+	Tabular Lining	Моноширинные выровненные
+	Tabular Oldstyle	Моноширинные старого стиля
+	The Record Again command changed.	Команда «Записать снова» изменилась.
+	The action or insertion command changed. Request Insert Menu Item again.	Операция или команда вставки изменилась. Снова запросите «Вставить пункт меню».
+	The actions changed. Request Record Again again.	Операции изменились. Снова запросите «Записать снова».
+	The command permissions changed. Request Insert Menu Item again.	Разрешения команд изменились. Снова запросите «Вставить пункт меню».
+	The command permissions changed. Request Record Again again.	Разрешения команд изменились. Снова запросите «Записать снова».
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Текущий каталог временных файлов ({path}) не сообщает о свободном месте, поэтому Lienzo не может остановиться до его заполнения, а большие файлы не получают от него дополнительного места без ограничения размера временных файлов. Это предупреждение относится к текущей конфигурации; изменения выше вступят в силу после нажатия «Применить» или «ОК». Задайте ограничение или используйте локальный диск.
+	The document changed. Please choose Clear All again.	Документ изменился. Снова выберите «Очистить всё».
+	The document changed. Request Record Again again.	Документ изменился. Снова запросите «Записать снова».
+	The document or its notes changed. Please delete the note again.	Документ или его заметки изменились. Снова удалите заметку.
+	The preference could not be saved: {error}	Не удалось сохранить настройку: {error}
+	The step editor could not be opened.	Не удалось открыть редактор шагов.
+	The step has no command editor.	У шага нет редактора команды.
+	Tolerance for choosing related colors	Допуск при выборе связанных цветов
+	Top align text	Выровнять текст по верхнему краю
+	Uncached Refresh	Обновить без кэша
+	Use relative positioning for reference point	Использовать относительное позиционирование для опорной точки
+	Use these settings for new arrows	Использовать эти параметры для новых стрелок
+	Useful mixer brush combinations	Полезные комбинации кисти-смесителя
+	ZIP	ZIP
+	Zoom current window to 1:1	Масштаб текущего окна 1:1
+	Zoom current window to fill the screen	Масштаб текущего окна по размеру экрана с заполнением
+	Zoom current window to screen size	Масштаб текущего окна по размеру экрана
+	brush tool	инструмент «Кисть»
+	by Nodalia	от Nodalia
+	dodge tool	инструмент «Осветлитель»
+	{message} into “{group}”	{message} в «{group}»
+	{ok} written to {dir}	{ok} записано в {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	В группе кистей «{group}» уже есть {n} ваша кисть.|В группе кистей «{group}» уже есть {n} ваши кисти.|В группе кистей «{group}» уже есть {n} ваших кистей.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Группа градиентов «{group}» уже существует ({n} градиент).|Группа градиентов «{group}» уже существует ({n} градиента).|Группа градиентов «{group}» уже существует ({n} градиентов).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: не удалось создать {n} выходной ресурс изображения|{what}: не удалось создать {n} выходных ресурса изображения|{what}: не удалось создать {n} выходных ресурсов изображения
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: не удалось обработать {n} файл|{what}: не удалось обработать {n} файла|{what}: не удалось обработать {n} файлов
+# Template gallery on the Home screen
+	Start from a template	Начать с шаблона
+	Social	Соцсети
+	Print & paper	Печать и бумага
+	Web & art	Веб и искусство
+	Quiet Quote	Тихая цитата
+	Weekend Notes	Заметки выходного дня
+	Little Things	Мелочи
+	Video Thumbnail	Обложка видео
+	Evening Poster	Вечерний плакат
+	Coast Postcard	Открытка с побережья
+	Garden Invitation	Приглашение в сад
+	Business Card	Визитная карточка
+	Dusk Hills	Холмы в сумерках
+	Web Banner	Веб-баннер
+	Album Cover	Обложка альбома
+	Colour Palette	Цветовая палитра

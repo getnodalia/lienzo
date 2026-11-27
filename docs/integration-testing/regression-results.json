@@ -9783,7 +9783,7 @@
           "path": "crates/ui-egui/src/dock_tests.rs",
           "package": "lienzo-ui-egui",
           "command": "cargo test -p lienzo-ui-egui --locked dragging_the_splitter_resizes_and_survives_a_ui_state_round_trip -- --nocapture",
-          "fixture_and_action_excerpt": "    let (mut app, _, _) = app_with_layers();\n    // CodeRabbit on #9606: the Color panel's options ride the same frames and preferences.\n    app.ui.color_panel.mode = crate::state::ColorPanelMode::HsbSliders;\n    let mut h = harness(app, vec2(1200.0, 800.0), ThemeKind::ProMedium);\n    let props = rect_of(&h, Group::Properties);\n    let color = rect_of(&h, Group::Color);\n    let split = probe::hit_rect(&h.ctx, &craft_ui::docking::Hit::Divider(craft_ui::docking::Divider::Group(\"properties\".into())))\n        .expect(\"divider below Properties\")\n        .center();\n    // Less than Properties has above its minimum, so the groups above don't give way.\n    drag(&mut h, split, split - vec2(0.0, 40.0));\n    let props2 = rect_of(&h, Group::Properties);",
+          "fixture_and_action_excerpt": "    let (mut app, _, _) = app_with_layers();\n    // CodeRabbit on #9606: the Color panel's options ride the same frames and preferences.\n    app.ui.color_panel.mode = crate::state::ColorPanelMode::HsbSliders;\n    let mut h = harness(app, vec2(1200.0, 800.0), ThemeKind::ProMedium);\n    let props = rect_of(&h, Group::Properties);\n    let color = rect_of(&h, Group::Color);\n    let split = probe::hit_rect(&h.ctx, &nodalia_ui::docking::Hit::Divider(nodalia_ui::docking::Divider::Group(\"properties\".into())))\n        .expect(\"divider below Properties\")\n        .center();\n    // Less than Properties has above its minimum, so the groups above don't give way.\n    drag(&mut h, split, split - vec2(0.0, 40.0));\n    let props2 = rect_of(&h, Group::Properties);",
           "expected_assertions": [
             "    assert!((props2.height() - (props.height() - 40.0)).abs() < 2.0, \"{props:?} -> {props2:?}\");\n    assert_eq!(rect_of(&h, Group::Color), color, \"the group above keeps its place\");\n\n    // Save and restore the UI state (what `ui.inspect` / `ui.set` and workspaces carry).\n    let saved = serde_json::to_value(&h.state().ui).unwrap();\n    assert_eq!(drawn(&h2).0, drawn(&h).0);\n\n    // Remembered in the preferences once the mouse is up, and restored at the next launch.\n    let prefs = h.state().session.prefs_to_json();\n    assert!(app3.ui.docking.is_some());\n    assert_eq!(app3.ui.docking.as_ref().map(|w| &w.layout), h.state().ui.docking.as_ref().map(|w| &w.layout));\n    crate::color_panel_ui::restore(&mut app3);\n    assert_eq!(app3.ui.color_panel.mode, crate::state::ColorPanelMode::HsbSliders, \"the Color panel's mode too\");\n    // \u2026unless Remember Workspace Changes is off.\n    let mut s3 = lienzo_engine::Session::new();\n    s3.load_prefs_json(&prefs).unwrap();\n    assert!(app4.ui.docking.is_none());\n    assert_eq!(app4.ui.dock, DockLayout::default());\n}"
           ],
@@ -9807,7 +9807,7 @@
     "build_url": "https://github.com/FredApps/photocraft/actions/runs/40867283787",
     "workflow_id": 390299892,
     "workflow_restored_state": "disabled_manually",
-    "fonts_pin": "b076417b5880bd4154bd22f00695b1d28c6bea83",
+    "fonts_pin": "f9a5f30b74d90b69cffdb7042bb0b339400ed06d",
     "artifact_verified": true,
     "artifact": {
       "id": 12895845995,

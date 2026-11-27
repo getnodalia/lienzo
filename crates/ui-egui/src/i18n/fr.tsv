@@ -4663,3 +4663,203 @@ shape	Appearance	Apparence
 	Content-aware fill	Remplissage basé sur le contenu
 	Sample content from part of the image and use it to fill a small area	Prélever le contenu d'une partie de l'image pour remplir une petite zone
 	Reset the crop box, image rotation, and aspect ratio settings	Réinitialiser le cadre de recadrage, la rotation de l'image et le format
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Une commande a été annulée ou arrêtée pendant le traitement par lot. Passer au fichier suivant ou arrêter ?
+	A file is still being placed; try again when it has finished.	Un fichier est encore en cours de placement ; réessayez quand il sera terminé.
+	A native image editor, layer by layer. No account, no cloud.	Un éditeur d’images natif, calque par calque. Sans compte, sans cloud.
+	Allow Tool Recording	Autoriser l’enregistrement des outils
+	Allows rotation and scaling of selection	Permet la rotation et la mise à l’échelle de la sélection
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Toujours utiliser la pression pour l’opacité. Désactivé, c’est la présélection de pinceau qui gère la pression
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Toujours utiliser la pression pour la taille. Désactivé, c’est la présélection de pinceau qui gère la pression
+	Answer the open import question first, then import this file again.	Répondez d’abord à la question d’importation en cours, puis importez de nouveau ce fichier.
+	Anti-alias brush application	Appliquer le pinceau avec anticrénelage
+	Are you sure you want to delete all notes?	Voulez-vous vraiment supprimer toutes les notes ?
+	Arrowhead options	Options des pointes de flèche
+	Arrowheads	Pointes de flèche
+	Attribute	Attribut
+	Batch preview	Aperçu du lot
+	Bottom align text	Aligner le texte en bas
+	CPU Rendering	Rendu CPU
+	Calculating…	Calcul en cours…
+	Cancelled placing {name}	Placement de {name} annulé
+	Choose a menu command. Playback asks for its settings when needed.	Choisissez une commande de menu. La lecture demande ses réglages si nécessaire.
+	Choose a remix mode	Choisir un mode de remixage
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Cliquez et déplacez vers la gauche ou la droite pour mettre à l’échelle avec l’outil Zoom (OpenGL uniquement)
+	Click to open the Brush Preset picker	Cliquez pour ouvrir le sélecteur de présélections de pinceau
+	Click to refresh histogram with uncached data	Cliquez pour actualiser l’histogramme avec des données non mises en cache
+	Concavity	Concavité
+	Confirm or cancel the pending Record Again editor first.	Confirmez ou annulez d’abord l’éditeur « Réenregistrer » en attente.
+	Confirm or cancel the pending menu item first.	Confirmez ou annulez d’abord l’élément de menu en attente.
+	Copy CSS	Copier le CSS
+	Could not use the type tool because the layer is locked.	Impossible d’utiliser l’outil Texte car le calque est verrouillé.
+	Count:	Nombre :
+	Data Sets as Files is unavailable on the web	« Jeux de données en fichiers » n’est pas disponible sur le web
+	Delete Note	Supprimer la note
+	Delete this note?	Supprimer cette note ?
+	Determines the spread of replaced color	Détermine l’étendue de la couleur remplacée
+	Do not erase the foreground swatch color	Ne pas effacer la couleur de la pastille de premier plan
+	Drawn on the CPU: {reason}. Click for System Info.	Dessiné sur le CPU : {reason}. Cliquez pour les informations système.
+	Draws background color over foreground colors	Dessine la couleur d’arrière-plan sur les couleurs de premier plan
+	Dropped files weren't placed: their document was closed.	Les fichiers déposés n’ont pas été placés : leur document a été fermé.
+	Dropped files weren't placed: too many are waiting for their document.	Les fichiers déposés n’ont pas été placés : trop de fichiers attendent leur document.
+	Effect	Effet
+	Empty	Vide
+	Enable to remix all layers	Activer pour remixer tous les calques
+	End	Fin
+	Erase range of similar colors	Effacer une plage de couleurs similaires
+	Erase to History	Effacer vers l’historique
+	Filter for embedded smart objects	Filtre pour les objets intelligents incorporés
+	Filter for linked smart objects that are missing	Filtre pour les objets intelligents liés manquants
+	Filter for smart objects linked locally	Filtre pour les objets intelligents liés localement
+	High Memory Photoshop Document	Document Photoshop à forte mémoire
+	How far to let the erasing spread	Jusqu’où laisser l’effacement se propager
+	Image Compression	Compression d’image
+	Import as New Group	Importer comme nouveau groupe
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	« Importer comme nouveau groupe » conserve « {group} » et ajoute le fichier comme nouveau groupe à côté.
+	Insert Menu Item…	Insérer un élément de menu…
+	Insert Path	Insérer un tracé
+	LZW	LZW
+	Layer Effects	Effets de calque
+	Level:	Niveau :
+	Lining	Alignés
+	Linked	Lié
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Il resterait très peu de mémoire après l’ouverture de ce fichier. Fermez d’abord d’autres applications, sinon Lienzo risque de manquer de mémoire.
+	Load Solid Colors Only	Charger uniquement les couleurs unies
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Réduit l’écrêtage dans les ombres et les hautes lumières et évite les changements de teinte
+	No Adv. Blending	Aucune fusion avancée
+	No Layer Effects	Aucun effet de calque
+	No Layer Mask	Aucun masque de calque
+	No Vector Mask	Aucun masque vectoriel
+	No document.	Aucun document.
+	No import is waiting. Import the file again.	Aucune importation n’est en attente. Importez de nouveau le fichier.
+	No matching fonts	Aucune police correspondante
+	No menu item belongs to this chooser.	Aucun élément de menu n’appartient à ce sélecteur.
+	No menu item is waiting.	Aucun élément de menu n’est en attente.
+	No note to delete	Aucune note à supprimer
+	No options for the Add Anchor Point Tool.	Aucune option pour l’outil Ajout de point d’ancrage.
+	No options for the Delete Anchor Point Tool.	Aucune option pour l’outil Suppression de point d’ancrage.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Aucun tracé à partir duquel créer une forme : dessinez-en un avec l’outil Plume ou sélectionnez-en un dans le panneau Tracés.
+	No pixels are selected.	Aucun pixel n’est sélectionné.
+	No recorded step belongs to this editor.	Aucune étape enregistrée n’appartient à cet éditeur.
+	No slices are selected. Click a slice in the preview to select it.	Aucune tranche n’est sélectionnée. Cliquez sur une tranche dans l’aperçu pour la sélectionner.
+	No step is waiting.	Aucune étape n’est en attente.
+	Not Clipped	Non découpé
+	Not Empty	Non vide
+	Not Linked	Non lié
+	Not Locked	Non verrouillé
+	Not Visible	Non visible
+	Note deleted, but the preference could not be saved: {error}	Note supprimée, mais la préférence n’a pas pu être enregistrée : {error}
+	Nudge	Décaler
+	Numerals	Chiffres
+	Open anyway	Ouvrir quand même
+	Open as Smart Object…	Ouvrir comme objet intelligent…
+	Opening this document uses more memory and may slow down your computer or other running applications.	L’ouverture de ce document utilise davantage de mémoire et peut ralentir votre ordinateur ou d’autres applications en cours d’exécution.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	L’ouverture de « {name} » nécessite environ {est} Gio de mémoire ({avail} Gio disponibles).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	L’ouverture de « {name} » nécessite environ {est} Gio de mémoire. La mémoire disponible n’a pas pu être mesurée.
+	Painting Mode	Mode de peinture
+	Percentile:	Centile :
+	Preparing Free Transform	Préparation de la transformation libre
+	Proportional	Proportionnels
+	Proportional Lining	Alignés proportionnels
+	Proportional Oldstyle	Elzéviriens proportionnels
+	Record Again	Réenregistrer
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	« Remplacer » supprime d’abord tout le contenu de « {group} », y compris les présélections que vous y avez modifiées ou déplacées. Cette action est irréversible.
+	Report an issue	Signaler un problème
+	Resize windows when zooming using the Zoom Tool	Redimensionner les fenêtres lors du zoom avec l’outil Zoom
+	Save Image Pyramid	Enregistrer la pyramide d’images
+	Save Transparency	Enregistrer la transparence
+	Scroll all open document windows when using the hand tool	Faire défiler toutes les fenêtres de document ouvertes avec l’outil Main
+	Search and select fonts	Rechercher et sélectionner des polices
+	Select Pixels	Sélectionner les pixels
+	Select an action first.	Sélectionnez d’abord une action.
+	Select an action step first.	Sélectionnez d’abord une étape d’action.
+	Selected Slices	Tranches sélectionnées
+	Set 	Jeu 
+	Set 1	Jeu 1
+	Set 10	Jeu 10
+	Set 11	Jeu 11
+	Set 12	Jeu 12
+	Set 13	Jeu 13
+	Set 14	Jeu 14
+	Set 15	Jeu 15
+	Set 16	Jeu 16
+	Set 17	Jeu 17
+	Set 18	Jeu 18
+	Set 19	Jeu 19
+	Set 2	Jeu 2
+	Set 20	Jeu 20
+	Set 3	Jeu 3
+	Set 4	Jeu 4
+	Set 5	Jeu 5
+	Set 6	Jeu 6
+	Set 7	Jeu 7
+	Set 8	Jeu 8
+	Set 9	Jeu 9
+	Set as default	Définir par défaut
+	Set exposure for stroke	Définir l’exposition du trait
+	Set flow rate for stroke	Définir le débit du trait
+	Set font size	Définir la taille de police
+	Set font style	Définir le style de police
+	Set opacity for stroke	Définir l’opacité du trait
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Définir le lissage du trait\nUtilisez des valeurs plus élevées pour réduire les tremblements des traits de pinceau
+	Set symmetry options for Painting	Définir les options de symétrie pour la peinture
+	Set text color	Définir la couleur du texte
+	Set the brush angle	Définir l’angle du pinceau
+	Show Channels in Color	Afficher les couches en couleur
+	Show Statistics	Afficher les statistiques
+	Smoothing Options	Options de lissage
+	Source:	Source :
+	Start	Début
+	Stylistic Sets	Jeux stylistiques
+	Tabular	Tabulaires
+	Tabular Lining	Alignés tabulaires
+	Tabular Oldstyle	Elzéviriens tabulaires
+	The Record Again command changed.	La commande Réenregistrer a changé.
+	The action or insertion command changed. Request Insert Menu Item again.	La commande d’action ou d’insertion a changé. Demandez de nouveau « Insérer un élément de menu ».
+	The actions changed. Request Record Again again.	Les actions ont changé. Demandez de nouveau « Réenregistrer ».
+	The command permissions changed. Request Insert Menu Item again.	Les autorisations de commande ont changé. Demandez de nouveau « Insérer un élément de menu ».
+	The command permissions changed. Request Record Again again.	Les autorisations de commande ont changé. Demandez de nouveau « Réenregistrer ».
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Le disque de travail actuel ({path}) ne signale pas son espace libre : Lienzo ne peut donc pas s’arrêter avant qu’il soit plein, et les gros fichiers n’y obtiennent pas de place supplémentaire sans limite de taille de disque de travail. Cet avertissement s’applique à la configuration actuelle ; les modifications ci-dessus prennent effet avec Appliquer ou OK. Définissez une limite ou utilisez un disque local.
+	The document changed. Please choose Clear All again.	Le document a changé. Choisissez de nouveau « Tout effacer ».
+	The document changed. Request Record Again again.	Le document a changé. Demandez de nouveau « Réenregistrer ».
+	The document or its notes changed. Please delete the note again.	Le document ou ses notes ont changé. Supprimez de nouveau la note.
+	The preference could not be saved: {error}	La préférence n’a pas pu être enregistrée : {error}
+	The step editor could not be opened.	L’éditeur d’étape n’a pas pu être ouvert.
+	The step has no command editor.	L’étape n’a pas d’éditeur de commande.
+	Tolerance for choosing related colors	Tolérance pour le choix des couleurs apparentées
+	Top align text	Aligner le texte en haut
+	Uncached Refresh	Actualisation sans cache
+	Use relative positioning for reference point	Utiliser un positionnement relatif pour le point de référence
+	Use these settings for new arrows	Utiliser ces réglages pour les nouvelles flèches
+	Useful mixer brush combinations	Combinaisons utiles de pinceau mélangeur
+	ZIP	ZIP
+	Zoom current window to 1:1	Zoomer la fenêtre actuelle à 1:1
+	Zoom current window to fill the screen	Zoomer la fenêtre actuelle pour remplir l’écran
+	Zoom current window to screen size	Zoomer la fenêtre actuelle à la taille de l’écran
+	brush tool	outil Pinceau
+	by Nodalia	par Nodalia
+	dodge tool	outil Éclaircir
+	{message} into “{group}”	{message} dans « {group} »
+	{ok} written to {dir}	{ok} écrits dans {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Le groupe de pinceaux « {group} » contient déjà {n} pinceau de votre part.|Le groupe de pinceaux « {group} » contient déjà {n} pinceaux de votre part.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Le groupe de dégradés « {group} » existe déjà ({n} dégradé).|Le groupe de dégradés « {group} » existe déjà ({n} dégradés).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what} : {n} sortie d’éléments d’image a échoué|{what} : {n} sorties d’éléments d’image ont échoué
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what} : {n} fichier a échoué|{what} : {n} fichiers ont échoué
+	Drag to move the selected path	Faites glisser pour déplacer le tracé sélectionné
+	Pick Color From Image	Prélever la couleur de l’image
+# Template gallery on the Home screen
+	Start from a template	Partir d’un modèle
+	Social	Réseaux sociaux
+	Print & paper	Impression et papier
+	Web & art	Web et art
+	Quiet Quote	Citation tranquille
+	Weekend Notes	Notes du week-end
+	Little Things	Petites choses
+	Video Thumbnail	Miniature vidéo
+	Evening Poster	Affiche du soir
+	Coast Postcard	Carte postale de la côte
+	Garden Invitation	Invitation au jardin
+	Business Card	Carte de visite
+	Dusk Hills	Collines au crépuscule
+	Web Banner	Bannière web
+	Album Cover	Pochette d’album
+	Colour Palette	Palette de couleurs

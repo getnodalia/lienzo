@@ -748,7 +748,7 @@ The shared layout begins with the existing workspace on the first docking operat
 Workspace saves keep its groups, active tabs, split sizes, floating geometry, and the
 positions of hidden panels. Resetting a built-in workspace restores its default dock.
 
-The docking commands are craft-ui's shared vocabulary (`DockCommand`). Panels may be named
+The docking commands are nodalia-ui's shared vocabulary (`DockCommand`). Panels may be named
 by ID or label, and `onto` is accepted for `anchor`.
 
 - `window.panel.move {panel, anchor, zone?, before?, group?, placement?}` moves a panel into the
@@ -786,7 +786,7 @@ resizes the root divider (`false`/`true` path entries select first/second childr
 The UI dispatches these same commands. Unknown panel IDs, invalid geometry, and stale
 split paths return an error without changing the workspace.
 
-The `docking` object in `ui.state` and in saved workspaces is craft-ui's `Workspace`:
+The `docking` object in `ui.state` and in saved workspaces is nodalia-ui's `Workspace`:
 `version` (2), `layout`, `hidden` (each closed panel with its return place), `saved` and
 `locked`. `dockingReturns` holds where each floating panel docks back, and
 `dockingCollapsed` the panels of collapsed custom groups. Any other saved `docking` value,

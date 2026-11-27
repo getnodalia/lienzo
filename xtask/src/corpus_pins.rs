@@ -3,20 +3,16 @@
 //! below and verifies each file against the `xtask/*.sha256` manifests. The CI corpus job's cache
 //! key hashes this file and the manifests, so changing a pin is the only thing that refetches.
 //!
-//! - Our own oracles: https://github.com/storytold/photocraft-corpus (README, AGENTS.md).
 //! - Third-party sets come from their upstreams (licences in ATTRIBUTION.md).
+//! - Real Photoshop- and GIMP-authored oracles (`corpus/photoshop`, `corpus/gimp`) are not pinned:
+//!   they are optional, and the tests that read them skip with a message when they are absent
+//!   (`docs/development.md` › Test corpora).
 //!
 //! Moving a pin: change the commit, run `cargo xtask corpus --<name> --update-manifest`, review the
 //! manifest diff, and re-run `cargo xtask test-corpus` (adjust floors only upwards).
 
 use crate::pinned::{PinnedCorpus, Upstream};
 
-/// https://github.com/storytold/photocraft-corpus: our Photoshop-authored oracle PSDs
-/// (`photoshop/`). Bump through a PR after committing there.
-pub const LIENZO_CORPUS_COMMIT: &str = "f5b1178cab15309e05b7b504545df3c701f6d8fd";
-/// https://github.com/storytold/photocraft-corpus: our GIMP-authored XCF oracles (`gimp/`). Its own
-/// pin, so that set can move without refetching `photoshop/`. Bump through a PR after committing there.
-pub const LIENZO_CORPUS_GIMP_COMMIT: &str = "fbe9227a48d06de87061e527541209a178fd685c";
 /// https://github.com/psd-tools/psd-tools (MIT): `tests/psd_files` (main, 2026-10-05).
 pub const PSD_TOOLS_COMMIT: &str = "96eb134c17b2c65edf4c4151c0f00b802ada86c2";
 /// https://github.com/Agamnentzar/ag-psd (MIT): `test/` (master, 2026-07-02).
@@ -47,55 +43,6 @@ pub const PNGSUITE_URL: &str = "http://www.schaik.com/pngsuite/PngSuite-2017jul1
 /// 134faad8 (corpus/checksums.json and tests/pngsuite/SHA256SUMS). Check the legacy HTTP
 /// download against this committed digest before extraction.
 pub const PNGSUITE_SHA256: &str = "0294b244c95a8342c01b00010cf34abdcabc7c6a34fd0fe1bd963917537bfdc8";
-
-/// `corpus/photoshop`: 258 PSDs authored with Photoshop by the photocraft-corpus generator.
-pub const PHOTOSHOP: PinnedCorpus = PinnedCorpus {
-    name: "photoshop",
-    dest: "photoshop",
-    upstreams: &[Upstream {
-        prefix: "",
-        repo: "storytold/photocraft-corpus",
-        commit: LIENZO_CORPUS_COMMIT,
-        subdir: "photoshop",
-        extras: &[("README.md", "README.md"), ("LICENSE-MIT", "LICENSE-MIT"), ("LICENSE-APACHE", "LICENSE-APACHE")],
-    }],
-    manifest: "xtask/photoshop-corpus.sha256",
-    exts: &["psd", "psb"],
-    subset: false,
-    sources_md: |c| {
-        format!(
-            "# Photoshop oracle corpus\n\n`photoshop/` of https://github.com/storytold/photocraft-corpus at commit {LIENZO_CORPUS_COMMIT} \
-             (see `README.md`). MIT OR Apache-2.0, authored by the PhotoCraft contributors. Fetched and sha256-verified by \
-             `cargo xtask corpus --photoshop` against `{}`. Gitignored; never commit these files.\n",
-            c.manifest
-        )
-    },
-};
-
-/// `corpus/gimp`: 14 XCF files written by GIMP 3.2.6 by the photocraft-corpus generator, each with
-/// GIMP's merged rendering as a PNG (28 files), the oracles of `lienzo-io`'s XCF reader.
-pub const GIMP: PinnedCorpus = PinnedCorpus {
-    name: "gimp",
-    dest: "gimp",
-    upstreams: &[Upstream {
-        prefix: "",
-        repo: "storytold/photocraft-corpus",
-        commit: LIENZO_CORPUS_GIMP_COMMIT,
-        subdir: "gimp",
-        extras: &[("README.md", "README.md"), ("LICENSE-MIT", "LICENSE-MIT"), ("LICENSE-APACHE", "LICENSE-APACHE")],
-    }],
-    manifest: "xtask/gimp-corpus.sha256",
-    exts: &["xcf", "png"],
-    subset: false,
-    sources_md: |c| {
-        format!(
-            "# GIMP XCF oracle corpus\n\n`gimp/` of https://github.com/storytold/photocraft-corpus at commit {LIENZO_CORPUS_GIMP_COMMIT} \
-             (see `README.md`). MIT OR Apache-2.0, authored by the PhotoCraft contributors with GIMP 3.2.6. Fetched and sha256-verified by \
-             `cargo xtask corpus --gimp` against `{}`. Gitignored; never commit these files.\n",
-            c.manifest
-        )
-    },
-};
 
 /// `corpus/psd-tools`: the complete psd-tools test set.
 pub const PSD_TOOLS: PinnedCorpus = PinnedCorpus {
@@ -335,7 +282,7 @@ pub const ATN: PinnedCorpus = PinnedCorpus {
 };
 
 /// Every pinned corpus, in fetch order.
-pub const ALL: &[&PinnedCorpus] = &[&PSD_MIXED, &PSD_TOOLS, &PHOTOSHOP, &GIMP, &HEIF, &EXR, &AFFINITY, &ATN];
+pub const ALL: &[&PinnedCorpus] = &[&PSD_MIXED, &PSD_TOOLS, &HEIF, &EXR, &AFFINITY, &ATN];
 
 /// `corpus/pixls`: real camera raws from <https://raw.pixls.us> (released into the public
 /// domain / CC0 by their photographers; see ATTRIBUTION.md). One file per decode path

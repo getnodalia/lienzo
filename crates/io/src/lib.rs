@@ -558,7 +558,7 @@ pub fn import_preflight(name: &str, bytes: &[u8]) -> ImportPreflight {
     if is_psd_input(name, bytes) {
         return ImportPreflight::Psd;
     }
-    // PDF (craft-pdf, pure Rust). `.ai` files that start with `%PDF-` are PDFs and take this
+    // PDF (nodalia-pdf, pure Rust). `.ai` files that start with `%PDF-` are PDFs and take this
     // importer too; a recognized raster signature wins over a misleading `.pdf` suffix.
     if pdf_import::is_pdf(bytes) || (has_extension(name, "pdf") && lienzo_codecs::detect(bytes).is_none()) {
         return ImportPreflight::Unbounded;
@@ -1003,7 +1003,7 @@ fn import_stages(name: &str, bytes: &[u8], ctl: &lienzo_raster::Interrupt, opts:
     if is_svg_input(name, bytes) {
         return svg::import_svg_with_group_depth(name, bytes, opts.max_group_depth);
     }
-    // PDF (craft-pdf, pure Rust). `.ai` files that start with `%PDF-` are PDFs and take this
+    // PDF (nodalia-pdf, pure Rust). `.ai` files that start with `%PDF-` are PDFs and take this
     // importer too; a recognized raster signature wins over a misleading `.pdf` suffix.
     if pdf_import::is_pdf(bytes) || (has_extension(name, "pdf") && lienzo_codecs::detect(bytes).is_none()) {
         return pdf_import::import(name, bytes, opts, ctl);
@@ -1164,11 +1164,11 @@ pub(crate) fn with_span<R>(ctl: &lienzo_raster::Interrupt, lo: f32, hi: f32, f: 
 /// Where a .pcraft save's progress stands once its thumbnail, then its 1024 px composite preview,
 /// then its full-size composite when [`ExportOptions::pcraft_full_composite`] asks for one, are
 /// rendered (the bundle itself is written after them).
-const PCRAFT_THUMBNAIL_DONE: f32 = 0.15;
-const PCRAFT_PREVIEWS_DONE: f32 = 0.4;
-const PCRAFT_FULL_COMPOSITE_DONE: f32 = 0.6;
+const PNODALIA_THUMBNAIL_DONE: f32 = 0.15;
+const PNODALIA_PREVIEWS_DONE: f32 = 0.4;
+const PNODALIA_FULL_COMPOSITE_DONE: f32 = 0.6;
 /// Bounds the optional full-size RGBA8 composite to 256 MiB before PNG and ZIP encoding.
-const PCRAFT_FULL_COMPOSITE_PIXELS: u64 = 1 << 26;
+const PNODALIA_FULL_COMPOSITE_PIXELS: u64 = 1 << 26;
 /// The share of a PSD/PSB export spent converting the document (layers, then the composite)
 /// before its bytes are assembled: about 2.7 s of 3.0 s for a 24 MP, 5-layer RGB/8 document.
 const PSD_MODEL_DONE: f32 = 0.9;
@@ -1215,15 +1215,15 @@ fn export_stages_with_renderer(
         let doc = named_for_file(doc, name_or_ext);
         let thumbnail = Some(lienzo_compose::thumbnail(doc.as_ref(), 256));
         ctl.check().map_err(|_| IoError::Cancelled)?;
-        ctl.progress(PCRAFT_THUMBNAIL_DONE);
+        ctl.progress(PNODALIA_THUMBNAIL_DONE);
         let composite = Some(lienzo_compose::thumbnail(doc.as_ref(), 1024));
         ctl.check().map_err(|_| IoError::Cancelled)?;
-        ctl.progress(PCRAFT_PREVIEWS_DONE);
+        ctl.progress(PNODALIA_PREVIEWS_DONE);
         let mut full_composite = None;
         if opts.pcraft_full_composite {
-            full_composite = with_span(ctl, PCRAFT_PREVIEWS_DONE, PCRAFT_FULL_COMPOSITE_DONE, |ctl| pcraft_full_composite_with(doc.as_ref(), ctl))?;
+            full_composite = with_span(ctl, PNODALIA_PREVIEWS_DONE, PNODALIA_FULL_COMPOSITE_DONE, |ctl| pcraft_full_composite_with(doc.as_ref(), ctl))?;
             ctl.check().map_err(|_| IoError::Cancelled)?;
-            ctl.progress(PCRAFT_FULL_COMPOSITE_DONE);
+            ctl.progress(PNODALIA_FULL_COMPOSITE_DONE);
         }
         let full_composite_icc = full_composite.as_ref().map(|_| pcraft_full_composite_icc(doc.as_ref()));
         let previews = lienzo_format::SaveOptions { thumbnail, composite, full_composite, full_composite_icc };
@@ -1306,7 +1306,7 @@ pub fn pcraft_full_composite_icc(doc: &Document) -> Vec<u8> {
 /// cancelled render fails with [`IoError::Cancelled`].
 fn pcraft_full_composite_with(doc: &Document, ctl: &lienzo_raster::Interrupt) -> Result<Option<lienzo_raster::Rgba8Image>, IoError> {
     let canvas = doc.bounds();
-    if canvas.is_empty() || u64::from(canvas.width()) * u64::from(canvas.height()) > PCRAFT_FULL_COMPOSITE_PIXELS {
+    if canvas.is_empty() || u64::from(canvas.width()) * u64::from(canvas.height()) > PNODALIA_FULL_COMPOSITE_PIXELS {
         return Ok(None);
     }
     let Ok(len) = usize::try_from(u64::from(canvas.width()) * u64::from(canvas.height()) * 4) else { return Ok(None) };

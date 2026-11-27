@@ -32,12 +32,12 @@ concurrency:
 jobs:
   build:
     # The oldest glibc we build on is the oldest one the packages run on.
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-26.04
     outputs:
       version: ${{ steps.ver.outputs.version }}
     env:
-      CRAFT_FONTS_DIR: ${{ github.workspace }}/craft-fonts
-      CRAFT_FONTS_REQUIRED: "1"
+      NODALIA_FONTS_DIR: ${{ github.workspace }}/nodalia-fonts
+      NODALIA_FONTS_REQUIRED: "1"
       DIST: ${{ github.workspace }}/dist
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -65,12 +65,12 @@ jobs:
           TAG: ${{ inputs.tag }}
         run: scripts/check-release-notes.sh "$TAG"
 
-      - name: Check out craft-fonts
+      - name: Check out nodalia-fonts
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: getnodalia/foundation # craft-fonts, kept at vendor/craft-fonts/main
-          ref: b076417b5880bd4154bd22f00695b1d28c6bea83
-          path: craft-fonts
+          repository: getnodalia/foundation # nodalia-fonts, kept at nodalia/fonts
+          ref: f9a5f30b74d90b69cffdb7042bb0b339400ed06d
+          path: nodalia-fonts
           persist-credentials: false
 
       - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec # stable
@@ -101,7 +101,7 @@ jobs:
           sha256sum lienzo-* > SHA256SUMS
           cat SHA256SUMS
 
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: lienzo-linux
           path: dist/
@@ -110,14 +110,14 @@ jobs:
   smoke:
     # Bare distribution images: the AppImage must start its CLI with nothing installed but glibc.
     needs: build
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     strategy:
       fail-fast: false
       matrix:
         image: ["ubuntu:22.04", "ubuntu:24.04", "debian:12", "fedora:latest", "archlinux:latest"]
     container: ${{ matrix.image }}
     steps:
-      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: lienzo-linux
           path: dist
@@ -137,7 +137,7 @@ jobs:
     # Nothing reaches a release unless every start-up check above passed.
     needs: [build, smoke]
     if: inputs.tag != ''
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       contents: write
     steps:
@@ -152,7 +152,7 @@ jobs:
         env:
           TAG: ${{ inputs.tag }}
         run: scripts/check-release-notes.sh "$TAG"
-      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: lienzo-linux
           path: dist

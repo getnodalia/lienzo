@@ -2,3 +2,4 @@
 self-hosted-runner:
   labels:
     - macos-release  # org larger runner (M2 Pro), used by release.yml
+    - ubuntu-26.04  # GitHub-hosted since 2026-09; actionlint version has an outdated built-in label list

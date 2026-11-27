@@ -1,24 +1,24 @@
 //! Application-owned panel IDs and commands around the shared docking workspace.
 //!
-//! craft-ui draws the window's panels and the canvas as one layout: a horizontal split of the
+//! nodalia-ui draws the window's panels and the canvas as one layout: a horizontal split of the
 //! protected `canvas` panel and a dock at the logical end edge. Until the first docking
 //! operation the layout is built each frame from the native dock's state (`crate::dock`), so its
 //! groups, tab order, selection, heights and collapse follow that state; from then on
-//! `app.ui.docking` holds a craft-ui [`Workspace`]. The layout, hidden panels and their return
-//! places, and the lock are craft-ui's; Lienzo keeps the panel registry, the collapsed custom
+//! `app.ui.docking` holds a nodalia-ui [`Workspace`]. The layout, hidden panels and their return
+//! places, and the lock are nodalia-ui's; Lienzo keeps the panel registry, the collapsed custom
 //! groups and where a floated panel docks back.
 
 use crate::dock::Group;
-use craft_ui::docking::{
+use nodalia_ui::docking::{
     Action, Column, DockCommand, DockHeights, FloatSpace, Floating, Layout, Location, Node, PanelState, Permissions, Placement, Side, Target, Zone,
 };
-use craft_ui::layout::{SplitAxis, SplitSize};
+use nodalia_ui::layout::{SplitAxis, SplitSize};
 use serde_json::{Map, Value, json};
 
 use crate::LienzoApp;
 
 /// The saved arrangement: layout, hidden panels with their return places, and the lock.
-pub(crate) type Workspace = craft_ui::docking::Workspace<String>;
+pub(crate) type Workspace = nodalia_ui::docking::Workspace<String>;
 
 type Returns = std::collections::BTreeMap<String, Location<String>>;
 
@@ -43,8 +43,8 @@ const PANELS: &[(&str, &str, Group)] = &[
     ("brushes", "Brushes", Group::Brushes),
 ];
 
-/// Lienzo's wording of craft-ui's docking labels, translated through `tl!`. The others keep
-/// craft-ui's English.
+/// Lienzo's wording of nodalia-ui's docking labels, translated through `tl!`. The others keep
+/// nodalia-ui's English.
 const DOCK_LABELS: &[(&str, &str)] = &[
     ("dock.float", "Float Panel"),
     ("dock.close", "Close Panel"),
@@ -56,7 +56,7 @@ const DOCK_LABELS: &[(&str, &str)] = &[
     ("dock.floatGroup", "Float Tab Group"),
 ];
 
-/// Where a panel floats when a command gives no rect: craft-ui places it 24 points inside this
+/// Where a panel floats when a command gives no rect: nodalia-ui places it 24 points inside this
 /// area, at (400, 140) on the window.
 const FLOAT_AREA: egui::Rect = egui::Rect::from_min_max(egui::pos2(376.0, 116.0), egui::pos2(1400.0, 900.0));
 const FLOAT_SIZE: egui::Vec2 = egui::vec2(300.0, 400.0);
@@ -90,7 +90,7 @@ fn default_width(pro: bool) -> f32 {
     if pro { 290.0 } else { 300.0 }
 }
 
-/// The end dock of `layout`: follow only the second child of horizontal splits, as craft-ui
+/// The end dock of `layout`: follow only the second child of horizontal splits, as nodalia-ui
 /// keeps a side's dock at its window edge; this app builds that dock as `Side::End`. `None` when
 /// the layout has no end dock.
 fn end_dock_node(node: &Node<String>) -> Option<&Node<String>> {
@@ -141,11 +141,11 @@ pub(crate) fn dock_is_empty(app: &LienzoApp) -> bool {
     dock_metrics(app).empty
 }
 
-/// craft-ui's iconic column width without a saved width, and its renderer's clamp.
+/// nodalia-ui's iconic column width without a saved width, and its renderer's clamp.
 pub(crate) const ICONIC_WIDTH: f32 = 36.0;
 const ICONIC_MAX_WIDTH: f32 = 240.0;
 
-/// A column's width as craft-ui draws it: `iconic_width` (default 36, clamped to 36..240) while
+/// A column's width as nodalia-ui draws it: `iconic_width` (default 36, clamped to 36..240) while
 /// collapsed to icons, else the expanded width.
 fn display_width(column: &Column<String>) -> f32 {
     if column.iconic { column.iconic_width.unwrap_or(ICONIC_WIDTH).clamp(ICONIC_WIDTH, ICONIC_MAX_WIDTH) } else { column.width }
@@ -264,7 +264,7 @@ fn dock_columns_mut(node: &mut Node<String>) -> Option<&mut Vec<Column<String>>>
 }
 
 /// The window id of the Studio themes' floating Properties group in a layout built each frame:
-/// the same every time, with the top bit set, where craft-ui's fresh ids never reach.
+/// the same every time, with the top bit set, where nodalia-ui's fresh ids never reach.
 const PROPERTIES_WINDOW: u64 = (1 << 63) | 0x5052_4f50;
 
 /// The canvas beside `dock`, which is `width` wide, at the logical end edge.
@@ -305,7 +305,7 @@ pub(crate) fn valid(layout: &Layout<String>) -> bool {
     layout.validate().is_ok() && layout.panels().iter().all(|id| registered(id)) && docked(layout).contains(&CANVAS.to_owned())
 }
 
-/// craft-ui's checks plus Lienzo's registry, for the layout and every hidden panel.
+/// nodalia-ui's checks plus Lienzo's registry, for the layout and every hidden panel.
 pub(crate) fn valid_workspace(workspace: &Workspace) -> bool {
     workspace.validate().is_ok()
         && valid(&workspace.layout)
@@ -325,7 +325,7 @@ pub(crate) fn load(saved: &Value) -> Option<(Workspace, Returns)> {
     valid_workspace(&workspace).then_some((workspace, returns))
 }
 
-/// The saved `docking` workspace is from a newer version than craft-ui reads.
+/// The saved `docking` workspace is from a newer version than nodalia-ui reads.
 pub(crate) fn newer(saved: &Value) -> bool {
     saved.get("docking").and_then(|docking| docking.get("version")).and_then(Value::as_u64).is_some_and(|version| version > u64::from(Workspace::VERSION))
 }
@@ -334,7 +334,7 @@ fn legacy(app: &LienzoApp) -> Layout<String> {
     legacy_layout(app, false)
 }
 
-/// The native dock's arrangement as a craft-ui layout: the canvas beside one dock column of the
+/// The native dock's arrangement as a nodalia-ui layout: the canvas beside one dock column of the
 /// shown groups, top to bottom, with their tab order, selected tab and user-set heights. The
 /// Studio themes float Properties over the canvas's top right corner. `all` includes the groups
 /// that are not shown, with every tab.
@@ -356,7 +356,7 @@ fn legacy_layout(app: &LienzoApp, all: bool) -> Layout<String> {
             continue;
         }
         let height = app.ui.dock.heights.contains_key(&group).then(|| app.ui.dock.height(group));
-        groups.push(craft_ui::docking::Group { height, ..craft_ui::docking::Group::new(panels, active) });
+        groups.push(nodalia_ui::docking::Group { height, ..nodalia_ui::docking::Group::new(panels, active) });
     }
     let (columns, width) = if groups.is_empty() { (Vec::new(), 0.0) } else { (vec![Column::new(groups, default_width(pro))], default_width(pro)) };
     Layout { root: Some(with_canvas(Node::Dock { side: Side::End, columns }, width)), floating }
@@ -444,7 +444,7 @@ fn ensure(app: &LienzoApp, workspace: &mut Workspace, panel: &str) -> Result<(),
 
 /// Where the native dock shows `panel` in `layout`: a tab of its group, before the next of the
 /// group's tabs; else a new group of the dock column, above the next native group there or below
-/// the one before it; else where craft-ui opens a panel.
+/// the one before it; else where nodalia-ui opens a panel.
 fn default_place(app: &LienzoApp, layout: &Layout<String>, panel: &str) -> Action<String> {
     let open = Action::Open { panel: panel.to_owned(), anchor: None };
     let Some(group) = PANELS.iter().find(|p| p.0 == panel).map(|p| p.2) else { return open };
@@ -472,7 +472,7 @@ fn default_place(app: &LienzoApp, layout: &Layout<String>, panel: &str) -> Actio
 
 /// The panel a command names, if any.
 fn command_panel(command: &DockCommand<String>) -> Option<&String> {
-    use craft_ui::docking::{DockOperation, UiDock};
+    use nodalia_ui::docking::{DockOperation, UiDock};
     match command {
         DockCommand::Move { panel, .. }
         | DockCommand::Float { panel, .. }
@@ -498,7 +498,7 @@ fn command_panel(command: &DockCommand<String>) -> Option<&String> {
 
 /// Commands that bring their panel to the front.
 fn reveals(command: &DockCommand<String>) -> bool {
-    use craft_ui::docking::{DockOperation, UiDock};
+    use nodalia_ui::docking::{DockOperation, UiDock};
     matches!(
         command,
         DockCommand::Activate { .. }
@@ -511,7 +511,7 @@ fn reveals(command: &DockCommand<String>) -> bool {
 
 /// Commands that close their panel, so a hidden one is not shown first.
 fn closes(command: &DockCommand<String>) -> bool {
-    use craft_ui::docking::{DockOperation, UiDock};
+    use nodalia_ui::docking::{DockOperation, UiDock};
     matches!(
         command,
         DockCommand::Close { .. }
@@ -557,7 +557,7 @@ pub(crate) fn checked(app: &LienzoApp, id: &str) -> Option<bool> {
     Some(workspace.layout.contains(&panel.to_string()))
 }
 
-/// Parse a docking command id and its params as craft-ui's [`DockCommand`] and run it. Panels
+/// Parse a docking command id and its params as nodalia-ui's [`DockCommand`] and run it. Panels
 /// may be named by id or label, and `onto` stands for `anchor`.
 fn dock_command(app: &mut LienzoApp, id: &str, params: &Value) -> Result<Value, String> {
     let mut fields = match params {
@@ -724,7 +724,7 @@ fn without_canvas(layout: Layout<String>) -> Layout<String> {
 /// The dock-edge toolbox layout presents the dock column without its canvas so the toolbox can sit
 /// between them. That presentation drops the canvas side of the root split, so it is only safe
 /// while the canvas is alone there: a panel docked beside the canvas keeps the standard layout,
-/// where craft-ui draws it and accepts drops beside it.
+/// where nodalia-ui draws it and accepts drops beside it.
 pub(crate) fn canvas_alone(app: &LienzoApp) -> bool {
     match &app.ui.docking {
         Some(workspace) => canvas_alone_layout(&workspace.layout),
@@ -783,7 +783,7 @@ fn show_layout(app: &mut LienzoApp, ui: &mut egui::Ui, dock_only: bool) {
         previous.is_some_and(|generation| generation != app.ui.docking_generation)
     });
     if changed_workspace {
-        craft_ui::docking::cancel_drag::<String>(ui.ctx(), area);
+        nodalia_ui::docking::cancel_drag::<String>(ui.ctx(), area);
     }
     if app.ui.docking.as_ref().is_some_and(|workspace| !valid_workspace(workspace)) {
         app.ui.docking = None;
@@ -804,13 +804,17 @@ fn show_layout(app: &mut LienzoApp, ui: &mut egui::Ui, dock_only: bool) {
     let reveal = app.ui.docking_reveal.take();
     let t = crate::theme::Tokens::get(ui.ctx());
     let locked = app.session.prefs().workspace_locked;
-    let mut style = craft_ui::docking::DockStyle::from_ui(ui);
+    let mut style = nodalia_ui::docking::DockStyle::from_ui(ui);
     style.tab_height = if t.pro { 28.0 } else { 40.0 };
     style.min_pane = 0.0;
     if t.islands() {
         // Nodalia: the canvas and every panel group stand apart on the window frame.
         style.gap = crate::theme::ISLAND_GAP;
         style.dock_gap = Some(crate::theme::ISLAND_GAP);
+        // No bar above the column: it left an empty strip over the panel island, so the
+        // inspector started lower than the toolbox and the canvas. The rail collapses and
+        // expands groups, and a group's tabs still drag it.
+        style.column_bar_height = 0.0;
     }
     style.background = t.card;
     // Studio themes leave the strip transparent over the dock's card; a floating group has no
@@ -832,7 +836,7 @@ fn show_layout(app: &mut LienzoApp, ui: &mut egui::Ui, dock_only: bool) {
     style.right_to_left = crate::direction::is_rtl();
     style.new_dock_zones = true;
     let style = style.localized(|key| DOCK_LABELS.iter().find(|(k, _)| *k == key).map(|(_, english)| tl!(english).to_string()));
-    let mut dock = craft_ui::docking::DockArea::new(area)
+    let mut dock = nodalia_ui::docking::DockArea::new(area)
         .locked(locked)
         .auto_collapse_iconic(app.session.prefs().workspace.auto_collapse_icon_panels)
         .input_blocked(modal_open(app, ui.ctx()));
@@ -858,13 +862,16 @@ fn show_layout(app: &mut LienzoApp, ui: &mut egui::Ui, dock_only: bool) {
         permissions,
         |id| {
             if id == CANVAS {
-                craft_ui::docking::PanelLimits { min: egui::vec2(CANVAS_MIN_WIDTH, 120.0), ..Default::default() }
+                nodalia_ui::docking::PanelLimits { min: egui::vec2(CANVAS_MIN_WIDTH, 120.0), ..Default::default() }
             } else if collapsed.contains(id) {
-                craft_ui::docking::PanelLimits { min: egui::vec2(220.0, 0.0), max: egui::vec2(1_000_000.0, 0.0) }
+                nodalia_ui::docking::PanelLimits { min: egui::vec2(220.0, 0.0), max: egui::vec2(1_000_000.0, 0.0) }
             } else {
                 // The native group's smallest height, tab strip included.
-                let height = PANELS.iter().find(|p| p.0 == id).map_or(80.0, |p| p.2.min_height() - strip);
-                craft_ui::docking::PanelLimits { min: egui::vec2(220.0, height), ..Default::default() }
+                // A column squeezes a group down to its small minimum; a group that stands on its
+                // own (beside the canvas, floating) keeps room for its whole layout.
+                let in_column = in_dock_column(&layout, id);
+                let height = PANELS.iter().find(|p| p.0 == id).map_or(80.0, |p| (if in_column { p.2.min_height() } else { p.2.framed_min_height() }) - strip);
+                nodalia_ui::docking::PanelLimits { min: egui::vec2(220.0, height), ..Default::default() }
             }
         },
         &mut PanelContent { app, collapsed: &collapsed, fillers: &fillers, card: &card, strip, commands: &mut commands },
@@ -924,7 +931,7 @@ pub(crate) fn native_viewports(app: &LienzoApp, ctx: &egui::Context) -> Vec<egui
             .floating
             .iter()
             .filter(|window| window.id != PROPERTIES_WINDOW)
-            .map(|window| craft_ui::docking::DockArea::<String>::window_viewport(area_id(), window.id))
+            .map(|window| nodalia_ui::docking::DockArea::<String>::window_viewport(area_id(), window.id))
             .collect();
     }
     let _ = (app, ctx);
@@ -960,7 +967,7 @@ pub(crate) fn other_window_keyboard(ctx: &egui::Context) -> Option<bool> {
 /// Files dropped on a floating panel's own OS window open as documents, as files dropped on the
 /// main window away from the canvas and the tab strip do, and the main window comes forward.
 #[cfg(not(target_arch = "wasm32"))]
-fn open_window_drops(app: &mut LienzoApp, ctx: &egui::Context, windows: Vec<craft_ui::docking::WindowFiles<String>>) {
+fn open_window_drops(app: &mut LienzoApp, ctx: &egui::Context, windows: Vec<nodalia_ui::docking::WindowFiles<String>>) {
     let dropped: Vec<egui::DroppedFileHandle> = windows.into_iter().flat_map(|window| window.dropped).collect();
     if !dropped.is_empty() {
         app.open_dropped(ctx, dropped, None);
@@ -972,7 +979,7 @@ fn open_window_drops(app: &mut LienzoApp, ctx: &egui::Context, windows: Vec<craf
 /// still at their defaults, which give way to the filler, don't shift while one is resized. The
 /// last open group fills the column and stays unpinned.
 fn pin_group_heights(ctx: &egui::Context, layout: &Layout<String>, actions: &mut Vec<Action<String>>) {
-    use craft_ui::docking::{DockArea, Hit};
+    use nodalia_ui::docking::{DockArea, Hit};
     let resized: Vec<String> = actions.iter().filter_map(|a| if let Action::ResizeGroup { panel, .. } = a { Some(panel.clone()) } else { None }).collect();
     if resized.is_empty() {
         return;
@@ -994,7 +1001,7 @@ fn pin_group_heights(ctx: &egui::Context, layout: &Layout<String>, actions: &mut
                             .map(|(_, rect)| rect.top())
                             .reduce(f32::min);
                         let bottom =
-                            hits.iter().find(|(hit, _)| *hit == Hit::Divider(craft_ui::docking::Divider::Group(first.clone()))).map(|(_, r)| r.center().y);
+                            hits.iter().find(|(hit, _)| *hit == Hit::Divider(nodalia_ui::docking::Divider::Group(first.clone()))).map(|(_, r)| r.center().y);
                         if let (Some(top), Some(bottom)) = (top, bottom) {
                             pins.push(Action::ResizeGroup { panel: first.clone(), height: Some(bottom - top) });
                         }
@@ -1220,8 +1227,8 @@ pub(crate) mod record {
 #[cfg(test)]
 pub(crate) mod probe {
     use super::*;
-    use craft_ui::docking::{DockArea, Hit};
     use egui::Rect;
+    use nodalia_ui::docking::{DockArea, Hit};
 
     pub(crate) fn hit_rect(ctx: &egui::Context, hit: &Hit<String>) -> Option<Rect> {
         DockArea::<String>::hit_rects(ctx, area_id()).into_iter().find(|(drawn, _)| drawn == hit).map(|(_, rect)| rect)
@@ -1280,7 +1287,7 @@ fn migration_hidden(app: &LienzoApp, visible: &Layout<String>) -> Vec<(String, L
 struct TabGroup {
     panels: Vec<String>,
     active: usize,
-    /// In a dock column, where craft-ui minimizes it to its tab strip.
+    /// In a dock column, where nodalia-ui minimizes it to its tab strip.
     dock: bool,
     minimized: bool,
 }
@@ -1580,7 +1587,7 @@ fn panel_menu(app: &mut LienzoApp, ui: &mut egui::Ui, panel: &str) {
     }
 }
 
-impl craft_ui::docking::DockContent<String> for PanelContent<'_> {
+impl nodalia_ui::docking::DockContent<String> for PanelContent<'_> {
     /// Draws panel `id`'s body in `ui`: the canvas, or an expanded panel's contents when the
     /// column leaves it at least 200 points.
     fn body(&mut self, ui: &mut egui::Ui, id: &String) {

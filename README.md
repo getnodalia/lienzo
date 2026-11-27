@@ -41,13 +41,15 @@ for working in layers, with no account and no cloud. It runs on Linux, macOS and
 </p>
 
 > [!IMPORTANT]
-> **Lienzo is at an early stage.** Version 0.3.6 is out for Linux, macOS and Windows:
+> **Lienzo is at an early stage.** Version 0.4.4 is out for Linux, macOS and Windows:
 > [download it from the releases page](https://github.com/getnodalia/lienzo/releases/latest)
 > (AppImage, .deb, .rpm and .tar.gz; a DMG; a Windows installer and portable zip).
 
 ## What it does
 
 - Layers, masks, adjustment layers, smart objects, selections, paths, type and brushes.
+- A template gallery on Home with twelve calm starting points (social posts, a poster, a postcard,
+  a business card, a web banner and more), each with named layers and live text.
 - Opens and saves Photoshop documents (PSD and PSB), plus its own `.pcraft` format and the usual
   image formats.
 - The Nodalia interface: rounded islands, Lienzo's accent, Sora and Inter, round window controls

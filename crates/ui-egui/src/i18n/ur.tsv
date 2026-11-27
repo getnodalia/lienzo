@@ -4587,3 +4587,144 @@ navigator	Zoom	زوم
 	Content-aware fill	مواد کی بنیاد پر بھرنا
 	Sample content from part of the image and use it to fill a small area	چھوٹی جگہ بھرنے کے لیے تصویر کے حصے سے مواد لیں
 	Reset the crop box, image rotation, and aspect ratio settings	تراشنے کا فریم، تصویر کی گردش اور پہلو تناسب دوبارہ ترتیب دیں
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	بیچ پروسیسنگ کے دوران ایک کمانڈ منسوخ یا روک دی گئی۔ اگلی فائل کے ساتھ جاری رکھیں یا رک جائیں؟
+	A native image editor, layer by layer. No account, no cloud.	ایک مقامی امیج ایڈیٹر، تہہ بہ تہہ۔ نہ اکاؤنٹ، نہ کلاؤڈ۔
+	Allow Tool Recording	ٹول ریکارڈنگ کی اجازت دیں
+	Allows rotation and scaling of selection	انتخاب کو گھمانے اور اس کا سائز بدلنے کی اجازت دیتا ہے
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	دھندلاپن کے لیے ہمیشہ دباؤ استعمال کریں۔ بند ہونے پر برش پری سیٹ دباؤ کو کنٹرول کرتا ہے
+	Always use Pressure for Size. When off, Brush Preset controls pressure	سائز کے لیے ہمیشہ دباؤ استعمال کریں۔ بند ہونے پر برش پری سیٹ دباؤ کو کنٹرول کرتا ہے
+	Anti-alias brush application	برش کو اینٹی ایلیاسنگ کے ساتھ لاگو کریں
+	Are you sure you want to delete all notes?	کیا آپ واقعی تمام نوٹس حذف کرنا چاہتے ہیں؟
+	Bottom align text	متن کو نیچے سے ہم صف کریں
+	Choose a menu command. Playback asks for its settings when needed.	مینو کی ایک کمانڈ منتخب کریں۔ پلے بیک ضرورت پڑنے پر اس کی ترتیبات پوچھتا ہے۔
+	Choose a remix mode	ریمکس موڈ منتخب کریں
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	زوم ٹول سے پیمانہ بدلنے کے لیے کلک کریں اور بائیں یا دائیں حرکت دیں (صرف OpenGL)
+	Click to open the Brush Preset picker	برش پری سیٹ کا انتخاب کنندہ کھولنے کے لیے کلک کریں
+	Confirm or cancel the pending Record Again editor first.	پہلے زیر التوا دوبارہ ریکارڈ کریں ایڈیٹر کی تصدیق یا اسے منسوخ کریں۔
+	Confirm or cancel the pending menu item first.	پہلے زیر التوا مینو آئٹم کی تصدیق یا اسے منسوخ کریں۔
+	Copy CSS	CSS کاپی کریں
+	Could not use the type tool because the layer is locked.	ٹائپ ٹول استعمال نہیں ہو سکا کیونکہ تہہ مقفل ہے۔
+	Delete Note	نوٹ حذف کریں
+	Delete this note?	یہ نوٹ حذف کریں؟
+	Determines the spread of replaced color	بدلے گئے رنگ کے پھیلاؤ کا تعین کرتا ہے
+	Do not erase the foreground swatch color	پیش منظر کے سویچ کا رنگ نہ مٹائیں
+	Draws background color over foreground colors	پیش منظر کے رنگوں کے اوپر پس منظر کا رنگ بناتا ہے
+	Enable to remix all layers	تمام تہوں کو ریمکس کرنے کے لیے فعال کریں
+	Erase range of similar colors	ملتے جلتے رنگوں کی حد مٹائیں
+	Erase to History	ہسٹری میں مٹائیں
+	How far to let the erasing spread	مٹانے کو کتنی دور تک پھیلنے دیا جائے
+	Insert Menu Item…	مینو آئٹم داخل کریں…
+	Insert Path	پاتھ داخل کریں
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	یہ فائل کھولنے کے بعد بہت کم میموری بچے گی۔ پہلے دوسری ایپس بند کریں، ورنہ Lienzo کی میموری ختم ہو سکتی ہے۔
+	Load Solid Colors Only	صرف ٹھوس رنگ لوڈ کریں
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	سائے اور نمایاں حصوں میں کلپنگ کم سے کم کرتا ہے اور رنگوں کو ہیو بدلنے سے روکتا ہے
+	No document.	کوئی دستاویز نہیں۔
+	No menu item belongs to this chooser.	کوئی مینو آئٹم اس انتخاب کنندہ سے تعلق نہیں رکھتا۔
+	No menu item is waiting.	کوئی مینو آئٹم زیر التوا نہیں۔
+	No note to delete	حذف کرنے کے لیے کوئی نوٹ نہیں
+	No options for the Add Anchor Point Tool.	اینکر پوائنٹ شامل کرنے کے ٹول کے لیے کوئی اختیارات نہیں۔
+	No options for the Delete Anchor Point Tool.	اینکر پوائنٹ حذف کرنے کے ٹول کے لیے کوئی اختیارات نہیں۔
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	شکل بنانے کے لیے کوئی پاتھ نہیں: پین ٹول سے ایک بنائیں یا پاتھس پینل میں ایک منتخب کریں۔
+	No pixels are selected.	کوئی پکسل منتخب نہیں ہے۔
+	No recorded step belongs to this editor.	کوئی ریکارڈ شدہ مرحلہ اس ایڈیٹر سے تعلق نہیں رکھتا۔
+	No slices are selected. Click a slice in the preview to select it.	کوئی سلائس منتخب نہیں ہے۔ اسے منتخب کرنے کے لیے پیش منظر میں سلائس پر کلک کریں۔
+	No step is waiting.	کوئی مرحلہ زیر التوا نہیں۔
+	Note deleted, but the preference could not be saved: {error}	نوٹ حذف ہو گیا، لیکن ترجیح محفوظ نہیں ہو سکی: {error}
+	Nudge	ہلکا سا سرکائیں
+	Open as Smart Object…	سمارٹ آبجیکٹ کے طور پر کھولیں…
+	Painting Mode	پینٹنگ موڈ
+	Preparing Free Transform	فری ٹرانسفارم تیار کیا جا رہا ہے
+	Record Again	دوبارہ ریکارڈ کریں
+	Report an issue	مسئلے کی اطلاع دیں
+	Resize windows when zooming using the Zoom Tool	زوم ٹول سے زوم کرتے وقت ونڈوز کا سائز بدلیں
+	Scroll all open document windows when using the hand tool	ہینڈ ٹول استعمال کرتے وقت تمام کھلی دستاویزی ونڈوز کو اسکرول کریں
+	Search and select fonts	فونٹس تلاش کریں اور منتخب کریں
+	Select Pixels	پکسلز منتخب کریں
+	Select an action first.	پہلے ایک ایکشن منتخب کریں۔
+	Select an action step first.	پہلے ایکشن کا کوئی مرحلہ منتخب کریں۔
+	Selected Slices	منتخب سلائسز
+	Set exposure for stroke	اسٹروک کے لیے نمائش مقرر کریں
+	Set flow rate for stroke	اسٹروک کے لیے بہاؤ کی شرح مقرر کریں
+	Set font size	فونٹ کا سائز مقرر کریں
+	Set font style	فونٹ کا انداز مقرر کریں
+	Set opacity for stroke	اسٹروک کے لیے دھندلاپن مقرر کریں
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	اسٹروک کے لیے ہمواری مقرر کریں\nبرش اسٹروک کی لرزش کم کرنے کے لیے زیادہ قدریں استعمال کریں
+	Set symmetry options for Painting	پینٹنگ کے لیے تشاکل کے اختیارات مقرر کریں
+	Set text color	متن کا رنگ مقرر کریں
+	Set the brush angle	برش کا زاویہ مقرر کریں
+	Smoothing Options	ہمواری کے اختیارات
+	The Record Again command changed.	دوبارہ ریکارڈ کریں کمانڈ بدل گئی۔
+	The action or insertion command changed. Request Insert Menu Item again.	ایکشن یا داخل کرنے کی کمانڈ بدل گئی۔ مینو آئٹم داخل کریں دوبارہ طلب کریں۔
+	The actions changed. Request Record Again again.	ایکشنز بدل گئے۔ دوبارہ ریکارڈ کریں دوبارہ طلب کریں۔
+	The command permissions changed. Request Insert Menu Item again.	کمانڈ کی اجازتیں بدل گئیں۔ مینو آئٹم داخل کریں دوبارہ طلب کریں۔
+	The command permissions changed. Request Record Again again.	کمانڈ کی اجازتیں بدل گئیں۔ دوبارہ ریکارڈ کریں دوبارہ طلب کریں۔
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	موجودہ اسکریچ ڈائریکٹری ({path}) اپنی خالی جگہ نہیں بتاتی، اس لیے Lienzo اس کے بھرنے سے پہلے رک نہیں سکتا، اور اسکریچ سائز کی حد کے بغیر بڑی فائلوں کو اس سے اضافی جگہ نہیں ملتی۔ یہ انتباہ موجودہ ترتیب پر لاگو ہوتا ہے؛ اوپر کی تبدیلیاں لاگو کریں یا ٹھیک ہے پر مؤثر ہوتی ہیں۔ کوئی حد مقرر کریں یا مقامی ڈسک استعمال کریں۔
+	The document changed. Please choose Clear All again.	دستاویز بدل گئی۔ براہ کرم سب صاف کریں دوبارہ منتخب کریں۔
+	The document changed. Request Record Again again.	دستاویز بدل گئی۔ دوبارہ ریکارڈ کریں دوبارہ طلب کریں۔
+	The document or its notes changed. Please delete the note again.	دستاویز یا اس کے نوٹس بدل گئے۔ براہ کرم نوٹ دوبارہ حذف کریں۔
+	The preference could not be saved: {error}	ترجیح محفوظ نہیں ہو سکی: {error}
+	The step editor could not be opened.	مرحلہ ایڈیٹر نہیں کھل سکا۔
+	The step has no command editor.	اس مرحلے کے لیے کوئی کمانڈ ایڈیٹر نہیں ہے۔
+	Tolerance for choosing related colors	متعلقہ رنگ منتخب کرنے کے لیے رواداری
+	Top align text	متن کو اوپر سے ہم صف کریں
+	Use relative positioning for reference point	حوالہ نقطے کے لیے relative پوزیشننگ استعمال کریں
+	Useful mixer brush combinations	مفید مکسر برش امتزاج
+	Zoom current window to 1:1	موجودہ ونڈو کو 1:1 پر زوم کریں
+	Zoom current window to fill the screen	موجودہ ونڈو کو اسکرین بھرنے کے لیے زوم کریں
+	Zoom current window to screen size	موجودہ ونڈو کو اسکرین کے سائز پر زوم کریں
+	brush tool	برش ٹول
+	by Nodalia	بذریعہ Nodalia
+	dodge tool	ڈاج ٹول
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} فائل ناکام ہوئی|{what}: {n} فائلیں ناکام ہوئیں
+	Align bottom edges	نچلے کنارے ہم صف کریں
+	Align top edges	بالائی کنارے ہم صف کریں
+	Align vertical centers	عمودی مراکز ہم صف کریں
+	Canceled opening {name}	{name} کھولنا منسوخ کر دیا گیا
+	Canceled {label}	{label} منسوخ کر دیا گیا
+	Center the gradient (offset 0, 0)	گریڈینٹ کو مرکز میں رکھیں (آفسیٹ 0, 0)
+	Click to restore the current color	موجودہ رنگ بحال کرنے کے لیے کلک کریں
+	Click to sample the foreground color  ·  {key}-click for background	پیش منظر کا رنگ نمونہ لینے کے لیے کلک کریں  ·  پس منظر کے لیے {key}-کلک کریں
+	Clip Thumbnails to Document Bounds	تھمب نیلز کو دستاویز کی حدود تک کلپ کریں
+	Color Blindness - Deuteranopia-type	رنگ اندھاپن - ڈیوٹیرانوپیا قسم
+	Color Blindness - Protanopia-type	رنگ اندھاپن - پروٹانوپیا قسم
+	Contextual Task Bar	سیاق و سباق کے مطابق ٹاسک بار
+	Default Foreground and Background Colors (D)	پیش منظر اور پس منظر کے طے شدہ رنگ (D)
+	Distribute horizontally	افقی طور پر تقسیم کریں
+	Distribute vertically	عمودی طور پر تقسیم کریں
+	Drag around the center to rotate the view  ·  Shift constrains to 15°	منظر گھمانے کے لیے مرکز کے گرد گھسیٹیں  ·  Shift اسے 15° تک محدود کرتا ہے
+	Embed All Linked	تمام لنک شدہ کو ایمبیڈ کریں
+	Embed Linked	لنک شدہ کو ایمبیڈ کریں
+	Equalize Entire Image Based On Selected Area	منتخب علاقے کی بنیاد پر پوری تصویر کو برابر کریں
+	Equalize Selected Area Only	صرف منتخب علاقے کو برابر کریں
+	Expand layer group on click	کلک پر تہوں کا گروپ پھیلائیں
+	Hide bar	بار چھپائیں
+	Internet Standard RGB (sRGB)	انٹرنیٹ معیاری RGB (sRGB)
+	Large Thumbnails	بڑے تھمب نیلز
+	Legacy Macintosh RGB (Gamma 1.8)	پرانا Macintosh RGB (گاما 1.8)
+	Make Shape	شکل بنائیں
+	Medium Thumbnails	درمیانے تھمب نیلز
+	More options	مزید اختیارات
+	Move bar	بار منتقل کریں
+	Netscape Gray	نیٹ اسکیپ گرے
+	No Thumbnails	کوئی تھمب نیل نہیں
+	No settings saved: these raws can't keep a sidecar here	کوئی ترتیب محفوظ نہیں ہوئی: یہ raw فائلیں یہاں sidecar فائل نہیں رکھ سکتیں
+	Not a web color: click for the nearest web color	ویب رنگ نہیں ہے: قریب ترین ویب رنگ کے لیے کلک کریں
+	Nothing to save: these raws are at their default settings	محفوظ کرنے کو کچھ نہیں: ان raw فائلوں کی ترتیبات طے شدہ ہیں
+	Open a document to select a color range.	رنگ کی حد منتخب کرنے کے لیے کوئی دستاویز کھولیں۔
+	Out of gamut for printing: click for the nearest printable color	پرنٹنگ کے لیے گیمٹ سے باہر: قریب ترین قابل پرنٹ رنگ کے لیے کلک کریں
+	Pick Color From Image	تصویر سے رنگ منتخب کریں
+	Pin bar position	بار کی پوزیشن پن کریں
+	Plugins…	پلگ اِنز…
+	Remember to turn off the printer's own color management in Print Settings…	یاد رکھیں کہ پرنٹ سیٹنگز میں پرنٹر کا اپنا رنگ نظم بند کریں…
+	Reset bar position	بار کی پوزیشن ری سیٹ کریں
+	Sample: foreground color	نمونہ: پیش منظر کا رنگ
+	Save canceled	محفوظ کرنا منسوخ ہو گیا
+	Save the settings to each raw's sidecar without opening it	ہر raw کی sidecar فائل میں ترتیبات کھولے بغیر محفوظ کریں
+	Scroll All Windows	تمام ونڈوز اسکرول کریں
+	Show hover bounds from Layers	تہوں سے ہوور کی حدود دکھائیں
+	Show layer bounds on hover	ہوور پر تہہ کی حدود دکھائیں
+	Small Thumbnails	چھوٹے تھمب نیلز
+	Some settings could not be saved; the raws stay open	کچھ ترتیبات محفوظ نہیں ہو سکیں؛ raw فائلیں کھلی رہتی ہیں
+	Switch Foreground and Background Colors (X)	پیش منظر اور پس منظر کے رنگ بدلیں (X)
+	Working CMY Plates	ورکنگ CMY پلیٹس
+	{label} is writing the file and can no longer be canceled	{label} فائل لکھ رہا ہے اور اب منسوخ نہیں کیا جا سکتا

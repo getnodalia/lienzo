@@ -23,12 +23,6 @@ status = "done"
 note = "release.yml:162-163,186"
 
 [[item]]
-id = "DIST-4"
-target = "Flatpak single-file bundles, x86_64 and aarch64"
-status = "done"
-note = "release.yml:204-216 (#163)"
-
-[[item]]
 id = "DIST-5"
 target = "Web build (wasm32, trunk)"
 status = "done"
@@ -45,7 +39,7 @@ id = "DIST-220-1"
 target = "Help > Check for Updates plus an opt-out periodic release-feed check on all desktops"
 status = "partial"
 issue = 220
-note = "2026-10-22 (#5485): Help > Check for Updates and an opt-out check once per launch (updates_cmds + the desktop HTTPS transport; none inside Flatpak, where flatpak update owns updates). Missing: a periodic recheck while the app stays open"
+note = "2026-10-22 (#5485): Help > Check for Updates and an opt-out check once per launch (updates_cmds + the desktop HTTPS transport; none inside where flatpak update owns updates). Missing: a periodic recheck while the app stays open"
 
 [[item]]
 id = "DIST-220-2"
@@ -70,7 +64,7 @@ note = "`cargo xtask i18n-coverage` reports per-language coverage (#427); RTL la
 
 [[item]]
 id = "DIST-220-5"
-target = "Linux AppImage x86_64 + aarch64 ship; Flatpak kept; Flathub later (#173)"
+target = "Linux AppImage x86_64 + aarch64 ship"
 status = "partial"
 issue = 220
-note = "AppImage and Flatpak ship (release.yml:162-216); Flathub not done"
+note = "AppImage ships (release.yml:162-216)"

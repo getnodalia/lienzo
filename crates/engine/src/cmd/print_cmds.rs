@@ -4,7 +4,7 @@
 //! scale, colour handling with printer profile / intent / black-point compensation, corner and
 //! centre crop marks, registration marks, description and label) with a small PDF writer
 //! (ISO 32000: one page, a Flate-compressed image XObject, vector marks, Helvetica text), then
-//! hands its bytes to `craft-print` (CUPS on macOS/Linux, Windows PDF printing on Windows).
+//! hands its bytes to `nodalia-print` (CUPS on macOS/Linux, Windows PDF printing on Windows).
 //! `"dryRun": true` reports the backend command without spooling; a PDF is kept only at an
 //! explicit output path. Shared spooler transport files are private and automatically removed.
 //!
@@ -76,7 +76,7 @@ pub struct Spooler {
 /// `file.print.printers` and the dialog's driver Printer menu list them on Windows only, where the
 /// GDI route is; elsewhere they answer as that route does there. In the browser `file.printers`
 /// lists none of them, as it lists no printers there without a stand-in.
-pub type PrinterSource = std::sync::Arc<dyn Fn() -> Vec<craft_print::Printer> + Send + Sync>;
+pub type PrinterSource = std::sync::Arc<dyn Fn() -> Vec<nodalia_print::Printer> + Send + Sync>;
 
 /// Held while a thread of this process lists printers or calls into a printer driver.
 static SPOOLER: std::sync::Mutex<()> = std::sync::Mutex::new(());
@@ -139,13 +139,13 @@ pub fn try_with_spooler<T>(f: impl FnOnce() -> T) -> Option<T> {
 pub const SPOOLER_BUSY: &str = "the printer driver is busy with another print; try again when it finishes";
 
 /// The GDI route's printers, or why they could not be listed.
-pub type RgbPrinters = std::result::Result<Vec<craft_print::rgb::Printer>, craft_print::rgb::PrintError>;
+pub type RgbPrinters = std::result::Result<Vec<nodalia_print::rgb::Printer>, nodalia_print::rgb::PrintError>;
 
 /// A list kept with the session's `printer_source` it came from (`None` for the system's printers).
 type Kept<T> = std::sync::Mutex<Option<(Option<PrinterSource>, T)>>;
 
 /// The last answers `system_printer_list` and `rgb_printers` got in this process.
-static LAST_PRINTERS: Kept<Vec<craft_print::Printer>> = std::sync::Mutex::new(None);
+static LAST_PRINTERS: Kept<Vec<nodalia_print::Printer>> = std::sync::Mutex::new(None);
 static LAST_RGB_PRINTERS: Kept<RgbPrinters> = std::sync::Mutex::new(None);
 
 /// The kept list when it came from `source`; a list from other printers is not returned.
@@ -165,12 +165,12 @@ fn keep<T>(kept: &Kept<T>, source: Option<&PrinterSource>, value: T) {
 }
 
 /// Lists the printers; called with the spooler lock held.
-fn list_system_printers(s: &Session) -> Vec<craft_print::Printer> {
+fn list_system_printers(s: &Session) -> Vec<nodalia_print::Printer> {
     let list = match stand_in_printers(s.printer_source.as_ref(), cfg!(target_arch = "wasm32")) {
         Some(source) => source(),
         None => {
             SYSTEM_LISTINGS.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-            craft_print::printers()
+            nodalia_print::printers()
         }
     };
     keep(&LAST_PRINTERS, s.printer_source.as_ref(), list.clone());
@@ -189,7 +189,7 @@ fn list_rgb_printers(s: &Session) -> RgbPrinters {
         Some(source) => stand_in_rgb_printers(source, cfg!(windows)),
         None => {
             SYSTEM_LISTINGS.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-            craft_print::rgb::printers()
+            nodalia_print::rgb::printers()
         }
     };
     keep(&LAST_RGB_PRINTERS, s.printer_source.as_ref(), list.clone());
@@ -197,20 +197,20 @@ fn list_rgb_printers(s: &Session) -> RgbPrinters {
 }
 
 /// The GDI route's answer from a stand-in: its printers on Windows, and `Unsupported` elsewhere,
-/// as `craft_print::rgb::printers` answers there.
+/// as `nodalia_print::rgb::printers` answers there.
 fn stand_in_rgb_printers(source: &PrinterSource, windows: bool) -> RgbPrinters {
     if !windows {
-        return Err(craft_print::rgb::PrintError::Unsupported);
+        return Err(nodalia_print::rgb::PrintError::Unsupported);
     }
-    Ok(source().into_iter().map(|p| craft_print::rgb::Printer { name: p.name, default: p.default }).collect())
+    Ok(source().into_iter().map(|p| nodalia_print::rgb::Printer { name: p.name, default: p.default }).collect())
 }
 
-/// The printers `craft-print` spools to, or the session's stand-in for them.
-fn system_printer_list(s: &Session) -> Vec<craft_print::Printer> {
+/// The printers `nodalia-print` spools to, or the session's stand-in for them.
+fn system_printer_list(s: &Session) -> Vec<nodalia_print::Printer> {
     with_spooler(|| list_system_printers(s))
 }
 
-/// The printers the GDI route prints to (`craft_print::rgb`), or on Windows the session's stand-in
+/// The printers the GDI route prints to (`nodalia_print::rgb`), or on Windows the session's stand-in
 /// for them.
 pub fn rgb_printers(s: &Session) -> RgbPrinters {
     with_spooler(|| list_rgb_printers(s))
@@ -221,7 +221,7 @@ pub fn rgb_printers(s: &Session) -> RgbPrinters {
 pub fn rgb_printers_without_waiting(s: &Session) -> RgbPrinters {
     try_with_spooler(|| list_rgb_printers(s))
         .or_else(|| last(&LAST_RGB_PRINTERS, s.printer_source.as_ref()))
-        .unwrap_or(Err(craft_print::rgb::PrintError::Unsupported))
+        .unwrap_or(Err(nodalia_print::rgb::PrintError::Unsupported))
 }
 
 /// Lists printers for the Print dialog. While the system spooler is busy, returns the cached
@@ -234,8 +234,8 @@ pub fn printers_without_waiting(s: &mut Session) -> Value {
     printers_answer(list)
 }
 
-/// `file.printers`' answer for a list from `craft-print`.
-fn printers_answer(list: Vec<craft_print::Printer>) -> Value {
+/// `file.printers`' answer for a list from `nodalia-print`.
+fn printers_answer(list: Vec<nodalia_print::Printer>) -> Value {
     let default = list.iter().find(|p| p.default).map(|p| p.name.clone());
     let printers: Vec<Value> = list.into_iter().map(|p| json!({"name": p.name, "default": p.default})).collect();
     json!({"server": Value::Null, "default": default, "printers": printers})
@@ -249,11 +249,11 @@ enum SpoolError {
 }
 
 /// Sends the job and says where it went and through what. A named print server takes the IPP
-/// route. Otherwise: the app's spooler when it is preferred; else `craft-print` (`lp`, or the
+/// route. Otherwise: the app's spooler when it is preferred; else `nodalia-print` (`lp`, or the
 /// Windows spooler) when it is there, or the app's spooler when CUPS lists no printer for `lp`;
 /// else CUPS over IPP; and the app's spooler when that had no route either. A route that exists but fails (an unknown printer, a refused job) is an
 /// error, never a fall-through.
-fn spool_job(spooler: Option<&Spooler>, job: &PrintJob, lp: &craft_print::Job) -> Result<(String, String)> {
+fn spool_job(spooler: Option<&Spooler>, job: &PrintJob, lp: &nodalia_print::Job) -> Result<(String, String)> {
     let app = |sp: &Spooler| (sp.run)(job).map(|m| (m, sp.name.to_string())).map_err(other);
     if job.server.is_none() {
         if let Some(sp) = spooler.filter(|sp| sp.preferred) {
@@ -268,7 +268,7 @@ fn spool_job(spooler: Option<&Spooler>, job: &PrintJob, lp: &craft_print::Job) -
                 _ => Some(lp.clone()),
             };
             return match (route, spooler) {
-                (Some(lp), _) => with_spooler(|| craft_print::submit(&job.pdf, &lp)).map(|m| (m, name.to_string())).map_err(other),
+                (Some(lp), _) => with_spooler(|| nodalia_print::submit(&job.pdf, &lp)).map(|m| (m, name.to_string())).map_err(other),
                 // CUPS lists no printer. IPP would ask the same CUPS, or (it ignores client.conf)
                 // another server whose printer the user never chose, so only the portal is left.
                 (None, Some(sp)) => app(sp),
@@ -292,20 +292,20 @@ const LP_LISTING_TIMEOUT: std::time::Duration = std::time::Duration::from_secs(1
 /// The most a printer listing may print; a longer one counts as no answer.
 const LP_LISTING_CAP: u64 = 1 << 20;
 
-/// CUPS' printers as `craft_print::printers` lists them, or `None` when that can't be told: an
+/// CUPS' printers as `nodalia_print::printers` lists them, or `None` when that can't be told: an
 /// `lpstat` can't start, outlasts `timeout`, prints more than `LP_LISTING_CAP`, or `lpstat -e`
 /// fails (CUPS unreachable, or listing forbidden by policy). `lpstat -p -d`'s own status is not
 /// a failure: it exits 1 whenever there are no queues, as on a host with only driverless
 /// printers. Each `lpstat` is killed and reaped at the deadline, so a hung one never outlives
 /// the job.
-fn lp_printers(timeout: std::time::Duration) -> Option<Vec<craft_print::Printer>> {
+fn lp_printers(timeout: std::time::Duration) -> Option<Vec<nodalia_print::Printer>> {
     let deadline = std::time::Instant::now() + timeout;
-    let (_, queues) = output_by(craft_print::lpstat_command(), deadline)?;
-    // `lpstat -e`, as craft-print runs it (its builder is private): the driverless printers.
+    let (_, queues) = output_by(nodalia_print::lpstat_command(), deadline)?;
+    // `lpstat -e`, as nodalia-print runs it (its builder is private): the driverless printers.
     let mut driverless = std::process::Command::new("lpstat");
     driverless.arg("-e").env("LC_ALL", "C").env("LANG", "C").env("SOFTWARE", "Craft");
     let (listed, available) = output_by(driverless, deadline)?;
-    listed.then(|| craft_print::printers_parsed(&queues, Some(&available)))
+    listed.then(|| nodalia_print::printers_parsed(&queues, Some(&available)))
 }
 
 /// Whether `command` succeeded, and its standard output; `None` when it can't start, prints more
@@ -347,7 +347,7 @@ fn output_by(mut command: std::process::Command, deadline: std::time::Instant) -
 /// name always goes to `lp`, which knows it even where CUPS won't list it, and the portal could
 /// not honour the name. With no printer asked for, no default and one printer, that printer, as
 /// `resolve_printer` picks for IPP.
-fn lp_route(lp: &craft_print::Job, printers: &[craft_print::Printer]) -> Option<craft_print::Job> {
+fn lp_route(lp: &nodalia_print::Job, printers: &[nodalia_print::Printer]) -> Option<nodalia_print::Job> {
     let mut lp = lp.clone();
     if lp.printer.is_none()
         && !printers.iter().any(|p| p.default)
@@ -358,13 +358,13 @@ fn lp_route(lp: &craft_print::Job, printers: &[craft_print::Printer]) -> Option<
     (lp.printer.is_some() || !printers.is_empty()).then_some(lp)
 }
 
-/// The spooler `craft-print` can talk to, as the job's `backend` name: `lp` when CUPS' command
+/// The spooler `nodalia-print` can talk to, as the job's `backend` name: `lp` when CUPS' command
 /// is on the path, the Windows spooler on Windows. `None` in a sandbox without `lp` and in the
 /// browser.
 fn system_spooler() -> Option<&'static str> {
-    match craft_print::backend()? {
-        craft_print::Backend::WindowsPdf => Some("windows"),
-        craft_print::Backend::Cups => {
+    match nodalia_print::backend()? {
+        nodalia_print::Backend::WindowsPdf => Some("windows"),
+        nodalia_print::Backend::Cups => {
             let path = std::env::var_os("PATH")?;
             std::env::split_paths(&path).any(|dir| dir.join("lp").is_file()).then_some("lp")
         }
@@ -442,7 +442,7 @@ fn cups_spool(job: &PrintJob) -> std::result::Result<String, SpoolError> {
 }
 
 /// `file.printers`: the printers the system's (or `printServer`'s) print server knows, with the default. From
-/// `craft-print` (`lpstat`, the Windows spooler) where that is the route; over IPP for a named
+/// `nodalia-print` (`lpstat`, the Windows spooler) where that is the route; over IPP for a named
 /// server and where there is no `lp` (a sandbox).
 fn system_printers(s: &mut Session, p: &Value) -> Result<Value> {
     let named = p.get("printServer").and_then(Value::as_str).filter(|v| !v.is_empty());
@@ -1102,16 +1102,16 @@ fn render_and_spool(doc: &Document, p: &Value, cmd: &str, spooler: Option<&Spool
     }
     let pdf = print_pdf(&page);
     let pdf_len = pdf.len();
-    let job = craft_print::Job {
+    let job = nodalia_print::Job {
         printer: p.get("printer").and_then(Value::as_str).filter(|v| !v.is_empty()).map(str::to_string),
         copies,
         title: doc.name.clone(),
         // Lienzo already placed and scaled the image on its physical sheet. Scaling again
         // in the driver would change the preview, print resolution and crop-mark positions.
-        scaling: craft_print::Scaling::Exact,
+        scaling: nodalia_print::Scaling::Exact,
         ..Default::default()
     };
-    let command = if send { json!(craft_print::command_preview(&job).map_err(other)?) } else { Value::Null };
+    let command = if send { json!(nodalia_print::command_preview(&job).map_err(other)?) } else { Value::Null };
     let pdf_path = match output {
         Some(path) => {
             write_file(&path, &pdf)?;
@@ -1226,13 +1226,13 @@ fn printer_name(p: &Value) -> Result<String> {
     if let Some(name) = p.get("printer").and_then(Value::as_str).filter(|v| !v.trim().is_empty()) {
         return Ok(name.to_string());
     }
-    with_spooler(craft_print::rgb::default_printer).map_err(other)?.ok_or_else(|| other("no printer chosen and no default printer is set"))
+    with_spooler(nodalia_print::rgb::default_printer).map_err(other)?.ok_or_else(|| other("no printer chosen and no default printer is set"))
 }
 
 /// The driver settings chosen with Print Settings… (`printerSettings`, hex), when any.
-fn printer_settings(p: &Value) -> Result<Option<craft_print::rgb::DevMode>> {
+fn printer_settings(p: &Value) -> Result<Option<nodalia_print::rgb::DevMode>> {
     match p.get("printerSettings").and_then(Value::as_str).filter(|v| !v.is_empty()) {
-        Some(hex) => craft_print::rgb::DevMode::from_hex(hex).map(Some).map_err(|e| bad("file.print", e.to_string())),
+        Some(hex) => nodalia_print::rgb::DevMode::from_hex(hex).map(Some).map_err(|e| bad("file.print", e.to_string())),
         None => Ok(None),
     }
 }
@@ -1250,7 +1250,7 @@ const DMORIENT_LANDSCAPE: i16 = 2;
 /// `dmOrientation` set and flagged in `dmFields`, every other byte (the driver's private settings
 /// included) kept. The driver validates the result when it lays out the page, as it does for
 /// settings from Print Settings….
-pub fn turned_settings(settings: &craft_print::rgb::DevMode, landscape: bool) -> Result<craft_print::rgb::DevMode> {
+pub fn turned_settings(settings: &nodalia_print::rgb::DevMode, landscape: bool) -> Result<nodalia_print::rgb::DevMode> {
     let mut b = settings.as_bytes().to_vec();
     let short = || other("printer settings are too short to hold an orientation");
     let fields: [u8; 4] = b.get(DM_FIELDS_AT..DM_FIELDS_AT + 4).and_then(|s| s.try_into().ok()).ok_or_else(short)?;
@@ -1258,7 +1258,7 @@ pub fn turned_settings(settings: &craft_print::rgb::DevMode, landscape: bool) ->
     b.get_mut(DM_FIELDS_AT..DM_FIELDS_AT + 4).ok_or_else(short)?.copy_from_slice(&fields.to_le_bytes());
     let orientation = if landscape { DMORIENT_LANDSCAPE } else { DMORIENT_PORTRAIT };
     b.get_mut(DM_ORIENTATION_AT..DM_ORIENTATION_AT + 2).ok_or_else(short)?.copy_from_slice(&orientation.to_le_bytes());
-    craft_print::rgb::DevMode::from_bytes(b).map_err(other)
+    nodalia_print::rgb::DevMode::from_bytes(b).map_err(other)
 }
 
 /// Whether a driver page of `driver` points is the layout's `paper` turned the other way round
@@ -1276,19 +1276,19 @@ fn turned_paper(driver: (f64, f64), paper: (f64, f64)) -> bool {
 /// Print Settings, as a script or another app asking for landscape expects.
 fn settings_for_layout(
     printer: &str,
-    settings: Option<craft_print::rgb::DevMode>,
+    settings: Option<nodalia_print::rgb::DevMode>,
     paper: (f64, f64),
-) -> Result<(Option<craft_print::rgb::DevMode>, craft_print::rgb::Page)> {
-    let page = with_spooler(|| craft_print::rgb::page(printer, settings.as_ref())).map_err(other)?;
+) -> Result<(Option<nodalia_print::rgb::DevMode>, nodalia_print::rgb::Page)> {
+    let page = with_spooler(|| nodalia_print::rgb::page(printer, settings.as_ref())).map_err(other)?;
     if !turned_paper(page.paper, paper) {
         return Ok((settings, page));
     }
     let base = match settings {
         Some(s) => s,
-        None => with_spooler(|| craft_print::rgb::default_settings(printer)).map_err(other)?,
+        None => with_spooler(|| nodalia_print::rgb::default_settings(printer)).map_err(other)?,
     };
     let turned = turned_settings(&base, paper.0 > paper.1)?;
-    let page = with_spooler(|| craft_print::rgb::page(printer, Some(&turned))).map_err(other)?;
+    let page = with_spooler(|| nodalia_print::rgb::page(printer, Some(&turned))).map_err(other)?;
     Ok((Some(turned), page))
 }
 
@@ -1331,15 +1331,15 @@ fn print_windows(page: &PrintPage, p: &Value, title: &str, copies: u32) -> Resul
         return Err(other("the driver paper or orientation differs from the print layout; choose the matching paper in Print Settings before printing"));
     }
     let rgb = page_rgb(page)?;
-    let image = craft_print::rgb::RgbImage { width: page.image.width, height: page.image.height, data: &rgb };
+    let image = nodalia_print::rgb::RgbImage { width: page.image.width, height: page.image.height, data: &rgb };
     let rect = page_rect_top_left(page);
     let primitives = windows_marks::primitives(page.marks, rect);
     let color_policy = match p.get("colorHandling").and_then(Value::as_str) {
-        Some("lienzoManages" | "photoshopManages") => craft_print::rgb::ColorPolicy::ApplicationManaged,
-        Some("noColorManagement") => craft_print::rgb::ColorPolicy::Unmanaged,
-        _ => craft_print::rgb::ColorPolicy::DriverManaged,
+        Some("lienzoManages" | "photoshopManages") => nodalia_print::rgb::ColorPolicy::ApplicationManaged,
+        Some("noColorManagement") => nodalia_print::rgb::ColorPolicy::Unmanaged,
+        _ => nodalia_print::rgb::ColorPolicy::DriverManaged,
     };
-    let job = craft_print::rgb::Job {
+    let job = nodalia_print::rgb::Job {
         printer: &printer,
         settings: settings.as_ref(),
         title,
@@ -1348,7 +1348,7 @@ fn print_windows(page: &PrintPage, p: &Value, title: &str, copies: u32) -> Resul
         color_policy,
         primitives: &primitives,
     };
-    let done = with_spooler(|| craft_print::rgb::print(&job, &image, rect)).map_err(other)?;
+    let done = with_spooler(|| nodalia_print::rgb::print(&job, &image, rect)).map_err(other)?;
     Ok(
         json!({"printer": printer, "dpi": [done.dpi.0, done.dpi.1], "deviceRect": [done.device_rect.0, done.device_rect.1, done.device_rect.2, done.device_rect.3]}),
     )
@@ -1357,7 +1357,7 @@ fn print_windows(page: &PrintPage, p: &Value, title: &str, copies: u32) -> Resul
 fn printers(s: &mut Session, _: &Value) -> Result<Value> {
     match rgb_printers(s) {
         Ok(list) => Ok(json!({"supported": true, "printers": list.iter().map(|p| json!({"name": p.name, "default": p.default})).collect::<Vec<_>>()})),
-        Err(craft_print::rgb::PrintError::Unsupported) => Ok(json!({"supported": false, "printers": []})),
+        Err(nodalia_print::rgb::PrintError::Unsupported) => Ok(json!({"supported": false, "printers": []})),
         Err(e) => Err(other(e)),
     }
 }
@@ -1377,11 +1377,11 @@ fn printer_page(_: &mut Session, p: &Value) -> Result<Value> {
     if let Some(landscape) = landscape {
         let base = match settings {
             Some(s) => s,
-            None => with_spooler(|| craft_print::rgb::default_settings(&printer)).map_err(other)?,
+            None => with_spooler(|| nodalia_print::rgb::default_settings(&printer)).map_err(other)?,
         };
         settings = Some(turned_settings(&base, landscape)?);
     }
-    let pg = with_spooler(|| craft_print::rgb::page(&printer, settings.as_ref())).map_err(other)?;
+    let pg = with_spooler(|| nodalia_print::rgb::page(&printer, settings.as_ref())).map_err(other)?;
     let mut out = json!({"printer": printer, "paper": [pg.paper.0, pg.paper.1], "printable": [pg.printable.0, pg.printable.1, pg.printable.2, pg.printable.3], "dpi": [pg.dpi.0, pg.dpi.1]});
     // The turned settings, to pass on as `printerSettings` (the Print dialog's Orientation does).
     if let (Some(_), Some(s), Some(o)) = (landscape, settings, out.as_object_mut()) {

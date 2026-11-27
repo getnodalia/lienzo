@@ -10,7 +10,7 @@ fn app() -> (LienzoApp, u64) {
     app.ui.panels.properties = false;
     // Print lists this printer and does not ask the spooler.
     app.session.printer_source = Some(std::sync::Arc::new(|| {
-        vec![craft_print::Printer { name: "Test native printer".into(), default: true, two_sided: None, description: String::new() }]
+        vec![nodalia_print::Printer { name: "Test native printer".into(), default: true, two_sided: None, description: String::new() }]
     }));
     app.run("file.new", json!({"width": 120, "height": 80, "name": "Custom paper"})).unwrap();
     let id = lienzo_engine::print_cmds::with_spooler(|| open_print(&mut app));

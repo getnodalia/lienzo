@@ -2,8 +2,7 @@
 //! document's `Txt2` block (EngineData marks such a layer as box text, `ShapeType 1`, with the
 //! path's bounds as its `BoxBounds`).
 //!
-//! Observed layout (Photoshop 2026, `text/path-circle.psd` and `text/path-wave-open.psd` in
-//! photocraft-corpus): a frame `<< /0 << /1 << /0 [ … ] >> /2 << /0 2 /2 [ matrix ] … >> >> >>`
+//! Observed layout (Photoshop 2026, a circle and an open wave on a path): a frame `<< /0 << /1 << /0 [ … ] >> /2 << /0 2 /2 [ matrix ] … >> >> >>`
 //! has the kind `/2 /0` (absent for point text, 1 for a text box, 2 for type on a path) and its
 //! outline at `/1 /0` as a flat list of cubic Bézier segments, eight numbers each
 //! (`p0 c1 c2 p1`, the next segment starting where the previous one ends, a closed path ending

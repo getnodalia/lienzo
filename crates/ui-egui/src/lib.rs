@@ -34,6 +34,7 @@ pub mod frame_stages;
 pub mod gpu_memo;
 pub mod gpu_status;
 pub mod home_recent_ui;
+pub mod home_templates_ui;
 pub mod i18n;
 mod icon_data;
 pub mod icons;

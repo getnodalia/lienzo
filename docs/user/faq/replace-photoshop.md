@@ -9,4 +9,4 @@ Not yet. Lienzo is in early alpha. Much of Photoshop's feature surface exists in
 
 The biggest gaps the project lists are AI and generative features, tools Photoshop has that Lienzo does not yet, depth in typography and professional workflows, and plug-in compatibility. Every Photoshop menu item is connected to a command, but that only shows the menu is wired up. Having a tool or command is not the same as matching Photoshop's behaviour.
 
-What Lienzo does well already: layers, masks, adjustment layers, layer styles, type, vector shapes, brushes and live-preview filters, in a menu and shortcut layout that follows Photoshop. See [Lienzo](../index.md) for an overview, and the [project roadmap](https://github.com/storytold/photocraft/blob/main/ROADMAP.md) for what comes next.
+What Lienzo does well already: layers, masks, adjustment layers, layer styles, type, vector shapes, brushes and live-preview filters, in a menu and shortcut layout that follows Photoshop. See [Lienzo](../index.md) for an overview, and the [project repository](https://github.com/getnodalia/lienzo) for what comes next.

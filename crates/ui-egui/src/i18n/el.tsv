@@ -4344,3 +4344,185 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Γέμισμα βάσει περιεχομένου
 	Sample content from part of the image and use it to fill a small area	Δειγματοληψία περιεχομένου από μέρος της εικόνας για γέμισμα μικρής περιοχής
 	Reset the crop box, image rotation, and aspect ratio settings	Επαναφορά πλαισίου περικοπής, περιστροφής εικόνας και αναλογίας
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Μια εντολή ακυρώθηκε ή διακόπηκε κατά την ομαδική επεξεργασία. Συνέχεια με το επόμενο αρχείο ή διακοπή;
+	A file is still being placed; try again when it has finished.	Ένα αρχείο τοποθετείται ακόμη· δοκιμάστε ξανά όταν ολοκληρωθεί.
+	A native image editor, layer by layer. No account, no cloud.	Ένας εγγενής επεξεργαστής εικόνων, επίπεδο προς επίπεδο. Χωρίς λογαριασμό, χωρίς cloud.
+	Allow Tool Recording	Να επιτρέπεται η καταγραφή εργαλείων
+	Allows rotation and scaling of selection	Επιτρέπει την περιστροφή και την κλιμάκωση της επιλογής
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Να χρησιμοποιείται πάντα η πίεση για την αδιαφάνεια. Όταν είναι απενεργοποιημένο, την πίεση ελέγχει η προεπιλογή πινέλου
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Να χρησιμοποιείται πάντα η πίεση για το μέγεθος. Όταν είναι απενεργοποιημένο, την πίεση ελέγχει η προεπιλογή πινέλου
+	Answer the open import question first, then import this file again.	Απαντήστε πρώτα στην ανοιχτή ερώτηση εισαγωγής και μετά εισαγάγετε ξανά αυτό το αρχείο.
+	Anti-alias brush application	Εφαρμογή του πινέλου με εξομάλυνση ακμών
+	Are you sure you want to delete all notes?	Θέλετε σίγουρα να διαγράψετε όλες τις σημειώσεις;
+	Arrowhead options	Επιλογές αιχμών βελών
+	Arrowheads	Αιχμές βελών
+	Attribute	Χαρακτηριστικό
+	Batch preview	Προεπισκόπηση ομαδικής επεξεργασίας
+	Bottom align text	Στοίχιση κειμένου κάτω
+	CPU Rendering	Σχεδίαση από την CPU
+	Calculating…	Υπολογισμός…
+	Cancelled placing {name}	Ακυρώθηκε η τοποθέτηση του «{name}»
+	Choose a menu command. Playback asks for its settings when needed.	Επιλέξτε μια εντολή μενού. Η αναπαραγωγή ζητά τις ρυθμίσεις της όταν χρειάζεται.
+	Choose a remix mode	Επιλέξτε λειτουργία ρεμίξ
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Κάντε κλικ και μετακινήστε αριστερά ή δεξιά για κλιμάκωση με το εργαλείο Μεγέθυνση (μόνο OpenGL)
+	Click to open the Brush Preset picker	Κάντε κλικ για να ανοίξετε τον επιλογέα προεπιλογών πινέλου
+	Click to refresh histogram with uncached data	Κάντε κλικ για ανανέωση του ιστογράμματος με δεδομένα εκτός προσωρινής μνήμης
+	Concavity	Κοιλότητα
+	Confirm or cancel the pending Record Again editor first.	Επιβεβαιώστε ή ακυρώστε πρώτα τον επεξεργαστή «Νέα εγγραφή» που εκκρεμεί.
+	Confirm or cancel the pending menu item first.	Επιβεβαιώστε ή ακυρώστε πρώτα το στοιχείο μενού που εκκρεμεί.
+	Copy CSS	Αντιγραφή CSS
+	Could not use the type tool because the layer is locked.	Δεν ήταν δυνατή η χρήση του εργαλείου κειμένου επειδή το επίπεδο είναι κλειδωμένο.
+	Count:	Πλήθος:
+	Data Sets as Files is unavailable on the web	Η επιλογή «Σύνολα δεδομένων ως αρχεία» δεν είναι διαθέσιμη στον ιστό
+	Delete Note	Διαγραφή σημείωσης
+	Delete this note?	Να διαγραφεί αυτή η σημείωση;
+	Determines the spread of replaced color	Καθορίζει την έκταση του χρώματος που αντικαθίσταται
+	Do not erase the foreground swatch color	Να μη διαγράφεται το χρώμα του δείγματος προσκηνίου
+	Drawn on the CPU: {reason}. Click for System Info.	Σχεδίαση από την CPU: {reason}. Κάντε κλικ για πληροφορίες συστήματος.
+	Draws background color over foreground colors	Σχεδιάζει το χρώμα φόντου πάνω από τα χρώματα προσκηνίου
+	Dropped files weren't placed: their document was closed.	Τα αρχεία που αφέθηκαν δεν τοποθετήθηκαν: το έγγραφό τους έκλεισε.
+	Dropped files weren't placed: too many are waiting for their document.	Τα αρχεία που αφέθηκαν δεν τοποθετήθηκαν: πάρα πολλά περιμένουν το έγγραφό τους.
+	Effect	Εφέ
+	Empty	Κενό
+	Enable to remix all layers	Ενεργοποιήστε για ρεμίξ όλων των επιπέδων
+	End	Τέλος
+	Erase range of similar colors	Διαγραφή εύρους παρόμοιων χρωμάτων
+	Erase to History	Διαγραφή στο ιστορικό
+	Filter for embedded smart objects	Φίλτρο για ενσωματωμένα έξυπνα αντικείμενα
+	Filter for linked smart objects that are missing	Φίλτρο για συνδεδεμένα έξυπνα αντικείμενα με λείπουσα σύνδεση
+	Filter for smart objects linked locally	Φίλτρο για τοπικά συνδεδεμένα έξυπνα αντικείμενα
+	High Memory Photoshop Document	Έγγραφο Photoshop υψηλής μνήμης
+	How far to let the erasing spread	Πόσο μακριά να απλώνεται η διαγραφή
+	Image Compression	Συμπίεση εικόνας
+	Import as New Group	Εισαγωγή ως νέα ομάδα
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Η «Εισαγωγή ως νέα ομάδα» διατηρεί την ομάδα «{group}» και προσθέτει το αρχείο ως νέα ομάδα δίπλα της.
+	Insert Menu Item…	Εισαγωγή στοιχείου μενού…
+	Insert Path	Εισαγωγή διαδρομής
+	LZW	LZW
+	Layer Effects	Εφέ επιπέδου
+	Level:	Επίπεδο:
+	Lining	Ευθυγραμμισμένα
+	Linked	Συνδεδεμένο
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Μετά το άνοιγμα αυτού του αρχείου θα απομείνει λίγη μνήμη. Κλείστε πρώτα άλλες εφαρμογές, αλλιώς το Lienzo μπορεί να μείνει από μνήμη.
+	Load Solid Colors Only	Φόρτωση μόνο μονόχρωμων
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Ελαχιστοποιεί το ψαλίδισμα στις σκιές και στους φωτισμούς και εμποδίζει την αλλαγή απόχρωσης των χρωμάτων
+	No Adv. Blending	Χωρίς σύνθετη ανάμειξη
+	No Layer Effects	Χωρίς εφέ επιπέδου
+	No Layer Mask	Χωρίς μάσκα επιπέδου
+	No Vector Mask	Χωρίς διανυσματική μάσκα
+	No document.	Δεν υπάρχει έγγραφο.
+	No import is waiting. Import the file again.	Δεν εκκρεμεί εισαγωγή. Εισαγάγετε ξανά το αρχείο.
+	No matching fonts	Δεν υπάρχουν γραμματοσειρές που να ταιριάζουν
+	No menu item belongs to this chooser.	Κανένα στοιχείο μενού δεν ανήκει σε αυτόν τον επιλογέα.
+	No menu item is waiting.	Δεν εκκρεμεί κανένα στοιχείο μενού.
+	No note to delete	Δεν υπάρχει σημείωση για διαγραφή
+	No options for the Add Anchor Point Tool.	Το εργαλείο προσθήκης σημείου αγκύρωσης δεν έχει επιλογές.
+	No options for the Delete Anchor Point Tool.	Το εργαλείο διαγραφής σημείου αγκύρωσης δεν έχει επιλογές.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Δεν υπάρχει διαδρομή για δημιουργία σχήματος: σχεδιάστε μία με το εργαλείο Πένα ή επιλέξτε μία στον πίνακα Διαδρομές.
+	No pixels are selected.	Δεν έχουν επιλεγεί εικονοστοιχεία.
+	No recorded step belongs to this editor.	Κανένα καταγεγραμμένο βήμα δεν ανήκει σε αυτόν τον επεξεργαστή.
+	No slices are selected. Click a slice in the preview to select it.	Δεν έχουν επιλεγεί τομές. Κάντε κλικ σε μια τομή στην προεπισκόπηση για να την επιλέξετε.
+	No step is waiting.	Δεν εκκρεμεί κανένα βήμα.
+	Not Clipped	Χωρίς αποκοπή
+	Not Empty	Μη κενό
+	Not Linked	Μη συνδεδεμένο
+	Not Locked	Μη κλειδωμένο
+	Not Visible	Μη ορατό
+	Note deleted, but the preference could not be saved: {error}	Η σημείωση διαγράφηκε, αλλά η προτίμηση δεν μπόρεσε να αποθηκευτεί: {error}
+	Nudge	Μικρομετακίνηση
+	Numerals	Αριθμητικά ψηφία
+	Open anyway	Άνοιγμα ούτως ή άλλως
+	Open as Smart Object…	Άνοιγμα ως έξυπνο αντικείμενο…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Το άνοιγμα αυτού του εγγράφου χρησιμοποιεί περισσότερη μνήμη και μπορεί να επιβραδύνει τον υπολογιστή σας ή άλλες εφαρμογές που εκτελούνται.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Το άνοιγμα του «{name}» απαιτεί εκτιμώμενα {est} GiB μνήμης (διαθέσιμα {avail} GiB).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Το άνοιγμα του «{name}» απαιτεί εκτιμώμενα {est} GiB μνήμης. Η διαθέσιμη μνήμη δεν μπόρεσε να μετρηθεί.
+	Painting Mode	Λειτουργία ζωγραφικής
+	Percentile:	Εκατοστημόριο:
+	Preparing Free Transform	Προετοιμασία ελεύθερου μετασχηματισμού
+	Proportional	Αναλογικά
+	Proportional Lining	Αναλογικά ευθυγραμμισμένα
+	Proportional Oldstyle	Αναλογικά παλιού τύπου
+	Record Again	Νέα εγγραφή
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Η «Αντικατάσταση» διαγράφει πρώτα τα πάντα στην ομάδα «{group}», μαζί με τις προεπιλογές που επεξεργαστήκατε ή μετακινήσατε εκεί. Η ενέργεια δεν αναιρείται.
+	Report an issue	Αναφορά προβλήματος
+	Resize windows when zooming using the Zoom Tool	Αλλαγή μεγέθους των παραθύρων κατά τη μεγέθυνση με το εργαλείο Μεγέθυνση
+	Save Image Pyramid	Αποθήκευση πυραμίδας εικόνας
+	Save Transparency	Αποθήκευση διαφάνειας
+	Scroll all open document windows when using the hand tool	Κύλιση όλων των ανοιχτών παραθύρων εγγράφων όταν χρησιμοποιείται το εργαλείο Χέρι
+	Search and select fonts	Αναζήτηση και επιλογή γραμματοσειρών
+	Select Pixels	Επιλογή εικονοστοιχείων
+	Select an action first.	Επιλέξτε πρώτα μια ενέργεια.
+	Select an action step first.	Επιλέξτε πρώτα ένα βήμα ενέργειας.
+	Selected Slices	Επιλεγμένες τομές
+	Set 	Σύνολο 
+	Set 1	Σύνολο 1
+	Set 10	Σύνολο 10
+	Set 11	Σύνολο 11
+	Set 12	Σύνολο 12
+	Set 13	Σύνολο 13
+	Set 14	Σύνολο 14
+	Set 15	Σύνολο 15
+	Set 16	Σύνολο 16
+	Set 17	Σύνολο 17
+	Set 18	Σύνολο 18
+	Set 19	Σύνολο 19
+	Set 2	Σύνολο 2
+	Set 20	Σύνολο 20
+	Set 3	Σύνολο 3
+	Set 4	Σύνολο 4
+	Set 5	Σύνολο 5
+	Set 6	Σύνολο 6
+	Set 7	Σύνολο 7
+	Set 8	Σύνολο 8
+	Set 9	Σύνολο 9
+	Set as default	Ορισμός ως προεπιλογή
+	Set exposure for stroke	Ορισμός έκθεσης για την πινελιά
+	Set flow rate for stroke	Ορισμός ρυθμού ροής για την πινελιά
+	Set font size	Ορισμός μεγέθους γραμματοσειράς
+	Set font style	Ορισμός στυλ γραμματοσειράς
+	Set opacity for stroke	Ορισμός αδιαφάνειας για την πινελιά
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Ορισμός εξομάλυνσης για την πινελιά\nΧρησιμοποιήστε μεγαλύτερες τιμές για να μειώσετε το τρέμουλο των πινελιών
+	Set symmetry options for Painting	Ορισμός επιλογών συμμετρίας για τη ζωγραφική
+	Set text color	Ορισμός χρώματος κειμένου
+	Set the brush angle	Ορισμός γωνίας πινέλου
+	Show Channels in Color	Εμφάνιση καναλιών σε χρώμα
+	Show Statistics	Εμφάνιση στατιστικών
+	Smoothing Options	Επιλογές εξομάλυνσης
+	Source:	Πηγή:
+	Start	Έναρξη
+	Stylistic Sets	Στυλιστικά σύνολα
+	Tabular	Πινακοειδή
+	Tabular Lining	Πινακοειδή ευθυγραμμισμένα
+	Tabular Oldstyle	Πινακοειδή παλιού τύπου
+	The Record Again command changed.	Η εντολή «Νέα εγγραφή» άλλαξε.
+	The action or insertion command changed. Request Insert Menu Item again.	Η ενέργεια ή η εντολή εισαγωγής άλλαξε. Ζητήστε ξανά την «Εισαγωγή στοιχείου μενού».
+	The actions changed. Request Record Again again.	Οι ενέργειες άλλαξαν. Ζητήστε ξανά τη «Νέα εγγραφή».
+	The command permissions changed. Request Insert Menu Item again.	Τα δικαιώματα των εντολών άλλαξαν. Ζητήστε ξανά την «Εισαγωγή στοιχείου μενού».
+	The command permissions changed. Request Record Again again.	Τα δικαιώματα των εντολών άλλαξαν. Ζητήστε ξανά τη «Νέα εγγραφή».
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Ο τρέχων κατάλογος προσωρινής αποθήκευσης ({path}) δεν αναφέρει τον ελεύθερο χώρο του, οπότε το Lienzo δεν μπορεί να σταματήσει πριν γεμίσει και τα μεγάλα αρχεία δεν παίρνουν επιπλέον χώρο από αυτόν χωρίς όριο μεγέθους προσωρινού δίσκου. Η προειδοποίηση ισχύει για την τρέχουσα διαμόρφωση· οι αλλαγές παραπάνω εφαρμόζονται με «Εφαρμογή» ή «OK». Ορίστε ένα όριο ή χρησιμοποιήστε τοπικό δίσκο.
+	The document changed. Please choose Clear All again.	Το έγγραφο άλλαξε. Επιλέξτε ξανά «Απαλοιφή όλων».
+	The document changed. Request Record Again again.	Το έγγραφο άλλαξε. Ζητήστε ξανά τη «Νέα εγγραφή».
+	The document or its notes changed. Please delete the note again.	Το έγγραφο ή οι σημειώσεις του άλλαξαν. Διαγράψτε ξανά τη σημείωση.
+	The preference could not be saved: {error}	Η προτίμηση δεν μπόρεσε να αποθηκευτεί: {error}
+	The step editor could not be opened.	Ο επεξεργαστής βημάτων δεν μπόρεσε να ανοίξει.
+	The step has no command editor.	Το βήμα δεν έχει επεξεργαστή εντολής.
+	Tolerance for choosing related colors	Ανοχή για την επιλογή συγγενικών χρωμάτων
+	Top align text	Στοίχιση κειμένου πάνω
+	Uncached Refresh	Ανανέωση χωρίς προσωρινή μνήμη
+	Use relative positioning for reference point	Χρήση σχετικής τοποθέτησης για το σημείο αναφοράς
+	Use these settings for new arrows	Χρήση αυτών των ρυθμίσεων για νέα βέλη
+	Useful mixer brush combinations	Χρήσιμοι συνδυασμοί του πινέλου ανάμειξης
+	ZIP	ZIP
+	Zoom current window to 1:1	Μεγέθυνση του τρέχοντος παραθύρου σε 1:1
+	Zoom current window to fill the screen	Μεγέθυνση του τρέχοντος παραθύρου ώστε να γεμίσει την οθόνη
+	Zoom current window to screen size	Μεγέθυνση του τρέχοντος παραθύρου στο μέγεθος της οθόνης
+	brush tool	εργαλείο πινέλου
+	by Nodalia	από τη Nodalia
+	dodge tool	εργαλείο φωτισμού
+	{message} into “{group}”	{message} στην ομάδα «{group}»
+	{ok} written to {dir}	Το {ok} γράφτηκε στο {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Η ομάδα πινέλων «{group}» έχει ήδη {n} δικό σας πινέλο.|Η ομάδα πινέλων «{group}» έχει ήδη {n} δικά σας πινέλα.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Η ομάδα διαβαθμίσεων «{group}» υπάρχει ήδη ({n} διαβάθμιση).|Η ομάδα διαβαθμίσεων «{group}» υπάρχει ήδη ({n} διαβαθμίσεις).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: απέτυχε {n} έξοδος στοιχείου εικόνας|{what}: απέτυχαν {n} έξοδοι στοιχείων εικόνας
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: απέτυχε {n} αρχείο|{what}: απέτυχαν {n} αρχεία
+	Pick Color From Image	Επιλογή χρώματος από εικόνα

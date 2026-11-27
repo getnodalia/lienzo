@@ -154,7 +154,7 @@ removed from the definitions can be registered again. Idle frames keep their fon
 Other languages retain the system's CJK fallback preference for document names and text.
 
 Font files are not added to this repository. Native rendering uses installed system fonts
-and the optional craft-fonts build input; see [Fonts](development.md#fonts-craft-fonts).
+and the optional nodalia-fonts build input; see [Fonts](development.md#fonts-craft-fonts).
 The web build can select every catalog, but CJK glyph delivery and automatic browser-locale
 detection remain separate outstanding work. Switching catalogs does not supply missing fonts.
 

@@ -4260,3 +4260,207 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Wypełnianie oparte na zawartości
 	Sample content from part of the image and use it to fill a small area	Pobierz zawartość z części obrazu, aby wypełnić mały obszar
 	Reset the crop box, image rotation, and aspect ratio settings	Zresetuj ramkę kadrowania, obrót obrazu i proporcje
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Polecenie zostało anulowane lub przerwane podczas przetwarzania wsadowego. Kontynuować z następnym plikiem czy zatrzymać?
+	A file is still being placed; try again when it has finished.	Plik jest nadal umieszczany; spróbuj ponownie po zakończeniu.
+	A native image editor, layer by layer. No account, no cloud.	Natywny edytor obrazów, warstwa po warstwie. Bez konta, bez chmury.
+	Allow Tool Recording	Zezwalaj na nagrywanie narzędzi
+	Allows rotation and scaling of selection	Umożliwia obracanie i skalowanie zaznaczenia
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	Zawsze używaj nacisku dla krycia. Po wyłączeniu naciskiem steruje zestaw ustawień pędzla
+	Always use Pressure for Size. When off, Brush Preset controls pressure	Zawsze używaj nacisku dla rozmiaru. Po wyłączeniu naciskiem steruje zestaw ustawień pędzla
+	Answer the open import question first, then import this file again.	Najpierw odpowiedz na otwarte pytanie dotyczące importu, a potem zaimportuj ten plik ponownie.
+	Anti-alias brush application	Stosuj pędzel z wygładzaniem krawędzi
+	Are you sure you want to delete all notes?	Czy na pewno usunąć wszystkie notatki?
+	Arrowhead options	Opcje grotów strzałek
+	Arrowheads	Groty strzałek
+	Attribute	Atrybut
+	Batch preview	Podgląd wsadu
+	Bottom align text	Wyrównaj tekst do dołu
+	CPU Rendering	Renderowanie na CPU
+	Calculating…	Obliczanie…
+	Cancelled placing {name}	Anulowano umieszczanie: {name}
+	Choose a menu command. Playback asks for its settings when needed.	Wybierz polecenie menu. Odtwarzanie poprosi o ustawienia, gdy będą potrzebne.
+	Choose a remix mode	Wybierz tryb remiksu
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Kliknij i przesuń w lewo lub w prawo, aby skalować narzędziem Lupa (tylko OpenGL)
+	Click to open the Brush Preset picker	Kliknij, aby otworzyć selektor zestawów ustawień pędzla
+	Click to refresh histogram with uncached data	Kliknij, aby odświeżyć histogram na podstawie danych spoza pamięci podręcznej
+	Concavity	Wklęsłość
+	Confirm or cancel the pending Record Again editor first.	Najpierw potwierdź lub anuluj oczekujący edytor Nagraj ponownie.
+	Confirm or cancel the pending menu item first.	Najpierw potwierdź lub anuluj oczekującą pozycję menu.
+	Copy CSS	Kopiuj CSS
+	Could not use the type tool because the layer is locked.	Nie można użyć narzędzia tekstowego, ponieważ warstwa jest zablokowana.
+	Count:	Liczba:
+	Data Sets as Files is unavailable on the web	Zestawy danych jako pliki są niedostępne w sieci
+	Delete Note	Usuń notatkę
+	Delete this note?	Usunąć tę notatkę?
+	Determines the spread of replaced color	Określa zasięg zastępowanego koloru
+	Do not erase the foreground swatch color	Nie wymazuj koloru próbki pierwszego planu
+	Drawn on the CPU: {reason}. Click for System Info.	Rysowane na CPU: {reason}. Kliknij, aby zobaczyć informacje o systemie.
+	Draws background color over foreground colors	Rysuje kolorem tła nad kolorami pierwszego planu
+	Dropped files weren't placed: their document was closed.	Upuszczone pliki nie zostały umieszczone: ich dokument został zamknięty.
+	Dropped files weren't placed: too many are waiting for their document.	Upuszczone pliki nie zostały umieszczone: zbyt wiele czeka na swój dokument.
+	Effect	Efekt
+	Empty	Pusty
+	Enable to remix all layers	Włącz, aby zremiksować wszystkie warstwy
+	End	Koniec
+	Erase range of similar colors	Wymazuj zakres podobnych kolorów
+	Erase to History	Wymaż do historii
+	Filter for embedded smart objects	Filtr dla osadzonych obiektów inteligentnych
+	Filter for linked smart objects that are missing	Filtr dla powiązanych obiektów inteligentnych z brakującym łączem
+	Filter for smart objects linked locally	Filtr dla obiektów inteligentnych powiązanych lokalnie
+	High Memory Photoshop Document	Dokument Photoshop o dużym zużyciu pamięci
+	How far to let the erasing spread	Jak daleko ma sięgać wymazywanie
+	Image Compression	Kompresja obrazu
+	Import as New Group	Importuj jako nową grupę
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Opcja „Importuj jako nową grupę” zachowuje „{group}” i dodaje plik jako nową grupę obok niej.
+	Insert Menu Item…	Wstaw pozycję menu…
+	Insert Path	Wstaw ścieżkę
+	LZW	LZW
+	Layer Effects	Efekty warstwy
+	Level:	Poziom:
+	Lining	Wyrównane
+	Linked	Powiązane
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	Po otwarciu tego pliku zostanie mało pamięci. Najpierw zamknij inne aplikacje, w przeciwnym razie Lienzo może zabraknąć pamięci.
+	Load Solid Colors Only	Wczytaj tylko jednolite kolory
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Ogranicza obcinanie w cieniach i światłach oraz zapobiega przesuwaniu się odcienia kolorów
+	No Adv. Blending	Bez zaawansowanego mieszania
+	No Layer Effects	Bez efektów warstwy
+	No Layer Mask	Bez maski warstwy
+	No Vector Mask	Bez maski wektorowej
+	No document.	Brak dokumentu.
+	No import is waiting. Import the file again.	Brak oczekującego importu. Zaimportuj plik ponownie.
+	No matching fonts	Brak pasujących czcionek
+	No menu item belongs to this chooser.	Żadna pozycja menu nie należy do tego selektora.
+	No menu item is waiting.	Brak oczekującej pozycji menu.
+	No note to delete	Brak notatki do usunięcia
+	No options for the Add Anchor Point Tool.	Narzędzie Dodaj punkt kontrolny nie ma opcji.
+	No options for the Delete Anchor Point Tool.	Narzędzie Usuń punkt kontrolny nie ma opcji.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Brak ścieżki, z której można utworzyć kształt: narysuj ją narzędziem Pióro lub zaznacz w panelu Ścieżki.
+	No pixels are selected.	Nie zaznaczono żadnych pikseli.
+	No recorded step belongs to this editor.	Żaden nagrany krok nie należy do tego edytora.
+	No slices are selected. Click a slice in the preview to select it.	Nie zaznaczono żadnych plasterków. Kliknij plasterek w podglądzie, aby go zaznaczyć.
+	No step is waiting.	Brak oczekującego kroku.
+	Not Clipped	Bez maski przycinającej
+	Not Empty	Niepusty
+	Not Linked	Niepowiązane
+	Not Locked	Niezablokowane
+	Not Visible	Niewidoczne
+	Note deleted, but the preference could not be saved: {error}	Notatka została usunięta, ale nie udało się zapisać preferencji: {error}
+	Nudge	Przesuń
+	Numerals	Cyfry
+	Open anyway	Otwórz mimo to
+	Open as Smart Object…	Otwórz jako obiekt inteligentny…
+	Opening this document uses more memory and may slow down your computer or other running applications.	Otwarcie tego dokumentu zużyje więcej pamięci i może spowolnić komputer lub inne uruchomione aplikacje.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	Otwarcie „{name}” wymaga szacunkowo {est} GiB pamięci (dostępne: {avail} GiB).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	Otwarcie „{name}” wymaga szacunkowo {est} GiB pamięci. Nie udało się zmierzyć dostępnej pamięci.
+	Painting Mode	Tryb malowania
+	Percentile:	Percentyl:
+	Preparing Free Transform	Przygotowywanie przekształcenia swobodnego
+	Proportional	Proporcjonalne
+	Proportional Lining	Proporcjonalne wyrównane
+	Proportional Oldstyle	Proporcjonalne nieregularne
+	Record Again	Nagraj ponownie
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	Opcja Zastąp najpierw usuwa wszystko z „{group}”, w tym zestawy, które tam edytowano lub przeniesiono. Tej operacji nie można cofnąć.
+	Report an issue	Zgłoś problem
+	Resize windows when zooming using the Zoom Tool	Zmieniaj rozmiar okien podczas powiększania narzędziem Lupa
+	Save Image Pyramid	Zapisz piramidę obrazu
+	Save Transparency	Zapisz przezroczystość
+	Scroll all open document windows when using the hand tool	Przewijaj wszystkie otwarte okna dokumentów podczas używania narzędzia Rączka
+	Search and select fonts	Szukaj i wybieraj czcionki
+	Select Pixels	Zaznacz piksele
+	Select an action first.	Najpierw wybierz akcję.
+	Select an action step first.	Najpierw wybierz krok akcji.
+	Selected Slices	Zaznaczone plasterki
+	Set 	Zestaw 
+	Set 1	Zestaw 1
+	Set 10	Zestaw 10
+	Set 11	Zestaw 11
+	Set 12	Zestaw 12
+	Set 13	Zestaw 13
+	Set 14	Zestaw 14
+	Set 15	Zestaw 15
+	Set 16	Zestaw 16
+	Set 17	Zestaw 17
+	Set 18	Zestaw 18
+	Set 19	Zestaw 19
+	Set 2	Zestaw 2
+	Set 20	Zestaw 20
+	Set 3	Zestaw 3
+	Set 4	Zestaw 4
+	Set 5	Zestaw 5
+	Set 6	Zestaw 6
+	Set 7	Zestaw 7
+	Set 8	Zestaw 8
+	Set 9	Zestaw 9
+	Set as default	Ustaw jako domyślne
+	Set exposure for stroke	Ustaw ekspozycję dla pociągnięcia
+	Set flow rate for stroke	Ustaw szybkość przepływu dla pociągnięcia
+	Set font size	Ustaw rozmiar czcionki
+	Set font style	Ustaw styl czcionki
+	Set opacity for stroke	Ustaw krycie dla pociągnięcia
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	Ustaw wygładzanie dla pociągnięcia\nWyższe wartości zmniejszają drżenie pociągnięć pędzla
+	Set symmetry options for Painting	Ustaw opcje symetrii dla malowania
+	Set text color	Ustaw kolor tekstu
+	Set the brush angle	Ustaw kąt pędzla
+	Show Channels in Color	Pokaż kanały w kolorze
+	Show Statistics	Pokaż statystyki
+	Smoothing Options	Opcje wygładzania
+	Source:	Źródło:
+	Start	Początek
+	Stylistic Sets	Zestawy stylistyczne
+	Tabular	Tabelaryczne
+	Tabular Lining	Tabelaryczne wyrównane
+	Tabular Oldstyle	Tabelaryczne nieregularne
+	The Record Again command changed.	Polecenie Nagraj ponownie uległo zmianie.
+	The action or insertion command changed. Request Insert Menu Item again.	Akcja lub polecenie wstawiania uległy zmianie. Poproś ponownie o Wstaw pozycję menu.
+	The actions changed. Request Record Again again.	Akcje uległy zmianie. Poproś ponownie o Nagraj ponownie.
+	The command permissions changed. Request Insert Menu Item again.	Uprawnienia poleceń uległy zmianie. Poproś ponownie o Wstaw pozycję menu.
+	The command permissions changed. Request Record Again again.	Uprawnienia poleceń uległy zmianie. Poproś ponownie o Nagraj ponownie.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	Bieżący katalog roboczy ({path}) nie podaje ilości wolnego miejsca, więc Lienzo nie może zatrzymać się przed jego zapełnieniem, a duże pliki nie dostają od niego dodatkowego miejsca bez limitu rozmiaru dysku roboczego. To ostrzeżenie dotyczy bieżącej konfiguracji; zmiany powyżej zaczną działać po kliknięciu Zastosuj lub OK. Ustaw limit lub użyj dysku lokalnego.
+	The document changed. Please choose Clear All again.	Dokument uległ zmianie. Wybierz ponownie Wyczyść wszystko.
+	The document changed. Request Record Again again.	Dokument uległ zmianie. Poproś ponownie o Nagraj ponownie.
+	The document or its notes changed. Please delete the note again.	Dokument lub jego notatki uległy zmianie. Usuń notatkę ponownie.
+	The preference could not be saved: {error}	Nie udało się zapisać preferencji: {error}
+	The step editor could not be opened.	Nie udało się otworzyć edytora kroku.
+	The step has no command editor.	Ten krok nie ma edytora poleceń.
+	Tolerance for choosing related colors	Tolerancja przy wyborze pokrewnych kolorów
+	Top align text	Wyrównaj tekst do góry
+	Uncached Refresh	Odśwież bez pamięci podręcznej
+	Use relative positioning for reference point	Używaj pozycjonowania względnego dla punktu odniesienia
+	Use these settings for new arrows	Użyj tych ustawień dla nowych strzałek
+	Useful mixer brush combinations	Przydatne kombinacje pędzla mieszającego
+	ZIP	ZIP
+	Zoom current window to 1:1	Powiększ bieżące okno do 1:1
+	Zoom current window to fill the screen	Powiększ bieżące okno, aby wypełniło ekran
+	Zoom current window to screen size	Powiększ bieżące okno do rozmiaru ekranu
+	brush tool	narzędzie Pędzel
+	by Nodalia	od Nodalia
+	dodge tool	narzędzie Rozjaśnianie
+	{message} into “{group}”	{message} do „{group}”
+	{ok} written to {dir}	{ok} zapisano w {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	Grupa pędzli „{group}” ma już {n} Twój pędzel.|Grupa pędzli „{group}” ma już {n} Twoje pędzle.|Grupa pędzli „{group}” ma już {n} Twoich pędzli.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	Grupa gradientów „{group}” już istnieje ({n} gradient).|Grupa gradientów „{group}” już istnieje ({n} gradienty).|Grupa gradientów „{group}” już istnieje ({n} gradientów).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} wyjście zasobów obrazu nie powiodło się|{what}: {n} wyjścia zasobów obrazu nie powiodły się|{what}: {n} wyjść zasobów obrazu nie powiodło się
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} plik nie powiódł się|{what}: {n} pliki nie powiodły się|{what}: {n} plików nie powiodło się
+	Apply to All	Zastosuj do wszystkich
+	Artboards	Obszary robocze
+	Drag to move the selected path	Przeciągnij, aby przesunąć zaznaczoną ścieżkę
+	Locked	Zablokowane
+	Pick Color From Image	Wybierz kolor z obrazu
+	Recent Files	Ostatnie pliki
+# Template gallery on the Home screen
+	Start from a template	Zacznij od szablonu
+	Social	Media społecznościowe
+	Print & paper	Druk i papier
+	Web & art	Sieć i sztuka
+	Quiet Quote	Spokojny cytat
+	Weekend Notes	Notatki z weekendu
+	Little Things	Drobne rzeczy
+	Video Thumbnail	Miniatura wideo
+	Evening Poster	Wieczorny plakat
+	Coast Postcard	Pocztówka znad morza
+	Garden Invitation	Zaproszenie do ogrodu
+	Business Card	Wizytówka
+	Dusk Hills	Wzgórza o zmierzchu
+	Web Banner	Baner internetowy
+	Album Cover	Okładka albumu
+	Colour Palette	Paleta kolorów

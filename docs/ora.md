@@ -67,12 +67,12 @@ reopens, edits and saves in place through the agent surface, and checks that a d
 adjustment layer never overwrites its `.ora`; the CLI test converts both ways.
 
 Real-file checks use Krita-authored oracles from
-[photocraft-corpus](https://github.com/storytold/photocraft-corpus) (`krita/`, made by
-`tools/krita-oracles/generate.py`). Each Krita file carries Krita's rendering of itself in
+a folder of Krita-authored files you own (made with
+Krita's own scripting). Each Krita file carries Krita's rendering of itself in
 `mergedimage.png`:
 
 ```sh
-KRITA_TEST_DIR=/path/to/photocraft-corpus/krita cargo test -p lienzo-io --test it -- krita_corpus:: --ignored --nocapture
+KRITA_TEST_DIR=/path/to/krita-files cargo test -p lienzo-io --test it -- krita_corpus:: --ignored --nocapture
 ```
 
 2026-10-09, Krita 5.2.9: 32 of 35 `.ora` files render within 3/255 of Krita's merged image; the

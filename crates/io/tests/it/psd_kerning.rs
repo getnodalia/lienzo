@@ -481,11 +481,12 @@ fn photoshop_positions(txt2: &E, index: usize) -> Option<Vec<f64>> {
 }
 
 /// Photoshop-authored kerning oracles (`corpus/photoshop/text/kerning-*.psd`, made from scratch
-/// by photocraft-corpus's generator): the automatic mode read from `Txt2` per character, the
+/// in Photoshop): the automatic mode read from `Txt2` per character, the
 /// EngineData kerning fields after export, and our layout against Photoshop's glyph positions.
 #[cfg(feature = "corpus")]
 #[test]
 fn photoshop_kerning_oracles() {
+    skip_without_oracles!("photoshop");
     use Kerning::{Metrics as M, Off as O, Optical as P};
     let dir = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus/photoshop/text");
     assert!(dir.is_dir(), "{} is missing: run `cargo xtask corpus --all`", dir.display());

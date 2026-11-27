@@ -81,7 +81,7 @@ fn key4(s: &str) -> Result<[u8; 4]> {
     unhex(s)?.try_into().map_err(|_| FormatError::corrupt(format!("bad 4-byte key `{s}`")))
 }
 
-pub(crate) use craft_pcraft_format::is_valid_hash;
+pub(crate) use nodalia_lienzo_format::is_valid_hash;
 
 /// Convert native-endian sample bytes to little-endian in place (and back:
 /// the swap is an involution).

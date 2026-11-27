@@ -5,7 +5,7 @@ order: 30
 verified: 0.8.2
 ---
 
-Open **Help › Report an Issue…**. It takes you to the [Lienzo issue tracker](https://github.com/storytold/photocraft/issues) on GitHub. You can also ask in [Discord](https://discord.gg/artcraft).
+Use the [Lienzo issue tracker](https://github.com/getnodalia/lienzo/issues) on GitHub.
 
 ## What to include
 

@@ -3,7 +3,7 @@
 # Final testing checkpoint
 
 Validated and packaged source: `f5b3f1238bb414b43851ebe86f3a58ce83bb9b48`. Base: `5f9b4391874aabc9deb2fcb905267613e4d93ec8`.
-Version: `0.17.0-integration.20261029.f5b3f123`; Windows x64; pinned fonts `b076417b5880bd4154bd22f00695b1d28c6bea83`.
+Version: `0.17.0-integration.20261029.f5b3f123`; Windows x64; pinned fonts `f9a5f30b74d90b69cffdb7042bb0b339400ed06d`.
 [Full-sweep CI](https://github.com/FredApps/photocraft/actions/runs/40858867520); [portable build](https://github.com/FredApps/photocraft/actions/runs/40867283787);
 [download artifact](https://github.com/FredApps/photocraft/actions/runs/40867283787/artifacts/12895845995). Portable ZIP: `lienzo-0.17.0-integration.20261029.f5b3f123-windows-x64-portable.zip`.
 SHA256: `4125eccd5b009f30dc2d72f64bfafcf32220dc5574f765d0b3664ac4d9f992ba`. Artifact ID `12895845995`, job ID `123425396034`.

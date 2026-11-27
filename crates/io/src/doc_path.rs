@@ -3,12 +3,12 @@
 //!
 //! Such a path is followed only through [`resolve`]: a relative path is taken from the document's
 //! folder, and only local files, or files on the network share the document itself is on, are
-//! opened (see `craft_docpath`). A refused path is treated like a missing file.
+//! opened (see `nodalia_docpath`). A refused path is treated like a missing file.
 
 use std::fmt;
 use std::path::{Path, PathBuf};
 
-pub use craft_docpath::Refused;
+pub use nodalia_docpath::Refused;
 
 /// Why a stored path is not followed.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -35,16 +35,16 @@ impl std::error::Error for NotFollowed {}
 /// a relative `document` is taken from the working directory, where it was opened from.
 pub fn resolve(stored: &str, document: Option<&Path>) -> Result<PathBuf, NotFollowed> {
     let document = document.map(|d| if d.is_relative() { std::path::absolute(d).unwrap_or_else(|_| d.to_path_buf()) } else { d.to_path_buf() });
-    craft_docpath::resolve_absolute(stored, document.as_deref()).map_err(|r| match r {
+    nodalia_docpath::resolve_absolute(stored, document.as_deref()).map_err(|r| match r {
         // Without a document, a relative path resolves but stays relative.
-        Refused::Invalid if document.is_none() && craft_docpath::resolve(stored, None).is_ok_and(|p| cfg!(windows) || !is_windows_form(&p)) => {
+        Refused::Invalid if document.is_none() && nodalia_docpath::resolve(stored, None).is_ok_and(|p| cfg!(windows) || !is_windows_form(&p)) => {
             NotFollowed::NoDocumentFolder
         }
         r => NotFollowed::Refused(r),
     })
 }
 
-/// Whether `path`, as `craft_docpath` writes it, has a Windows drive or share root (`C:x`, `C:\x`,
+/// Whether `path`, as `nodalia_docpath` writes it, has a Windows drive or share root (`C:x`, `C:\x`,
 /// `\\server\share\x`). Outside Windows no document folder makes such a path absolute.
 fn is_windows_form(path: &Path) -> bool {
     let s = path.as_os_str().as_encoded_bytes();

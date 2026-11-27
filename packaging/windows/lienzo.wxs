@@ -20,7 +20,7 @@
     <Property Id="ARPHELPLINK" Value="https://discord.gg/artcraft" />
 
     <StandardDirectory Id="ProgramFiles6432Folder">
-      <Directory Id="CraftSuiteFolder" Name="ArtCraft">
+      <Directory Id="CraftSuiteFolder" Name="Nodalia">
         <Directory Id="INSTALLFOLDER" Name="Lienzo" />
       </Directory>
     </StandardDirectory>

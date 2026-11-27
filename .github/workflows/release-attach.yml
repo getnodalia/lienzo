@@ -30,7 +30,7 @@ concurrency:
 
 jobs:
   attach:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 20
     permissions:
       contents: write
@@ -53,7 +53,7 @@ jobs:
           fi
           echo "Run $RUN_ID built $built, the commit $TAG points at."
 
-      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: ${{ inputs.artifact }}
           path: dist

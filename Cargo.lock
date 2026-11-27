@@ -1398,111 +1398,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "craft-docpath"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-
-[[package]]
-name = "craft-fonts-build"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-
-[[package]]
-name = "craft-i18n"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-dependencies = [
- "fixed_decimal",
- "icu_decimal",
- "icu_locale_core",
- "icu_locale_fallback",
- "icu_normalizer",
- "icu_plurals",
- "icu_properties",
- "icu_provider",
- "icu_provider_adapters",
- "icu_provider_blob",
- "log",
- "objc2-foundation 0.3.2",
- "sys-locale",
- "unicode-bidi",
- "windows-registry",
- "writeable",
-]
-
-[[package]]
-name = "craft-jpeg"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-dependencies = [
- "thiserror 2.0.21",
-]
-
-[[package]]
-name = "craft-pcraft-format"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=b8f7d93b00dfb8f172938f3d2d796ae62dcfe123#b8f7d93b00dfb8f172938f3d2d796ae62dcfe123"
-dependencies = [
- "serde",
- "serde_json",
- "thiserror 2.0.21",
-]
-
-[[package]]
-name = "craft-pdf"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-dependencies = [
- "bytemuck",
- "hayro",
- "hayro-interpret",
- "hayro-syntax",
- "thiserror 2.0.21",
-]
-
-[[package]]
-name = "craft-print"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
-dependencies = [
- "craft-winprint-gdi",
- "log",
- "miniz_oxide 0.9.1",
- "roxmltree 0.21.1",
- "tempfile",
- "winprint",
- "winsafe",
-]
-
-[[package]]
-name = "craft-ui"
-version = "0.1.0"
-dependencies = [
- "craft-fonts-build",
- "craft-i18n",
- "egui",
- "epaint",
- "js-sys",
- "log",
- "objc2 0.6.5",
- "objc2-app-kit 0.3.2",
- "objc2-foundation 0.3.2",
- "serde",
- "skrifa 0.44.0",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "web-sys",
-]
-
-[[package]]
-name = "craft-winprint-gdi"
-version = "0.1.0"
-source = "git+https://github.com/getnodalia/foundation?rev=64e7afd4d1483512385012c340ecaaaf0f3beb7f#64e7afd4d1483512385012c340ecaaaf0f3beb7f"
-dependencies = [
- "windows-sys 0.61.2",
-]
-
-[[package]]
 name = "crc32fast"
 version = "1.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2931,7 +2826,7 @@ dependencies = [
 [[package]]
 name = "hayro"
 version = "0.7.1"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
 dependencies = [
  "bytemuck",
  "hayro-interpret",
@@ -2961,7 +2856,7 @@ dependencies = [
 [[package]]
 name = "hayro-interpret"
 version = "0.7.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
 dependencies = [
  "bitflags 2.13.2",
  "hayro-cmap",
@@ -2979,7 +2874,7 @@ dependencies = [
 [[package]]
 name = "hayro-jbig2"
 version = "0.3.0"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
 dependencies = [
  "fearless_simd",
  "hayro-ccitt",
@@ -3003,7 +2898,7 @@ checksum = "bc2d80da85f31c3fdc0366431f44cfd645a9da1e242ed1f4a61f213d9765660f"
 [[package]]
 name = "hayro-syntax"
 version = "0.7.2"
-source = "git+https://github.com/getnodalia/foundation?rev=1b34eba41e62138fc2438d2734523b302840b45d#1b34eba41e62138fc2438d2734523b302840b45d"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
 dependencies = [
  "flate2",
  "hayro-ccitt",
@@ -4014,7 +3909,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "arboard",
  "async-io",
@@ -4069,7 +3964,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-affinity"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "crc32fast",
  "flate2",
@@ -4079,7 +3974,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-algo"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "criterion",
  "lienzo-color",
@@ -4094,7 +3989,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-automation"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "base64 0.23.1",
  "cap-std",
@@ -4125,7 +4020,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-cli"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "clap",
  "clap_complete",
@@ -4151,7 +4046,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-cms"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "moxcms",
  "rayon",
@@ -4159,9 +4054,8 @@ dependencies = [
 
 [[package]]
 name = "lienzo-codecs"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
- "craft-jpeg",
  "exr",
  "flate2",
  "half",
@@ -4170,6 +4064,7 @@ dependencies = [
  "jpeg-encoder",
  "jxl-oxide",
  "lienzo-heif",
+ "nodalia-jpeg",
  "png 0.18.1",
  "proptest",
  "rayon",
@@ -4183,7 +4078,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-color"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "lienzo-cms",
  "serde",
@@ -4191,7 +4086,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-compose"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "criterion",
  "lienzo-cms",
@@ -4207,7 +4102,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-doc"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "lienzo-color",
  "lienzo-geom",
@@ -4218,12 +4113,11 @@ dependencies = [
 
 [[package]]
 name = "lienzo-engine"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "base64 0.22.1",
  "blake3",
  "chrono",
- "craft-print",
  "exr",
  "flate2",
  "lienzo-affinity",
@@ -4246,6 +4140,7 @@ dependencies = [
  "lienzo-testkit",
  "lienzo-text",
  "lienzo-vector",
+ "nodalia-print",
  "rayon",
  "roxmltree 0.21.1",
  "same-file",
@@ -4261,10 +4156,9 @@ dependencies = [
 
 [[package]]
 name = "lienzo-format"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "blake3",
- "craft-pcraft-format",
  "crc32fast",
  "exacl",
  "flate2",
@@ -4274,6 +4168,7 @@ dependencies = [
  "lienzo-doc",
  "lienzo-geom",
  "lienzo-raster",
+ "nodalia-lienzo-format",
  "proptest",
  "rustix 1.1.5",
  "ruzstd",
@@ -4285,14 +4180,14 @@ dependencies = [
 
 [[package]]
 name = "lienzo-geom"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "serde",
 ]
 
 [[package]]
 name = "lienzo-gpu"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "bytemuck",
  "half",
@@ -4313,18 +4208,16 @@ dependencies = [
 
 [[package]]
 name = "lienzo-heif"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "heic-rs",
 ]
 
 [[package]]
 name = "lienzo-io"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "blake3",
- "craft-docpath",
- "craft-pdf",
  "crc32fast",
  "flate2",
  "imagesize",
@@ -4347,6 +4240,8 @@ dependencies = [
  "lienzo-vector",
  "lopdf",
  "miniz_oxide 0.9.1",
+ "nodalia-docpath",
+ "nodalia-pdf",
  "proptest",
  "resvg",
  "roxmltree 0.21.1",
@@ -4360,18 +4255,18 @@ dependencies = [
 
 [[package]]
 name = "lienzo-ipp"
-version = "0.3.6"
+version = "0.4.4"
 
 [[package]]
 name = "lienzo-ops"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "lienzo-doc",
 ]
 
 [[package]]
 name = "lienzo-paint"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "lienzo-cms",
  "lienzo-color",
@@ -4385,7 +4280,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-plugins"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "lienzo-color",
  "lienzo-geom",
@@ -4401,7 +4296,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-psd"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "encoding_rs",
  "flate2",
@@ -4413,7 +4308,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-raster"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "crc32fast",
  "lienzo-color",
@@ -4429,7 +4324,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-raw"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "flate2",
  "image",
@@ -4444,7 +4339,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-tablet"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "block2 0.6.2",
  "log",
@@ -4459,7 +4354,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-testkit"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "memory-stats",
  "serde_json",
@@ -4467,7 +4362,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-text"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "flate2",
  "lienzo-color",
@@ -4482,12 +4377,10 @@ dependencies = [
 
 [[package]]
 name = "lienzo-ui-egui"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "base64 0.23.1",
  "chrono",
- "craft-print",
- "craft-ui",
  "eframe",
  "egui",
  "egui_extras",
@@ -4516,7 +4409,9 @@ dependencies = [
  "lienzo-text",
  "lienzo-vector",
  "log",
+ "nodalia-print",
  "nodalia-theme",
+ "nodalia-ui",
  "nodalia-update",
  "rayon",
  "serde",
@@ -4530,7 +4425,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-vector"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "lienzo-color",
  "lienzo-doc",
@@ -4541,7 +4436,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-web"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "eframe",
  "egui",
@@ -4564,7 +4459,7 @@ dependencies = [
 
 [[package]]
 name = "lienzo-web-boot"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "flate2",
  "js-sys",
@@ -4895,22 +4790,127 @@ dependencies = [
 ]
 
 [[package]]
+name = "nodalia-docpath"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+
+[[package]]
+name = "nodalia-fonts-build"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+
+[[package]]
+name = "nodalia-i18n"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+dependencies = [
+ "fixed_decimal",
+ "icu_decimal",
+ "icu_locale_core",
+ "icu_locale_fallback",
+ "icu_normalizer",
+ "icu_plurals",
+ "icu_properties",
+ "icu_provider",
+ "icu_provider_adapters",
+ "icu_provider_blob",
+ "log",
+ "objc2-foundation 0.3.2",
+ "sys-locale",
+ "unicode-bidi",
+ "windows-registry",
+ "writeable",
+]
+
+[[package]]
+name = "nodalia-jpeg"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+dependencies = [
+ "thiserror 2.0.21",
+]
+
+[[package]]
+name = "nodalia-lienzo-format"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=00d3395e4a43dc1545938e9da9ea4a032bc9a158#00d3395e4a43dc1545938e9da9ea4a032bc9a158"
+dependencies = [
+ "serde",
+ "serde_json",
+ "thiserror 2.0.21",
+]
+
+[[package]]
+name = "nodalia-pdf"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+dependencies = [
+ "bytemuck",
+ "hayro",
+ "hayro-interpret",
+ "hayro-syntax",
+ "thiserror 2.0.21",
+]
+
+[[package]]
+name = "nodalia-print"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=6db9b8e114917c0f9c046e431efa0f9f7eb9beb1#6db9b8e114917c0f9c046e431efa0f9f7eb9beb1"
+dependencies = [
+ "log",
+ "miniz_oxide 0.9.1",
+ "nodalia-winprint-gdi",
+ "roxmltree 0.21.1",
+ "tempfile",
+ "winprint",
+ "winsafe",
+]
+
+[[package]]
 name = "nodalia-theme"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/danielmigueltejedor/nodalia-design?rev=6d94e9c17c1767260bcb020f00c71eddd105561f#6d94e9c17c1767260bcb020f00c71eddd105561f"
+source = "git+https://github.com/danielmigueltejedor/nodalia-design?rev=44bfd0a37e6bd2837c473b4e5607b70e8d169e61#44bfd0a37e6bd2837c473b4e5607b70e8d169e61"
 dependencies = [
  "egui",
 ]
 
 [[package]]
+name = "nodalia-ui"
+version = "0.1.0"
+dependencies = [
+ "egui",
+ "epaint",
+ "js-sys",
+ "log",
+ "nodalia-fonts-build",
+ "nodalia-i18n",
+ "objc2 0.6.5",
+ "objc2-app-kit 0.3.2",
+ "objc2-foundation 0.3.2",
+ "serde",
+ "skrifa 0.44.0",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
+]
+
+[[package]]
 name = "nodalia-update"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/danielmigueltejedor/nodalia-design?rev=17c2912f46b898940b263e315d2b191f3e0aad17#17c2912f46b898940b263e315d2b191f3e0aad17"
+source = "git+https://github.com/danielmigueltejedor/nodalia-design?rev=114848a2ff1a7c29c9a5432fb12e955fbe0aeef2#114848a2ff1a7c29c9a5432fb12e955fbe0aeef2"
 dependencies = [
  "egui",
  "serde_json",
  "sha2",
  "ureq",
+]
+
+[[package]]
+name = "nodalia-winprint-gdi"
+version = "0.1.0"
+source = "git+https://github.com/getnodalia/foundation?rev=e6b9c3cb65bf6d11a75b0ee2c17b41aae14a6b7d#e6b9c3cb65bf6d11a75b0ee2c17b41aae14a6b7d"
+dependencies = [
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -9425,7 +9425,7 @@ dependencies = [
 [[package]]
 name = "winprint"
 version = "0.2.1"
-source = "git+https://github.com/getnodalia/foundation?rev=51934db382f225454cf152a8657eb03789be63c4#51934db382f225454cf152a8657eb03789be63c4"
+source = "git+https://github.com/getnodalia/foundation?rev=f74759aedd0d72605baf33ba882da0dd38e8476c#f74759aedd0d72605baf33ba882da0dd38e8476c"
 dependencies = [
  "flate2",
  "fmt-derive",
@@ -9681,7 +9681,7 @@ checksum = "ec7a2a501ed189703dba8b08142f057e887dfc4b2cc4db2d343ac6376ba3e0b9"
 
 [[package]]
 name = "xtask"
-version = "0.3.6"
+version = "0.4.4"
 dependencies = [
  "chrono",
  "serde",

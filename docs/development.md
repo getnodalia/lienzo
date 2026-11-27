@@ -115,24 +115,24 @@ Rust test and variable work on Windows with the native shell's environment-varia
 
 **GPU tests without a GPU.** Linux CI uses the shared `craft-common-actions` gate with Mesa's Vulkan driver installed. After the regular gate, `python3 scripts/ci-gpu-lavapipe.py` reruns the configured `gpu` group with `WGPU_BACKEND=vulkan` and the lavapipe ICD explicitly selected. It requires Vulkan parity evidence and rejects authored skips, except the documented software-adapter timing exceptions. It reads the filter from `.config/nextest.toml`, so no second filter needs maintaining. To run locally on Linux, install `mesa-vulkan-drivers libvulkan1` and run the same script. Windows uses WARP; this check does not certify Windows skip coverage.
 
-## Fonts (craft-fonts)
+## Fonts (nodalia-fonts)
 
-Font assets shared by the Nodalia apps live in [storytold/craft-fonts](https://github.com/storytold/craft-fonts), never in this repo: don't commit font files here (Inter and JetBrains Mono in `assets/fonts/` are the only exceptions; new fonts go to craft-fonts).
+Font assets shared by the Nodalia apps live in [getnodalia/foundation (nodalia/fonts)](https://github.com/getnodalia/foundation), never in this repo: don't commit font files here (Inter and JetBrains Mono in `assets/fonts/` are the only exceptions; new fonts go to nodalia-fonts).
 
-craft-fonts is an **optional build input**, never a Cargo dependency:
+nodalia-fonts is an **optional build input**, never a Cargo dependency:
 
 ```sh
-git clone https://github.com/storytold/craft-fonts ../craft-fonts
-CRAFT_FONTS_DIR="$PWD/../craft-fonts" cargo run --release -p lienzo
-CRAFT_FONTS_DIR="$PWD/../craft-fonts" cargo test --workspace     # runs the Japanese font tests too
+git clone https://github.com/getnodalia/foundation ../nodalia-fonts
+NODALIA_FONTS_DIR="$PWD/../nodalia-fonts" cargo run --release -p lienzo
+NODALIA_FONTS_DIR="$PWD/../nodalia-fonts" cargo test --workspace     # runs the Japanese font tests too
 ```
 
-- Use an absolute path (`$PWD/...`): `build.rs` runs in `crates/text`, so a relative `CRAFT_FONTS_DIR` would resolve from there.
-- `crates/text/build.rs` reads `$CRAFT_FONTS_DIR/fonts/manifest.txt` and embeds the fonts as `lienzo_text::CRAFT_FONTS` (`crates/text/src/craft_fonts.rs`). Unset, `CRAFT_FONTS` is empty and the build is unchanged. A bad path is a build warning, or an error with `CRAFT_FONTS_REQUIRED=1` (release builds set both).
+- Use an absolute path (`$PWD/...`): `build.rs` runs in `crates/text`, so a relative `NODALIA_FONTS_DIR` would resolve from there.
+- `crates/text/build.rs` reads `$NODALIA_FONTS_DIR/fonts/manifest.txt` and embeds the fonts as `lienzo_text::NODALIA_FONTS` (`crates/text/src/nodalia_fonts.rs`). Unset, `NODALIA_FONTS` is empty and the build is unchanged. A bad path is a build warning, or an error with `NODALIA_FONTS_REQUIRED=1` (release builds set both).
 - **UI:** the Japanese fonts (BIZ UDPGothic Regular first) are the first Japanese fallback in the lazy CJK loader (`crates/ui-egui/src/cjk_fonts.rs`), ahead of the system Japanese fonts and in the same locale script order, appended last to every egui family with the usual baseline alignment.
 - **Type tool:** the text engine registers them in `FontDb::new` (so also with no system fonts) and puts them first in the Japanese slot of the locale-ordered fallback list: BIZ UDPGothic for sans runs, Shippori Mincho / BIZ UDMincho for serif runs.
-- **Web:** the wasm32 build never embeds craft-fonts, even with `CRAFT_FONTS_DIR` set: measured on 2026-10-06, the UI face alone took the release wasm from 24.19 MB to 28.87 MB, over the 24 MiB gate in `packaging/web/package.sh`. Instead it loads fonts served next to it, on demand: `fonts/manifest.txt` beside `index.html`, in craft-fonts' manifest format (`crates/text/src/served.rs`; hosting: `packaging/web/README.md` › Fonts). `LIENZO_WEB_FONTS_DIR="$PWD/../craft-fonts" packaging/web/package.sh` puts craft-fonts there. Served families are in the font menus and are fetched when picked or when a document's text needs them; they aren't in the script fallback list yet, so Japanese text set in a Latin font still needs a Japanese font picked (#1615).
-- Tests that need the fonts skip with a message when `CRAFT_FONTS` is empty; CI's Linux gate and Windows test legs build with `CRAFT_FONTS_DIR` set and `CRAFT_FONTS_REQUIRED=1`, so they run there. Desktop releases check out craft-fonts at the commit pinned in `.github/workflows/release-*.yml` (ci.yml pins the same commit) and ship each font's `OFL.txt` as `OFL-<family>.txt`.
+- **Web:** the wasm32 build never embeds nodalia-fonts, even with `NODALIA_FONTS_DIR` set: measured on 2026-10-06, the UI face alone took the release wasm from 24.19 MB to 28.87 MB, over the 24 MiB gate in `packaging/web/package.sh`. Instead it loads fonts served next to it, on demand: `fonts/manifest.txt` beside `index.html`, in nodalia-fonts' manifest format (`crates/text/src/served.rs`; hosting: `packaging/web/README.md` › Fonts). `LIENZO_WEB_FONTS_DIR="$PWD/../nodalia-fonts" packaging/web/package.sh` puts nodalia-fonts there. Served families are in the font menus and are fetched when picked or when a document's text needs them; they aren't in the script fallback list yet, so Japanese text set in a Latin font still needs a Japanese font picked (#1615).
+- Tests that need the fonts skip with a message when `NODALIA_FONTS` is empty; CI's Linux gate and Windows test legs build with `NODALIA_FONTS_DIR` set and `NODALIA_FONTS_REQUIRED=1`, so they run there. Desktop releases check out nodalia-fonts at the commit pinned in `.github/workflows/release-*.yml` (ci.yml pins the same commit) and ship each font's `OFL.txt` as `OFL-<family>.txt`.
 
 ## One instance per user
 
@@ -634,7 +634,7 @@ trunk build --release              # writes ../../dist/web (index.html, .js glue
 trunk serve --release              # dev server on http://127.0.0.1:8765
 ```
 
-Any static file server works for `dist/web`, for example `python3 -m http.server 8765` run inside that directory. Trunk downloads the matching `wasm-bindgen` and `wasm-opt` itself. `trunk build --release` uses the `wasm-release` Cargo profile (`data-cargo-profile` in `index.html`: fat LTO, opt-level "z" for the UI, engine, I/O and web shells and for large crates off the hot paths (document model, file parsers, JSON, SVG parsing, shader translation), "s" for other crates except pixel processing, which keeps level 3). The UI override reduces browser code size while retaining the speed-oriented settings for filters and compositing. Serve the `.wasm` with compression; its raw size varies with the source and compiler. Some static hosts refuse a file that large (Cloudflare's per-file cap is 25 MiB), so the release site doesn't hold it as one file: `packaging/web/package.sh` gzips it, cuts it into parts of at most 20 MiB under `app/`, and ships the page of `apps/lienzo-web-boot`, a small module that fetches the parts, has the browser inflate them (or inflates them itself where the browser can't) and passes the stream to the app's own loader (issue #5302). The script fails if any file in the site is over 24 MiB; the wasm's own size is no longer limited, but it is still what every visitor downloads, so watch it. Pull-request CI also builds the actual browser app with the same pinned Trunk version as the release job and runs `packaging/web/package.sh`, including the relative-URL and file-size checks. The `web build and wasm size gate` check runs on main and on PRs that change something the web build compiles or packages (`apps/lienzo-web`, `apps/lienzo-web-boot`, `packaging/web`, crate sources and manifests, `Cargo.toml`/`Cargo.lock`, the CI workflow), and reports the wasm's size and the site's largest file in the Actions job summary. The web build never embeds craft-fonts (see Fonts above). To see where the bytes go, run `twiggy top -n 40` on `target/wasm32-unknown-unknown/wasm-release/lienzo-web.wasm` (before wasm-opt strips the names).
+Any static file server works for `dist/web`, for example `python3 -m http.server 8765` run inside that directory. Trunk downloads the matching `wasm-bindgen` and `wasm-opt` itself. `trunk build --release` uses the `wasm-release` Cargo profile (`data-cargo-profile` in `index.html`: fat LTO, opt-level "z" for the UI, engine, I/O and web shells and for large crates off the hot paths (document model, file parsers, JSON, SVG parsing, shader translation), "s" for other crates except pixel processing, which keeps level 3). The UI override reduces browser code size while retaining the speed-oriented settings for filters and compositing. Serve the `.wasm` with compression; its raw size varies with the source and compiler. Some static hosts refuse a file that large (Cloudflare's per-file cap is 25 MiB), so the release site doesn't hold it as one file: `packaging/web/package.sh` gzips it, cuts it into parts of at most 20 MiB under `app/`, and ships the page of `apps/lienzo-web-boot`, a small module that fetches the parts, has the browser inflate them (or inflates them itself where the browser can't) and passes the stream to the app's own loader (issue #5302). The script fails if any file in the site is over 24 MiB; the wasm's own size is no longer limited, but it is still what every visitor downloads, so watch it. Pull-request CI also builds the actual browser app with the same pinned Trunk version as the release job and runs `packaging/web/package.sh`, including the relative-URL and file-size checks. The `web build and wasm size gate` check runs on main and on PRs that change something the web build compiles or packages (`apps/lienzo-web`, `apps/lienzo-web-boot`, `packaging/web`, crate sources and manifests, `Cargo.toml`/`Cargo.lock`, the CI workflow), and reports the wasm's size and the site's largest file in the Actions job summary. The web build never embeds nodalia-fonts (see Fonts above). To see where the bytes go, run `twiggy top -n 40` on `target/wasm32-unknown-unknown/wasm-release/lienzo-web.wasm` (before wasm-opt strips the names).
 
 URL flags: `?webgl` forces the WebGL2 backend, and `?cpu` forces the CPU canvas path. `?free-mb=N` is a diagnostic: the memory gates and the low-memory warning behave as if only N MiB could be allocated, so they can be checked in a browser without gigabytes of images (for example `?free-mb=300`, then Place a large image, or `?free-mb=400` for the warning).
 
@@ -1011,8 +1011,8 @@ against committed **sha256 manifests**. All pins are in one place:
 
 | Directory | What | Source | Manifest |
 |---|---|---|---|
-| `corpus/photoshop/` | 258 PSDs we authored with Photoshop: smart filters, layer-style effect shapes, the text engine, adjustments in every mode and depth | https://github.com/storytold/photocraft-corpus (ours, MIT OR Apache-2.0) | `xtask/photoshop-corpus.sha256` |
-| `corpus/gimp/` | 14 XCF files written by GIMP 3.2.6 with GIMP's merged rendering of each as a PNG (28 files), the oracles of the XCF reader | https://github.com/storytold/photocraft-corpus (ours, MIT OR Apache-2.0; its own pin) | `xtask/gimp-corpus.sha256` |
+| `corpus/photoshop/` (optional, not pinned) | Real Photoshop-authored PSDs for the oracle, smart-filter, text and 32-bit tests: put them there by hand | your own files, or `getnodalia/nodalia-corpus` once it holds some | none |
+| `corpus/gimp/` (optional, not pinned) | GIMP-authored XCF files with GIMP's merged rendering of each as a PNG, the oracles of the XCF reader | your own files, or `getnodalia/nodalia-corpus` once it holds some | none |
 | `corpus/psd/` | 170 small psd-tools and ag-psd files, the mix most PSD tests use | psd-tools and ag-psd upstreams (MIT) | `xtask/psd-corpus.sha256` |
 | `corpus/psd-tools/` | the complete psd-tools test set (309 files) | psd-tools upstream (MIT) | `xtask/psd-tools-corpus.sha256` |
 | `corpus/heif/` | 9 small HEIC/HEIF files (checkerboards, RGB strips, a grid-tiled photo with EXIF/XMP, each with Apple's decode as `.ref.png`; a 10-bit RGBA file with its source PNG), for the `heif` feature | heic-rs (MIT OR Apache-2.0) and pillow-heif (BSD-3-Clause) upstreams | `xtask/heif-corpus.sha256` |
@@ -1037,8 +1037,9 @@ scripts/fetch-corpus.sh            # the same as cargo xtask corpus --all
   `lienzo-io` and `lienzo-engine`, so plain `cargo test` neither compiles nor needs them.
   The HEIF ones also need the `heif` feature of `lienzo-codecs`/`lienzo-io` (test-corpus
   turns it on).
-- With the feature on, a missing corpus is a failure ("run `cargo xtask corpus --all`"), never a
-  silent skip, and every floor is enforced.
+- With the feature on, a missing pinned corpus is a failure ("run `cargo xtask corpus --all`"),
+  never a silent skip, and every floor is enforced. The optional Photoshop and GIMP sets are the
+  exception: see below.
 - If you touch psd, io, codecs, compose, gpu, text or format, run `cargo xtask test-corpus` before
   you finish.
 - The CI `corpus` job runs `cargo xtask corpus --all` and then `cargo xtask test-corpus` on every PR
@@ -1046,26 +1047,17 @@ scripts/fetch-corpus.sh            # the same as cargo xtask corpus --all
   the manifests. A download happens only when a pin changes; otherwise the cache restores in seconds
   and is re-verified (sha256) before the tests run. Fork PRs read the base branch's cache.
 
-**Our own corpus: [photocraft-corpus](https://github.com/storytold/photocraft-corpus).**
+**Real Photoshop and GIMP oracles are optional.** Nodalia has no copy of the files it once borrowed,
+so `corpus/photoshop/` and `corpus/gimp/` are not pinned or fetched. Each test that reads one skips
+with `SKIPPED: corpus/<name> is not present` when the folder is absent, and `LIENZO_ORACLES_REQUIRED=1`
+turns that skip into a failure for a run that must not pass by skipping. To run them, put files you
+own there (a `photoshop/` tree with `smart-filters/`, `effects/`, `text/` and `adjustments/<mode><bits>/`
+folders, or a `gimp/` folder with each `.xcf` and its `.png` rendering). Anything added to Nodalia's
+shared `getnodalia/nodalia-corpus` records who made it, with which program and under which licence.
+Nothing here is ever committed to this repository.
 
-- **Authoring clone:** a normal git clone, `git clone git@github.com:storytold/photocraft-corpus.git`,
-  placed next to this checkout (`../photocraft-corpus`). Its generators write there, and you commit
-  and push there.
-- **Consuming copy:** `corpus/photoshop/` here. It is a plain directory: the pinned snapshot
-  (downloaded as the codeload tarball of the pinned commit, then verified).
-- **Local mode:** `cargo xtask corpus --photoshop --local` copies `photoshop/` (and `--gimp --local` `gimp/`) from
-  `../photocraft-corpus` (or `LIENZO_CORPUS_REPO=<path>`) instead of downloading. It warns when
-  the clone's HEAD isn't the pin or its files differ from the manifest. Use it to test regenerated
-  files before pushing: `cargo xtask test-corpus --local` copies them and runs every corpus test.
-- **Bumping the pin:** commit and push in photocraft-corpus, then in a PR here set
-  `LIENZO_CORPUS_COMMIT` in `corpus_pins.rs` (`LIENZO_CORPUS_GIMP_COMMIT` for `gimp/`), run
-  `cargo xtask corpus --photoshop --update-manifest` (or `--gimp --update-manifest`), commit the manifest diff, run
-  `cargo xtask test-corpus`, and raise floors that improved.
-- **Not a submodule or a subtree:** a subtree would put the binaries back into this repository's
-  history, and submodules cause init and detached-HEAD friction for every contributor. A pin plus a
-  manifest gives the same reproducibility.
-- The third-party sets (psd-tools, ag-psd, PngSuite) are fetched from their upstreams the same way,
-  and are never copied into photocraft-corpus.
+- The third-party sets (psd-tools, ag-psd, PngSuite) are fetched from their upstreams the same way
+  and are never copied into this repository.
 
 ## PSD write recipes
 
@@ -1076,7 +1068,7 @@ and reopens the PSD, and checks the specified properties (it reads layers with
 files and results for a later independent Photoshop verification (#6130).
 
 ```sh
-cargo xtask corpus --photoshop
+# needs corpus/photoshop (see Test corpora: it is optional and not pinned)
 cargo build -p lienzo-cli --release
 cargo xtask psd-write-oracle xtask/psd-write-oracle/starter.json corpus/photoshop target/release/lienzo-cli target/psd-write-oracle
 ```
@@ -1104,7 +1096,7 @@ relative to the inspected layer: `unchanged` requires a present, equal value bef
 and after; `equals` checks the exported value; `changed_to` requires the exported
 value to match and differ from the base. Numbers compare by exact value, so `17` equals `17.0`. Every edited case needs a `changed_to` check.
 Every check is run and reported (not only the first failure), each result naming the layer and the property path. See the starter recipes for examples. Regenerate hashes when deliberately changing
-the corpus pin, and review them against `xtask/photoshop-corpus.sha256`.
+the corpus pin, and review them against the files you placed in `corpus/photoshop`.
 
 These checks use Lienzo's own importer and inspector; they do **not** prove that
 Photoshop can open the output or interprets it correctly. The report marks those
@@ -1116,8 +1108,7 @@ upload its artifacts; that integration and the Photoshop judge are separate work
 `cargo xtask test-corpus -p io -- --nocapture` compares our composite of every corpus PSD with
 Photoshop's own merged image (PASS ≤ 2/255) and checks that export → re-import renders the same,
 per source with its own floors: `corpus/psd`, the psd-tools set (also a truncation/corruption sweep
-over every file that must never panic) and our Photoshop set `corpus/photoshop` (per-feature-group
-totals: `smart-filters`, `effects`, `text`, `adjustments/<mode><bits>`). Smart objects and type
+over every file that must never panic) and, when you have placed one, a Photoshop set in `corpus/photoshop`. Smart objects and type
 layers composite Photoshop's cached pixels there; `cargo xtask test-corpus -p engine -- --nocapture`
 (`crates/engine/tests/it/photoshop_oracles.rs`) re-renders them with our smart-filter stack and text
 engine and is the failure map for both. A panic is reported as `CRASH` and fails the run. Files without a real merged image (Maximize Compatibility off)
@@ -1143,7 +1134,7 @@ their own modes, an upper stroke covering lower ones.
 ## System printing
 
 `file.print` and `file.printOneCopy` keep PDF layout, scaling, marks and ICC conversion in
-Lienzo and submit the rendered bytes through `craft-print` at the Git revision pinned in
+Lienzo and submit the rendered bytes through `nodalia-print` at the Git revision pinned in
 `Cargo.toml`. CUPS streams the PDF on macOS/Linux; Windows uses the shared Windows PDF backend.
 The driver receives exact physical sheet size so it does not scale Lienzo's layout twice.
 Windows raster printing does not establish physical-printer colour fidelity; test critical

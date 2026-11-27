@@ -4313,3 +4313,206 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	コンテンツに応じた塗りつぶし
 	Sample content from part of the image and use it to fill a small area	画像の一部から内容をサンプリングして小さな領域を塗りつぶす
 	Reset the crop box, image rotation, and aspect ratio settings	切り抜き枠、画像の回転、アスペクト比をリセット
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	バッチ処理中にコマンドがキャンセルまたは中断されました。次のファイルに進みますか、それとも停止しますか？
+	A file is still being placed; try again when it has finished.	ファイルを配置中です。完了してからもう一度お試しください。
+	A native image editor, layer by layer. No account, no cloud.	レイヤー単位で編集できるネイティブの画像エディター。アカウントもクラウドも不要です。
+	Allow Tool Recording	ツールの記録を許可
+	Allows rotation and scaling of selection	選択範囲の回転と拡大・縮小を許可します
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	不透明度に常に筆圧を使用。オフの場合は、ブラシプリセットが筆圧を制御します
+	Always use Pressure for Size. When off, Brush Preset controls pressure	サイズに常に筆圧を使用。オフの場合は、ブラシプリセットが筆圧を制御します
+	Answer the open import question first, then import this file again.	先に未回答のインポートの質問に答えてから、このファイルをもう一度インポートしてください。
+	Anti-alias brush application	ブラシの適用にアンチエイリアスを使用
+	Are you sure you want to delete all notes?	すべての注釈を削除してもよろしいですか？
+	Arrowhead options	矢印の先端のオプション
+	Arrowheads	矢印の先端
+	Attribute	属性
+	Batch preview	バッチプレビュー
+	Bottom align text	テキストを下揃え
+	CPU Rendering	CPU レンダリング
+	Calculating…	計算中…
+	Cancelled placing {name}	{name} の配置をキャンセルしました
+	Choose a menu command. Playback asks for its settings when needed.	メニューコマンドを選択してください。再生時に必要な設定を確認します。
+	Choose a remix mode	リミックスモードを選択
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	ズームツールを使用して、左右にクリックしながらドラッグして拡大・縮小します（OpenGL のみ）
+	Click to open the Brush Preset picker	クリックしてブラシプリセットピッカーを開きます
+	Click to refresh histogram with uncached data	クリックしてキャッシュされていないデータでヒストグラムを更新します
+	Concavity	凹み
+	Confirm or cancel the pending Record Again editor first.	先に保留中の「再記録」エディターを確定またはキャンセルしてください。
+	Confirm or cancel the pending menu item first.	先に保留中のメニュー項目を確定またはキャンセルしてください。
+	Copy CSS	CSS をコピー
+	Could not use the type tool because the layer is locked.	レイヤーがロックされているため、文字ツールを使用できませんでした。
+	Count:	カウント:
+	Data Sets as Files is unavailable on the web	「データセットをファイルとして」はウェブでは使用できません
+	Delete Note	注釈を削除
+	Delete this note?	この注釈を削除しますか？
+	Determines the spread of replaced color	置き換える色の範囲を指定します
+	Do not erase the foreground swatch color	描画色のスウォッチ色を消去しない
+	Drawn on the CPU: {reason}. Click for System Info.	CPU で描画中: {reason}。クリックするとシステム情報を表示します。
+	Draws background color over foreground colors	描画色の上に背景色を描画します
+	Dropped files weren't placed: their document was closed.	ドロップしたファイルは配置されませんでした。ドキュメントが閉じられています。
+	Dropped files weren't placed: too many are waiting for their document.	ドロップしたファイルは配置されませんでした。ドキュメントを待っているファイルが多すぎます。
+	Effect	効果
+	Empty	空
+	Enable to remix all layers	すべてのレイヤーをリミックスするには有効にします
+	End	終了
+	Erase range of similar colors	似た色の範囲を消去します
+	Erase to History	ヒストリーに消去
+	Filter for embedded smart objects	埋め込みスマートオブジェクトのフィルター
+	Filter for linked smart objects that are missing	リンク切れのスマートオブジェクトのフィルター
+	Filter for smart objects linked locally	ローカルにリンクされたスマートオブジェクトのフィルター
+	High Memory Photoshop Document	大容量メモリ用 Photoshop ドキュメント
+	How far to let the erasing spread	消去をどこまで広げるかを指定します
+	Image Compression	画像圧縮
+	Import as New Group	新規グループとしてインポート
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	「新規グループとしてインポート」は「{group}」を残し、その隣にファイルを新規グループとして追加します。
+	Insert Menu Item…	メニュー項目を挿入…
+	Insert Path	パスを挿入
+	LZW	LZW
+	Layer Effects	レイヤー効果
+	Level:	レベル:
+	Lining	ライニング
+	Linked	リンク済み
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	このファイルを開くと空きメモリがほとんど残りません。先にほかのアプリを閉じてください。閉じないと Lienzo のメモリが不足する可能性があります。
+	Load Solid Colors Only	ソリッドカラーのみ読み込む
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	シャドウとハイライトのクリッピングを最小限に抑え、色相がずれないようにします
+	No Adv. Blending	高度な合成なし
+	No Layer Effects	レイヤー効果なし
+	No Layer Mask	レイヤーマスクなし
+	No Vector Mask	ベクトルマスクなし
+	No document.	ドキュメントがありません。
+	No import is waiting. Import the file again.	待機中のインポートはありません。ファイルをもう一度インポートしてください。
+	No matching fonts	一致するフォントがありません
+	No menu item belongs to this chooser.	このチューザーに対応するメニュー項目がありません。
+	No menu item is waiting.	待機中のメニュー項目はありません。
+	No note to delete	削除する注釈がありません
+	No options for the Add Anchor Point Tool.	アンカーポイントの追加ツールにはオプションがありません。
+	No options for the Delete Anchor Point Tool.	アンカーポイントの削除ツールにはオプションがありません。
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	シェイプを作成するパスがありません。ペンツールで描くか、パスパネルで選択してください。
+	No pixels are selected.	ピクセルが選択されていません。
+	No recorded step belongs to this editor.	このエディターに対応する記録済みのステップがありません。
+	No slices are selected. Click a slice in the preview to select it.	スライスが選択されていません。プレビューでスライスをクリックして選択してください。
+	No step is waiting.	待機中のステップはありません。
+	Not Clipped	クリップされていない
+	Not Empty	空ではない
+	Not Linked	リンクされていない
+	Not Locked	ロックされていない
+	Not Visible	非表示
+	Note deleted, but the preference could not be saved: {error}	注釈を削除しましたが、環境設定を保存できませんでした: {error}
+	Nudge	微調整
+	Numerals	数字
+	Open anyway	このまま開く
+	Open as Smart Object…	スマートオブジェクトとして開く…
+	Opening this document uses more memory and may slow down your computer or other running applications.	このドキュメントを開くと、より多くのメモリを使用し、コンピューターや実行中のほかのアプリケーションが遅くなる可能性があります。
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	「{name}」を開くには、推定 {est} GiB のメモリが必要です（使用可能: {avail} GiB）。
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	「{name}」を開くには、推定 {est} GiB のメモリが必要です。使用可能なメモリを測定できませんでした。
+	Painting Mode	描画モード
+	Percentile:	パーセンタイル:
+	Preparing Free Transform	自由変形を準備中
+	Proportional	プロポーショナル
+	Proportional Lining	プロポーショナルライニング
+	Proportional Oldstyle	プロポーショナルオールドスタイル
+	Record Again	もう一度記録
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	「置き換え」は、まず「{group}」の内容をすべて削除します。そこで編集または移動したプリセットも含まれます。この操作は元に戻せません。
+	Report an issue	問題を報告
+	Resize windows when zooming using the Zoom Tool	ズームツールでズームするときにウィンドウのサイズを変更
+	Save Image Pyramid	イメージピラミッドを保存
+	Save Transparency	透明部分を保存
+	Scroll all open document windows when using the hand tool	手のひらツールの使用時に、開いているすべてのドキュメントウィンドウをスクロール
+	Search and select fonts	フォントを検索して選択
+	Select Pixels	ピクセルを選択
+	Select an action first.	先にアクションを選択してください。
+	Select an action step first.	先にアクションのステップを選択してください。
+	Selected Slices	選択したスライス
+	Set 	セット 
+	Set 1	セット 1
+	Set 10	セット 10
+	Set 11	セット 11
+	Set 12	セット 12
+	Set 13	セット 13
+	Set 14	セット 14
+	Set 15	セット 15
+	Set 16	セット 16
+	Set 17	セット 17
+	Set 18	セット 18
+	Set 19	セット 19
+	Set 2	セット 2
+	Set 20	セット 20
+	Set 3	セット 3
+	Set 4	セット 4
+	Set 5	セット 5
+	Set 6	セット 6
+	Set 7	セット 7
+	Set 8	セット 8
+	Set 9	セット 9
+	Set as default	デフォルトに設定
+	Set exposure for stroke	ストロークの露光量を設定
+	Set flow rate for stroke	ストロークの流量を設定
+	Set font size	フォントサイズを設定
+	Set font style	フォントスタイルを設定
+	Set opacity for stroke	ストロークの不透明度を設定
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	ストロークのスムージングを設定\n値を大きくするとブラシストロークの手ぶれが軽減されます
+	Set symmetry options for Painting	ペイントの対称オプションを設定
+	Set text color	テキストカラーを設定
+	Set the brush angle	ブラシの角度を設定
+	Show Channels in Color	チャンネルをカラーで表示
+	Show Statistics	統計情報を表示
+	Smoothing Options	スムージングオプション
+	Source:	ソース:
+	Start	開始
+	Stylistic Sets	スタイルセット
+	Tabular	表組み用
+	Tabular Lining	表組み用ライニング
+	Tabular Oldstyle	表組み用オールドスタイル
+	The Record Again command changed.	「もう一度記録」コマンドが変更されました。
+	The action or insertion command changed. Request Insert Menu Item again.	アクションまたは挿入コマンドが変更されました。「メニュー項目を挿入」をもう一度実行してください。
+	The actions changed. Request Record Again again.	アクションが変更されました。「もう一度記録」をもう一度実行してください。
+	The command permissions changed. Request Insert Menu Item again.	コマンドのアクセス許可が変更されました。「メニュー項目を挿入」をもう一度実行してください。
+	The command permissions changed. Request Record Again again.	コマンドのアクセス許可が変更されました。「もう一度記録」をもう一度実行してください。
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	現在のスクラッチディレクトリ（{path}）は空き容量を報告しないため、Lienzo は満杯になる前に停止できず、スクラッチサイズの上限がないと大きなファイルに追加の余裕を確保できません。この警告は現在の構成に対するものです。上の変更は「適用」または「OK」で反映されます。上限を設定するか、ローカルディスクを使用してください。
+	The document changed. Please choose Clear All again.	ドキュメントが変更されました。もう一度「すべて消去」を選択してください。
+	The document changed. Request Record Again again.	ドキュメントが変更されました。「もう一度記録」をもう一度実行してください。
+	The document or its notes changed. Please delete the note again.	ドキュメントまたはその注釈が変更されました。もう一度注釈を削除してください。
+	The preference could not be saved: {error}	環境設定を保存できませんでした: {error}
+	The step editor could not be opened.	ステップエディターを開けませんでした。
+	The step has no command editor.	このステップにはコマンドエディターがありません。
+	Tolerance for choosing related colors	関連する色を選択する許容値
+	Top align text	テキストを上揃え
+	Uncached Refresh	キャッシュなしで更新
+	Use relative positioning for reference point	基準点に相対位置を使用
+	Use these settings for new arrows	新しい矢印にこれらの設定を使用
+	Useful mixer brush combinations	便利な混合ブラシの組み合わせ
+	ZIP	ZIP
+	Zoom current window to 1:1	現在のウィンドウを 1:1 にズーム
+	Zoom current window to fill the screen	現在のウィンドウを画面いっぱいにズーム
+	Zoom current window to screen size	現在のウィンドウを画面サイズにズーム
+	brush tool	ブラシツール
+	by Nodalia	Nodalia 提供
+	dodge tool	覆い焼きツール
+	{message} into “{group}”	{message}（「{group}」へ）
+	{ok} written to {dir}	{ok} を {dir} に書き出しました
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	ブラシグループ「{group}」には、すでにあなたのブラシが {n} 個あります。
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	グラデーショングループ「{group}」はすでに存在します（グラデーション {n} 個）。
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: 画像アセットの出力 {n} 件が失敗しました
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: ファイル {n} 件が失敗しました
+	Apply to All	すべてに適用
+	Artboards	アートボード
+	Locked	ロック済み
+	Pick Color From Image	画像から色を選択
+	Recent Files	最近使ったファイル
+# Template gallery on the Home screen
+	Start from a template	テンプレートから始める
+	Social	SNS
+	Print & paper	印刷・紙
+	Web & art	ウェブ・アート
+	Quiet Quote	静かな言葉
+	Weekend Notes	週末のメモ
+	Little Things	ささやかなこと
+	Video Thumbnail	動画のサムネイル
+	Evening Poster	夜のポスター
+	Coast Postcard	海辺のポストカード
+	Garden Invitation	庭の招待状
+	Business Card	名刺
+	Dusk Hills	夕暮れの丘
+	Web Banner	ウェブバナー
+	Album Cover	アルバムカバー
+	Colour Palette	カラーパレット

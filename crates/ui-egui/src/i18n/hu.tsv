@@ -4549,3 +4549,184 @@ smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded
 	Content-aware fill	Tartalom alapú kitöltés
 	Sample content from part of the image and use it to fill a small area	Tartalom mintavétele a kép egy részéből egy kis terület kitöltéséhez
 	Reset the crop box, image rotation, and aspect ratio settings	A kivágási keret, a képelforgatás és a képarány visszaállítása
+	A command was canceled or stopped during batch processing. Continue with the next file or stop?	Egy parancsot megszakítottak vagy leállítottak a kötegelt feldolgozás során. Folytatod a következő fájllal, vagy leállítod?
+	A file is still being placed; try again when it has finished.	Egy fájl elhelyezése még folyamatban van; próbáld újra, amikor végzett.
+	A native image editor, layer by layer. No account, no cloud.	Natív képszerkesztő, rétegről rétegre. Fiók és felhő nélkül.
+	Allow Tool Recording	Eszközrögzítés engedélyezése
+	Allows rotation and scaling of selection	Engedélyezi a kijelölés forgatását és átméretezését
+	Always use Pressure for Opacity. When off, Brush Preset controls pressure	A nyomás mindig az átlátszatlanságot vezérelje. Kikapcsolva az ecset-beállításkészlet vezérli a nyomást
+	Always use Pressure for Size. When off, Brush Preset controls pressure	A nyomás mindig a méretet vezérelje. Kikapcsolva az ecset-beállításkészlet vezérli a nyomást
+	Answer the open import question first, then import this file again.	Először válaszolj a nyitott importálási kérdésre, majd importáld újra ezt a fájlt.
+	Anti-alias brush application	Élsimítás az ecsetnél
+	Are you sure you want to delete all notes?	Biztosan törölni szeretnéd az összes jegyzetet?
+	Arrowhead options	Nyílhegy-beállítások
+	Arrowheads	Nyílhegyek
+	Attribute	Attribútum
+	Batch preview	Kötegelt előnézet
+	Bottom align text	Szöveg lent igazítása
+	CPU Rendering	CPU-s megjelenítés
+	Calculating…	Számítás…
+	Cancelled placing {name}	A(z) {name} elhelyezése megszakítva
+	Choose a menu command. Playback asks for its settings when needed.	Válassz egy menüparancsot. A lejátszás szükség esetén elkéri a beállításait.
+	Choose a remix mode	Válassz remix módot
+	Click and move left or right to scale using the Zoom Tool (OpenGL only)	Kattints, és mozgasd balra vagy jobbra a méretezéshez a Nagyító eszközzel (csak OpenGL)
+	Click to open the Brush Preset picker	Kattints az ecset-beállításkészlet-választó megnyitásához
+	Click to refresh histogram with uncached data	Kattints a hisztogram frissítéséhez a gyorsítótárba nem került adatokkal
+	Concavity	Homorúság
+	Confirm or cancel the pending Record Again editor first.	Először erősítsd meg vagy vesd el a függőben lévő Rögzítés újra szerkesztőt.
+	Confirm or cancel the pending menu item first.	Először erősítsd meg vagy vesd el a függőben lévő menüelemet.
+	Copy CSS	CSS másolása
+	Could not use the type tool because the layer is locked.	A szövegeszköz nem használható, mert a réteg zárolva van.
+	Count:	Darabszám:
+	Data Sets as Files is unavailable on the web	Az Adatkészletek fájlként a weben nem érhető el
+	Delete Note	Jegyzet törlése
+	Delete this note?	Törlöd ezt a jegyzetet?
+	Determines the spread of replaced color	Meghatározza a lecserélt szín kiterjedését
+	Do not erase the foreground swatch color	Ne törölje az előtérszín színmintáját
+	Drawn on the CPU: {reason}. Click for System Info.	CPU-n rajzolva: {reason}. Kattints a rendszerinformációkhoz.
+	Draws background color over foreground colors	A háttérszínnel rajzol az előtérszínek fölé
+	Dropped files weren't placed: their document was closed.	A ledobott fájlok nem lettek elhelyezve: a dokumentumuk be lett zárva.
+	Dropped files weren't placed: too many are waiting for their document.	A ledobott fájlok nem lettek elhelyezve: túl sok vár a dokumentumára.
+	Effect	Effektus
+	Empty	Üres
+	Enable to remix all layers	Engedélyezd az összes réteg remixeléséhez
+	End	Vége
+	Erase range of similar colors	Hasonló színek tartományának törlése
+	Erase to History	Törlés az előzményekbe
+	Filter for embedded smart objects	Szűrő a beágyazott intelligens objektumokhoz
+	Filter for linked smart objects that are missing	Szűrő a hiányzó hivatkozású, csatolt intelligens objektumokhoz
+	Filter for smart objects linked locally	Szűrő a helyileg csatolt intelligens objektumokhoz
+	High Memory Photoshop Document	Nagy memóriaigényű Photoshop-dokumentum
+	How far to let the erasing spread	Meddig terjedjen ki a törlés
+	Image Compression	Képtömörítés
+	Import as New Group	Importálás új csoportként
+	Import as New Group keeps “{group}” and adds the file as a new group beside it.	Az Importálás új csoportként megtartja a(z) „{group}” csoportot, és a fájlt új csoportként adja hozzá mellé.
+	Insert Menu Item…	Menüelem beszúrása…
+	Insert Path	Útvonal beszúrása
+	LZW	LZW
+	Layer Effects	Rétegeffektusok
+	Level:	Szint:
+	Lining	Egyenlő magasságú
+	Linked	Csatolt
+	Little memory would be left after opening this file. Close other apps first, or Lienzo may run out of memory.	A fájl megnyitása után kevés memória marad. Először zárj be más alkalmazásokat, különben a Lienzo elfogyhat a memóriából.
+	Load Solid Colors Only	Csak egyszínű színek betöltése
+	Minimizes clipping in shadows and highlights, and keeps colors from shifting hue	Minimalizálja a vágást az árnyékokban és a fényekben, és megakadályozza a színárnyalat eltolódását
+	No Adv. Blending	Nincs speciális keverés
+	No Layer Effects	Nincsenek rétegeffektusok
+	No Layer Mask	Nincs rétegmaszk
+	No Vector Mask	Nincs vektormaszk
+	No document.	Nincs dokumentum.
+	No import is waiting. Import the file again.	Nincs függőben lévő importálás. Importáld újra a fájlt.
+	No matching fonts	Nincs egyező betűtípus
+	No menu item belongs to this chooser.	Ehhez a választóhoz nem tartozik menüelem.
+	No menu item is waiting.	Nincs függőben lévő menüelem.
+	No note to delete	Nincs törölhető jegyzet
+	No options for the Add Anchor Point Tool.	A Horgonypont hozzáadása eszköznek nincsenek beállításai.
+	No options for the Delete Anchor Point Tool.	A Horgonypont törlése eszköznek nincsenek beállításai.
+	No path to make a shape from: draw one with the Pen tool or select one in the Paths panel.	Nincs útvonal, amelyből alakzat készíthető: rajzolj egyet a Toll eszközzel, vagy jelölj ki egyet az Útvonalak panelen.
+	No pixels are selected.	Nincsenek kijelölt pixelek.
+	No recorded step belongs to this editor.	Ehhez a szerkesztőhöz nem tartozik rögzített lépés.
+	No slices are selected. Click a slice in the preview to select it.	Nincsenek kijelölt szeletek. Kattints egy szeletre az előnézetben a kijelöléséhez.
+	No step is waiting.	Nincs függőben lévő lépés.
+	Not Clipped	Nincs vágva
+	Not Empty	Nem üres
+	Not Linked	Nem csatolt
+	Not Locked	Nem zárolt
+	Not Visible	Nem látható
+	Note deleted, but the preference could not be saved: {error}	A jegyzet törölve lett, de a beállítást nem sikerült menteni: {error}
+	Nudge	Léptetés
+	Numerals	Számjegyek
+	Open anyway	Megnyitás mindenképp
+	Open as Smart Object…	Megnyitás intelligens objektumként…
+	Opening this document uses more memory and may slow down your computer or other running applications.	A dokumentum megnyitása több memóriát használ, és lelassíthatja a számítógépet vagy a többi futó alkalmazást.
+	Opening “{name}” requires an estimated {est} GiB of memory ({avail} GiB available).	A(z) „{name}” megnyitásához becslés szerint {est} GiB memória szükséges ({avail} GiB érhető el).
+	Opening “{name}” requires an estimated {est} GiB of memory. The available memory could not be measured.	A(z) „{name}” megnyitásához becslés szerint {est} GiB memória szükséges. Az elérhető memóriát nem sikerült megmérni.
+	Painting Mode	Festési mód
+	Percentile:	Percentilis:
+	Preparing Free Transform	Szabad átalakítás előkészítése
+	Proportional	Arányos
+	Proportional Lining	Arányos, egyenlő magasságú
+	Proportional Oldstyle	Arányos, régi stílusú
+	Record Again	Rögzítés újra
+	Replace deletes everything in “{group}” first, including presets you edited or moved there. This can't be undone.	A Csere először mindent töröl a(z) „{group}” csoportból, az ott szerkesztett vagy áthelyezett beállításkészleteket is beleértve. Ez nem vonható vissza.
+	Report an issue	Hiba jelentése
+	Resize windows when zooming using the Zoom Tool	Ablakok átméretezése a Nagyító eszközzel való nagyításkor
+	Save Image Pyramid	Képpiramis mentése
+	Save Transparency	Átlátszóság mentése
+	Scroll all open document windows when using the hand tool	Az összes megnyitott dokumentumablak görgetése a Kéz eszköz használatakor
+	Search and select fonts	Betűtípusok keresése és kiválasztása
+	Select Pixels	Pixelek kijelölése
+	Select an action first.	Először válassz ki egy műveletet.
+	Select an action step first.	Először válassz ki egy művelet-lépést.
+	Selected Slices	Kijelölt szeletek
+	Set 	Készlet 
+	Set 1	Készlet 1
+	Set 10	Készlet 10
+	Set 11	Készlet 11
+	Set 12	Készlet 12
+	Set 13	Készlet 13
+	Set 14	Készlet 14
+	Set 15	Készlet 15
+	Set 16	Készlet 16
+	Set 17	Készlet 17
+	Set 18	Készlet 18
+	Set 19	Készlet 19
+	Set 2	Készlet 2
+	Set 20	Készlet 20
+	Set 3	Készlet 3
+	Set 4	Készlet 4
+	Set 5	Készlet 5
+	Set 6	Készlet 6
+	Set 7	Készlet 7
+	Set 8	Készlet 8
+	Set 9	Készlet 9
+	Set as default	Beállítás alapértelmezettként
+	Set exposure for stroke	A vonás expozíciójának beállítása
+	Set flow rate for stroke	A vonás áramlási sebességének beállítása
+	Set font size	Betűméret beállítása
+	Set font style	Betűstílus beállítása
+	Set opacity for stroke	A vonás átlátszatlanságának beállítása
+	Set smoothing for stroke\nUse higher values to reduce the shakiness of brush strokes	A vonás simításának beállítása\nMagasabb értékekkel csökkenthető az ecsetvonások remegése
+	Set symmetry options for Painting	A festés szimmetriabeállításai
+	Set text color	Szövegszín beállítása
+	Set the brush angle	Az ecset szögének beállítása
+	Show Channels in Color	Csatornák megjelenítése színesen
+	Show Statistics	Statisztika megjelenítése
+	Smoothing Options	Simítási beállítások
+	Source:	Forrás:
+	Start	Kezdet
+	Stylistic Sets	Stilisztikai készletek
+	Tabular	Táblázatos
+	Tabular Lining	Táblázatos, egyenlő magasságú
+	Tabular Oldstyle	Táblázatos, régi stílusú
+	The Record Again command changed.	A Rögzítés újra parancs megváltozott.
+	The action or insertion command changed. Request Insert Menu Item again.	A művelet vagy a beszúrási parancs megváltozott. Kérd újra a Menüelem beszúrása parancsot.
+	The actions changed. Request Record Again again.	A műveletek megváltoztak. Kérd újra a Rögzítés újra parancsot.
+	The command permissions changed. Request Insert Menu Item again.	A parancsengedélyek megváltoztak. Kérd újra a Menüelem beszúrása parancsot.
+	The command permissions changed. Request Record Again again.	A parancsengedélyek megváltoztak. Kérd újra a Rögzítés újra parancsot.
+	The current scratch directory ({path}) doesn't report its free space, so Lienzo can't stop before it fills up, and large files get no extra room from it without a Scratch Size Limit. This warning applies to the current configuration; changes above take effect on Apply or OK. Set a limit or use a local disk.	A jelenlegi lemezgyorsítótár-könyvtár ({path}) nem jelenti a szabad helyét, így a Lienzo nem tud megállni, mielőtt megtelik, és a nagy fájlok a lemezgyorsítótár-méretkorlát nélkül nem kapnak belőle extra helyet. Ez a figyelmeztetés a jelenlegi konfigurációra vonatkozik; a fenti módosítások az Alkalmaz vagy az OK gombbal lépnek érvénybe. Állíts be korlátot, vagy használj helyi lemezt.
+	The document changed. Please choose Clear All again.	A dokumentum megváltozott. Válaszd újra a Mindent töröl parancsot.
+	The document changed. Request Record Again again.	A dokumentum megváltozott. Kérd újra a Rögzítés újra parancsot.
+	The document or its notes changed. Please delete the note again.	A dokumentum vagy a jegyzetei megváltoztak. Töröld újra a jegyzetet.
+	The preference could not be saved: {error}	A beállítást nem sikerült menteni: {error}
+	The step editor could not be opened.	A lépésszerkesztőt nem sikerült megnyitni.
+	The step has no command editor.	A lépésnek nincs parancsszerkesztője.
+	Tolerance for choosing related colors	Tűrés a rokon színek kiválasztásához
+	Top align text	Szöveg fent igazítása
+	Uncached Refresh	Frissítés gyorsítótár nélkül
+	Use relative positioning for reference point	Relatív pozicionálás használata a referenciaponthoz
+	Use these settings for new arrows	Ezek a beállítások legyenek érvényesek az új nyilakra
+	Useful mixer brush combinations	Hasznos keverőecset-kombinációk
+	ZIP	ZIP
+	Zoom current window to 1:1	Az aktuális ablak nagyítása 1:1 arányra
+	Zoom current window to fill the screen	Az aktuális ablak nagyítása a képernyő kitöltéséhez
+	Zoom current window to screen size	Az aktuális ablak nagyítása a képernyő méretére
+	brush tool	Ecset eszköz
+	by Nodalia	Készítette: Nodalia
+	dodge tool	Derítő eszköz
+	{message} into “{group}”	{message} a(z) „{group}” csoportba
+	{ok} written to {dir}	{ok} kiírva ide: {dir}
+@plural	The brush group “{group}” already has {n} brush of yours.|The brush group “{group}” already has {n} brushes of yours.	A(z) „{group}” ecsetcsoportban már van {n} saját ecseted.
+@plural	The gradient group “{group}” already exists ({n} gradient).|The gradient group “{group}” already exists ({n} gradients).	A(z) „{group}” színátmenet-csoport már létezik ({n} színátmenet).
+@plural	{what}: {n} Image Assets output failed|{what}: {n} Image Assets outputs failed	{what}: {n} képelem-kimenet sikertelen volt
+@plural	{what}: {n} file failed|{what}: {n} files failed	{what}: {n} fájl sikertelen volt

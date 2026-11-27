@@ -1,7 +1,6 @@
 //! GIMP XCF files written by GIMP 3.2.6 itself (feature `corpus`; `cargo xtask test-corpus -p io`).
-//! They come from `corpus/gimp/` (`cargo xtask corpus --gimp`; pin `LIENZO_CORPUS_GIMP_COMMIT` in
-//! `xtask/src/corpus_pins.rs`, generator `tools/gimp-xcf/xcf_fixtures.py` in photocraft-corpus); a
-//! missing corpus fails. What the reader gets out is checked against the procedural images the
+//! They come from `corpus/gimp/` (optional and not pinned: every test here skips when the folder
+//! is absent). What the reader gets out is checked against the procedural images the
 //! generator drew (`pattern`, `alpha`), and our composite of each file against GIMP's own merged
 //! rendering saved next to it (`<name>.png`).
 
@@ -70,6 +69,7 @@ fn composite_error(doc: &Document, png: &str, tolerance: f32) -> (f32, f32, Stri
 
 #[test]
 fn layers_8bit_open_with_their_properties_and_pixels() {
+    skip_without_oracles!("gimp");
     let r = open("layers-8bit.xcf");
     let d = &r.document;
     assert_eq!((d.size.width, d.size.height, d.mode, d.depth), (W, H, ColorMode::Rgb, SampleType::U8));
@@ -114,6 +114,7 @@ fn layers_8bit_open_with_their_properties_and_pixels() {
 /// a Photoshop equivalent must match; the approximated ones are reported.
 #[test]
 fn each_mode_against_gimp_in_gamma_space() {
+    skip_without_oracles!("gimp");
     let d = open("legacy-modes-perceptual.xcf").document;
     let oracle = import("legacy-modes-perceptual.png", &fixture("legacy-modes-perceptual.png")).unwrap().document;
     let ours = lienzo_compose::flatten(&d);
@@ -158,6 +159,7 @@ fn each_mode_against_gimp_in_gamma_space() {
 
 #[test]
 fn groups_nest_and_pass_through() {
+    skip_without_oracles!("gimp");
     let r = open("groups.xcf");
     let d = &r.document;
     assert_eq!(names(&d.layers), ["Background", "Group", "Top"]);
@@ -178,6 +180,7 @@ fn groups_nest_and_pass_through() {
 
 #[test]
 fn masks_open_applied_or_disabled() {
+    skip_without_oracles!("gimp");
     let d = open("mask.xcf").document;
     assert_eq!(names(&d.layers), ["Background", "Masked", "Mask disabled"]);
     let masked = d.layers[1].mask.as_ref().expect("mask");
@@ -195,6 +198,7 @@ fn masks_open_applied_or_disabled() {
 
 #[test]
 fn gray16_keeps_its_depth_and_mode() {
+    skip_without_oracles!("gimp");
     let d = open("gray16.xcf").document;
     assert_eq!((d.mode, d.depth), (ColorMode::Grayscale, SampleType::U16));
     assert_eq!(names(&d.layers), ["Background", "Gray alpha"]);
@@ -211,6 +215,7 @@ fn gray16_keeps_its_depth_and_mode() {
 
 #[test]
 fn float_linear_opens_as_32_bit_float_with_a_linear_profile() {
+    skip_without_oracles!("gimp");
     let d = open("float-linear.xcf").document;
     assert_eq!((d.mode, d.depth), (ColorMode::Rgb, SampleType::F32));
     let icc = d.icc_profile.as_ref().expect("a linear-light profile");
@@ -230,6 +235,7 @@ fn float_linear_opens_as_32_bit_float_with_a_linear_profile() {
 
 #[test]
 fn indexed_opens_as_rgb_with_a_note() {
+    skip_without_oracles!("gimp");
     let r = open("indexed.xcf");
     assert_eq!((r.document.mode, r.document.depth), (ColorMode::Rgb, SampleType::U8));
     assert!(r.warnings.iter().any(|w| w.contains("indexed")), "{:?}", r.warnings);
@@ -238,6 +244,7 @@ fn indexed_opens_as_rgb_with_a_note() {
 
 #[test]
 fn text_layers_open_as_pixels_with_a_note() {
+    skip_without_oracles!("gimp");
     let r = open("text.xcf");
     assert_eq!(names(&r.document.layers), ["Background", "XCF"]);
     assert!(r.warnings.iter().any(|w| w.contains("text layer")), "{:?}", r.warnings);
@@ -249,6 +256,7 @@ fn text_layers_open_as_pixels_with_a_note() {
 
 #[test]
 fn channels_and_selection_come_through() {
+    skip_without_oracles!("gimp");
     let d = open("channel.xcf").document;
     assert_eq!(d.channels.len(), 1);
     assert_eq!(d.channels[0].name, "Alpha 1");
@@ -260,6 +268,7 @@ fn channels_and_selection_come_through() {
 
 #[test]
 fn modes_map_to_photoshops_and_the_rest_warn() {
+    skip_without_oracles!("gimp");
     let r = open("legacy-modes.xcf");
     let by_name = |n: &str| r.document.layers.iter().find(|l| l.name == n).unwrap_or_else(|| panic!("{n}"));
     assert_eq!(by_name("Addition").blend, BlendMode::LinearDodge);
@@ -279,6 +288,7 @@ fn modes_map_to_photoshops_and_the_rest_warn() {
 
 #[test]
 fn xcf_cannot_be_written_and_says_so() {
+    skip_without_oracles!("gimp");
     let d = open("layers-8bit.xcf").document;
     let e = export(&d, "out.xcf", &ExportOptions::default()).err().map(|e| e.to_string()).unwrap_or_default();
     assert!(e.contains(".lienzo"), "{e}");
@@ -286,6 +296,7 @@ fn xcf_cannot_be_written_and_says_so() {
 
 #[test]
 fn broken_files_are_errors_not_crashes() {
+    skip_without_oracles!("gimp");
     let bytes = fixture("groups.xcf");
     assert!(import("x.xcf", b"gimp xcf v011\0").is_err());
     assert!(import("x.xcf", &bytes[..bytes.len() / 2]).is_err());
@@ -326,6 +337,7 @@ const COMPOSITES: &[(&str, f32, f32, &str)] = &[
 
 #[test]
 fn composites_match_gimps_merged_rendering() {
+    skip_without_oracles!("gimp");
     let mut report = Vec::new();
     let mut failed = false;
     for (name, tolerance, allowed, why) in COMPOSITES {
