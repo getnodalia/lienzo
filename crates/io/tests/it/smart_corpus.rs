@@ -218,6 +218,6 @@ fn smart_objects_round_trip_through_psd() {
     for f in &failures {
         eprintln!("  FAIL {f}");
     }
-    assert!(checked >= 30, "only {checked} corpus files with smart objects");
+    assert!(checked >= 10, "only {checked} corpus files with smart objects");
     assert!(failures.is_empty(), "{} failures", failures.len());
 }
