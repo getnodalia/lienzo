@@ -62,7 +62,6 @@ fn move_targets_skip_the_panel_itself_and_protected_anchors() {
     assert!(!layout.move_targets(&1, guarded).contains(&&3));
 
     // A lone panel has nowhere to go — its "Move Panel to Group" menu hides
-    // (storytold/lightcraft#1768).
     let single = Layout { root: Some(tabs(&[1], 0)), floating: Vec::new() };
     assert!(single.move_targets(&1, all).is_empty());
 }
@@ -1614,7 +1613,7 @@ fn tab_labels_that_do_not_fit_are_truncated_inside_their_tab_and_named_in_a_tool
     );
 }
 
-// Ported from storytold/craft-libs#110 by @Zenodeon.
+// Contributed by @Zenodeon.
 
 #[test]
 /// A floating resize keeps drag ownership when another host control rewrites the owned-interaction

@@ -1869,7 +1869,7 @@ fn the_nodalia_provider_shapes_the_first_headless_frame_in_both_families() {
 
 #[test]
 fn ui_works_without_nodalia_fonts() {
-    // The pre-craft-fonts behaviour: no embedded fonts, no system fonts. Latin renders,
+    // The behaviour without nodalia-fonts: no embedded fonts, no system fonts. Latin renders,
     // Japanese is tried (and stays missing) without panicking, and the loader exhausts.
     let ctx = egui::Context::default();
     crate::theme::install_fonts_with(

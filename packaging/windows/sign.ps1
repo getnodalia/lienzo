@@ -65,7 +65,7 @@ if (-not $haveCert -and -not $haveAzure) {
 }
 
 $script:SignTool = Find-SignTool
-$common = @('sign', '/v', '/fd', 'SHA256', '/td', 'SHA256', '/d', 'Lienzo', '/du', 'https://github.com/storytold/photocraft')
+$common = @('sign', '/v', '/fd', 'SHA256', '/td', 'SHA256', '/d', 'Lienzo', '/du', 'https://github.com/getnodalia/lienzo')
 $tmp = Join-Path ([IO.Path]::GetTempPath()) "lienzo-sign-$PID"
 New-Item -ItemType Directory -Force -Path $tmp | Out-Null
 

@@ -18,11 +18,11 @@ Update Lienzo. Version 0.7.0 on Windows 11 could turn the taskbar black or hide 
 2. If it is older than 0.8.2, download the [latest release](https://github.com/getnodalia/lienzo/releases/latest). See [Install Lienzo](../getting-started/install.md).
 3. Start Lienzo again and maximize the window.
 
-A user who saw the black taskbar on 0.7.0 confirmed that it is gone in 0.8.2 ([issue 3864](https://github.com/storytold/photocraft/issues/3864)).
+A user who saw the black taskbar on 0.7.0 confirmed that it is gone in 0.8.2 (issue 3864).
 
 ## Why this happens
 
-Lienzo draws its own title bar. When such a window was maximized, Windows sized it to cover the whole screen, taskbar included, took it for a full-screen app and dropped the taskbar's background. The fix keeps a maximized Lienzo window clear of the taskbar ([issue 3144](https://github.com/storytold/photocraft/issues/3144), [pull request 3308](https://github.com/storytold/photocraft/pull/3308)).
+Lienzo draws its own title bar. When such a window was maximized, Windows sized it to cover the whole screen, taskbar included, took it for a full-screen app and dropped the taskbar's background. The fix keeps a maximized Lienzo window clear of the taskbar (issue 3144, pull request 3308).
 
 ## Still stuck?
 

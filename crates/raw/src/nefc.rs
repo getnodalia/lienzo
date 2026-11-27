@@ -15,7 +15,7 @@
 //!   NEFLinearizationTable); ITU-T T.81 Annex F / H for the "difference
 //!   category + additional bits" coding and canonical Huffman codes.
 //! * The Huffman tables, which Nikon files do not carry, come from the
-//!   black-box analysis documented in LightCraft (storytold/lightcraft#86,
+//!   black-box analysis documented in LightCraft (#86,
 //!   `crates/raw/src/vendor/nefc.rs`): recovered from CC0 raw.pixls.us samples
 //!   shot in both compressed and uncompressed mode, and verified on ~45 files
 //!   from ~35 bodies (D40 … D850, Df, Z 6, Z 50, 1 J1). Only the format facts
@@ -51,7 +51,7 @@
 //!   0–7 one-bits of padding. These facts, the prefix
 //!   tables and the dequantisation (`fixed_words`, ported from LightCraft's
 //!   `fixed_word_table`) come from LightCraft's black-box analysis of 11 CC0
-//!   raw.pixls.us files (storytold/lightcraft#633), like the Huffman tables above.
+//!   raw.pixls.us files (#633), like the Huffman tables above.
 //!
 //! Not decoded (reported as unsupported; the embedded preview is used
 //! instead): "lossy after split" strips that fail to decode, other
@@ -318,7 +318,7 @@ pub(crate) fn parse_table(t: &[u8], le: bool, bits: u32) -> Result<DecodeTable> 
 
 /// Difference-category prefix codes of the fixed-rate ("lossy after split") section:
 /// `(prefix bits, prefix length, category n)`. A word of `bits - 4` bits is a prefix followed by
-/// the top `bits - 4 - length` additional bits of category `n` (storytold/lightcraft#633; the
+/// the top `bits - 4 - length` additional bits of category `n` (#633; the
 /// 14-bit `010` prefix never occurred in the analysed files, its category 12 is deduced).
 const FIXED_12: &[(u32, u32, u32)] = &[
     (0b00, 2, 9),
