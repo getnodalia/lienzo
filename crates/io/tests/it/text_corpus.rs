@@ -149,6 +149,7 @@ fn corpus_tysh_lossless() {
 #[cfg(feature = "corpus")]
 #[test]
 fn corpus_photoshop_txt2_survives_an_unedited_save() {
+    skip_without_oracles!("photoshop");
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus/photoshop/text");
     assert!(root.is_dir(), "{} is missing: run `cargo xtask corpus --photoshop`", root.display());
     let mut files = Vec::new();
@@ -175,6 +176,7 @@ fn corpus_photoshop_txt2_survives_an_unedited_save() {
 #[cfg(feature = "corpus")]
 #[test]
 fn corpus_photoshop_path_text_opens_on_its_path() {
+    skip_without_oracles!("photoshop");
     use lienzo_doc::text::TextShape;
     use lienzo_geom::Point;
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus/photoshop/text");

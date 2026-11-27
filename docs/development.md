@@ -1011,8 +1011,8 @@ against committed **sha256 manifests**. All pins are in one place:
 
 | Directory | What | Source | Manifest |
 |---|---|---|---|
-| `corpus/photoshop/` | 258 PSDs we authored with Photoshop: smart filters, layer-style effect shapes, the text engine, adjustments in every mode and depth | https://github.com/storytold/photocraft-corpus (ours, MIT OR Apache-2.0) | `xtask/photoshop-corpus.sha256` |
-| `corpus/gimp/` | 14 XCF files written by GIMP 3.2.6 with GIMP's merged rendering of each as a PNG (28 files), the oracles of the XCF reader | https://github.com/storytold/photocraft-corpus (ours, MIT OR Apache-2.0; its own pin) | `xtask/gimp-corpus.sha256` |
+| `corpus/photoshop/` (optional, not pinned) | Real Photoshop-authored PSDs for the oracle, smart-filter, text and 32-bit tests: put them there by hand | your own files, or `getnodalia/nodalia-corpus` once it holds some | none |
+| `corpus/gimp/` (optional, not pinned) | GIMP-authored XCF files with GIMP's merged rendering of each as a PNG, the oracles of the XCF reader | your own files, or `getnodalia/nodalia-corpus` once it holds some | none |
 | `corpus/psd/` | 170 small psd-tools and ag-psd files, the mix most PSD tests use | psd-tools and ag-psd upstreams (MIT) | `xtask/psd-corpus.sha256` |
 | `corpus/psd-tools/` | the complete psd-tools test set (309 files) | psd-tools upstream (MIT) | `xtask/psd-tools-corpus.sha256` |
 | `corpus/heif/` | 9 small HEIC/HEIF files (checkerboards, RGB strips, a grid-tiled photo with EXIF/XMP, each with Apple's decode as `.ref.png`; a 10-bit RGBA file with its source PNG), for the `heif` feature | heic-rs (MIT OR Apache-2.0) and pillow-heif (BSD-3-Clause) upstreams | `xtask/heif-corpus.sha256` |
@@ -1037,8 +1037,9 @@ scripts/fetch-corpus.sh            # the same as cargo xtask corpus --all
   `lienzo-io` and `lienzo-engine`, so plain `cargo test` neither compiles nor needs them.
   The HEIF ones also need the `heif` feature of `lienzo-codecs`/`lienzo-io` (test-corpus
   turns it on).
-- With the feature on, a missing corpus is a failure ("run `cargo xtask corpus --all`"), never a
-  silent skip, and every floor is enforced.
+- With the feature on, a missing pinned corpus is a failure ("run `cargo xtask corpus --all`"),
+  never a silent skip, and every floor is enforced. The optional Photoshop and GIMP sets are the
+  exception: see below.
 - If you touch psd, io, codecs, compose, gpu, text or format, run `cargo xtask test-corpus` before
   you finish.
 - The CI `corpus` job runs `cargo xtask corpus --all` and then `cargo xtask test-corpus` on every PR
@@ -1046,26 +1047,17 @@ scripts/fetch-corpus.sh            # the same as cargo xtask corpus --all
   the manifests. A download happens only when a pin changes; otherwise the cache restores in seconds
   and is re-verified (sha256) before the tests run. Fork PRs read the base branch's cache.
 
-**Our own corpus: [photocraft-corpus](https://github.com/storytold/photocraft-corpus).**
+**Real Photoshop and GIMP oracles are optional.** Nodalia has no copy of the files it once borrowed,
+so `corpus/photoshop/` and `corpus/gimp/` are not pinned or fetched. Each test that reads one skips
+with `SKIPPED: corpus/<name> is not present` when the folder is absent, and `LIENZO_ORACLES_REQUIRED=1`
+turns that skip into a failure for a run that must not pass by skipping. To run them, put files you
+own there (a `photoshop/` tree with `smart-filters/`, `effects/`, `text/` and `adjustments/<mode><bits>/`
+folders, or a `gimp/` folder with each `.xcf` and its `.png` rendering). Anything added to Nodalia's
+shared `getnodalia/nodalia-corpus` records who made it, with which program and under which licence.
+Nothing here is ever committed to this repository.
 
-- **Authoring clone:** a normal git clone, `git clone git@github.com:storytold/photocraft-corpus.git`,
-  placed next to this checkout (`../photocraft-corpus`). Its generators write there, and you commit
-  and push there.
-- **Consuming copy:** `corpus/photoshop/` here. It is a plain directory: the pinned snapshot
-  (downloaded as the codeload tarball of the pinned commit, then verified).
-- **Local mode:** `cargo xtask corpus --photoshop --local` copies `photoshop/` (and `--gimp --local` `gimp/`) from
-  `../photocraft-corpus` (or `LIENZO_CORPUS_REPO=<path>`) instead of downloading. It warns when
-  the clone's HEAD isn't the pin or its files differ from the manifest. Use it to test regenerated
-  files before pushing: `cargo xtask test-corpus --local` copies them and runs every corpus test.
-- **Bumping the pin:** commit and push in photocraft-corpus, then in a PR here set
-  `LIENZO_CORPUS_COMMIT` in `corpus_pins.rs` (`LIENZO_CORPUS_GIMP_COMMIT` for `gimp/`), run
-  `cargo xtask corpus --photoshop --update-manifest` (or `--gimp --update-manifest`), commit the manifest diff, run
-  `cargo xtask test-corpus`, and raise floors that improved.
-- **Not a submodule or a subtree:** a subtree would put the binaries back into this repository's
-  history, and submodules cause init and detached-HEAD friction for every contributor. A pin plus a
-  manifest gives the same reproducibility.
-- The third-party sets (psd-tools, ag-psd, PngSuite) are fetched from their upstreams the same way,
-  and are never copied into photocraft-corpus.
+- The third-party sets (psd-tools, ag-psd, PngSuite) are fetched from their upstreams the same way
+  and are never copied into this repository.
 
 ## PSD write recipes
 
@@ -1076,7 +1068,7 @@ and reopens the PSD, and checks the specified properties (it reads layers with
 files and results for a later independent Photoshop verification (#6130).
 
 ```sh
-cargo xtask corpus --photoshop
+# needs corpus/photoshop (see Test corpora: it is optional and not pinned)
 cargo build -p lienzo-cli --release
 cargo xtask psd-write-oracle xtask/psd-write-oracle/starter.json corpus/photoshop target/release/lienzo-cli target/psd-write-oracle
 ```
@@ -1104,7 +1096,7 @@ relative to the inspected layer: `unchanged` requires a present, equal value bef
 and after; `equals` checks the exported value; `changed_to` requires the exported
 value to match and differ from the base. Numbers compare by exact value, so `17` equals `17.0`. Every edited case needs a `changed_to` check.
 Every check is run and reported (not only the first failure), each result naming the layer and the property path. See the starter recipes for examples. Regenerate hashes when deliberately changing
-the corpus pin, and review them against `xtask/photoshop-corpus.sha256`.
+the corpus pin, and review them against the files you placed in `corpus/photoshop`.
 
 These checks use Lienzo's own importer and inspector; they do **not** prove that
 Photoshop can open the output or interprets it correctly. The report marks those
@@ -1116,8 +1108,7 @@ upload its artifacts; that integration and the Photoshop judge are separate work
 `cargo xtask test-corpus -p io -- --nocapture` compares our composite of every corpus PSD with
 Photoshop's own merged image (PASS ≤ 2/255) and checks that export → re-import renders the same,
 per source with its own floors: `corpus/psd`, the psd-tools set (also a truncation/corruption sweep
-over every file that must never panic) and our Photoshop set `corpus/photoshop` (per-feature-group
-totals: `smart-filters`, `effects`, `text`, `adjustments/<mode><bits>`). Smart objects and type
+over every file that must never panic) and, when you have placed one, a Photoshop set in `corpus/photoshop`. Smart objects and type
 layers composite Photoshop's cached pixels there; `cargo xtask test-corpus -p engine -- --nocapture`
 (`crates/engine/tests/it/photoshop_oracles.rs`) re-renders them with our smart-filter stack and text
 engine and is the failure map for both. A panic is reported as `CRASH` and fails the run. Files without a real merged image (Maximize Compatibility off)

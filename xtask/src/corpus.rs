@@ -7,10 +7,7 @@ use std::path::{Path, PathBuf};
 use std::process::{Child, Command, Stdio};
 use std::sync::atomic::{AtomicU64, Ordering};
 
-use crate::corpus_pins::{
-    self, AG_PSD_COMMIT, HEIC_RS_COMMIT, LIENZO_CORPUS_COMMIT, LIENZO_CORPUS_GIMP_COMMIT, OPENEXR_COMMIT, PILLOW_HEIF_COMMIT, PNGSUITE_SHA256, PNGSUITE_URL,
-    PSD_TOOLS_COMMIT,
-};
+use crate::corpus_pins::{self, AG_PSD_COMMIT, HEIC_RS_COMMIT, OPENEXR_COMMIT, PILLOW_HEIF_COMMIT, PNGSUITE_SHA256, PNGSUITE_URL, PSD_TOOLS_COMMIT};
 use crate::pinned::{PinnedCorpus, USER_AGENT};
 use crate::{cargo, root, run};
 
@@ -37,12 +34,12 @@ const CRITICAL: &[&str] = &[
     "crates/raw/",
     "crates/engine/src/atn_cmds",
 ];
-/// `cargo xtask corpus [--all | --pngsuite | --download | --psd | --psd-tools | --heif | --exr | --pixls | --affinity | --atn | --photoshop [--local] | --gimp [--local]] [--update-manifest]`
+/// `cargo xtask corpus [--all | --pngsuite | --download | --psd | --psd-tools | --heif | --exr | --pixls | --affinity | --atn] [--update-manifest]`
 pub fn cmd(args: &[&str]) -> Result<(), String> {
     let update = args.contains(&"--update-manifest");
     let mut did = false;
     if args.contains(&"--all") {
-        return fetch_all(args.contains(&"--local"), update);
+        return fetch_all(update);
     }
     if args.contains(&"--pngsuite") || args.contains(&"--download") {
         fetch_pngsuite()?;
@@ -76,61 +73,27 @@ pub fn cmd(args: &[&str]) -> Result<(), String> {
         corpus_pins::ATN.fetch(update)?;
         did = true;
     }
-    if args.contains(&"--photoshop") {
-        if args.contains(&"--local") {
-            corpus_pins::PHOTOSHOP.fetch_local(&local_clone()?, update)?;
-        } else {
-            corpus_pins::PHOTOSHOP.fetch(update)?;
-        }
-        did = true;
-    }
-    if args.contains(&"--gimp") {
-        if args.contains(&"--local") {
-            corpus_pins::GIMP.fetch_local(&local_clone()?, update)?;
-        } else {
-            corpus_pins::GIMP.fetch(update)?;
-        }
-        did = true;
-    }
     if !did {
         list();
     }
     Ok(())
 }
 
-/// The authoring clone of photocraft-corpus: `$LIENZO_CORPUS_REPO`, else `../photocraft-corpus`.
-fn local_clone() -> Result<PathBuf, String> {
-    if let Some(p) = std::env::var_os("LIENZO_CORPUS_REPO").filter(|v| !v.is_empty()) {
-        return Ok(PathBuf::from(p));
-    }
-    let sibling = root().parent().map(|p| p.join("photocraft-corpus"));
-    sibling
-        .filter(|s| s.join("photoshop").is_dir())
-        .ok_or_else(|| "no local photocraft-corpus clone: expected ../photocraft-corpus next to this checkout, or set LIENZO_CORPUS_REPO=<path>".to_string())
-}
-
-/// Fetches every corpus that is missing or stale (verified ones are left alone). With `local`,
-/// `corpus/photoshop` and `corpus/gimp` are copied from the authoring clone of photocraft-corpus instead. With
+/// Fetches every corpus that is missing or stale (verified ones are left alone). With
 /// `update`, every pinned corpus is refetched and its manifest rewritten (`--update-manifest`).
-pub fn fetch_all(local: bool, update: bool) -> Result<(), String> {
+pub fn fetch_all(update: bool) -> Result<(), String> {
     fetch_pngsuite()?;
-    fetch_pinned(local, update, fetch_one)?;
+    fetch_pinned(update, |c, update| c.fetch(update))?;
     println!("all corpora present and verified under {}", root().join("corpus").display());
     Ok(())
 }
 
-/// Calls `fetch(corpus, from_clone, update)` for every pinned corpus; `from_clone` is set for
-/// the photocraft-corpus sets (`corpus/photoshop`, `corpus/gimp`) when `local`.
-fn fetch_pinned(local: bool, update: bool, mut fetch: impl FnMut(&PinnedCorpus, bool, bool) -> Result<(), String>) -> Result<(), String> {
+/// Calls `fetch(corpus, update)` for every pinned corpus.
+fn fetch_pinned(update: bool, mut fetch: impl FnMut(&PinnedCorpus, bool) -> Result<(), String>) -> Result<(), String> {
     for c in corpus_pins::ALL {
-        let ours = std::ptr::eq(*c, &corpus_pins::PHOTOSHOP) || std::ptr::eq(*c, &corpus_pins::GIMP);
-        fetch(c, local && ours, update)?;
+        fetch(c, update)?;
     }
     Ok(())
-}
-
-fn fetch_one(c: &PinnedCorpus, from_clone: bool, update: bool) -> Result<(), String> {
-    if from_clone { c.fetch_local(&local_clone()?, update) } else { c.fetch(update) }
 }
 
 fn status(present: bool) -> &'static str {
@@ -148,13 +111,10 @@ fn list() {
   cargo xtask corpus --all      fetch every corpus below that is missing or stale (sha256-verified)
   cargo xtask test-corpus       fetch, then run every corpus test (--release --features corpus)
 
-  corpus/photoshop/  [{}] our Photoshop-authored oracles (MIT OR Apache-2.0), from
-                     https://github.com/storytold/photocraft-corpus at {LIENZO_CORPUS_COMMIT}
-                     manifest xtask/photoshop-corpus.sha256. Fetch: --photoshop
-                     (--photoshop --local copies from ../photocraft-corpus or $LIENZO_CORPUS_REPO)
-  corpus/gimp/       [{}] our GIMP-authored XCF oracles with GIMP's PNG renderings (MIT OR Apache-2.0),
-                     from the same repository at {LIENZO_CORPUS_GIMP_COMMIT}
-                     manifest xtask/gimp-corpus.sha256. Fetch: --gimp (--gimp --local copies from the clone)
+  corpus/photoshop/  [{}] optional real Photoshop-authored oracles; not pinned. Place PSDs there by hand
+  corpus/gimp/       [{}] optional real GIMP-authored XCF oracles with GIMP's PNG renderings; not pinned
+                     (tests that read these two skip with a message when they are absent;
+                     set LIENZO_ORACLES_REQUIRED=1 to make a missing one fail instead)
   corpus/psd/        [{}] 170 small psd-tools + ag-psd files (MIT), psd-tools@{} and
                      ag-psd@{}, manifest xtask/psd-corpus.sha256. Fetch: --psd
   corpus/psd-tools/  [{}] the full psd-tools test set (MIT) at {PSD_TOOLS_COMMIT}
@@ -173,8 +133,8 @@ fn list() {
 
 Pins: xtask/src/corpus_pins.rs. Moving one: change it, then --<name> --update-manifest.",
         corpus.display(),
-        status(corpus_pins::PHOTOSHOP.is_current()),
-        status(corpus_pins::GIMP.is_current()),
+        status(corpus.join("photoshop").is_dir()),
+        status(corpus.join("gimp").is_dir()),
         status(corpus_pins::PSD_MIXED.is_current()),
         &PSD_TOOLS_COMMIT[..12],
         &AG_PSD_COMMIT[..12],
@@ -407,7 +367,7 @@ fn changed_files() -> Result<Vec<String>, String> {
     Ok(String::from_utf8_lossy(&out.stdout).lines().map(str::to_string).collect())
 }
 
-/// `cargo xtask test-corpus [-p <crate>]... [--changed] [--local] [-- <test args>]`
+/// `cargo xtask test-corpus [-p <crate>]... [--changed] [-- <test args>]`
 pub fn test_cmd(args: &[&str]) -> Result<(), String> {
     let (ours, passthrough) = match args.iter().position(|a| *a == "--") {
         Some(i) => (&args[..i], &args[i + 1..]),
@@ -436,7 +396,7 @@ pub fn test_cmd(args: &[&str]) -> Result<(), String> {
                 }
                 crates.push(full);
             }
-            "--changed" | "--local" | "--pixls" => {}
+            "--changed" | "--pixls" => {}
             other => return Err(format!("test-corpus: unknown argument `{other}`")),
         }
     }
@@ -452,7 +412,7 @@ pub fn test_cmd(args: &[&str]) -> Result<(), String> {
     if wants_pixls {
         crate::pinned::fetch_pixls(false)?;
     }
-    fetch_all(ours.contains(&"--local"), false)?;
+    fetch_all(false)?;
     let mut c = cargo();
     c.args(["test", "--release", "--lib", "--tests"]);
     for k in &crates {

@@ -38,6 +38,7 @@ fn rect(t: &lienzo_text::psd::TySh, key: &str) -> [f32; 4] {
 
 #[test]
 fn engine_data_antialias_matches_photoshop() {
+    skip_without_oracles!("photoshop");
     for name in ["none", "crisp", "strong", "smooth", "sharp"] {
         let raw = first_tysh(&corpus(&format!("text/antialias-{name}.psd")));
         let mut layer = lienzo_text::psd::text_layer_from_tysh(&raw, 72.0).unwrap();
@@ -49,6 +50,7 @@ fn engine_data_antialias_matches_photoshop() {
 
 #[test]
 fn tysh_trailing_bounds_match_photoshop() {
+    skip_without_oracles!("photoshop");
     for (file, warped) in [("text/warp-arc-50.psd", true), ("text/antialias-smooth.psd", false)] {
         let raw = first_tysh(&corpus(file));
         let theirs = lienzo_text::psd::parse_tysh(&raw).unwrap();
@@ -67,6 +69,7 @@ fn tysh_trailing_bounds_match_photoshop() {
 
 #[test]
 fn version_info_matches_photoshop() {
+    skip_without_oracles!("photoshop");
     for file in ["text/antialias-smooth.psd", "text/warp-arc-50.psd"] {
         let theirs = corpus(file);
         assert_eq!(lienzo_psd::resources::version_info_resource(true).data, theirs.resource(1057).unwrap().data, "{file}");

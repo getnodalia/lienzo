@@ -130,6 +130,7 @@ fn layered_32bit_export_reimports_render_equal() {
 #[cfg(feature = "corpus")]
 #[test]
 fn photoshop_32bit_corpus_round_trip() {
+    skip_without_oracles!("photoshop");
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus/photoshop/adjustments");
     assert!(root.is_dir(), "{} is missing: run `cargo xtask corpus --all`", root.display());
     let mut files = Vec::new();
