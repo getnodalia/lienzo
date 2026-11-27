@@ -26,7 +26,6 @@ the interface uses Nodalia Design throughout.
 |---|---|---|---|
 | craft-common-actions `release.yml`, `refresh-contributors.yml` | `.github/workflows/release.yml` | Lienzo's own `release-*.yml`, plus a contributors step | checking whether `release.yml` is still needed |
 | craft-common-actions `windows-arm64.yml` | `.github/workflows/windows-arm64.yml` | a Foundation workflow | writing it |
-| storytold/photocraft-corpus | `xtask/src/corpus_pins.rs`, `docs/development.md` | a Foundation vendor branch with the same commits | mirroring it |
 
 ## Technical debt
 
@@ -48,7 +47,7 @@ getnodalia/foundation (vendored crates, fonts, reusable workflows); getnodalia/n
 
 1. Make the Linux gate and Windows tests green on `nodalia`.
 2. Replace `windows-arm64.yml`.
-3. Mirror photocraft-corpus into Foundation and repoint the pins.
+3. Add real Photoshop and GIMP oracles to `getnodalia/nodalia-corpus` with their provenance (the tests skip without them).
 
 ## What the first agent should do
 

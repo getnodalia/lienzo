@@ -101,6 +101,9 @@ fn raster_layer_with_stale_blocks_writes_none() {
 fn photoshop_fill_and_smart_layers_stay_rasterized() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus");
     for (file, want) in [("psd-tools/gradient-fill.psd", "fill"), ("photoshop/smart-filters/sf-none-plain.psd", "smart")] {
+        if file.starts_with("photoshop/") && crate::real_oracles::missing("photoshop") {
+            continue;
+        }
         let path = root.join(file);
         let bytes = std::fs::read(&path).unwrap_or_else(|e| panic!("{}: {e} (run `cargo xtask corpus --all`)", path.display()));
         let doc = lienzo_io::import(file, &bytes).unwrap().document;

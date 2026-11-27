@@ -1,9 +1,9 @@
 use super::*;
 
-/// The flags each pinned corpus is fetched with by `fetch_all(local, update)`.
-fn calls(local: bool, update: bool) -> Vec<(&'static str, bool)> {
+/// The flags each pinned corpus is fetched with by `fetch_all(update)`.
+fn calls(update: bool) -> Vec<(&'static str, bool)> {
     let mut seen = Vec::new();
-    let r = fetch_pinned(local, update, |c, _, u| {
+    let r = fetch_pinned(update, |c, u| {
         seen.push((c.name, u));
         Ok(())
     });
@@ -13,16 +13,14 @@ fn calls(local: bool, update: bool) -> Vec<(&'static str, bool)> {
 
 #[test]
 fn all_with_update_manifest_updates_every_pinned_corpus() {
-    for local in [false, true] {
-        let seen = calls(local, true);
-        assert_eq!(seen.len(), corpus_pins::ALL.len());
-        assert!(seen.iter().all(|(_, u)| *u), "--all --update-manifest dropped the flag: {seen:?}");
-    }
+    let seen = calls(true);
+    assert_eq!(seen.len(), corpus_pins::ALL.len());
+    assert!(seen.iter().all(|(_, u)| *u), "--all --update-manifest dropped the flag: {seen:?}");
 }
 
 #[test]
 fn all_without_update_manifest_only_verifies() {
-    assert!(calls(false, false).iter().all(|(_, u)| !*u));
+    assert!(calls(false).iter().all(|(_, u)| !*u));
 }
 
 const FIXTURE_FILES: &[(&str, &[u8])] = &[("a.png", b"alpha"), ("b.png", b"beta"), ("PngSuite.LICENSE", b"fixture licence")];

@@ -5,11 +5,8 @@
 //! - `corpus/psd/**/*.{psd,psb}`: a hand-picked mix of small ag-psd and psd-tools samples
 //!   (manifest `xtask/psd-corpus.sha256`).
 //! - `corpus/psd-tools/**/*.{psd,psb}`: the complete psd-tools test set (MIT).
-//! - `corpus/photoshop/**/*.psd`: our own Photoshop-authored oracles from
-//!   https://github.com/storytold/photocraft-corpus (smart filters, layer-style effect shapes,
-//!   the text engine, adjustments in every mode and depth), reported per feature group. Smart
-//!   objects and type layers composite Photoshop's cached pixels here; the engine's
-//!   `photoshop_oracles` test re-renders them with our smart-filter stack and text engine.
+//! Real Photoshop-authored files (`corpus/photoshop`) are optional and not pinned; the tests
+//! that read them skip with a message when they are absent.
 //!
 //! For each file: parse → document → flatten, compared with the file's own
 //! merged composite (Photoshop's rendering) as the oracle; then document →
@@ -153,10 +150,6 @@ const MIXED: Source = Source { label: "io corpus", dir: "corpus/psd", group_dept
 /// The full psd-tools test set (309 files at the pinned commit; see `xtask/psd-tools-corpus.sha256`):
 /// 226 vs the merged image + 10 vs the thumbnail (Advanced Blending knockouts: +7).
 const PSD_TOOLS: Source = Source { label: "psd-tools corpus", dir: "corpus/psd-tools", group_depth: 0, pass_floor: 249, roundtrip_floor: 308 };
-
-/// Our Photoshop-authored oracles (258 files; https://github.com/storytold/photocraft-corpus),
-/// grouped by feature (`smart-filters`, `effects`, `text`, `adjustments/<mode><bits>`).
-const PHOTOSHOP: Source = Source { label: "photoshop oracles", dir: "corpus/photoshop", group_depth: 2, pass_floor: 190, roundtrip_floor: 258 };
 
 /// The corpus directory; a missing corpus fails the test.
 fn locate(src: &Source) -> PathBuf {
@@ -510,11 +503,6 @@ fn corpus_import_flatten_oracle() {
 #[test]
 fn psd_tools_import_flatten_oracle() {
     run_oracle(&PSD_TOOLS);
-}
-
-#[test]
-fn photoshop_oracle_corpus() {
-    run_oracle(&PHOTOSHOP);
 }
 
 #[test]

@@ -59,13 +59,13 @@ it as OpenRaster. `crates/engine/tests/it/kra.rs` (opt-in) opens a Krita-authore
 session, checks it is read-only, edits with undo and saves as `.ora` and `.pcraft`.
 
 Real-file checks use the Krita-authored oracles in
-[photocraft-corpus](https://github.com/storytold/photocraft-corpus) (`krita/`, made by
-`tools/krita-oracles/generate.py`, which removes Krita's embedded third-party ICC profiles so
+a folder of Krita-authored files you own (made with
+Krita's own scripting, which removes Krita's embedded third-party ICC profiles so
 the files are sRGB):
 
 ```sh
-KRITA_TEST_DIR=/path/to/photocraft-corpus/krita cargo test -p lienzo-io --test it -- krita_corpus:: --ignored --nocapture
-KRITA_TEST_DIR=/path/to/photocraft-corpus/krita cargo test -p lienzo-engine --test it -- kra:: --ignored
+KRITA_TEST_DIR=/path/to/krita-files cargo test -p lienzo-io --test it -- krita_corpus:: --ignored --nocapture
+KRITA_TEST_DIR=/path/to/krita-files cargo test -p lienzo-engine --test it -- kra:: --ignored
 ```
 
 2026-10-09, Krita 5.2.9: 31 of 35 `.kra` files render within 3/255 of Krita's merged image; the

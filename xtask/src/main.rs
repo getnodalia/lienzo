@@ -33,15 +33,13 @@ commands:
   ci              the CI gate: fmt --check, clippy -D warnings, layers, panel-commands, scorecard --check, tests
                   (nextest --profile ci), panic_hunt, doctests and wasm, with --locked --features heif
                   (stops at first failure), then the i18n-coverage report
-  corpus [--all | --pngsuite | --psd | --psd-tools | --pixls | --atn | --photoshop | --gimp] [--local] [--update-manifest]
+  corpus [--all | --pngsuite | --psd | --psd-tools | --pixls | --atn] [--update-manifest]
                   show where test corpora live and their pins (xtask/src/corpus_pins.rs), or fetch
-                  them into corpus/ (pinned commits, sha256-verified; --all = every corpus but pixls,
-                  --photoshop/--gimp --local copy from ../photocraft-corpus or $LIENZO_CORPUS_REPO)
-  test-corpus [-p <crate>]... [--changed] [--pixls] [--local] [-- <test args>]
+                  them into corpus/ (pinned commits, sha256-verified; --all = every corpus but pixls)
+  test-corpus [-p <crate>]... [--changed] [--pixls] [-- <test args>]
                   fetch every corpus, then cargo test --release --features corpus on the corpus
                   crates; --changed runs only if psd/io/codecs/compose/gpu/text/format/raw changed;
-                  --pixls (or -p raw) also fetches corpus/pixls and runs the raw corpus tests;
-                  --local takes corpus/photoshop and corpus/gimp from the photocraft-corpus authoring clone
+                  --pixls (or -p raw) also fetches corpus/pixls and runs the raw corpus tests
   stats [--exact] count tests and lines per crate (--exact: ask the test harness via `-- --list`)
   parity          Photoshop menu parity; rewrites docs/parity-checklist.md
   i18n-coverage   report UI translation coverage and the missing strings per registered language

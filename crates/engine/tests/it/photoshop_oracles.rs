@@ -1,7 +1,6 @@
-//! Re-render oracle over the Photoshop corpus (`corpus/photoshop`): our own Photoshop-authored
-//! PSDs from https://github.com/storytold/photocraft-corpus, fetched at a pinned commit by
-//! `cargo xtask corpus --all`. Feature `corpus` (run with `cargo xtask test-corpus`); a missing
-//! corpus fails.
+//! Re-render oracle over real Photoshop-authored PSDs in `corpus/photoshop` (optional, not
+//! pinned: these tests skip when the folder is absent). Feature `corpus` (run with
+//! `cargo xtask test-corpus`).
 //!
 //! The io corpus test (`crates/io/tests/it/corpus.rs`) flattens imported documents, which composite
 //! Photoshop's own cached pixels for smart objects and type layers. This test throws those caches
@@ -83,6 +82,7 @@ fn rerender(doc: &mut Document) -> Result<usize, String> {
 /// Re-rendering Photoshop's Screen/Motion Blur oracle matches its merged composite, so the result retains the input's coverage.
 #[test]
 fn screen_motion_blur_retains_input_coverage() {
+    skip_without_oracles!("photoshop");
     let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus/photoshop/smart-filters/sf-blend-screen-100.psd");
     let bytes = std::fs::read(&path).expect("Screen/Motion Blur oracle missing: run cargo xtask corpus --all");
     let file = PsdFile::from_bytes(&bytes).expect("parse Screen/Motion Blur oracle");
@@ -96,6 +96,7 @@ fn screen_motion_blur_retains_input_coverage() {
 /// Re-render every Photoshop oracle in the corpus with Lienzo's filters and compare it with Photoshop's own merged composite.
 #[test]
 fn photoshop_oracles_rerendered() {
+    skip_without_oracles!("photoshop");
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus/photoshop");
     assert!(root.is_dir(), "{} is missing: run `cargo xtask corpus --all`", root.display());
     let mut files = Vec::new();

@@ -1,5 +1,8 @@
 //! The crate's integration tests, linked into one test binary.
 
+#[macro_use]
+mod real_oracles;
+
 mod adjust_blend_roundtrip;
 mod adjust_warnings;
 mod affinity;

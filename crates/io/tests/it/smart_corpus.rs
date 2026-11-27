@@ -144,7 +144,7 @@ fn re_embed(doc: &mut Document) -> bool {
 #[test]
 fn smart_objects_round_trip_through_psd() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus");
-    assert!(root.join("photoshop").is_dir(), "{} is missing: run `cargo xtask corpus --all`", root.display());
+    assert!(root.join("psd").is_dir(), "{} is missing: run `cargo xtask corpus --all`", root.display());
     let mut files = Vec::new();
     for d in ["psd", "psd-tools", "photoshop"] {
         collect(&root.join(d), &mut files);

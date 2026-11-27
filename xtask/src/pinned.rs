@@ -7,7 +7,6 @@
 //! swaps the verified files into place. An already complete, verified copy is left alone, so
 //! re-running is cheap (and a CI cache restore is verified the same way).
 //! `--update-manifest` rewrites the manifest from the download (after moving a pin).
-//! Local mode copies from a working clone instead of downloading (see `fetch_local`).
 
 use std::ffi::OsStr;
 use std::path::{Path, PathBuf};
@@ -278,41 +277,6 @@ impl PinnedCorpus {
         self.install(&files, locate, &extras, false, &format!("verified; {}", pins.join(", ")))?;
         let _ = std::fs::remove_dir_all(&staging);
         Ok(())
-    }
-
-    /// Local development mode for a single-upstream corpus: copies it from a working clone of the
-    /// upstream repository instead of downloading, so regenerated files can be tested before they
-    /// are pushed and pinned. Warns (does not fail) when the clone's HEAD is not the pin or its
-    /// files differ from the manifest; `update_manifest` rewrites the manifest from the clone.
-    pub fn fetch_local(&self, clone: &Path, update_manifest: bool) -> Result<(), String> {
-        let [up] = self.upstreams else { return Err(format!("{}: local mode needs a single-upstream corpus", self.name)) };
-        let src = clone.join(up.subdir);
-        if !src.is_dir() {
-            return Err(format!("{}: {} is not a directory", self.name, src.display()));
-        }
-        let head = Command::new("git").arg("-C").arg(clone).args(["rev-parse", "HEAD"]).output().ok().filter(|o| o.status.success());
-        match head.map(|o| String::from_utf8_lossy(&o.stdout).trim().to_string()) {
-            Some(h) if h == up.commit => println!("{}: {} is at the pinned commit {h}", self.name, clone.display()),
-            Some(h) => eprintln!("warning: {}: {} is at {h}, not the pinned commit {}: tests will see unpinned files", self.name, clone.display(), up.commit),
-            None => eprintln!("warning: {}: could not read the git HEAD of {}", self.name, clone.display()),
-        }
-        let mut found = self.scan(&src, up.prefix)?;
-        found.sort_by(|a, b| a.1.cmp(&b.1));
-        if update_manifest {
-            self.write_manifest(&mut found)?;
-        } else {
-            let pinned = self.manifest_entries()?;
-            if pinned != found {
-                let changed = found.iter().filter(|f| !pinned.contains(f)).count();
-                let gone = pinned.iter().filter(|p| !found.iter().any(|f| f.1 == p.1)).count();
-                eprintln!(
-                    "warning: {}: the clone differs from {} ({changed} new or changed, {gone} missing); after pushing it, bump the pin and run with --update-manifest",
-                    self.name, self.manifest
-                );
-            }
-        }
-        let extras: Vec<(PathBuf, String)> = up.extras.iter().map(|(from, to)| (clone.join(from), (*to).to_string())).collect();
-        self.install(&found, |f| Some(src.join(&f[up.prefix.len()..])), &extras, true, &format!("copied from the local clone {}", clone.display()))
     }
 }
 
