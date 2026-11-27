@@ -40,7 +40,7 @@ cargo test -p lienzo-engine --lib average_preserves
 ## Smart filters
 
 The PSD importer already recognizes the optionless `Avrg` descriptor (see
-[#6297](https://github.com/storytold/photocraft/pull/6297)). Recognition alone did
+#6297). Recognition alone did
 not execute it: the shared renderer returned `None`, leaving the source pixels
 unchanged, and the raster-only command was disabled on Smart Objects.
 

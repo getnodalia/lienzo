@@ -1,7 +1,7 @@
 //! Fujifilm's striped predictive raw compression (lossless and lossy RAF).
 //!
-//! Ported from LightCraft's clean-room decoder (`crates/raw/src/vendor/rafc.rs`,
-//! storytold/lightcraft, MIT OR Apache-2.0, same organisation). LightCraft took the broad
+//! Ported from Luz's clean-room decoder (`crates/raw/src/vendor/rafc.rs`, MIT OR Apache-2.0).
+//! Luz took the broad
 //! structure from Fabian's prose description of lossless RAF compression
 //! (<https://capnfabs.net/posts/fuji-raf-compression-algorithm/>) and recovered the headers,
 //! colour-vector placement, predictors, contexts and adaptation from sample bytes and

@@ -54,7 +54,7 @@ architecture and the PSD writer are the serial parts.
   written from Photoshop's menus; it is the denominator of the menu number. Photoshop's binary
   `Default Menus.mnu` was not parsed, so items added in 27.x that the catalog lacks would not show
   (Generative and cloud items are the likely ones).
-- User reports on GitHub (`storytold/photocraft`, 579 open issues on 2026-10-10) as evidence of
+- User reports on GitHub (579 open issues on 2026-10-10) as evidence of
   depth and feel. Adobe's documentation and release notes for behaviour not visible in the bundle.
 
 ## Feature breadth: ~76% (weighted)
@@ -468,7 +468,7 @@ filled bar. This extends UI reachability and does not claim Photoshop-authored s
 |---|---|---|---|
 | Menu wiring | 626/626 menu items dispatch a command (`parity-checklist.md`) | high but shallow | Says nothing about behaviour. |
 | PSD fidelity (rendering) | Corpus oracle 115/170 (68%): 30 differ, 26 have no usable reference, 1 import error. 2026-10-07: io corpus 146/170, psd-tools corpus 236/309 (was 229: Advanced Blending knockouts), Photoshop oracles 132/258 | medium | Push to 170/170 under way (effects/strokes, multi-instance effects, 16/32-bit and colour modes, references for skipped files). |
-| PSD round trip | 169/169 re-import identically; every adjustment layer and blend mode round-trips | high (within corpus) | Floors in `crates/io/tests/it/corpus.rs`; raise, never lower. Corpora: `cargo xtask corpus --all` (ours: https://github.com/storytold/photocraft-corpus). |
+| PSD round trip | 169/169 re-import identically; every adjustment layer and blend mode round-trips | high (within corpus) | Floors in `crates/io/tests/it/corpus.rs`; raise, never lower. Corpora: `cargo xtask corpus --all` (ours: https://github.com/getnodalia/nodalia-corpus). |
 | OpenRaster read/write | 2026-10-09: 34 Krita 5.2.9-authored `.ora` files (27 blend modes, groups, pass-through, offsets, opacity, visibility, masks, 16-bit, gray) render within 3/255 of Krita's merged image (30) or differ for known reasons (4: Krita's lighter/darker-colour tie-break, Hard Mix at exactly 1, a linear-light 16-bit document); Krita re-opens our exports and renders them identically to its originals (33/34; Soft Light is written as `svg:soft-light`) | medium (one authoring app) | MyPaint and GIMP files untested. Masks are applied to pixels and layer styles dropped on save (reported). See [OpenRaster](ora.md). |
 | Paint.NET import | 2026-10-09: 14/14 local PDN3 textures preserve editable layers exactly through `.pcraft` and render within 2.142/255 of full-size previews; a supplied 5.x document (1280×720, 11 layers) passes editing/history/native saves and matches its thumbnail within 0.418/255 mean; all 14 blend modes exercised synthetically | medium (limited corpus) | Import only; metadata omitted. More current-version files and full-size exports needed. See [PDN support](pdn.md). |
 | Smart filters / text / effect shapes in PSDs | Measured on a Photoshop-authored set that was once in `corpus/photoshop` (258 files; no longer pinned, see `docs/development.md` › Test corpora); `crates/engine/tests/it/photoshop_oracles.rs` still re-renders any such files placed there. Smart objects and smart filters now survive PSD save and open (41 corpus files, 206 smart objects, round trip strict; Photoshop opens our exports with live filters); re-rendering Photoshop's smart filters with ours matches 5/30 (was 1/30) | low–medium | Remaining re-render gaps are filter maths (Gaussian/Motion Blur, Unsharp Mask, Emboss, Add Noise RNG) and bicubic placement. |
@@ -487,7 +487,7 @@ filled bar. This extends UI reachability and does not claim Photoshop-authored s
 | Localisation | 2026-10-07: 10 UI languages; menu, `tl!`, blend mode, preference and brush-section coverage enforced by tests; live switching and scoped Preferences previews | medium | Engine errors/status messages still partly English; CJK web fonts, browser-locale detection, and RTL remain open. |
 
 2026-10-08: Motion Blur adds adaptive FFT convolution for wide streaks while retaining the
-row kernel merged in [#902](https://github.com/storytold/photocraft/pull/902) for shorter
+row kernel merged in #902 for shorter
 streaks and unsupported cases. Native release medians of three paired runs on an Intel
 i7-9750H with 12 Rayon workers, synthetic RGBA8 at 30° / distance 1000: 24 MP
 22.594 → 9.785 s (2.31×), and 1.5 MP

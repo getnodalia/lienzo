@@ -20,7 +20,7 @@ then open a new terminal and check `cargo --version` and `rustc --version`.
 
 On Windows 11, Smart App Control can block Cargo, rustc or executables generated during a build.
 If a build reports `An Application Control policy has blocked this file. (os error 4551)`
-([#1585](https://github.com/storytold/photocraft/issues/1585)), check:
+(#1585), check:
 
 - **Windows Security → App & browser control → Smart App Control settings** for its status.
 - **Event Viewer → Applications and Services Logs → Microsoft → Windows → CodeIntegrity →
@@ -31,7 +31,7 @@ reinstalling Rust does not establish that the blocked executable is trusted. See
 [Smart App Control FAQ](https://support.microsoft.com/en-us/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions)
 for the available controls; there is no per-app exception. On a managed device, ask your
 administrator about an approved development environment. If you only want to run Lienzo,
-use the [packaged Windows release](https://github.com/storytold/photocraft/releases) to avoid
+use the packaged Windows release to avoid
 building locally; the downloaded app is still subject to Windows application-control checks.
 
 ## Build and run
@@ -113,7 +113,7 @@ the opted-in test; an unset variable leaves the ordinary behavior tests availabl
 After review, remove only the two generated PNGs and their owned temporary directory. The same
 Rust test and variable work on Windows with the native shell's environment-variable syntax.
 
-**GPU tests without a GPU.** Linux CI uses the shared `craft-common-actions` gate with Mesa's Vulkan driver installed. After the regular gate, `python3 scripts/ci-gpu-lavapipe.py` reruns the configured `gpu` group with `WGPU_BACKEND=vulkan` and the lavapipe ICD explicitly selected. It requires Vulkan parity evidence and rejects authored skips, except the documented software-adapter timing exceptions. It reads the filter from `.config/nextest.toml`, so no second filter needs maintaining. To run locally on Linux, install `mesa-vulkan-drivers libvulkan1` and run the same script. Windows uses WARP; this check does not certify Windows skip coverage.
+**GPU tests without a GPU.** Linux CI uses the shared Foundation gate with Mesa's Vulkan driver installed. After the regular gate, `python3 scripts/ci-gpu-lavapipe.py` reruns the configured `gpu` group with `WGPU_BACKEND=vulkan` and the lavapipe ICD explicitly selected. It requires Vulkan parity evidence and rejects authored skips, except the documented software-adapter timing exceptions. It reads the filter from `.config/nextest.toml`, so no second filter needs maintaining. To run locally on Linux, install `mesa-vulkan-drivers libvulkan1` and run the same script. Windows uses WARP; this check does not certify Windows skip coverage.
 
 ## Fonts (nodalia-fonts)
 
@@ -798,7 +798,7 @@ indexes are one-based opening order; a native numeric `document` parameter remai
 tab index. Layer comp references retain their name, index, ID or ordinal form when saved, including
 the measured comp ordinals that reapply the current or first comp. Invalid comp indexes do nothing,
 even with an empty comp list. Recording-document layer IDs and layer/comp offsets stay kept steps.
-These rules follow [davidmann4's measured reference](https://github.com/storytold/photocraft/pull/10603)
+These rules follow davidmann4's measured reference
 (#10701).
 
 ## Remove Tool quality

@@ -6,16 +6,16 @@ This corrects source metadata; it does not add a camera colour profile or a JPEG
 
 ## Research and scope
 
-Lienzo already contains the cRAW sensor decoder from [#83](https://github.com/storytold/photocraft/pull/83)
-and the 512 black fallback from [#1902](https://github.com/storytold/photocraft/pull/1902).
-The open [#2135](https://github.com/storytold/photocraft/pull/2135) proposes fitting camera-JPEG
-colour and tone; [#2230](https://github.com/storytold/photocraft/pull/2230) adds camera profiles.
+Lienzo already contains the cRAW sensor decoder from #83
+and the 512 black fallback from #1902.
+The open #2135 proposes fitting camera-JPEG
+colour and tone; #2230 adds camera profiles.
 Their actual bodies and diffs were reviewed before this change; neither is merged at the
 inspection date. This change addresses metadata missing from the existing decoder, without
 duplicating those colour-development proposals.
 
-Luz's [#115](https://github.com/storytold/lightcraft/pull/115),
-[#535](https://github.com/storytold/lightcraft/issues/535) and its current camera-preview-colour
+Luz's #115,
+#535 and its current camera-preview-colour
 documentation distinguish applied WB, camera calibration and JPEG tone/DRO. Its SR2 investigation
 suggested testing encrypted metadata before estimating WB from scene pixels. Lienzo's
 implementation is independent: no sibling source, decoder dependency or camera colour table is

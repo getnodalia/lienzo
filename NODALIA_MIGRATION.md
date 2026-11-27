@@ -17,15 +17,13 @@ base branch too (seen on lienzo#38 and lienzo#39); they are not caused by the mi
 
 ## Desired state
 
-No workflow, dependency or document depends on storytold; the gate and Windows tests are green;
+No workflow, dependency or document depends on a repository outside Nodalia; the gate and Windows tests are green;
 the interface uses Nodalia Design throughout.
 
 ## Inherited dependencies still pending
 
 | Dependency | Where | Replacement | Blocked on |
 |---|---|---|---|
-| craft-common-actions `release.yml`, `refresh-contributors.yml` | `.github/workflows/release.yml` | Lienzo's own `release-*.yml`, plus a contributors step | checking whether `release.yml` is still needed |
-| craft-common-actions `windows-arm64.yml` | `.github/workflows/windows-arm64.yml` | a Foundation workflow | writing it |
 
 ## Technical debt
 
