@@ -38,7 +38,7 @@ The last line clears the setting so later launches use the default again. You ne
 1. Update to Lienzo 0.8.2 or later. On Intel Macs it skips a set of graphics checks that macOS could not compile on older Intel graphics, such as Intel Iris Pro on macOS Monterey ([issue 3107](https://github.com/storytold/photocraft/issues/3107)).
 2. Start Lienzo again.
 
-If it still fails, there is no fix yet. This is the case reported on Macs patched with OpenCore Legacy Patcher, where setting `WGPU_BACKEND`, `--safe-gpu` and `LIENZO_CPU_CANVAS=1` did not change the error ([issue 1859](https://github.com/storytold/photocraft/issues/1859)). Add your Mac model, macOS version and Lienzo version to that issue.
+If it still fails, there is no fix yet. This is the case reported on Macs patched with OpenCore Legacy Patcher, where setting `WGPU_BACKEND`, `--safe-gpu` and `LIENZO_CPU_CANVAS=1` did not change the error ([issue 1859](https://github.com/storytold/photocraft/issues/1859)). Report your Mac model, macOS version and Lienzo version in the [Lienzo issue tracker](https://github.com/getnodalia/lienzo/issues).
 
 ## Why this happens
 

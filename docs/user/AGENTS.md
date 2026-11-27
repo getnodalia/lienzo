@@ -1,14 +1,10 @@
 # User docs: rules for agents and contributors
 
-Everything in this folder (except this file, CLAUDE.md and README.md) is published at
-https://getartcraft.com/docs/photocraft. The file path is the URL:
-`troubleshooting/taskbar-turns-black.md` → `/docs/lienzo/troubleshooting/taskbar-turns-black`.
-Renaming a file breaks links, so add the old path to `redirect_from` when you rename.
+This folder contains Lienzo's user documentation. Keep relative links stable when renaming files, and maintain redirects where the publishing system supports them.
 
 ## Who reads this
 
-Artists using Lienzo, Discord mods answering them, and AI assistants looking things up for
-either. Write for an artist, not a developer.
+Artists using Lienzo, contributors providing support, and assistants looking up documentation. Write for an artist, not a developer.
 
 ## Page rules
 
@@ -18,10 +14,10 @@ either. Write for an artist, not a developer.
 - Link to other pages instead of repeating them. Use relative links to the `.md` file:
   `[Install Lienzo](../getting-started/install.md)`.
 - No marketing copy, no "simply", no claims you have not checked in the code or a release.
-- Call the product "Lienzo", as the app, its downloads and getartcraft.com do.
+- Call the product "Lienzo", as the app and its official releases do.
 - Name UI labels exactly as the app shows them, in **bold**. Menu paths read `File › Open…`.
 - Troubleshooting pages: `## Symptoms`, `## Fix`, `## Why this happens` (optional),
-  `## Still stuck?` (link the issue tracker or Discord).
+  `## Still stuck?` (link the official Lienzo issue tracker).
 
 ## Frontmatter
 
@@ -50,9 +46,7 @@ drafts and are not published.
 
 ## Check before you push
 
-    node <path to your artcraft-services checkout>/frontend/apps/artcraft-website-next/scripts/docs/core.mjs docs/user
-
-The checker lives in storytold/artcraft-services. A CI check will be added once it is on that repo's main branch.
+Check that Markdown links resolve, frontmatter is valid, and version-specific claims match the published Lienzo release.
 
 ## Support PRs
 

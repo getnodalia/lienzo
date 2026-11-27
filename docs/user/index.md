@@ -16,10 +16,10 @@ It is a native app written in Rust that draws the canvas on your graphics card, 
 - [Troubleshooting](troubleshooting/index.md)
 - [FAQ](faq/index.md)
 
-## Part of the Craft App Suite
+## Part of the Nodalia suite
 
-Lienzo is one of the Nodalia apps from the ArtCraft team, next to Pluma, Toma and the other Nodalia apps. You can install and update them from [ArtCraft Launcher](https://getartcraft.com/docs/craft-launcher).
+Lienzo is part of the [Nodalia suite](https://getnodalia.com), alongside Pluma, Toma and other creative applications. Download releases from the official Lienzo repository.
 
 ## Get help
 
-Ask in [Discord](https://discord.gg/artcraft) or open an issue in the [issue tracker](https://github.com/storytold/photocraft/issues). In Lienzo, **Help › Report an Issue…** opens the same issue tracker.
+Report problems or request features in the [Lienzo issue tracker](https://github.com/getnodalia/lienzo/issues).
