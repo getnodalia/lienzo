@@ -11,9 +11,9 @@ license = "MIT OR Apache-2.0"
 rust-version = "1.95"
 
 [workspace.dependencies]
-nodalia-ui = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1", features = ["serde"] }
+nodalia-ui = { git = "https://github.com/getnodalia/foundation", rev = "f32e02ba6a828c795d668c8c97c4dd7158a22ad7", features = ["serde"] }
 # Nodalia Design Language tokens (no features: no egui of its own, so the patched egui stays the only one).
-nodalia-theme = { git = "https://github.com/danielmigueltejedor/nodalia-design", rev = "44bfd0a37e6bd2837c473b4e5607b70e8d169e61" }
+nodalia-theme = { git = "https://github.com/danielmigueltejedor/nodalia-design", rev = "55ef2eccee0ca0fda67bd1d31bfabb1a82ea098f" }
 # internal
 lienzo-geom = { path = "crates/geom" }
 lienzo-color = { path = "crates/color" }
@@ -42,13 +42,13 @@ lienzo-tablet = { path = "crates/tablet" }
 lienzo-ipp = { path = "crates/ipp" }
 
 # external
-nodalia-print = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
-nodalia-pdf = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1", features = ["raster"] }
+nodalia-print = { git = "https://github.com/getnodalia/foundation", rev = "f32e02ba6a828c795d668c8c97c4dd7158a22ad7" }
+nodalia-pdf = { git = "https://github.com/getnodalia/foundation", rev = "f32e02ba6a828c795d668c8c97c4dd7158a22ad7", features = ["raster"] }
 nodalia-docpath = { version = "0.1.0", git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
-nodalia-jpeg = { git = "https://github.com/getnodalia/foundation", rev = "6db9b8e114917c0f9c046e431efa0f9f7eb9beb1" }
-nodalia-lienzo-format = { git = "https://github.com/getnodalia/foundation", rev = "00d3395e4a43dc1545938e9da9ea4a032bc9a158" }
+nodalia-jpeg = { git = "https://github.com/getnodalia/foundation", rev = "f32e02ba6a828c795d668c8c97c4dd7158a22ad7" }
+nodalia-lienzo-format = { git = "https://github.com/getnodalia/foundation", rev = "f32e02ba6a828c795d668c8c97c4dd7158a22ad7" }
 # In-app updates (check GitHub Releases, verify, replace the AppImage or the macOS app, restart).
-nodalia-update = { git = "https://github.com/danielmigueltejedor/nodalia-design", rev = "114848a2ff1a7c29c9a5432fb12e955fbe0aeef2", features = ["egui"] }
+nodalia-update = { git = "https://github.com/danielmigueltejedor/nodalia-design", rev = "55ef2eccee0ca0fda67bd1d31bfabb1a82ea098f", features = ["egui"] }
 thiserror = "2"
 serde = { version = "1", features = ["derive", "rc"] }
 serde_json = "1"
@@ -69,14 +69,14 @@ eframe = { version = "0.37", default-features = false }
 # (egui_fonts.rs; the web build's size gate).
 egui = { version = "0.37", default-features = false }
 egui_kittest = "0.37"
-rfd = "0.17"
+rfd = "0.18"
 log = "0.4"
 # All date/time conversion goes through chrono (no hand-rolled calendar code beyond the 400-year range extension; AGENTS.md).
 chrono = { version = "0.4.45", default-features = false, features = ["std"] }
 rayon = "1"
 rustc-hash = "2.1.3"
 criterion = { version = "0.8", default-features = false }
-getrandom = "0.3"
+getrandom = "0.4"
 # Monotonic clock on native and wasm (screenshot deadlines: a wall clock can jump).
 web-time = "1"
 

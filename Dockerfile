@@ -7,7 +7,7 @@
 # used when it was last bumped; raise it when CI's stable moves on. It must stay >= the
 # workspace `rust-version` in Cargo.toml.
 ARG RUST_VERSION=1.99
-ARG NGINX_VERSION=1.28-alpine
+ARG NGINX_VERSION=1.31-alpine
 
 FROM rust:${RUST_VERSION}-slim-bookworm AS builder
 # Must match `TRUNK_VERSION` in the `web` job of .github/workflows/release.yml.

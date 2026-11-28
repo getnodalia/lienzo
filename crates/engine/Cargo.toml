@@ -33,7 +33,7 @@ lienzo-io = { workspace = true }
 lienzo-psd = { workspace = true }
 lienzo-format = { workspace = true }
 lienzo-plugins = { workspace = true }
-base64 = "0.22"
+base64 = "0.23"
 blake3 = { version = "1.8", default-features = false, features = ["pure"] }
 lienzo-codecs = { workspace = true }
 flate2 = { workspace = true }
